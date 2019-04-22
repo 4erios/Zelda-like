@@ -15,8 +15,8 @@ public class PlayerClass : LivingClass
     //Déplacement à vitesse normale
     public void PlayerMove(Rigidbody2D rb, float moveX, float moveY, float speed)
     {
-        moveX = Input.GetAxis("Horizontal");
-        moveY = Input.GetAxis("Vertical");
+        //moveX = Input.GetAxis("Horizontal");
+        //moveY = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(moveX * speed, moveY * speed);
     }
 
@@ -63,8 +63,11 @@ public class PlayerClass : LivingClass
         }
     }
 
-    public void PlayerDash(float dashRange)
+    public void PlayerDash(Rigidbody2D rb, float moveX, float moveY,float dashRange, int dashEnergyCost)
     {
+        UseAbility(dashEnergyCost);
 
+        Vector2 direction = new Vector2(moveX, moveY);
+        rb.MovePosition(rb.position + direction * dashRange);
     }
 }
