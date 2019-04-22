@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerClass : LivingClass
 {
+    //Accélération au début du déplacement
     public void PlayerAccelerate(Rigidbody2D rb,float moveX, float moveY,float speed, AnimationCurve accelerationCurve)
     {
         moveX = Input.GetAxis("Horizontal");
@@ -11,6 +12,7 @@ public class PlayerClass : LivingClass
         rb.velocity = new Vector2(moveX*speed* accelerationCurve.Evaluate(Time.time), moveY * speed * accelerationCurve.Evaluate(Time.time));
     }
 
+    //Déplacement à vitesse normale
     public void PlayerMove(Rigidbody2D rb, float moveX, float moveY, float speed)
     {
         moveX = Input.GetAxis("Horizontal");
@@ -18,6 +20,7 @@ public class PlayerClass : LivingClass
         rb.velocity = new Vector2(moveX * speed, moveY * speed);
     }
 
+    //Attaque, utilisable dans les 4 directions; besoin potentiel d'avoir son propre script
     public void PlayerAttack(Transform AttackPoint, float attackRange,LayerMask enemiesLayer, float playerDamages)
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange);
@@ -26,7 +29,42 @@ public class PlayerClass : LivingClass
             enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(playerDamages);
             Debug.Log("Ennemi touché");
             Debug.Log(i);
+            //enemiesHurt[i].GetComponent<PlayerClass>().GainEnergy();  pb car besoin d'ajouter une variable float playerEnergyGain pour fonctionner avec la fonction GainEnergy
         }
     }
 
+    //Energie et pouvoirs de l'énergie
+    public float energyTank;
+
+    public int maxEnergy;
+    public int energy;
+
+    public void UseAbility(int energyCost)
+    {
+        energy = energy - energyCost;
+        if(energy < 0)
+        {
+            energy = 0;
+        }
+    }
+
+    public void GainEnergy(float energyGain)
+    {
+        energyTank += energyGain;
+        if (energyTank >= 100)
+        {
+            energy += 1;
+            energyTank = 0;
+
+            if (energy > maxEnergy)
+            {
+                energy = maxEnergy;
+            }
+        }
+    }
+
+    public void PlayerDash(float dashRange)
+    {
+
+    }
 }
