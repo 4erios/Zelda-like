@@ -70,4 +70,26 @@ public class PlayerClass : LivingClass
         Vector2 direction = new Vector2(moveX, moveY);
         rb.MovePosition(rb.position + direction * dashRange);
     }
+
+    public void PlayerHeal(float playerHealth,float healValue, int healEnergyCost)
+    {
+        health = health + healValue;
+        UseAbility(healEnergyCost);
+        if (health >= playerHealth)
+        {
+            health = playerHealth;
+        }
+    }
+
+
+    public void PlayerResurrect()
+    {
+
+    }
+    
+    //maybe this function won't be needed, I wish to use it in order to manage whether or not the player has less than 3 energy left  
+    public void PlayerEnergyGauge()
+    {
+
+    }
 }
