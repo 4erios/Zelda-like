@@ -9,6 +9,10 @@ public class LivingClass : MonoBehaviour
     public virtual void TakeDamages(float damages)
     {
         health = health - damages;
+        if (health <= 0)
+        {
+            health = 0;
+        }
         Debug.Log("Damages Taken");
     }
 

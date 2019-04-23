@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerClass : LivingClass
 {
+
+    public override void Death()
+    {
+        Debug.Log("Player died!");
+    }
+
     //Accélération au début du déplacement
     public void PlayerAccelerate(Rigidbody2D rb,float moveX, float moveY,float speed, AnimationCurve accelerationCurve)
     {
@@ -39,7 +45,7 @@ public class PlayerClass : LivingClass
     public int maxEnergy;
     public int energy;
 
-    public void UseAbility(int energyCost)
+    public void LoseEnergy(int energyCost)
     {
         energy = energy - energyCost;
         if(energy < 0)
@@ -65,7 +71,7 @@ public class PlayerClass : LivingClass
 
     public void PlayerDash(Rigidbody2D rb, float moveX, float moveY,float dashRange, int dashEnergyCost)
     {
-        UseAbility(dashEnergyCost);
+        LoseEnergy(dashEnergyCost);
 
         Vector2 direction = new Vector2(moveX, moveY);
         rb.MovePosition(rb.position + direction * dashRange);
@@ -74,22 +80,34 @@ public class PlayerClass : LivingClass
     public void PlayerHeal(float playerHealth,float healValue, int healEnergyCost)
     {
         health = health + healValue;
-        UseAbility(healEnergyCost);
+        LoseEnergy(healEnergyCost);
         if (health >= playerHealth)
         {
             health = playerHealth;
         }
     }
 
-
-    public void PlayerResurrect()
+    public IEnumerator TimeUntilDeath(float timeUntilDeath)
     {
-
+        yield return new WaitForSeconds(timeUntilDeath);
+        if (health <= 0)
+        {
+            Death();
+        }
     }
+
+    public void PlayerResurrect(int deathZone)
+    {
+        if (health <= 0 && energy > deathZone)
+        {
+            StartCoroutine("TimeUntilDeath");
+        }
+        else if(health <=0 && energy <= deathZone)
+        {
+            Death();
+        }
+    }
+
+
     
-    //maybe this function won't be needed, I wish to use it in order to manage whether or not the player has less than 3 energy left  
-    public void PlayerEnergyGauge()
-    {
-
-    }
 }
