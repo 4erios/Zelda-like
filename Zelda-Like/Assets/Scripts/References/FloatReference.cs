@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;*/
+using System;
 
-[System.Serializable]
+[Serializable]
 public class FloatReference 
 {
     public bool useConstant = true;
@@ -11,7 +12,21 @@ public class FloatReference
 
     public float value
     {
-        get {return useConstant ? constantValue :
-                                  variable.value;}
+        get {return useConstant ? constantValue: variable.value;}
     }
+
 }
+
+
+
+
+/*public FloatReference (float value)
+    {
+        useConstant = true;
+        constantValue = value;
+    }*/
+
+/*public static implicit operator float (FloatReference reference)
+{
+    return reference.value;
+}*/
