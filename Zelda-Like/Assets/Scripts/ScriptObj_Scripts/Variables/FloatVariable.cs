@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace CharacterController.Variables
 {
     [CreateAssetMenu]
     public class FloatVariable : ScriptableObject

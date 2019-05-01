@@ -21,4 +21,19 @@ public class LivingClass : MonoBehaviour
         Debug.Log("Dead");
         Destroy(this.gameObject);
     }
+
+    /*
+  DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
+            if (damage != null)
+        {
+            HP.ApplyChange(-damage.DamageAmount);
+            DamageEvent.Invoke();
+        }
+
+        if (HP.Value <= 0.0f)
+        {
+            DeathEvent.Invoke();
+        }
+
+*/
 }

@@ -4,7 +4,20 @@ using UnityEngine;
 
 public class PlayerClass : LivingClass
 {
+    /*
+      DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
+                if (damage != null)
+            {
+                HP.ApplyChange(-damage.DamageAmount);
+                DamageEvent.Invoke();
+            }
 
+            if (HP.Value <= 0.0f)
+            {
+                DeathEvent.Invoke();
+            }
+        
+    */
     public override void Death()
     {
         Debug.Log("Player died!");

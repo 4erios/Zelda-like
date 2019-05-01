@@ -8,7 +8,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Events
+namespace Game.Events
 {
     [CreateAssetMenu]
     public class GameEvent : ScriptableObject
