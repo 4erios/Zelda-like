@@ -26,6 +26,7 @@ public class PlayerClass : LivingClass
     //Accélération au début du déplacement
     public void PlayerAccelerate(Rigidbody2D rb,float moveX, float moveY,float speed, AnimationCurve accelerationCurve)
     {
+        Debug.Log("Je m'appelle Thomas et je suis nul. Pouet pouet zizi");
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(moveX * accelerationCurve.Evaluate(Time.time), moveY * accelerationCurve.Evaluate(Time.time)).normalized * speed;

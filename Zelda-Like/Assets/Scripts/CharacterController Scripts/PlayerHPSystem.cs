@@ -2,40 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using CharacterController;
-using CharacterController.Variables;
 
-namespace CharacterController.Variables
+
+public class PlayerHPSystem : LivingClass
 {
-    public class PlayerHPSystem : LivingClass
+    public FloatReference playerMaxHP;
+
+    public FloatVariable CurrentHP;
+
+    public bool ResetHP;
+
+    [SerializeField] private GameEvent DamageEvent;
+    [SerializeField] private GameEvent ResurrectionEvent;
+
+    private void Start()
     {
-        public FloatReference playerMaxHP;
+        if (ResetHP)
+            CurrentHP.SetValue(playerMaxHP);
+    }
 
-        public FloatVariable CurrentHP;
-
-        public bool ResetHP;
-
-        public UnityEvent DamageEvent;
-
-        private void Start()
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        EnemyDamageDealer damages = collision.gameObject.GetComponent<EnemyDamageDealer>();
+        if (damages != null)
         {
-            if (ResetHP)
-                CurrentHP.SetValue(playerMaxHP);
+            CurrentHP.ApplyChange(-damages.enemyDamage);
+            DamageEvent.Raise();
         }
 
-        public override void TakeDamages(float damages)
+        if (CurrentHP.Value <= 0)
         {
-
-        }
-
-        public void OnCollisionEnter2D(Collision2D collision)
-        {
-            EnemyDamageDealer damages = collision.gameObject.GetComponent<EnemyDamageDealer>();
-            if (damages != null)
-            {
-                CurrentHP.ApplyChange(-damages.enemyDamage);
-                DamageEvent.Invoke(); 
-            }
+            CurrentHP.SetValue(0);
+            ResurrectionEvent.Raise();
         }
     }
 }
+

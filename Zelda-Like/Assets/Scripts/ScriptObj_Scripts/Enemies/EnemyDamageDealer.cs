@@ -9,11 +9,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CharacterController.Variables
+
+
+public class EnemyDamageDealer : ScriptableObject
 {
-    public class EnemyDamageDealer : ScriptableObject
-    {
-        public FloatReference enemyDamage;
-    }
+    public FloatReference enemyDamage;
 }
+
 
