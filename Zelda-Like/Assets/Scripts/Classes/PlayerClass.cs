@@ -15,7 +15,7 @@ public class PlayerClass : LivingClass
     {
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
-        rb.velocity = new Vector2(moveX*speed* accelerationCurve.Evaluate(Time.time), moveY * speed * accelerationCurve.Evaluate(Time.time));
+        rb.velocity = new Vector2(moveX * accelerationCurve.Evaluate(Time.time), moveY * accelerationCurve.Evaluate(Time.time)).normalized * speed;
     }
 
     //Déplacement à vitesse normale
@@ -23,7 +23,7 @@ public class PlayerClass : LivingClass
     {
         //moveX = Input.GetAxis("Horizontal");
         //moveY = Input.GetAxis("Vertical");
-        rb.velocity = new Vector2(moveX * speed, moveY * speed);
+        rb.velocity = new Vector2(moveX , moveY).normalized * speed;
     }
 
     //Attaque, utilisable dans les 4 directions; besoin potentiel d'avoir son propre script

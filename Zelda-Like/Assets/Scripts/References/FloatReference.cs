@@ -1,32 +1,38 @@
-﻿/*using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;*/
+﻿// ----------------------------------------------------------------------------
+// Unite 2017 - Game Architecture with Scriptable Objects
+// 
+// Author: Ryan Hipple
+// Date:   10/04/17
+// ----------------------------------------------------------------------------
+
 using System;
 
-[Serializable]
-public class FloatReference 
+namespace RoboRyanTron.Unite2017.Variables
 {
-    public bool useConstant = true;
-    public float constantValue;
-    public FloatVariable variable;
-
-    public float value
+    [Serializable]
+    public class FloatReference
     {
-        get {return useConstant ? constantValue: variable.value;}
+        public bool UseConstant = true;
+        public float ConstantValue;
+        public FloatVariable Variable;
+
+        public FloatReference()
+        { }
+
+        public FloatReference(float value)
+        {
+            UseConstant = true;
+            ConstantValue = value;
+        }
+
+        public float Value
+        {
+            get { return UseConstant ? ConstantValue : Variable.Value; }
+        }
+
+        public static implicit operator float(FloatReference reference)
+        {
+            return reference.Value;
+        }
     }
-
 }
-
-
-
-
-/*public FloatReference (float value)
-    {
-        useConstant = true;
-        constantValue = value;
-    }*/
-
-/*public static implicit operator float (FloatReference reference)
-{
-    return reference.value;
-}*/
