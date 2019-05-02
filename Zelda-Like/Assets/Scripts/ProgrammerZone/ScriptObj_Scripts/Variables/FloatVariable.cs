@@ -30,5 +30,15 @@ public class FloatVariable : ScriptableObject
     {
         Value += floatamount.Value;
     }
+
+    public float value
+    {
+        get { return Value; }
+    }
+
+    public static implicit operator float(FloatVariable floatVariable) 
+    {
+        return floatVariable.Value;
+    }
 }
 

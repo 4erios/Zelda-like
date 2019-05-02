@@ -70,8 +70,8 @@ InputManager:
     axis: 1
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Attack
-    descriptiveName: A
+    m_Name: ButtonA
+    descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 0
@@ -86,8 +86,8 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Absorb
-    descriptiveName: LT
+    m_Name: LeftTrigger
+    descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -102,8 +102,8 @@ InputManager:
     axis: 8
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Absorb
-    descriptiveName: 
+    m_Name: LeftTrigger
+    descriptiveName: KeyBoardEquivalent
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -118,8 +118,8 @@ InputManager:
     axis: 8
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Inject
-    descriptiveName: RT
+    m_Name: RightTrigger
+    descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -134,11 +134,11 @@ InputManager:
     axis: 9
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Inject
-    descriptiveName: 
+    m_Name: RightTrigger
+    descriptiveName: KeyBoardEquivalent
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick button 2
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: e
     gravity: 1000
@@ -150,8 +150,8 @@ InputManager:
     axis: 9
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Heal
-    descriptiveName: Y
+    m_Name: ButtonY
+    descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 3
@@ -166,8 +166,8 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Dash
-    descriptiveName: X
+    m_Name: ButtonX
+    descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 2
