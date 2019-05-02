@@ -9,10 +9,16 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable moveX;
     public FloatVariable moveY;
 
+
     void Update()
     {
         playerAnimator.SetFloat("MoveX", moveX);
         playerAnimator.SetFloat("MoveY", moveY);
-
     }
+
+    public void Attack()
+    {
+        playerAnimator.SetBool("Attack", true);
+    }
+    
 }
