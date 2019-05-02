@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackScript : MonoBehaviour
+public class PlayerAttackScript : StateMachineBehaviour
 {
     public void PlayerAttack()
     {
