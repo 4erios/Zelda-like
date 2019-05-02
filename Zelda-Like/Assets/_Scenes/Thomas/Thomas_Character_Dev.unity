@@ -430,6 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PressA: {fileID: 11400000, guid: e6f8242706f5f3947a7fa6753be6005c, type: 2}
   PressRightTrigger: {fileID: 11400000, guid: 69742d97eeedf874388eb53a40aa2a02, type: 2}
+  time: 0
 --- !u!114 &2091885494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,3 +446,4 @@ MonoBehaviour:
   playerAnimator: {fileID: 2091885489}
   moveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
   moveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
+  time: 2
