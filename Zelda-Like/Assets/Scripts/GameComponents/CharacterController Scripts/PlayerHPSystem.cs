@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class PlayerHPSystem : LivingClass
+public class PlayerHPSystem : MonoBehaviour
 {
     public FloatReference playerMaxHP;
 
@@ -18,7 +18,7 @@ public class PlayerHPSystem : LivingClass
     private void Start()
     {
         if (ResetHP)
-            CurrentHP.SetValue(playerMaxHP);
+            CurrentHP.SetFloatValue(playerMaxHP);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -26,13 +26,13 @@ public class PlayerHPSystem : LivingClass
         EnemyDamageDealer damages = collision.gameObject.GetComponent<EnemyDamageDealer>();
         if (damages != null)
         {
-            CurrentHP.ApplyChange(-damages.enemyDamage);
+            CurrentHP.ApplyChangeToFloat(-damages.enemyDamage);
             DamageEvent.Raise();
         }
 
         if (CurrentHP.Value <= 0)
         {
-            CurrentHP.SetValue(0);
+            CurrentHP.SetFloatValue(0);
             ResurrectionEvent.Raise();
         }
     }

@@ -13,22 +13,22 @@ public class FloatVariable : ScriptableObject
 {
     public float Value;
 
-    public void SetValue(float value)
+    public void SetFloatValue(float floatvalue)
     {
-        Value = value;
+        Value = floatvalue;
     }
-    public void SetValue(FloatVariable value)
+    public void SetFloatValue(FloatVariable floatvalue)
     {
-        Value = value.Value;
+        Value = floatvalue.Value;
     }
 
-    public void ApplyChange(float amount)
+    public void ApplyChangeToFloat(float floatamount)
     {
-        Value += amount;
+        Value += floatamount;
     }
-    public void ApplyChange(FloatVariable amount)
+    public void ApplyChangeToFloat(FloatVariable floatamount)
     {
-        Value += amount.Value;
+        Value += floatamount.Value;
     }
-    }
+}
 
