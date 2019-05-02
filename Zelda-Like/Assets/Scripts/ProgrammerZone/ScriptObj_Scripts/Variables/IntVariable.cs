@@ -26,4 +26,14 @@ public class IntVariable : ScriptableObject
     {
         intValue += intamount.intValue;
     }
+
+    public float value
+    {
+        get { return intValue; }
+    }
+
+    public static implicit operator int(IntVariable intVariable)
+    {
+        return intVariable.intValue;
+    }
 }
