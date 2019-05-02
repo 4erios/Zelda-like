@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    public GameEvent PressX;
+    public GameEvent PressA;
     public GameEvent PressRightTrigger;
 
-    public void OnPressX()
+    public void OnPressA()
     {
-        PressX.Raise();
+        PressA.Raise();
     }
 
     public void OnRightTrigger()
