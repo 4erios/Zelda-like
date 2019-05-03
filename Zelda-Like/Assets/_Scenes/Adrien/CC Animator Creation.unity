@@ -149,7 +149,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1698440705}
+      - m_Target: {fileID: 1698440699}
         m_MethodName: LaunchTimeToAttack
         m_Mode: 1
         m_Arguments:
@@ -236,7 +236,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1698440705}
+      - m_Target: {fileID: 1698440699}
         m_MethodName: PlayerAttackSwitch
         m_Mode: 1
         m_Arguments:
@@ -271,6 +271,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1698440698}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -467,6 +478,11 @@ PrefabInstance:
       propertyPath: time
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: cantattack
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!114 &1698440697 stripped
@@ -499,32 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee52b4b006ac424080deda612e7d4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timetoattack:
-    UseConstant: 1
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  timebetweenattacks:
-    UseConstant: 1
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  attacknumber: {fileID: 11400000, guid: b95256f714fa1714b8c193dd75cc92bf, type: 2}
-  playerCantAttack: {fileID: 11400000, guid: f0137d0439471cc44b45f8a831736dcb, type: 2}
-  playerAttackIsFalse: {fileID: 11400000, guid: f7110e1b5dbe7f64886fdadb21676d49,
-    type: 2}
-  playerCanAttackAgain: {fileID: 11400000, guid: 0fb8c418e610bbd43aca12136d415008,
-    type: 2}
---- !u!114 &1698440705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698440698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ee52b4b006ac424080deda612e7d4e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 1698440706}
   timetoattack:
     UseConstant: 1
     ConstantValue: 0.2
@@ -533,9 +524,15 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0.6
     Variable: {fileID: 0}
-  attacknumber: {fileID: 11400000, guid: a2fa6ad70c3bafe4798fb3488026f477, type: 2}
+  attacknumber: {fileID: 11400000, guid: b95256f714fa1714b8c193dd75cc92bf, type: 2}
   playerCantAttack: {fileID: 11400000, guid: f0137d0439471cc44b45f8a831736dcb, type: 2}
   playerAttackIsFalse: {fileID: 11400000, guid: f7110e1b5dbe7f64886fdadb21676d49,
     type: 2}
   playerCanAttackAgain: {fileID: 11400000, guid: 0fb8c418e610bbd43aca12136d415008,
     type: 2}
+--- !u!95 &1698440706 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4704675715113948173, guid: 30d97faed7688d2468a6d854eff79be1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698440696}
+  m_PrefabAsset: {fileID: 0}
