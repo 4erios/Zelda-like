@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttackFunctions : MonoBehaviour
 {
+    public Animator playerAnimator;
 
     public FloatReference timetoattack;
     public FloatReference timebetweenattacks;
@@ -13,6 +14,16 @@ public class PlayerAttackFunctions : MonoBehaviour
     public GameEvent playerCantAttack;
     public GameEvent playerAttackIsFalse;
     public GameEvent playerCanAttackAgain;
+
+    private void Start()
+    {
+        attacknumber.SetIntValue(0);
+    }
+
+    private void Update()
+    {
+        playerAnimator.SetInteger("ComboCounter",attacknumber);
+    }
 
     public IEnumerator TimeToAttack()
     {
@@ -38,20 +49,18 @@ public class PlayerAttackFunctions : MonoBehaviour
         switch (attacknumber)
         {
             case 0:
-                attacknumber.ApplyChangeToInt(attacknumber + 1);
+                attacknumber.SetIntValue(1);
                 break;
 
             case 1:
-                attacknumber.ApplyChangeToInt(attacknumber + 1);
+                attacknumber.SetIntValue(2);
                 break;
 
             case 2:
-                attacknumber.ApplyChangeToInt(attacknumber + 1);
-                break;
-
-            case 3:
                 attacknumber.SetIntValue(0);
                 break;
+    
+
         }
     }
 }

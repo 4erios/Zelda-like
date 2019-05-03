@@ -9,7 +9,6 @@ public class PlayerAttackBehaviour : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        playerAttackSwitch.Raise();
         launchTimeToAttack.Raise();
     }
 }
