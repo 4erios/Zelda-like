@@ -9,7 +9,7 @@ public class PlayerControls : MonoBehaviour
 
     public float time;
 
-    private void Update()
+   /* private void Update()
     {
         if (Input.GetButtonDown("ButtonA"))
             OnPressA();
@@ -23,5 +23,5 @@ public class PlayerControls : MonoBehaviour
     public void OnRightTrigger()
     {
         PressRightTrigger.Raise();
-    }
+    }*/
 }

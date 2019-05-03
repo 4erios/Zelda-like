@@ -19,16 +19,16 @@ public class PlayerAttackFunctions : MonoBehaviour
 
     private void Start()
     {
-        attacknumber.SetIntValue(0);
+        //attacknumber.SetIntValue(0);
     }
 
     private void Update()
     {
         playerAnimator.SetInteger("ComboCounter",i);
-        if (Input.GetKeyDown("a"))
+        if (Input.GetButtonDown("ButtonA"))
         {
             playerAnimator.SetTrigger("AttackButton");
-
+            Debug.Log(i);
             //playerAnimator.SetInteger("ComboCounter", +1);
             
        
@@ -42,7 +42,7 @@ public class PlayerAttackFunctions : MonoBehaviour
 
     }
 
-    public IEnumerator TimeToAttack()
+    /*public IEnumerator TimeToAttack()
     {
         yield return new WaitForSeconds(timetoattack);
         attacknumber.SetIntValue(0);
@@ -79,5 +79,5 @@ public class PlayerAttackFunctions : MonoBehaviour
     
 
         }
-    }
+    }*/
 }
