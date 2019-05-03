@@ -27,6 +27,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
   - m_Name: Attack 1
     m_Type: 9
     m_DefaultFloat: 0
@@ -45,6 +46,8 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+=======
+>>>>>>> 27f8b64ec6d64b420bd021dbc9b6870d67c65e7f
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -58,12 +61,18 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
 --- !u!1101 &1101008326570756778
 AnimatorStateTransition:
+=======
+--- !u!114 &114030655580108160
+MonoBehaviour:
+>>>>>>> 27f8b64ec6d64b420bd021dbc9b6870d67c65e7f
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
@@ -331,6 +340,15 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &1101401253445611526
+=======
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3fe9d9e6116e2479f9864c2a782122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1101 &1101277509263392942
+>>>>>>> 27f8b64ec6d64b420bd021dbc9b6870d67c65e7f
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
