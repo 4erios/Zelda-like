@@ -9,7 +9,7 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable moveX;
     public FloatVariable moveY;
 
-    private bool cantattack;
+    [SerializeField] private bool cantattack;
 
     void Update()
     {

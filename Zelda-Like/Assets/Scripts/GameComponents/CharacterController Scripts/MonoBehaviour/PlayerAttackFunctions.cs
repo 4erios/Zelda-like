@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackScript : StateMachineBehaviour
+public class PlayerAttackFunctions : MonoBehaviour
 {
-    public Animator playerAnimator;
 
     public FloatReference timetoattack;
     public FloatReference timebetweenattacks;
@@ -15,19 +14,12 @@ public class PlayerAttackScript : StateMachineBehaviour
     public GameEvent playerAttackIsFalse;
     public GameEvent playerCanAttackAgain;
 
-
-    public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-    {
-        PlayerAttackSwitch();
-        TimeToAttack();
-    }
-
-
     public IEnumerator TimeToAttack()
     {
         yield return new WaitForSeconds(timetoattack);
         attacknumber.SetIntValue(0);
         playerCantAttack.Raise();
+        StartCoroutine("AttackCoolDown");
     }
 
     public IEnumerator AttackCoolDown()
@@ -36,10 +28,19 @@ public class PlayerAttackScript : StateMachineBehaviour
         playerCanAttackAgain.Raise();
     }
 
+    public void LaunchTimeToAttack()
+    {
+        StartCoroutine("TimeToAttack");
+    }
+
     public void PlayerAttackSwitch()
     {
         switch (attacknumber)
         {
+            case 0:
+                attacknumber.ApplyChangeToInt(attacknumber + 1);
+                break;
+
             case 1:
                 attacknumber.ApplyChangeToInt(attacknumber + 1);
                 break;
@@ -51,11 +52,6 @@ public class PlayerAttackScript : StateMachineBehaviour
             case 3:
                 attacknumber.SetIntValue(0);
                 break;
-
-            case 0:
-                attacknumber.ApplyChangeToInt(attacknumber + 1);
-                    break;
         }
     }
-
 }
