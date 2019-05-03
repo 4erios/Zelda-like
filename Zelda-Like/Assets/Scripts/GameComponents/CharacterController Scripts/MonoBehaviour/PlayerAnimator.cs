@@ -33,7 +33,4 @@ public class PlayerAnimator : MonoBehaviour
         cantattack = true;
         PlayerAttackIsFalse();
     }
-    
-
-
 }
