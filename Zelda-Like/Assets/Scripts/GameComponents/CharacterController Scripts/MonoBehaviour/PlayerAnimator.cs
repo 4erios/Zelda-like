@@ -9,7 +9,7 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable moveX;
     public FloatVariable moveY;
 
-    public float time = 1f;
+    [SerializeField] private bool cantattack;
 
     void Update()
     {
@@ -17,17 +17,20 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetFloat("MoveY", moveY);
     }
 
-    public IEnumerator TimeBetwinAttacks(float time)
+    public void LaunchPlayerAttack()
     {
-        yield return new WaitForSeconds(time);
+        if(!cantattack)
+        playerAnimator.SetBool("Attack", true);
+    }
+
+    public void PlayerAttackIsFalse()
+    {
         playerAnimator.SetBool("Attack", false);
     }
 
-    public void Attack()
+    public void PlayerCantAttack()
     {
-        playerAnimator.SetBool("Attack", true);
-        Debug.Log("Attack");
-        StartCoroutine("TimeBetwinAttacks", time);
+        cantattack = true;
+        PlayerAttackIsFalse();
     }
-    
 }
