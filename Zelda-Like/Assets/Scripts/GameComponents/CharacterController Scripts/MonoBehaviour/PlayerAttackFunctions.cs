@@ -15,6 +15,8 @@ public class PlayerAttackFunctions : MonoBehaviour
     public GameEvent playerAttackIsFalse;
     public GameEvent playerCanAttackAgain;
 
+    private int i;
+
     private void Start()
     {
         attacknumber.SetIntValue(0);
@@ -22,7 +24,22 @@ public class PlayerAttackFunctions : MonoBehaviour
 
     private void Update()
     {
-        playerAnimator.SetInteger("ComboCounter",attacknumber);
+        playerAnimator.SetInteger("ComboCounter",i);
+        if (Input.GetKeyDown("a"))
+        {
+            playerAnimator.SetTrigger("AttackButton");
+
+            //playerAnimator.SetInteger("ComboCounter", +1);
+            
+       
+            playerAnimator.SetInteger("ComboCounter", i++);
+            if (i>=3)
+            {
+
+                i = 0;
+            }
+        }
+
     }
 
     public IEnumerator TimeToAttack()
