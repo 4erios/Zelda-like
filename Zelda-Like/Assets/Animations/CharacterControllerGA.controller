@@ -58,6 +58,20 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &114042542098151894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a859d9be2c2d85468f54502f9364153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAttackSwitch: {fileID: 11400000, guid: f7110e1b5dbe7f64886fdadb21676d49, type: 2}
+  launchTimeToAttack: {fileID: 11400000, guid: c36c5c1d443d73345a9c0fb68cf64200, type: 2}
 --- !u!1101 &1101008326570756778
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1031,7 +1045,8 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101651740847024878}
   - {fileID: 1101360098109548614}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114042542098151894}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

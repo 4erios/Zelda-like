@@ -30,7 +30,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public void PlayerCantAttack()
     {
-        cantattack = true;
+        cantattack = false;
         PlayerAttackIsFalse();
     }
 }
