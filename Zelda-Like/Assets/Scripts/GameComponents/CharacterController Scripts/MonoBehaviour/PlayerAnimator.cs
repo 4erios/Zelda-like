@@ -19,18 +19,26 @@ public class PlayerAnimator : MonoBehaviour
 
     public void LaunchPlayerAttack()
     {
-        if(cantattack == false)
-        playerAnimator.SetTrigger("");
+        if (cantattack == false)
+        {
+            playerAnimator.SetTrigger("AttackButton");
+            Debug.Log("Attack");
+        }
+    }
+
+    public void ResetTrigger()
+    {
+        playerAnimator.ResetTrigger("AttackButton");
     }
 
     public void PlayerAttackIsFalse()
     {
-        playerAnimator.SetBool("AttackButton", false);
+        playerAnimator.SetBool("Attack", false);
     }
 
     public void PlayerCantAttack()
     {
-        cantattack = true;
+        cantattack = false;
         PlayerAttackIsFalse();
     }
     
