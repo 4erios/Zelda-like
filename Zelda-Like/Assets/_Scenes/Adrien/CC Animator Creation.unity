@@ -482,37 +482,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8449999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8449999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.369
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948174, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: cec1798128c6f024bb1ba106d0dc82be,
-        type: 3}
-    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: time
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: cantattack
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!114 &1698440697 stripped
@@ -521,48 +490,21 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1698440696}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698440698}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e4876ca6389e3344bc1a806007354e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1698440698 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4704675715113948179, guid: 30d97faed7688d2468a6d854eff79be1,
+--- !u!114 &1698440699 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1698440699, guid: 30d97faed7688d2468a6d854eff79be1,
     type: 3}
   m_PrefabInstance: {fileID: 1698440696}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1698440699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698440698}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ee52b4b006ac424080deda612e7d4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimator: {fileID: 1698440706}
-  timetoattack:
-    UseConstant: 1
-    ConstantValue: 0.2
-    Variable: {fileID: 0}
-  timebetweenattacks:
-    UseConstant: 1
-    ConstantValue: 0.6
-    Variable: {fileID: 0}
-  attacknumber: {fileID: 11400000, guid: b95256f714fa1714b8c193dd75cc92bf, type: 2}
-  playerCantAttack: {fileID: 11400000, guid: f0137d0439471cc44b45f8a831736dcb, type: 2}
-  playerAttackIsFalse: {fileID: 11400000, guid: f7110e1b5dbe7f64886fdadb21676d49,
-    type: 2}
-  playerCanAttackAgain: {fileID: 11400000, guid: 0fb8c418e610bbd43aca12136d415008,
-    type: 2}
---- !u!95 &1698440706 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4704675715113948173, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1698440696}
-  m_PrefabAsset: {fileID: 0}
