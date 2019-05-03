@@ -11,7 +11,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButton("ButtonA"))
+        if (Input.GetButtonDown("ButtonA"))
             OnPressA();
     }
 

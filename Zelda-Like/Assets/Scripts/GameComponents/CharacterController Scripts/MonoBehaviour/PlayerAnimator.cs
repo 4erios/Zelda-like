@@ -9,7 +9,7 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable moveX;
     public FloatVariable moveY;
 
-    [SerializeField] private bool cantattack;
+    public bool cantattack = false;
 
     void Update()
     {
@@ -19,7 +19,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public void LaunchPlayerAttack()
     {
-        if(!cantattack)
+        if(cantattack == false)
         playerAnimator.SetBool("Attack", true);
     }
 
