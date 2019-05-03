@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4704675715113948169}
   - component: {fileID: 4704675715113948170}
   - component: {fileID: 4704675715113948172}
+  - component: {fileID: 5617452842764185857}
   m_Layer: 0
   m_Name: CharacterControllerGA
   m_TagString: Untagged
@@ -154,7 +155,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 4704675715113948173}
   moveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
   moveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
-  time: 2
+  cantattack: 0
 --- !u!114 &4704675715113948172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,3 +175,28 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 6
     Variable: {fileID: 0}
+--- !u!114 &5617452842764185857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704675715113948179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee52b4b006ac424080deda612e7d4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
+  timetoattack:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  timebetweenattacks:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  attacknumber: {fileID: 0}
+  playerCantAttack: {fileID: 0}
+  playerAttackIsFalse: {fileID: 0}
+  playerCanAttackAgain: {fileID: 0}
