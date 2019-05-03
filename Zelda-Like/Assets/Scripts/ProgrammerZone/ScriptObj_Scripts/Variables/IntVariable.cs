@@ -27,7 +27,7 @@ public class IntVariable : ScriptableObject
         intValue += intamount.intValue;
     }
 
-    public float value
+    public int value
     {
         get { return intValue; }
     }
