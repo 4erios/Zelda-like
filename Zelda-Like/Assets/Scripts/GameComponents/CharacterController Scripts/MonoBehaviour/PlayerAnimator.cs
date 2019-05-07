@@ -9,28 +9,57 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable moveX;
     public FloatVariable moveY;
 
-    public bool cantattack = false;
 
     void Update()
     {
         playerAnimator.SetFloat("MoveX", moveX);
-        playerAnimator.SetFloat("MoveY", moveY);
+        playerAnimator.SetFloat("MoveY", moveY); 
     }
 
-    public void LaunchPlayerAttack()
+    public void LaunchAttackAnimation()
     {
-        if(cantattack == false)
-        playerAnimator.SetTrigger("");
+
     }
 
-    public void PlayerAttackIsFalse()
+    public void LaunchDashAnimation()
     {
-        playerAnimator.SetBool("AttackButton", false);
+
     }
 
-    public void PlayerCantAttack()
+    public void LaunchHealAnimation()
     {
-        cantattack = true;
-        PlayerAttackIsFalse();
+
     }
+
+    public void LaunchTakeDamageAnimation()
+    {
+
+    }
+
+    public void LaunchResurrectionAnimation()
+    {
+
+    }
+
+    public void LaunchDeathAnimation()
+    {
+
+    }
+
+    public void LaunchShootAnimation()
+    {
+
+    }
+
+    public void LaunchInsufflationAnimation()
+    {
+
+    }
+
+    public void LaunchShieldAnimation()
+    {
+
+    }
+
+
 }

@@ -4,24 +4,47 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    public GameEvent PressA;
-    public GameEvent PressRightTrigger;
+    [Header("InputSettings")]
+    public string NameInputButtonA;
+    public string NameInputButtonX;
+    public string NameInputButtonY;
+    public string NameInputButtonB;
+    public string NameInputRightBumper;
+    public string NameInputLeftBumper;
+    public string NameInputRightTrigger;
+    public string NameInputLeftTrigger;
 
-    public float time;
+    [Header("InputEvents")]
+    public GameEvent PressA;
+    public GameEvent PressX;
+    public GameEvent PressY;
+    public GameEvent PressB;
+    public GameEvent PressRightBumper;
+    public GameEvent PressLeftBumper;
+    public GameEvent PressRightTrigger;
+    public GameEvent PressLeftTrigger;
+
 
     private void Update()
     {
-        if (Input.GetButtonDown("ButtonA"))
-            OnPressA();
+        if (Input.GetButton(NameInputButtonA))
+            PressA.Raise();
+
+        if (Input.GetButton(NameInputButtonX))
+            PressX.Raise();
+
+        if (Input.GetButton(NameInputButtonY))
+            PressY.Raise();
+
+        if (Input.GetButton(NameInputButtonB))
+            PressB.Raise();
+
+        if (Input.GetButton(NameInputRightBumper))
+            PressRightBumper.Raise();
+
+        if (Input.GetButton(NameInputLeftBumper))
+            PressLeftBumper.Raise();
+
     }
 
-    public void OnPressA()
-    {
-        PressA.Raise();
-    }
-
-    public void OnRightTrigger()
-    {
-        PressRightTrigger.Raise();
-    }
 }
