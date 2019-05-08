@@ -26,7 +26,17 @@ public class PlayerAttack : MonoBehaviour
     public FloatReference MaxEnergyTank;
 
     public IntVariable EnergyGauge;
-    public IntReferences EnergyMax; 
+    public IntReferences EnergyMax;
+
+    [Header("AttackInertiaComponents")]
+    public Rigidbody2D rb;
+    public FloatVariable moveX;
+    public FloatVariable moveY;
+    public FloatReference PlayerSpeed;
+
+    public AnimationCurve FirstAttackCurve;
+    public AnimationCurve SecondAttackCurve;
+    public AnimationCurve ThirdAttackCurve;
 
     public void RightAttackCollider()
     {
@@ -67,6 +77,7 @@ public class PlayerAttack : MonoBehaviour
         for (int i = 0; i < enemiesHurt.Length; i++)
         {
             enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+            enemiesHurt[i].GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
             Debug.Log("Ennemi touché");
             Debug.Log(i);
         }
@@ -75,23 +86,24 @@ public class PlayerAttack : MonoBehaviour
     public IEnumerator TimeToAttackCoroutine()
     {
         yield return new WaitForSeconds(TimeToAttack);
+        AttackCount.SetIntValue(3);
     }
 
     public void LaunchTimeToAttack()
     {
         StartCoroutine("TimeToAttackCoroutine");
-        AttackCount.SetIntValue(3);
+        LaunchAttackCoolDown();
     }
 
     public IEnumerator AttackCoolDownCoroutine()
     {
         yield return new WaitForSeconds(AttackCoolDown);
+        AttackCount.SetIntValue(0);
     }
 
-    public void LaunchAttackCoolDown()
+    private void LaunchAttackCoolDown()
     {
         StartCoroutine("AttackCoolDownCoroutine");
-        AttackCount.SetIntValue(0);
     }
 
     public void UpAttackCount()
@@ -99,23 +111,25 @@ public class PlayerAttack : MonoBehaviour
         AttackCount.ApplyChangeToInt(+1);
     }
 
-    public void GainEnergy(float energyGain)
+    private void DashAttack(float MoveSpeed, AnimationCurve InertiaCurve)
     {
-        CurrentEnergyTank.ApplyChangeToFloat(EnergyGain);
-        if (CurrentEnergyTank >= MaxEnergyTank)
-        {
-            EnergyGauge.ApplyChangeToInt(+1);
-            CurrentEnergyTank.SetFloatValue(0);
+        Vector2 direction = new Vector2(moveX, moveY);
+        rb.velocity= direction * MoveSpeed * InertiaCurve.Evaluate(Time.time);
+    }
 
-            if (EnergyGauge > EnergyMax)
-            {
-                EnergyGauge.SetIntValue(EnergyMax);
-            }
-        }
-
-        if (EnergyGauge == EnergyMax)
+    public void AttackInertia()
+    {
+        switch (AttackCount)
         {
-            CurrentEnergyTank.SetFloatValue(0);
+            case 0:
+                DashAttack(PlayerSpeed,FirstAttackCurve);
+                break;
+            case 1:
+                DashAttack(PlayerSpeed,SecondAttackCurve);
+                break;
+            case 2:
+                DashAttack(PlayerSpeed,ThirdAttackCurve);
+                break;
         }
     }
 }
