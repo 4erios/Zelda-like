@@ -9,11 +9,14 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable moveX;
     public FloatVariable moveY;
 
+    public IntVariable AttackCount;
+
 
     void Update()
     {
         playerAnimator.SetFloat("MoveX", moveX);
-        playerAnimator.SetFloat("MoveY", moveY); 
+        playerAnimator.SetFloat("MoveY", moveY);
+        playerAnimator.SetInteger("AttackCount", AttackCount);
     }
 
     public void LaunchAttackAnimation()
