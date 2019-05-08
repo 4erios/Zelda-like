@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 7bad87b1da6650348a0df5a354419439
+guid: 172d78372da1ba74aa2ef376aa31e745
 TextureImporter:
   fileIDToRecycleName:
-    21300000: IDLE_Right_0
-    21300002: IDLE_Right_1
-    21300004: IDLE_Right_2
-    21300006: IDLE_Right_3
+    21300000: IDLE_Top_0
+    21300002: IDLE_Top_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -88,12 +86,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLE_Right_0
+      name: IDLE_Top_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 36
+        x: 18
+        y: 4
+        width: 38
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,18 +100,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 721c7ccb2bf72b244ab9a768636ab66c
+      spriteID: 9751639f7d60ff249bb0482b1a8dd022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_1
+      name: IDLE_Top_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 0
-        width: 36
+        x: 76
+        y: 3
+        width: 40
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,47 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ed78acc5f3dae499ccb8ca63cfc29a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_Right_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 36
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 155e86d88e26b1644934b11354f27343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_Right_3
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 1
-        width: 36
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1ebb862cd3dd884197714035aa77145
+      spriteID: 1d236380d0315874193a8887dcb3bd10
       vertices: []
       indices: 
       edges: []
@@ -170,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e42a4a166dbf97340b7427e137bfe93c
+    spriteID: 36035e0a38d21724d8ae660c3c067b59
     vertices: []
     indices: 
     edges: []

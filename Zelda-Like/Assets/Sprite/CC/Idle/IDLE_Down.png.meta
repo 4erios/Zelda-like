@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 7bad87b1da6650348a0df5a354419439
+guid: 28612a1b7dc859d4e8bf966bcd52b9f9
 TextureImporter:
   fileIDToRecycleName:
-    21300000: IDLE_Right_0
-    21300002: IDLE_Right_1
-    21300004: IDLE_Right_2
-    21300006: IDLE_Right_3
+    21300000: IDLE_Down_0
+    21300002: IDLE_Down_1
+    21300004: IDLE_Down_2
+    21300006: IDLE_Down_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -88,12 +88,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLE_Right_0
+      name: IDLE_Down_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 36
+        x: 16
+        y: 3
+        width: 34
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,18 +102,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 721c7ccb2bf72b244ab9a768636ab66c
+      spriteID: fc697053e1c46ac479b3df86d685dfd2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_1
+      name: IDLE_Down_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 0
-        width: 36
+        x: 75
+        y: 3
+        width: 35
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,18 +122,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ed78acc5f3dae499ccb8ca63cfc29a
+      spriteID: 2387b7d0fafd4f64a93afee99d001328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_2
+      name: IDLE_Down_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 36
+        x: 135
+        y: 2
+        width: 35
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,18 +142,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 155e86d88e26b1644934b11354f27343
+      spriteID: f1793a75ce17d9548b994f69ba7d7aeb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_3
+      name: IDLE_Down_3
       rect:
         serializedVersion: 2
-        x: 108
-        y: 1
-        width: 36
+        x: 196
+        y: 3
+        width: 34
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -162,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1ebb862cd3dd884197714035aa77145
+      spriteID: 7e98168d15ed07a4889bda45320c5d9a
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e42a4a166dbf97340b7427e137bfe93c
+    spriteID: 3cebbd190654340489854af47b28e24d
     vertices: []
     indices: 
     edges: []

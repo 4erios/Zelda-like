@@ -303,17 +303,17 @@ PrefabInstance:
     - target: {fileID: 4704675715113948179, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: m_Name
-      value: CharacterControllerGA
+      value: Chara_Controller_Beta
       objectReference: {fileID: 0}
     - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.382
+      value: 4.57
       objectReference: {fileID: 0}
     - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.522
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
@@ -386,6 +386,16 @@ PrefabInstance:
       propertyPath: time
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1698440699}
+    - target: {fileID: 4704675715113948173, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a3cace6cd12c20a43bb67b2f2364d19e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!114 &1698440697 stripped
@@ -403,6 +413,12 @@ MonoBehaviour:
 --- !u!1 &1698440698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4704675715113948179, guid: 30d97faed7688d2468a6d854eff79be1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698440696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1698440699 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4704675715113948173, guid: 30d97faed7688d2468a6d854eff79be1,
     type: 3}
   m_PrefabInstance: {fileID: 1698440696}
   m_PrefabAsset: {fileID: 0}
