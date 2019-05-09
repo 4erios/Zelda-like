@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 7bad87b1da6650348a0df5a354419439
+guid: 4c78e7cfd7e909042a3712443dd4ca40
 TextureImporter:
   fileIDToRecycleName:
-    21300000: IDLE_Right_0
-    21300002: IDLE_Right_1
-    21300004: IDLE_Right_2
-    21300006: IDLE_Right_3
+    21300000: Shoot_Insufflation_Right_0
+    21300002: Shoot_Insufflation_Right_1
+    21300004: Shoot_Insufflation_Right_2
+    21300006: Shoot_Insufflation_Right_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -88,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLE_Right_0
+      name: Shoot_Insufflation_Right_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 36
-        height: 54
+        x: 11
+        y: 24
+        width: 62
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,19 +102,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 721c7ccb2bf72b244ab9a768636ab66c
+      spriteID: 4badf4818ef55e941b61d17fdd89e431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_1
+      name: Shoot_Insufflation_Right_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 0
-        width: 36
-        height: 54
+        x: 127
+        y: 11
+        width: 55
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,19 +122,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ed78acc5f3dae499ccb8ca63cfc29a
+      spriteID: a5d638fe67ec0b043bc391cca3dbbd10
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_2
+      name: Shoot_Insufflation_Right_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 36
-        height: 54
+        x: 242
+        y: 17
+        width: 55
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,19 +142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 155e86d88e26b1644934b11354f27343
+      spriteID: 8deb55a75a327744abebb134f8aeee6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_3
+      name: Shoot_Insufflation_Right_3
       rect:
         serializedVersion: 2
-        x: 108
-        y: 1
-        width: 36
-        height: 54
+        x: 343
+        y: 26
+        width: 75
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1ebb862cd3dd884197714035aa77145
+      spriteID: 44c6ad7fd08a4ba4c8ac86b121a14d9c
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e42a4a166dbf97340b7427e137bfe93c
+    spriteID: d5883a3d2853a2546b067241bda306c9
     vertices: []
     indices: 
     edges: []

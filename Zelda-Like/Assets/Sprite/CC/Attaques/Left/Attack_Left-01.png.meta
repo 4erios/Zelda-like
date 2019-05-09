@@ -1,11 +1,18 @@
 fileFormatVersion: 2
-guid: 7bad87b1da6650348a0df5a354419439
+guid: a09529b29df20024184fd34040ee105d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: IDLE_Right_0
-    21300002: IDLE_Right_1
-    21300004: IDLE_Right_2
-    21300006: IDLE_Right_3
+    21300000: Attack_Left-01_0
+    21300002: Attack_Left-01_1
+    21300004: Attack_Left-01_2
+    21300006: Attack_Left-01_3
+    21300008: Attack_Left-01_4
+    21300010: Attack_Left-01_5
+    21300012: Attack_Left-01_6
+    21300014: Attack_Left-01_7
+    21300016: Attack_Left-01_8
+    21300018: Attack_Left-01_9
+    21300020: Attack_Left-01_10
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -35,7 +42,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -67,7 +74,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -78,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,81 +95,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLE_Right_0
+      name: Attack_Left-01_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 36
-        height: 54
+        x: 42
+        y: 32
+        width: 74
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 721c7ccb2bf72b244ab9a768636ab66c
+      spriteID: 2cde85d740a2d2c4e80178fe23328e90
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_1
+      name: Attack_Left-01_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 0
-        width: 36
-        height: 54
+        x: 153
+        y: 8
+        width: 123
+        height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ed78acc5f3dae499ccb8ca63cfc29a
+      spriteID: b617f627ec3b5434f9d2111206b49348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_2
+      name: Attack_Left-01_3
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 36
-        height: 54
+        x: 305
+        y: 11
+        width: 121
+        height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 155e86d88e26b1644934b11354f27343
+      spriteID: b483e12a059451d4ca922ce9ecdeb18c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_3
+      name: Attack_Left-01_5
       rect:
         serializedVersion: 2
-        x: 108
-        y: 1
-        width: 36
-        height: 54
+        x: 456
+        y: 11
+        width: 120
+        height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1ebb862cd3dd884197714035aa77145
+      spriteID: 2a50e27bd44741e4f9036ed9bd134979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left-01_7
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 30
+        width: 78
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0e365dd26fdbe4c8b8330709880644
       vertices: []
       indices: 
       edges: []
@@ -170,7 +197,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e42a4a166dbf97340b7427e137bfe93c
+    spriteID: a5cee9414672bd64d9ecbf5202d9bc71
     vertices: []
     indices: 
     edges: []

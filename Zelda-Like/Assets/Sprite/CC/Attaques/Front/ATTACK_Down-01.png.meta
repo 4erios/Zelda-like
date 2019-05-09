@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 7bad87b1da6650348a0df5a354419439
+guid: 66fc98078db1e28478f23a32a8d6fe73
 TextureImporter:
   fileIDToRecycleName:
-    21300000: IDLE_Right_0
-    21300002: IDLE_Right_1
-    21300004: IDLE_Right_2
-    21300006: IDLE_Right_3
+    21300000: ATTACK_Down-01_0
+    21300002: ATTACK_Down-01_1
+    21300004: ATTACK_Down-01_2
+    21300006: ATTACK_Down-01_3
+    21300008: ATTACK_Down-01_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -88,33 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLE_Right_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1
-        width: 36
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 721c7ccb2bf72b244ab9a768636ab66c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_Right_1
+      name: ATTACK_Down-01_0
       rect:
         serializedVersion: 2
         x: 36
-        y: 0
-        width: 36
-        height: 54
+        y: 30
+        width: 55
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,19 +103,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ed78acc5f3dae499ccb8ca63cfc29a
+      spriteID: e0beeb058866dce4098ec8db0dea71ff
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_2
+      name: ATTACK_Down-01_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 36
-        height: 54
+        x: 150
+        y: 16
+        width: 60
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,19 +123,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 155e86d88e26b1644934b11354f27343
+      spriteID: 4e21cfe92d09ff1488c61d7a751c92f5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_Right_3
+      name: ATTACK_Down-01_2
       rect:
         serializedVersion: 2
-        x: 108
-        y: 1
-        width: 36
-        height: 54
+        x: 270
+        y: 18
+        width: 58
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,7 +143,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1ebb862cd3dd884197714035aa77145
+      spriteID: c5128440bd47f72428ce9d50fba8564b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACK_Down-01_3
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 18
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d357fac08b7fb4883d683b6fcfbb7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACK_Down-01_4
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 23
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442ea214bb5c93b4094fa123bdc2aeff
       vertices: []
       indices: 
       edges: []
@@ -170,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e42a4a166dbf97340b7427e137bfe93c
+    spriteID: 42b4c7cf83ab893459207a0546c433cd
     vertices: []
     indices: 
     edges: []
