@@ -15,9 +15,29 @@ public class PlayerAbilities : MonoBehaviour
     public IntReferences ShootInfuseCost;
     public IntReferences ShieldCost;
 
+    [Header("Abilities Parameters")]
+    public Rigidbody2D rb;
+
+    public FloatVariable MoveX;
+    public FloatVariable MoveY;
+
+    public FloatReference DashRange;
+
+    private void LoseEnergy(int energyCost)
+    {
+        EnergyGauge.ApplyChangeToInt(-energyCost);
+        if ( EnergyGauge < 0)
+        {
+            EnergyGauge.SetIntValue(0);
+        }
+    }
+
     public void PlayerDash()
     {
+        LoseEnergy(DashEnergyCost);
 
+        Vector2 direction = new Vector2(MoveX, MoveY);
+        rb.MovePosition(rb.position + direction * DashRange);
     }
 
     public void PlayerHeal()

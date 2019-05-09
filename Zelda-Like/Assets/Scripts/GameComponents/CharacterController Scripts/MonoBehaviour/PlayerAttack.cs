@@ -86,7 +86,7 @@ public class PlayerAttack : MonoBehaviour
     public IEnumerator TimeToAttackCoroutine()
     {
         yield return new WaitForSeconds(TimeToAttack);
-        AttackCount.SetIntValue(3);
+        AttackCount.SetIntValue(4);
     }
 
     public void LaunchTimeToAttack()
