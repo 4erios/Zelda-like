@@ -16,24 +16,29 @@ public class LivingClass : MonoBehaviour
         Debug.Log("Damages Taken");
     }
 
+    public void GainEnergy(FloatVariable currentEnergyTank, FloatReference energyGain, FloatReference maxEnergyTank, IntVariable energyGauge, IntReferences energyMax)
+    {
+        currentEnergyTank.ApplyChangeToFloat(energyGain);
+        if (currentEnergyTank >= maxEnergyTank)
+        {
+            energyGauge.ApplyChangeToInt(+1);
+            currentEnergyTank.SetFloatValue(0);
+
+            if (energyGauge > energyMax)
+            {
+                energyGauge.SetIntValue(energyMax);
+            }
+        }
+
+        if (energyGauge == energyMax)
+        {
+            currentEnergyTank.SetFloatValue(0);
+        }
+    }
+
     public virtual void Death()
     {
         Debug.Log("Dead");
         Destroy(this.gameObject);
     }
-
-    /*
-  DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
-            if (damage != null)
-        {
-            HP.ApplyChange(-damage.DamageAmount);
-            DamageEvent.Invoke();
-        }
-
-        if (HP.Value <= 0.0f)
-        {
-            DeathEvent.Invoke();
-        }
-
-*/
 }
