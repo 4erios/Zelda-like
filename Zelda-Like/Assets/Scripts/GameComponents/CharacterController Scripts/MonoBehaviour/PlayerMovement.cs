@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     public FloatVariable MoveX;
     public FloatVariable MoveY;
-    public FloatVariable Velocity;
 
     public FloatReference PlayerSpeed;
 
@@ -18,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveX.SetFloatValue(Input.GetAxis("Horizontal"));
         MoveY.SetFloatValue(Input.GetAxis("Vertical"));
+        PlayerAccelerate();
 
 
     }

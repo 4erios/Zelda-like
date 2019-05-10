@@ -14,67 +14,67 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: MoveY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Velocity
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attack
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Dash
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Insufflation
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Tir
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: "R\xE9surrection"
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Shield
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: TakeDamage
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Heal
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -1639,6 +1639,28 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &1101780467668001798
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102734290566321372}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &1101786959019597268
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2784,7 +2806,7 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: -492, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102013119506349320}
-    m_Position: {x: 0, y: -576, z: 0}
+    m_Position: {x: 0, y: -588, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102241629363736130}
     m_Position: {x: 0, y: -660, z: 0}
@@ -2802,7 +2824,7 @@ AnimatorStateMachine:
     m_Position: {x: 0, y: -732, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102993663821186842}
-    m_Position: {x: 1260, y: -420, z: 0}
+    m_Position: {x: 1260, y: -432, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102848004216373680}
     m_Position: {x: 1260, y: -528, z: 0}
@@ -2811,7 +2833,7 @@ AnimatorStateMachine:
     m_Position: {x: 852, y: -696, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102159360667439306}
-    m_Position: {x: 1260, y: -372, z: 0}
+    m_Position: {x: 1260, y: -384, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102102539386725142}
     m_Position: {x: 852, y: -360, z: 0}
@@ -2831,6 +2853,7 @@ AnimatorStateMachine:
   - {fileID: 1101588501922116396}
   - {fileID: 1101492844028998146}
   - {fileID: 1101048399218756216}
+  - {fileID: 1101780467668001798}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
