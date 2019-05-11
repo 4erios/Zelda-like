@@ -21,47 +21,47 @@ public class PlayerAnimator : MonoBehaviour
 
     public void LaunchAttackAnimation()
     {
-
+        playerAnimator.SetTrigger("");
     }
 
     public void LaunchDashAnimation()
     {
-
+        playerAnimator.SetTrigger("Dash");
     }
 
     public void LaunchHealAnimation()
     {
-
+        playerAnimator.SetTrigger("Heal");
     }
 
     public void LaunchTakeDamageAnimation()
     {
-
+        playerAnimator.SetTrigger("TakeDamage");
     }
 
     public void LaunchResurrectionAnimation()
     {
-
+        playerAnimator.SetTrigger("Résurrection");
     }
 
     public void LaunchDeathAnimation()
     {
-
+        playerAnimator.SetTrigger("");
     }
 
     public void LaunchShootAnimation()
     {
-
+        playerAnimator.SetTrigger("Tir");
     }
 
     public void LaunchInsufflationAnimation()
     {
-
+        playerAnimator.SetTrigger("Insufflation");
     }
 
     public void LaunchShieldAnimation()
     {
-
+        playerAnimator.SetTrigger("Shield");
     }
 
 
