@@ -263,7 +263,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.111667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -287,7 +287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524559646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 4.42, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -386,6 +386,11 @@ PrefabInstance:
       propertyPath: time
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: NameInputButtonA
+      value: Attack
+      objectReference: {fileID: 0}
     - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: playerAnimator
@@ -396,6 +401,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a3cace6cd12c20a43bb67b2f2364d19e, type: 2}
+    - target: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: MoveX
+      value: 
+      objectReference: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b,
+        type: 2}
+    - target: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: MoveY
+      value: 
+      objectReference: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!114 &1698440697 stripped
