@@ -27,22 +27,22 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButton(NameInputButtonA))
+        if (Input.GetButtonDown(NameInputButtonA))
             PressA.Raise();
 
-        if (Input.GetButton(NameInputButtonX))
+        if (Input.GetButtonDown(NameInputButtonX))
             PressX.Raise();
 
-        if (Input.GetButton(NameInputButtonY))
+        if (Input.GetButtonDown(NameInputButtonY))
             PressY.Raise();
 
-        if (Input.GetButton(NameInputButtonB))
+        if (Input.GetButtonDown(NameInputButtonB))
             PressB.Raise();
 
-        if (Input.GetButton(NameInputRightBumper))
+        if (Input.GetButtonDown(NameInputRightBumper))
             PressRightBumper.Raise();
 
-        if (Input.GetButton(NameInputLeftBumper))
+        if (Input.GetButtonDown(NameInputLeftBumper))
             PressLeftBumper.Raise();
 
     }
