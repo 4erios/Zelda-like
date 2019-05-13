@@ -104,6 +104,7 @@ public class PlayerAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(AttackCoolDown);
         AttackCount.SetIntValue(0);
+        Debug.Log("AttackCoolDown");
     }
 
     public void LaunchAttackCoolDown()
