@@ -114,7 +114,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void UpAttackCount()
     {
-        if (AttackCount < 4)
+        if (AttackCount < 3)
         {
             AttackCount.ApplyChangeToInt(+1);
             Debug.Log("UpAttackCount");
