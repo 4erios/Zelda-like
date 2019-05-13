@@ -6,22 +6,24 @@ public class PlayerAnimator : MonoBehaviour
 {
     public Animator playerAnimator;
 
-    public FloatVariable moveX;
-    public FloatVariable moveY;
+    public FloatVariable MoveX;
+    public FloatVariable MoveY;
+    public FloatVariable CurrentSpeed;
 
     public IntVariable AttackCount;
 
 
     void Update()
     {
-        playerAnimator.SetFloat("MoveX", moveX);
-        playerAnimator.SetFloat("MoveY", moveY);
+        playerAnimator.SetFloat("MoveX", MoveX);
+        playerAnimator.SetFloat("MoveY", MoveY);
+        playerAnimator.SetFloat("Speed", CurrentSpeed);
         playerAnimator.SetInteger("AttackCount", AttackCount);
     }
 
     public void LaunchAttackAnimation()
     {
-        playerAnimator.SetTrigger("");
+        playerAnimator.SetTrigger("Attack");
     }
 
     public void LaunchDashAnimation()
@@ -46,7 +48,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public void LaunchDeathAnimation()
     {
-        playerAnimator.SetTrigger("");
+        playerAnimator.SetTrigger("Death");
     }
 
     public void LaunchShootAnimation()

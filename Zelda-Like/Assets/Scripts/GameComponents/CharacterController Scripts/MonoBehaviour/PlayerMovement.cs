@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     public FloatVariable MoveX;
     public FloatVariable MoveY;
+    public Vector2 PlayerDirection;
+    public FloatVariable CurrentSpeed;
 
     public FloatReference PlayerSpeed;
 
@@ -15,21 +17,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        ProcessInputs();
+
+        //à foutre dans le state update après, placer ici pour permettre le test
+        PlayerMove();
+
+    }
+
+    public void ProcessInputs()
+    {
         MoveX.SetFloatValue(Input.GetAxis("Horizontal"));
         MoveY.SetFloatValue(Input.GetAxis("Vertical"));
-        PlayerAccelerate();
-
-
+        PlayerDirection = new Vector2 (MoveX, MoveY);
+        CurrentSpeed.SetFloatValue(Mathf.Clamp(PlayerDirection.magnitude, 0.0f, 1.0f));
+        PlayerDirection.Normalize();
     }
-
-    public void PlayerAccelerate()
-    {
-        rb.velocity = new Vector2(MoveX * accelerationCurve.Evaluate(Time.time), MoveY * accelerationCurve.Evaluate(Time.time)).normalized * PlayerSpeed;
-    }
-
 
     public void PlayerMove()
     {
-        rb.velocity = new Vector2(MoveX, MoveY).normalized * PlayerSpeed;
+        rb.velocity = PlayerDirection * CurrentSpeed * PlayerSpeed * accelerationCurve.Evaluate(Time.time);
     }
 }
