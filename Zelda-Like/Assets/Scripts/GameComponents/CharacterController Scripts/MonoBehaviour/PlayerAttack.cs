@@ -106,7 +106,7 @@ public class PlayerAttack : MonoBehaviour
         AttackCount.SetIntValue(0);
     }
 
-    private void LaunchAttackCoolDown()
+    public void LaunchAttackCoolDown()
     {
         StartCoroutine("AttackCoolDownCoroutine");
     }
