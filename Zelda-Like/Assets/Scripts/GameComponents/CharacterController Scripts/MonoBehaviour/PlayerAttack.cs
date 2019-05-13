@@ -113,8 +113,11 @@ public class PlayerAttack : MonoBehaviour
 
     public void UpAttackCount()
     {
-        AttackCount.ApplyChangeToInt(+1);
-        Debug.Log("UpAttackCount");
+        if (AttackCount < 4)
+        {
+            AttackCount.ApplyChangeToInt(+1);
+            Debug.Log("UpAttackCount");
+        }
     }
 
     private void DashAttack(float MoveSpeed, AnimationCurve InertiaCurve)
