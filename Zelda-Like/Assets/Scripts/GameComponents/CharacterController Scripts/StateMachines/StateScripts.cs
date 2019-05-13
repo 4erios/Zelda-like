@@ -6,7 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateScript : StateMachineBehaviour
+public class StateScripts : StateMachineBehaviour
 {
     [SerializeField] private GameEvent[] startEvent /*= default*/;
     [SerializeField] private GameEvent[] exitEvent /*= default*/;
