@@ -24,6 +24,7 @@ public class PlayerAnimator : MonoBehaviour
     public void LaunchAttackAnimation()
     {
         playerAnimator.SetTrigger("Attack");
+        Debug.Log("Attack Animation");
     }
 
     public void LaunchDashAnimation()
