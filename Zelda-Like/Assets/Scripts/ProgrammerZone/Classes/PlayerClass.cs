@@ -89,6 +89,7 @@ public class PlayerClass : LivingClass
 
         Vector2 direction = new Vector2(moveX, moveY);
         rb.MovePosition(rb.position + direction * dashRange);
+        Debug.Log("Je t'aime Thomas, bonne journée ~ Alexandre");
     }
 
     public void PlayerHeal(float playerHealth,float healValue, int healEnergyCost)
