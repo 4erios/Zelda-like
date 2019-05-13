@@ -30,7 +30,7 @@ AnimatorController:
   - m_Name: AttackCount
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 1
+    m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Attack
@@ -7355,7 +7355,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102053572405123510}
-    m_Position: {x: -552, y: -408, z: 0}
+    m_Position: {x: -636, y: -420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102516470478153926}
     m_Position: {x: 0, y: 0, z: 0}

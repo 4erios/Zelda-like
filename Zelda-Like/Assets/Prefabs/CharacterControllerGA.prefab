@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4871305041434284578}
   m_Layer: 0
-  m_Name: 'Attack_Bottom_Point '
+  m_Name: 'Attack_Down_Point '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,6 +128,7 @@ Transform:
   - {fileID: 7976656796365943351}
   - {fileID: 2464805085333481489}
   - {fileID: 4871305041434284578}
+  - {fileID: 1271560711376651459}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -338,17 +339,17 @@ MonoBehaviour:
     ConstantValue: 1
     Variable: {fileID: 0}
   AttackCount: {fileID: 11400000, guid: 0f0755ce561b5de49ba4d1429f560f1a, type: 2}
-  RightAttackPoint: {fileID: 0}
-  LeftAttackPoint: {fileID: 0}
-  UpAttackPoint: {fileID: 0}
-  DownAttackPoint: {fileID: 0}
+  RightAttackPoint: {fileID: 7976656796365943351}
+  LeftAttackPoint: {fileID: 6049446735290998431}
+  UpAttackPoint: {fileID: 2464805085333481489}
+  DownAttackPoint: {fileID: 4871305041434284578}
   layerToAttack:
     serializedVersion: 2
     m_Bits: 0
   CurrentEnergyTank: {fileID: 0}
   EnergyGain:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 3
     Variable: {fileID: 0}
   MaxEnergyTank:
     UseConstant: 1
@@ -359,28 +360,82 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  rb: {fileID: 0}
-  moveX: {fileID: 0}
-  moveY: {fileID: 0}
+  rb: {fileID: 4704675715113948175}
+  moveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
+  moveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
   PlayerSpeed:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: c7fbde6f47dcc7149b0e9120a7e2257f, type: 2}
   FirstAttackCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   SecondAttackCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   ThirdAttackCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -394,7 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2464805085333481489}
   m_Layer: 0
-  m_Name: 'Attack_Top_Point '
+  m_Name: 'Attack_Up_Point '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -414,3 +469,88 @@ Transform:
   m_Father: {fileID: 4704675715113948168}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1434923982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4704675715113948168}
+    m_Modifications:
+    - target: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerEventListener
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6101831
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7894305
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271560709942408974, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4704675715113948170}
+    - target: {fileID: 1271560709942408974, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8307763957188339053}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 456fd6718235ddd47a81b59fb709ea28, type: 3}
+--- !u!4 &1271560711376651459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434923982}
+  m_PrefabAsset: {fileID: 0}
