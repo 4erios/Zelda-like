@@ -18,10 +18,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         ProcessInputs();
-
-        //à foutre dans le state update après, placer ici pour permettre le test
-        PlayerMove();
-
     }
 
     public void ProcessInputs()
