@@ -389,7 +389,32 @@ PrefabInstance:
     - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: NameInputButtonA
-      value: Attack
+      value: ButtonA
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: NameInputButtonX
+      value: ButtonX
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: NameInputButtonY
+      value: ButtonY
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: NameInputButtonB
+      value: ButtonB
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: NameInputRightTrigger
+      value: RightTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: NameInputLeftTrigger
+      value: LeftTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
@@ -400,7 +425,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a3cace6cd12c20a43bb67b2f2364d19e, type: 2}
+      objectReference: {fileID: 9100000, guid: 4e5e9e816a1438246a7c5633ab6091b8, type: 2}
     - target: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: MoveX
@@ -413,6 +438,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c,
         type: 2}
+    - target: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1698440699}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!114 &1698440697 stripped
