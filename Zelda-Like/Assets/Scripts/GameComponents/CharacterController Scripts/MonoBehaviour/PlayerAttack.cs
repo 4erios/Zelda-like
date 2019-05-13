@@ -38,6 +38,11 @@ public class PlayerAttack : MonoBehaviour
     public AnimationCurve SecondAttackCurve;
     public AnimationCurve ThirdAttackCurve;
 
+    private void Start()
+    {
+        AttackCount.SetIntValue(0);
+    }
+
     public void RightAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(RightAttackPoint.position, AttackRange);
@@ -109,6 +114,7 @@ public class PlayerAttack : MonoBehaviour
     public void UpAttackCount()
     {
         AttackCount.ApplyChangeToInt(+1);
+        Debug.Log("UpAttackCount");
     }
 
     private void DashAttack(float MoveSpeed, AnimationCurve InertiaCurve)
