@@ -28,7 +28,11 @@ public class PlayerControls : MonoBehaviour
     private void Update()
     {
         if (Input.GetButtonDown(NameInputButtonA))
+        {
             PressA.Raise();
+            Debug.Log("AttackButton");
+        }
+
 
         if (Input.GetButtonDown(NameInputButtonX))
             PressX.Raise();
@@ -39,11 +43,11 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetButtonDown(NameInputButtonB))
             PressB.Raise();
 
-        if (Input.GetButtonDown(NameInputRightBumper))
+        /*if (Input.GetButtonDown(NameInputRightBumper))
             PressRightBumper.Raise();
 
         if (Input.GetButtonDown(NameInputLeftBumper))
-            PressLeftBumper.Raise();
+            PressLeftBumper.Raise();*/
 
     }
 
