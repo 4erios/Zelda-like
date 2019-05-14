@@ -307,6 +307,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: TimeToAttack.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: PressY
