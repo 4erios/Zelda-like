@@ -90,14 +90,15 @@ public class PlayerAttack : MonoBehaviour
 
     public IEnumerator TimeToAttackCoroutine()
     {
+        Debug.Log(TimeToAttack);
         yield return new WaitForSeconds(TimeToAttack);
         AttackCount.SetIntValue(4);
+        LaunchAttackCoolDown();
     }
 
     public void LaunchTimeToAttack()
     {
         StartCoroutine("TimeToAttackCoroutine");
-        LaunchAttackCoolDown();
         Debug.Log("LaunchTimeToAttack");
     }
 
