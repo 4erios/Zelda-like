@@ -9,16 +9,31 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable MoveX;
     public FloatVariable MoveY;
     public FloatVariable CurrentSpeed;
+    public VectorVariable PlayerDirection;
 
     public IntVariable AttackCount;
 
+    public BoolVariable FacingRight;
+    public BoolVariable FacingLeft;
+    public BoolVariable FacingUp;
+    public BoolVariable FacingDown;
 
     void Update()
     {
-        playerAnimator.SetFloat("MoveX", MoveX);
-        playerAnimator.SetFloat("MoveY", MoveY);
+        //allow the player to keep his last position
+        if(PlayerDirection != Vector2.zero)
+        {
+            playerAnimator.SetFloat("MoveX", MoveX);
+            playerAnimator.SetFloat("MoveY", MoveY);
+        }
+
         playerAnimator.SetFloat("Speed", CurrentSpeed);
         playerAnimator.SetInteger("AttackCount", AttackCount);
+
+        playerAnimator.SetBool("FacingRight", FacingRight);
+        playerAnimator.SetBool("FacingLeft", FacingLeft);
+        playerAnimator.SetBool("FacingUp", FacingUp);
+        playerAnimator.SetBool("FacingDown", FacingDown);
     }
 
     public void LaunchAttackAnimation()
