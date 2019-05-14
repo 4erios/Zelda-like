@@ -14,103 +14,103 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: MoveY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: AttackCount Test
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: AttackCount
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Dash
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Insufflation
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Tir
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Bouclier
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: TakeDamage
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Heal
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: "R\xE9surrection"
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: FacingRight
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: FacingLeft
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: FacingUp
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: FacingDown
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
   - {fileID: 11400000, guid: a66c73bd9e6f87e45a1dea3c14206baa, type: 2}
-  - {fileID: 11400000, guid: b300cff13db55d0449e7dd9618ab76b3, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e67e389809fc5b94794c308b20af2607, type: 2}
   exitEvent: []
   updateEvent: []
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
   - {fileID: 11400000, guid: a66c73bd9e6f87e45a1dea3c14206baa, type: 2}
-  - {fileID: 11400000, guid: b300cff13db55d0449e7dd9618ab76b3, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e67e389809fc5b94794c308b20af2607, type: 2}
   exitEvent: []
   updateEvent: []
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
   - {fileID: 11400000, guid: a66c73bd9e6f87e45a1dea3c14206baa, type: 2}
-  - {fileID: 11400000, guid: b300cff13db55d0449e7dd9618ab76b3, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e67e389809fc5b94794c308b20af2607, type: 2}
   exitEvent: []
   updateEvent: []
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
   - {fileID: 11400000, guid: a66c73bd9e6f87e45a1dea3c14206baa, type: 2}
-  - {fileID: 11400000, guid: b300cff13db55d0449e7dd9618ab76b3, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e67e389809fc5b94794c308b20af2607, type: 2}
   exitEvent: []
   updateEvent: []
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
   - {fileID: 11400000, guid: a66c73bd9e6f87e45a1dea3c14206baa, type: 2}
-  - {fileID: 11400000, guid: b300cff13db55d0449e7dd9618ab76b3, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e67e389809fc5b94794c308b20af2607, type: 2}
   exitEvent: []
   updateEvent: []
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
   - {fileID: 11400000, guid: a66c73bd9e6f87e45a1dea3c14206baa, type: 2}
-  - {fileID: 11400000, guid: b300cff13db55d0449e7dd9618ab76b3, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e67e389809fc5b94794c308b20af2607, type: 2}
   exitEvent: []
   updateEvent: []
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
   - {fileID: 11400000, guid: a66c73bd9e6f87e45a1dea3c14206baa, type: 2}
-  - {fileID: 11400000, guid: b300cff13db55d0449e7dd9618ab76b3, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e67e389809fc5b94794c308b20af2607, type: 2}
   exitEvent: []
   updateEvent: []
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
   - {fileID: 11400000, guid: a66c73bd9e6f87e45a1dea3c14206baa, type: 2}
-  - {fileID: 11400000, guid: b300cff13db55d0449e7dd9618ab76b3, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: e67e389809fc5b94794c308b20af2607, type: 2}
   exitEvent: []
   updateEvent: []
@@ -2202,7 +2202,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: MoveY
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 1
@@ -2330,7 +2330,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: MoveY
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 0
@@ -2386,7 +2386,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: MoveY
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 2
@@ -2417,7 +2417,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: MoveX
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 2
@@ -2498,7 +2498,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: MoveY
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 2
@@ -2745,7 +2745,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: MoveY
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 0
@@ -2845,7 +2845,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: MoveX
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 0
@@ -2976,7 +2976,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: MoveX
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 1
@@ -3132,7 +3132,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: MoveX
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 2
@@ -3601,7 +3601,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: MoveX
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 0
@@ -4305,7 +4305,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: MoveY
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 1
@@ -5100,7 +5100,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: MoveX
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCount
     m_EventTreshold: 1
@@ -7770,10 +7770,10 @@ AnimatorStateMachine:
     m_Position: {x: -1080, y: 144, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102047709126271756}
-    m_Position: {x: -588, y: 228, z: 0}
+    m_Position: {x: -540, y: 228, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102853847223682536}
-    m_Position: {x: -672, y: 276, z: 0}
+    m_Position: {x: -648, y: 276, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102014923448758138}
     m_Position: {x: -612, y: -120, z: 0}
