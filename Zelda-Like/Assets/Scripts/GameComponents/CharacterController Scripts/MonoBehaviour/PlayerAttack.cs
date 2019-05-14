@@ -135,10 +135,10 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    private void DashAttack(float MoveSpeed, AnimationCurve InertiaCurve)
+    private void DashAttack(float dashRange)
     {
         Vector2 direction = new Vector2(moveX, moveY);
-        rb.velocity= direction * MoveSpeed * InertiaCurve.Evaluate(Time.time);
+        rb.MovePosition(rb.position + direction * dashRange);
     }
 
     public void AttackInertia()
@@ -146,13 +146,13 @@ public class PlayerAttack : MonoBehaviour
         switch (AttackCount)
         {
             case 0:
-                DashAttack(PlayerSpeed,FirstAttackCurve);
+                DashAttack(PlayerSpeed);
                 break;
             case 1:
-                DashAttack(PlayerSpeed,SecondAttackCurve);
+                DashAttack(PlayerSpeed);
                 break;
             case 2:
-                DashAttack(PlayerSpeed,ThirdAttackCurve);
+                DashAttack(PlayerSpeed);
                 break;
         }
     }
