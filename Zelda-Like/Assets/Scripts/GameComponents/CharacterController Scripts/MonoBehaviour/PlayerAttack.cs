@@ -99,20 +99,31 @@ public class PlayerAttack : MonoBehaviour
     public void LaunchTimeToAttack()
     {
         StartCoroutine("TimeToAttackCoroutine");
-        Debug.Log("LaunchTimeToAttack");
+        //Debug.Log("LaunchTimeToAttack");
+    }
+
+    public void StopTimeToAttackCoroutine()
+    {
+        StopCoroutine("TimeToAttackCoroutine");
+        Debug.Log("TimeToAttack Stopped");
     }
 
     public IEnumerator AttackCoolDownCoroutine()
     {
         yield return new WaitForSeconds(AttackCoolDown);
         AttackCount.SetIntValue(0);
-        Debug.Log("AttackCoolDown");
+        //Debug.Log("AttackCoolDown");
     }
 
     public void LaunchAttackCoolDown()
     {
         StartCoroutine("AttackCoolDownCoroutine");
-        Debug.Log("LaunchAttackCoolDown");
+        //Debug.Log("LaunchAttackCoolDown");
+    }
+
+    public void StopAttackCoolDownCoroutine()
+    {
+        StopCoroutine("AttackCoolDownCoroutine");
     }
 
     public void UpAttackCount()
@@ -120,7 +131,7 @@ public class PlayerAttack : MonoBehaviour
         if (AttackCount < 3)
         {
             AttackCount.ApplyChangeToInt(+1);
-            Debug.Log("UpAttackCount");
+            //Debug.Log("UpAttackCount");
         }
     }
 
