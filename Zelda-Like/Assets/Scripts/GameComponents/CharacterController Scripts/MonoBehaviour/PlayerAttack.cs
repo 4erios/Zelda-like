@@ -98,6 +98,7 @@ public class PlayerAttack : MonoBehaviour
     {
         StartCoroutine("TimeToAttackCoroutine");
         LaunchAttackCoolDown();
+        Debug.Log("LaunchTimeToAttack");
     }
 
     public IEnumerator AttackCoolDownCoroutine()
@@ -110,6 +111,7 @@ public class PlayerAttack : MonoBehaviour
     public void LaunchAttackCoolDown()
     {
         StartCoroutine("AttackCoolDownCoroutine");
+        Debug.Log("LaunchAttackCoolDown");
     }
 
     public void UpAttackCount()
