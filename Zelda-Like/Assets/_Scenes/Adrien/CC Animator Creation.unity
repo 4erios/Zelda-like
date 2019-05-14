@@ -459,6 +459,30 @@ PrefabInstance:
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: FacingDown
+      value: 
+      objectReference: {fileID: 11400000, guid: 8931c5601d86b4d4a8896455cb2990c7,
+        type: 2}
+    - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: FacingLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: c6c0e21bcbdf3184cb679317e5503ba0,
+        type: 2}
+    - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: FacingRight
+      value: 
+      objectReference: {fileID: 11400000, guid: 6014f29bb1bec1948a117cf9fe601d07,
+        type: 2}
+    - target: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: FacingUp
+      value: 
+      objectReference: {fileID: 11400000, guid: f7e01d1fda5d6c34d8b85c4ea756c00e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!1 &1698440698 stripped
