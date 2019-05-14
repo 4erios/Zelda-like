@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class VectorVariable : MonoBehaviour
+public class VectorVariable : ScriptableObject
 {
     public Vector2 Vector2;
 
