@@ -191,92 +191,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1092644533 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1271560711376651462, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1698440696}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1092644534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092644533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 72b79f98bee98f447935d141c969068b, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1698440701}
-        m_MethodName: LaunchShieldAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4165362679613082742}
-        m_MethodName: PlayerShield
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1092644535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092644533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 8b4017cae48563548adba505245a1f63, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1698440701}
-        m_MethodName: LaunchShootAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4165362679613082742}
-        m_MethodName: PlayerShootInfuse
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1698440696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -344,26 +258,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
+    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
-      propertyPath: PressRightBumper
-      value: 
-      objectReference: {fileID: 11400000, guid: 8b4017cae48563548adba505245a1f63,
-        type: 2}
+      propertyPath: FirstDashRange.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: SecondDashRange.ConstantValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: ThirdDashRange.ConstantValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: HealValue.ConstantValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: MaxHP.ConstantValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: DashRange.ConstantValue
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539906982, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: playerMaxHP.ConstantValue
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
---- !u!114 &1698440701 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1698440696}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e4876ca6389e3344bc1a806007354e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1799184537
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,15 +406,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4165362679613082742 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1698440696}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7337f59f5e815c0409d77998dc6583e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
