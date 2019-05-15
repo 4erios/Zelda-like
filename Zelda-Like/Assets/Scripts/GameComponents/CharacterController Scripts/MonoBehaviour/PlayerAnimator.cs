@@ -9,18 +9,14 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable MoveX;
     public FloatVariable MoveY;
     public FloatVariable CurrentSpeed;
-    public VectorVariable PlayerDirection;
 
     public IntVariable AttackCount;
 
     void Update()
     {
-        //allow the player to keep his last position
-        if(PlayerDirection != Vector2.zero)
-        {
-            playerAnimator.SetFloat("MoveX", MoveX);
-            playerAnimator.SetFloat("MoveY", MoveY);
-        }
+        playerAnimator.SetFloat("MoveX", MoveX);
+        playerAnimator.SetFloat("MoveY", MoveY);
+        
 
         playerAnimator.SetFloat("Speed", CurrentSpeed);
         playerAnimator.SetInteger("AttackCount", AttackCount);
