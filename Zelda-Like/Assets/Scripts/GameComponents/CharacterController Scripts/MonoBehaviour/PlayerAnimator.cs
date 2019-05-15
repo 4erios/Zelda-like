@@ -42,6 +42,11 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetBool("Heal", true);
     }
 
+    public void StopHealAnimation()
+    {
+        playerAnimator.SetBool("Heal", false);
+    }
+
     public void LaunchTakeDamageAnimation()
     {
         playerAnimator.SetTrigger("TakeDamage");

@@ -32,7 +32,6 @@ public class PlayerAttack : MonoBehaviour
     public Rigidbody2D rb;
     public FloatVariable MoveX;
     public FloatVariable MoveY;
-    public FloatReference PlayerSpeed;
 
     public FloatReference FirstDashRange;
     public FloatReference SecondDashRange;
