@@ -12,8 +12,8 @@ public class PlayerHPSystem : MonoBehaviour
 
     public bool ResetHP;
 
-    [SerializeField] private GameEvent DamageEvent;
-    [SerializeField] private GameEvent ResurrectionEvent;
+    public GameEvent DamageEvent;
+    public GameEvent ResurrectionEvent;
 
     private void Start()
     {

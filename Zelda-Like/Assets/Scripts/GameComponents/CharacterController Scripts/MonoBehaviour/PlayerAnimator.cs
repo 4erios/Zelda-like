@@ -13,11 +13,6 @@ public class PlayerAnimator : MonoBehaviour
 
     public IntVariable AttackCount;
 
-    public BoolVariable FacingRight;
-    public BoolVariable FacingLeft;
-    public BoolVariable FacingUp;
-    public BoolVariable FacingDown;
-
     void Update()
     {
         //allow the player to keep his last position
@@ -29,11 +24,6 @@ public class PlayerAnimator : MonoBehaviour
 
         playerAnimator.SetFloat("Speed", CurrentSpeed);
         playerAnimator.SetInteger("AttackCount", AttackCount);
-
-        playerAnimator.SetBool("FacingRight", FacingRight);
-        playerAnimator.SetBool("FacingLeft", FacingLeft);
-        playerAnimator.SetBool("FacingUp", FacingUp);
-        playerAnimator.SetBool("FacingDown", FacingDown);
     }
 
     public void LaunchAttackAnimation()
@@ -49,7 +39,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public void LaunchHealAnimation()
     {
-        playerAnimator.SetTrigger("Heal");
+        playerAnimator.SetBool("Heal", true);
     }
 
     public void LaunchTakeDamageAnimation()
