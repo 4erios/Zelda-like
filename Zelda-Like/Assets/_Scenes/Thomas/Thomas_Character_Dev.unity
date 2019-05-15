@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 2061806493}
   - component: {fileID: 2061806497}
   - component: {fileID: 2061806496}
+  - component: {fileID: 2061806498}
   - component: {fileID: 2061806492}
   - component: {fileID: 2061806494}
   - component: {fileID: 2061806495}
@@ -282,7 +283,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061806491}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2fbf9ece6838fb44a152c3f8d43b217, type: 3}
   m_Name: 
@@ -396,16 +397,30 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061806491}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2061806498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061806491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c190e685e0ac6af44b9ed13810a8d9a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DashRange: 10
+  rb: {fileID: 2061806497}
