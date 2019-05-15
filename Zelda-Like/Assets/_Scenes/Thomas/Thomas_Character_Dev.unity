@@ -227,17 +227,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fb89155a6a5634e856b453b7bf57c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameInputButtonA: 
-  NameInputButtonX: 
-  NameInputButtonY: 
-  NameInputButtonB: 
-  NameInputRightBumper: 
-  NameInputLeftBumper: 
-  NameInputRightTrigger: 
-  NameInputLeftTrigger: 
+  NameInputButtonA: 'ButtonA '
+  NameInputButtonX: ButtonX
+  NameInputButtonY: ButtonY
+  NameInputButtonB: ButtonB
+  NameInputRightBumper: RightBumper
+  NameInputLeftBumper: LeftBumper
+  NameInputRightTrigger: RightTrigger
+  NameInputLeftTrigger: LeftTrigger
   PressA: {fileID: 0}
   PressX: {fileID: 0}
   PressY: {fileID: 0}
+  UnPressY: {fileID: 0}
   PressB: {fileID: 0}
   PressRightBumper: {fileID: 0}
   PressLeftBumper: {fileID: 0}
@@ -270,8 +271,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 0}
-  moveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
-  moveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
+  MoveX: {fileID: 0}
+  MoveY: {fileID: 0}
+  CurrentSpeed: {fileID: 0}
   AttackCount: {fileID: 0}
 --- !u!114 &2061806495
 MonoBehaviour:
@@ -282,40 +284,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 2061806491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db9d0db78c405a44b940cd05f6ff073, type: 3}
+  m_Script: {fileID: 11500000, guid: f2fbf9ece6838fb44a152c3f8d43b217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerAttackDamages:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  AttackRange:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  TimeToAttack:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  AttackCoolDown:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  AttackCount: {fileID: 0}
+  RightAttackPoint: {fileID: 0}
+  LeftAttackPoint: {fileID: 0}
+  UpAttackPoint: {fileID: 0}
+  DownAttackPoint: {fileID: 0}
+  layerToAttack:
+    serializedVersion: 2
+    m_Bits: 0
+  CurrentEnergyTank: {fileID: 0}
+  EnergyGain:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  MaxEnergyTank:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  EnergyGauge: {fileID: 0}
+  EnergyMax:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   rb: {fileID: 2061806497}
   MoveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
   MoveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
-  PlayerSpeed:
+  FirstDashRange:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 2
     Variable: {fileID: 0}
-  accelerationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  SecondDashRange:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  ThirdDashRange:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
 --- !u!212 &2061806496
 SpriteRenderer:
   m_ObjectHideFlags: 0
