@@ -59,16 +59,16 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerAOEInfuse()
     {
-
+        LoseEnergy(AOEInfuseCost);
     }
 
     public void PlayerShootInfuse()
     {
-
+        LoseEnergy(ShootInfuseCost);
     }
 
     public void PlayerShield()
     {
-
+        LoseEnergy(ShieldCost);
     }
 }
