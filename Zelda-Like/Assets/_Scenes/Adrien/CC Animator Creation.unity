@@ -209,12 +209,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 416dc1aa3a65c0e479f1cd96dadb6cf3, type: 2}
+  Event: {fileID: 11400000, guid: 72b79f98bee98f447935d141c969068b, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1698440701}
-        m_MethodName: StopHealAnimation
+        m_MethodName: LaunchShieldAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4165362679613082742}
+        m_MethodName: PlayerShield
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -238,12 +249,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: fe182448fd2eaf74197058fcde724ca1, type: 2}
+  Event: {fileID: 11400000, guid: 8b4017cae48563548adba505245a1f63, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1698440701}
-        m_MethodName: LaunchDashAnimation
+        m_MethodName: LaunchShootAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,7 +265,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 4165362679613082742}
-        m_MethodName: PlayerDash
+        m_MethodName: PlayerShootInfuse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -266,32 +277,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &1539906981 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4704675715113948179, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1698440696}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1539906982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539906981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5005167e7408d52458cdd76578a1e95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMaxHP:
-    UseConstant: 1
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  CurrentHP: {fileID: 11400000, guid: 41192a5fa502e3d49bfbc8fb0d01590d, type: 2}
-  ResetHP: 0
-  DamageEvent: {fileID: 0}
-  ResurrectionEvent: {fileID: 0}
 --- !u!1001 &1698440696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -359,99 +344,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: FirstDashRange.ConstantValue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: SecondDashRange.ConstantValue
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: ThirdDashRange.UseConstant
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: ThirdDashRange.ConstantValue
-      value: 1.4
-      objectReference: {fileID: 0}
     - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
-      propertyPath: UnPressY
+      propertyPath: PressRightBumper
       value: 
-      objectReference: {fileID: 11400000, guid: 416dc1aa3a65c0e479f1cd96dadb6cf3,
+      objectReference: {fileID: 11400000, guid: 8b4017cae48563548adba505245a1f63,
         type: 2}
-    - target: {fileID: 4704675715113948169, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: PressX
-      value: 
-      objectReference: {fileID: 11400000, guid: fe182448fd2eaf74197058fcde724ca1,
-        type: 2}
-    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: EnergyGauge
-      value: 
-      objectReference: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28,
-        type: 2}
-    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: DashRange.ConstantValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948175, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948175, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948174, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: PlayerSpeed.ConstantValue
-      value: 3.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: PlayerSpeed.UseConstant
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578423033553798844, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578423033553798844, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578423033553798844, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578423033553798844, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1539906981}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!114 &1698440701 stripped
@@ -460,7 +358,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1698440696}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539906981}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e4876ca6389e3344bc1a806007354e7, type: 3}
@@ -584,7 +482,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1698440696}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539906981}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7337f59f5e815c0409d77998dc6583e3, type: 3}
