@@ -15,6 +15,10 @@ public class PlayerAbilities : MonoBehaviour
     public IntReferences ShootInfuseCost;
     public IntReferences ShieldCost;
 
+    [Header("Reffered Components")]
+    public FloatVariable CurrentHP;
+    public FloatReference MaxHP;
+
     [Header("Abilities Parameters")]
     public Rigidbody2D rb;
 
@@ -22,6 +26,9 @@ public class PlayerAbilities : MonoBehaviour
     public FloatVariable MoveY;
 
     public FloatReference DashRange;
+
+    public FloatReference HealValue;
+    
 
     private void LoseEnergy(int energyCost)
     {
@@ -42,7 +49,12 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerHeal()
     {
-
+        CurrentHP.ApplyChangeToFloat(HealValue);
+        LoseEnergy(HealEnergyCost);
+        if (CurrentHP >= MaxHP)
+        {
+            CurrentHP.SetFloatValue(MaxHP);
+        }
     }
 
     public void PlayerAOEInfuse()

@@ -30,13 +30,13 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("AttackInertiaComponents")]
     public Rigidbody2D rb;
-    public FloatVariable moveX;
-    public FloatVariable moveY;
+    public FloatVariable MoveX;
+    public FloatVariable MoveY;
     public FloatReference PlayerSpeed;
 
-    public AnimationCurve FirstAttackCurve;
-    public AnimationCurve SecondAttackCurve;
-    public AnimationCurve ThirdAttackCurve;
+    public FloatReference FirstDashRange;
+    public FloatReference SecondDashRange;
+    public FloatReference ThirdDashRange;
 
     private void Start()
     {
@@ -92,7 +92,7 @@ public class PlayerAttack : MonoBehaviour
     {
         Debug.Log(TimeToAttack);
         yield return new WaitForSeconds(TimeToAttack);
-        AttackCount.SetIntValue(4);
+        AttackCount.SetIntValue(3);
         LaunchAttackCoolDown();
     }
 
@@ -137,7 +137,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void DashAttack(float dashRange)
     {
-        Vector2 direction = new Vector2(moveX, moveY);
+        Vector2 direction = new Vector2(MoveX, MoveY);
         rb.MovePosition(rb.position + direction * dashRange);
     }
 
@@ -146,13 +146,13 @@ public class PlayerAttack : MonoBehaviour
         switch (AttackCount)
         {
             case 0:
-                DashAttack(PlayerSpeed);
+                DashAttack(FirstDashRange);
                 break;
             case 1:
-                DashAttack(PlayerSpeed);
+                DashAttack(SecondDashRange);
                 break;
             case 2:
-                DashAttack(PlayerSpeed);
+                DashAttack(ThirdDashRange);
                 break;
         }
     }
