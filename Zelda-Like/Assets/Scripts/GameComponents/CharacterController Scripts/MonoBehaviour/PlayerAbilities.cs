@@ -15,7 +15,7 @@ public class PlayerAbilities : MonoBehaviour
     public IntReferences ShootInfuseCost;
     public IntReferences ShieldCost;
 
-    [Header("Reffered Components")]
+    [Header("Refered Components")]
     public FloatVariable CurrentHP;
     public FloatReference MaxHP;
 
