@@ -18,6 +18,7 @@ public class PlayerControls : MonoBehaviour
     public GameEvent PressA;
     public GameEvent PressX;
     public GameEvent PressY;
+    public GameEvent UnPressY;
     public GameEvent PressB;
     public GameEvent PressRightBumper;
     public GameEvent PressLeftBumper;
@@ -39,9 +40,14 @@ public class PlayerControls : MonoBehaviour
             PressX.Raise();
         }
 
-        if (Input.GetButtonDown(NameInputButtonY))
+        if (Input.GetButton(NameInputButtonY))
         {
             PressY.Raise();
+        }
+
+        if (Input.GetButtonUp(NameInputButtonY))
+        {
+            UnPressY.Raise();
         }
 
         if (Input.GetButtonDown(NameInputButtonB))
