@@ -146,12 +146,15 @@ public class PlayerAttack : MonoBehaviour
         {
             case 0:
                 DashAttack(FirstDashRange);
+                Debug.Log("FirstDash");
                 break;
             case 1:
                 DashAttack(SecondDashRange);
+                Debug.Log("SecondDash");
                 break;
             case 2:
                 DashAttack(ThirdDashRange);
+                Debug.Log("ThirdDash");
                 break;
         }
     }
