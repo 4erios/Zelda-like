@@ -136,8 +136,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void DashAttack(float dashRange)
     {
-        Vector2 direction = new Vector2(MoveX, MoveY);
-        rb.MovePosition(rb.position + direction * dashRange);
+        Vector2 direction = new Vector2(MoveX, MoveY).normalized;
+        rb.AddForce(direction * dashRange);
     }
 
     public void AttackInertia()

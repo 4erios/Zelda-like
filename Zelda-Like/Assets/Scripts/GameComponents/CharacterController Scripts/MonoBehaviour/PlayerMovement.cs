@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public FloatVariable MoveX;
     public FloatVariable MoveY;
 
+    private float moveX;
+    private float moveY;
+
     public VectorVariable PlayerDirection;
     private Vector2 playerdirection;
 
@@ -22,15 +25,21 @@ public class PlayerMovement : MonoBehaviour
     {
         ProcessInputs();
         PlayerDirection.SetVector(playerdirection);
+
+        //allow the player to keep his last position
+        if (PlayerDirection != Vector2.zero)
+        {
+            MoveX.SetFloatValue(moveX);
+            MoveY.SetFloatValue(moveY);
+        }
     }
 
     public void ProcessInputs()
     {
+        moveX = Input.GetAxis("Horizontal");
+        moveY = Input.GetAxis("Vertical");
 
-        MoveX.SetFloatValue(Input.GetAxis("Horizontal"));
-        MoveY.SetFloatValue(Input.GetAxis("Vertical"));
-
-        playerdirection = new Vector2 (MoveX, MoveY);
+        playerdirection = new Vector2 (moveX, moveY);
         CurrentSpeed.SetFloatValue(Mathf.Clamp(playerdirection.magnitude, 0.0f, 1.0f));
         playerdirection.Normalize();
     }
