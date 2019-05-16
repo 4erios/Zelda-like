@@ -21,6 +21,7 @@ public class PlayerAbilities : MonoBehaviour
 
     public Rigidbody2D rb;
     public Transform PlayerTransform;
+    public Transform FirePoint;
 
 
     [Header("Abilities Parameters")]
@@ -33,6 +34,13 @@ public class PlayerAbilities : MonoBehaviour
 
     public FloatReference AOEInfuseRange;
     public FloatReference AOEInfuseDamages;
+
+    public FloatVariable PlayerDamagesTaken;
+    [Range(0,1)]
+    public FloatReference ShieldDamageTaken;
+
+    //shoot parameters
+    private Vector2 FireDirection;
     
 
     private void LoseEnergy(int energyCost)
@@ -82,7 +90,7 @@ public class PlayerAbilities : MonoBehaviour
             enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
             //enemiesHurt[i].GetComponent<LivingClass>().Knockback();
             //enemiesHurt[i].GetComponent<InfusableComponentClass>().Infuse();
-            Debug.Log("AOE toucé");
+            Debug.Log("AOE touchée");
             Debug.Log(i);
         }
     }
@@ -94,7 +102,11 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerShootInfuse()
     {
-
+        RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
+        if (hit.collider != null)
+        {
+            FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
+        }
     }
 
     public void ShieldEnergyLoss()
@@ -104,6 +116,12 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerShield()
     {
-
+        PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
     }
+
+    public void StopPlayerShield()
+    {
+        PlayerDamagesTaken.SetFloatValue(1);
+    }
+
 }

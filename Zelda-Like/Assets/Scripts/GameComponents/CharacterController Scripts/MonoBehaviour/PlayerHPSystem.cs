@@ -15,6 +15,8 @@ public class PlayerHPSystem : MonoBehaviour
     public GameEvent DamageEvent;
     public GameEvent ResurrectionEvent;
 
+    public FloatVariable PlayerDamagesTaken;
+
     private void Start()
     {
         if (ResetHP)
@@ -26,7 +28,7 @@ public class PlayerHPSystem : MonoBehaviour
         EnemyDamageDealer damages = collision.gameObject.GetComponent<EnemyDamageDealer>();
         if (damages != null)
         {
-            CurrentHP.ApplyChangeToFloat(-damages.enemyDamage);
+            CurrentHP.ApplyChangeToFloat(-damages.enemyDamage * PlayerDamagesTaken);
             DamageEvent.Raise();
         }
 
