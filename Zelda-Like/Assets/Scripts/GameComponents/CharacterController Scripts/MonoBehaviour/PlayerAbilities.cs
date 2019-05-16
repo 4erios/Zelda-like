@@ -19,15 +19,20 @@ public class PlayerAbilities : MonoBehaviour
     public FloatVariable CurrentHP;
     public FloatReference MaxHP;
 
-    [Header("Abilities Parameters")]
     public Rigidbody2D rb;
+    public Transform PlayerTransform;
 
+
+    [Header("Abilities Parameters")]
     public FloatVariable MoveX;
     public FloatVariable MoveY;
 
     public FloatReference DashRange;
 
     public FloatReference HealValue;
+
+    public FloatReference AOEInfuseRange;
+    public FloatReference AOEInfuseDamages;
     
 
     private void LoseEnergy(int energyCost)
@@ -39,36 +44,66 @@ public class PlayerAbilities : MonoBehaviour
         }
     }
 
-    public void PlayerDash()
+    public void DashEnergyLoss()
     {
         LoseEnergy(DashEnergyCost);
+    }
 
-        Vector2 direction = new Vector2(MoveX, MoveY);
-        rb.AddForce(direction * DashRange);
+    public void PlayerDash()
+    {
+        Vector2 direction = new Vector2(MoveX, MoveY).normalized;
+        rb.velocity = new Vector2(MoveX * DashRange, MoveY * DashRange);
+    }
+
+    public void HealEnergyLoss()
+    {
+        LoseEnergy(HealEnergyCost);
     }
 
     public void PlayerHeal()
     {
         CurrentHP.ApplyChangeToFloat(HealValue);
-        LoseEnergy(HealEnergyCost);
         if (CurrentHP >= MaxHP)
         {
             CurrentHP.SetFloatValue(MaxHP);
         }
     }
 
-    public void PlayerAOEInfuse()
+    public void AOEInfuseEnergyLoss()
     {
         LoseEnergy(AOEInfuseCost);
     }
 
-    public void PlayerShootInfuse()
+    public void PlayerAOEInfuse()
+    {
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
+        for (int i = 0; i < enemiesHurt.Length; i++)
+        {
+            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
+            //enemiesHurt[i].GetComponent<LivingClass>().Knockback();
+            //enemiesHurt[i].GetComponent<InfusableComponentClass>().Infuse();
+            Debug.Log("AOE toucé");
+            Debug.Log(i);
+        }
+    }
+
+    public void ShootEnergyLoss()
     {
         LoseEnergy(ShootInfuseCost);
     }
 
-    public void PlayerShield()
+    public void PlayerShootInfuse()
+    {
+
+    }
+
+    public void ShieldEnergyLoss()
     {
         LoseEnergy(ShieldCost);
+    }
+
+    public void PlayerShield()
+    {
+
     }
 }
