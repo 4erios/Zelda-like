@@ -203,6 +203,46 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &430658595276618652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8b4017cae48563548adba505245a1f63, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4704675715113948170}
+        m_MethodName: LaunchShootAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4165362679613082742}
+        m_MethodName: PlayerShootInfuse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &965666219265475322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,35 +352,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &8300861569606609640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271560711376651462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 416dc1aa3a65c0e479f1cd96dadb6cf3, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4704675715113948170}
-        m_MethodName: StopHealAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &6845068152514889536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +392,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &430658595276618652
+--- !u!114 &8300861569606609640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,12 +404,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 8b4017cae48563548adba505245a1f63, type: 2}
+  Event: {fileID: 11400000, guid: 416dc1aa3a65c0e479f1cd96dadb6cf3, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4704675715113948170}
-        m_MethodName: LaunchShootAnimation
+        m_MethodName: StopHealAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -408,8 +419,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1023288216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6ec62425295eff24bb9841d24d67d404, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 4165362679613082742}
-        m_MethodName: PlayerShootInfuse
+        m_MethodName: PlayerDash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -791,15 +820,15 @@ MonoBehaviour:
   MoveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
   FirstDashRange:
     UseConstant: 1
-    ConstantValue: 1
+    ConstantValue: 10
     Variable: {fileID: 0}
   SecondDashRange:
     UseConstant: 1
-    ConstantValue: 1.2
+    ConstantValue: 15
     Variable: {fileID: 0}
   ThirdDashRange:
     UseConstant: 1
-    ConstantValue: 1.4
+    ConstantValue: 20
     Variable: {fileID: 0}
 --- !u!114 &1698440699
 MonoBehaviour:
@@ -851,21 +880,21 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  CurrentHP: {fileID: 0}
+  CurrentHP: {fileID: 11400000, guid: 41192a5fa502e3d49bfbc8fb0d01590d, type: 2}
   MaxHP:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 100
     Variable: {fileID: 0}
   rb: {fileID: 4704675715113948175}
   MoveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
   MoveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
   DashRange:
     UseConstant: 1
-    ConstantValue: 2
+    ConstantValue: 1.5
     Variable: {fileID: 0}
   HealValue:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 2
     Variable: {fileID: 0}
 --- !u!114 &1539906982
 MonoBehaviour:
@@ -881,7 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMaxHP:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 1000
     Variable: {fileID: 0}
   CurrentHP: {fileID: 11400000, guid: 41192a5fa502e3d49bfbc8fb0d01590d, type: 2}
   ResetHP: 0
@@ -1062,15 +1091,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456fd6718235ddd47a81b59fb709ea28, type: 3}
---- !u!1 &1271560711376651462 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
-    type: 3}
-  m_PrefabInstance: {fileID: 1434923982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1271560711376651459 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434923982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1271560711376651462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
     type: 3}
   m_PrefabInstance: {fileID: 1434923982}
   m_PrefabAsset: {fileID: 0}
