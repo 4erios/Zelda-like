@@ -15,7 +15,7 @@ public class PlayerAbilities : MonoBehaviour
     public IntReferences ShootInfuseCost;
     public IntReferences ShieldCost;
 
-    [Header("Reffered Components")]
+    [Header("Refered Components")]
     public FloatVariable CurrentHP;
     public FloatReference MaxHP;
 
@@ -44,7 +44,7 @@ public class PlayerAbilities : MonoBehaviour
         LoseEnergy(DashEnergyCost);
 
         Vector2 direction = new Vector2(MoveX, MoveY);
-        rb.MovePosition(rb.position + direction * DashRange);
+        rb.AddForce(direction * DashRange);
     }
 
     public void PlayerHeal()

@@ -39,7 +39,15 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-        AttackCount.SetIntValue(0);
+        //AttackCount.SetIntValue(0);
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("ButtonA"))
+        {
+            AttackInertia();
+        }
     }
 
     public void RightAttackCollider()
@@ -147,14 +155,17 @@ public class PlayerAttack : MonoBehaviour
             case 0:
                 DashAttack(FirstDashRange);
                 Debug.Log("FirstDash");
+                Debug.Log(FirstDashRange);
                 break;
             case 1:
                 DashAttack(SecondDashRange);
                 Debug.Log("SecondDash");
+                Debug.Log(SecondDashRange);
                 break;
             case 2:
                 DashAttack(ThirdDashRange);
                 Debug.Log("ThirdDash");
+                Debug.Log(ThirdDashRange);
                 break;
         }
     }
