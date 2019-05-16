@@ -258,39 +258,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: FirstDashRange.ConstantValue
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: SecondDashRange.ConstantValue
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: ThirdDashRange.ConstantValue
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
-      propertyPath: HealValue.ConstantValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: MaxHP.ConstantValue
-      value: 100
+      propertyPath: MaxHP.UseConstant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: DashRange.ConstantValue
-      value: 1.5
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1539906982, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
       propertyPath: playerMaxHP.ConstantValue
-      value: 100
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539906982, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: playerMaxHP.UseConstant
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
