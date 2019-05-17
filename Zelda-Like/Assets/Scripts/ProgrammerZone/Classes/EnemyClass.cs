@@ -44,9 +44,10 @@ public class EnemyClass : LivingClass
         }
     }
 
-    public void KnockBack()
+    public void KnockBack(Rigidbody2D enemyRigidbody,Transform playerPosition, float knockbackDistance)
     {
-
+        Vector2 direction = this.transform.position - playerPosition.position;
+        enemyRigidbody.AddForce(direction.normalized * knockbackDistance);
     }
 
     public void EnterAttackRange(Transform playerPosition,float attackRange)
