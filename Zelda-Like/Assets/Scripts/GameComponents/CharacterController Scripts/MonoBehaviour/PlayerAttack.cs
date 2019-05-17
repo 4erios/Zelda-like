@@ -149,7 +149,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void DashAttack(float dashRange)
     {
-        rb.velocity = new Vector2(MoveX * dashRange, MoveY * dashRange);
+        rb.velocity = new Vector2(MoveX * dashRange, MoveY * dashRange).normalized;
         Debug.Log("DashAttack");
     }
 

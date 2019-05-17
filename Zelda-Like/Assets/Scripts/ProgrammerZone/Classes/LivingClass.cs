@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LivingClass : MonoBehaviour
 {
-    public float health;
+    public float health = 1f;
 
     public virtual void TakeDamages(float damages)
     {
