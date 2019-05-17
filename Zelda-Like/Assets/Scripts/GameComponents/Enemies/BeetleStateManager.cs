@@ -12,6 +12,8 @@ public class BeetleStateManager : EnemyClass
 
     public LayerMask playerLayer;
 
+    public Animator enemyAnimator;
+
 
     private void Start()
     {
@@ -19,5 +21,8 @@ public class BeetleStateManager : EnemyClass
         health = beetleHealth;
     }
 
-    
+    private void Update()
+    {
+        
+    }
 }
