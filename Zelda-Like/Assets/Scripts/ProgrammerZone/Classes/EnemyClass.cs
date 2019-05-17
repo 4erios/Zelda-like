@@ -10,7 +10,8 @@ public class EnemyClass : LivingClass
     //KnockBack - To Do
     //MessageSystem - To Do
 
-    private bool playerDetected = false;
+    public bool playerDetected = false;
+    public bool playerInAttackRange = false;
 
     public void PlayerDetection(Transform monsterPosition, float detectionRange, LayerMask playerLayer)
     {
@@ -21,29 +22,49 @@ public class EnemyClass : LivingClass
         }
     }
 
-    public void MoveToPlayer(Transform playerPosition, float speed, float stopRange)
+    public void MoveToPlayer(Transform playerPosition, float currentspeed)
     {
-        transform.position = Vector2.MoveTowards(this.transform.position, playerPosition.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(this.transform.position, playerPosition.position, currentspeed * Time.deltaTime);
     }
 
-    public void FacePlayer(Transform playerPosition)
+    public void FacePlayer(Transform playerPosition, SpriteRenderer enemySprite)
     {
         if (this.transform.position.x < playerPosition.position.x)
         {
-            //FacingRight
+            if(enemySprite.flipX == true)
+            {
+                enemySprite.flipX = false;
+            }
         }
         else if (this.transform.position.x > playerPosition.position.x)
         {
-            //FacingLeft
+            if (enemySprite.flipX == false)
+            {
+                enemySprite.flipX = true;
+            }
         }
     }
 
-    public void EnterAttackRange(float attackRange)
+    public void EnterAttackRange(Transform playerPosition,float attackRange)
     {
-        if ()
+        if (Vector2.Distance(this.transform.position, playerPosition.position) >= attackRange)
         {
-
+            playerInAttackRange = true;
         }
+        else
+        {
+            playerInAttackRange = false;
+        }
+    }
+
+    public void SetCurrentSpeedToZero(float currentSpeed)
+    {
+        currentSpeed = 0;
+    }
+
+    public void SetCurrentSpeedToSpeed(float currentSpeed, float speed)
+    {
+        currentSpeed = speed;
     }
 
 }
