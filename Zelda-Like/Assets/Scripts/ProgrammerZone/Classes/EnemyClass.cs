@@ -5,10 +5,9 @@ using UnityEngine;
 public class EnemyClass : LivingClass
 {
     //PlayerDetection - Done
-    //FacePlayer - In Progress
+    //FacePlayer - Done
     //MoveToPlayer - Done
     //KnockBack - To Do
-    //MessageSystem - To Do
 
     public bool playerDetected = false;
     public bool playerInAttackRange = false;
@@ -43,6 +42,11 @@ public class EnemyClass : LivingClass
                 enemySprite.flipX = true;
             }
         }
+    }
+
+    public void KnockBack()
+    {
+
     }
 
     public void EnterAttackRange(Transform playerPosition,float attackRange)

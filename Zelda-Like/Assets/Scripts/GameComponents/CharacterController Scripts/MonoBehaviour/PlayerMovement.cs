@@ -42,8 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void ProcessInputs()
     {
-        moveX = Input.GetAxis("Horizontal");
-        moveY = Input.GetAxis("Vertical");
+        moveX = Input.GetAxisRaw("Horizontal");
+        moveY = Input.GetAxisRaw("Vertical");
 
         playerdirection = new Vector2 (moveX, moveY);
         CurrentSpeed.SetFloatValue(Mathf.Clamp(playerdirection.magnitude, 0.0f, 1.0f));
