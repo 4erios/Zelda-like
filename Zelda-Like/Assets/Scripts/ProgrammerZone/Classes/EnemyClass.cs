@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyClass : LivingClass
 {
-    //PlayerDetection
-    //FacePlayer
-    //MoveToPlayer
-    //KnockBack
-    //MessageSystem
+    //PlayerDetection - Done
+    //FacePlayer - In Progress
+    //MoveToPlayer - Done
+    //KnockBack - To Do
+    //MessageSystem - To Do
 
     private bool playerDetected = false;
 
@@ -26,5 +26,21 @@ public class EnemyClass : LivingClass
         transform.position = Vector2.MoveTowards(this.transform.position, playerPosition.position, speed * Time.deltaTime);
     }
 
+    public void FacePlayer(Transform playerPosition)
+    {
+        if (this.transform.position.x < playerPosition.position.x)
+        {
+            //FacingRight
+        }
+        else if (this.transform.position.x > playerPosition.position.x)
+        {
+            //FacingLeft
+        }
+    }
+
+    public void EnterAttackRange()
+    {
+
+    }
 
 }
