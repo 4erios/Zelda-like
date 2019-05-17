@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1023288216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6ec62425295eff24bb9841d24d67d404, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4165362679613082742}
+        m_MethodName: PlayerDash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1092644534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,17 +368,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4165362679613082742}
-        m_MethodName: PlayerDash
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &6845068152514889536
@@ -410,35 +428,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4704675715113948170}
         m_MethodName: StopHealAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1023288216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271560711376651462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 6ec62425295eff24bb9841d24d67d404, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4165362679613082742}
-        m_MethodName: PlayerDash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -648,7 +637,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.65, y: 1.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -738,7 +727,7 @@ MonoBehaviour:
   CurrentSpeed: {fileID: 11400000, guid: 1dc334b34714b1840a293a6fe9933b2a, type: 2}
   PlayerMaxSpeed:
     UseConstant: 1
-    ConstantValue: 3.5
+    ConstantValue: 3.8
     Variable: {fileID: 0}
   PlayerSpeed: {fileID: 11400000, guid: c7fbde6f47dcc7149b0e9120a7e2257f, type: 2}
   accelerationCurve:
@@ -791,7 +780,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   AttackCoolDown:
     UseConstant: 1
-    ConstantValue: 0.4
+    ConstantValue: 0.3
     Variable: {fileID: 0}
   AttackCount: {fileID: 11400000, guid: 0f0755ce561b5de49ba4d1429f560f1a, type: 2}
   RightAttackPoint: {fileID: 7976656796365943351}
@@ -824,11 +813,11 @@ MonoBehaviour:
     Variable: {fileID: 0}
   SecondDashRange:
     UseConstant: 1
-    ConstantValue: 15
+    ConstantValue: 12
     Variable: {fileID: 0}
   ThirdDashRange:
     UseConstant: 1
-    ConstantValue: 20
+    ConstantValue: 15
     Variable: {fileID: 0}
 --- !u!114 &1698440699
 MonoBehaviour:
@@ -886,15 +875,30 @@ MonoBehaviour:
     ConstantValue: 100
     Variable: {fileID: 0}
   rb: {fileID: 4704675715113948175}
+  PlayerTransform: {fileID: 0}
+  FirePoint: {fileID: 0}
   MoveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
   MoveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
   DashRange:
     UseConstant: 1
-    ConstantValue: 1.5
+    ConstantValue: 12
     Variable: {fileID: 0}
   HealValue:
     UseConstant: 1
     ConstantValue: 2
+    Variable: {fileID: 0}
+  AOEInfuseRange:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  AOEInfuseDamages:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  PlayerDamagesTaken: {fileID: 0}
+  ShieldDamageTaken:
+    UseConstant: 1
+    ConstantValue: 0
     Variable: {fileID: 0}
 --- !u!114 &1539906982
 MonoBehaviour:
@@ -910,12 +914,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMaxHP:
     UseConstant: 1
-    ConstantValue: 1000
+    ConstantValue: 10000
     Variable: {fileID: 0}
   CurrentHP: {fileID: 11400000, guid: 41192a5fa502e3d49bfbc8fb0d01590d, type: 2}
   ResetHP: 0
   DamageEvent: {fileID: 0}
   ResurrectionEvent: {fileID: 0}
+  PlayerDamagesTaken: {fileID: 0}
 --- !u!1 &7081426699157911933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1031,7 @@ PrefabInstance:
     - target: {fileID: 1271560709942408975, guid: 456fd6718235ddd47a81b59fb709ea28,
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1271560709942408975, guid: 456fd6718235ddd47a81b59fb709ea28,
         type: 3}
@@ -1062,31 +1067,6 @@ PrefabInstance:
     - target: {fileID: 1271560709942408975, guid: 456fd6718235ddd47a81b59fb709ea28,
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271560709942408975, guid: 456fd6718235ddd47a81b59fb709ea28,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1698440699}
-    - target: {fileID: 1271560709942408975, guid: 456fd6718235ddd47a81b59fb709ea28,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CallDebugMessage
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271560709942408975, guid: 456fd6718235ddd47a81b59fb709ea28,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271560709942408975, guid: 456fd6718235ddd47a81b59fb709ea28,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271560709942408975, guid: 456fd6718235ddd47a81b59fb709ea28,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
