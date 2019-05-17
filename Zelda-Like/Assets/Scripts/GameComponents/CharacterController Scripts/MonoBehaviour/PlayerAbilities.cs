@@ -60,7 +60,7 @@ public class PlayerAbilities : MonoBehaviour
     public void PlayerDash()
     {
         Vector2 direction = new Vector2(MoveX, MoveY).normalized;
-        rb.velocity = new Vector2(MoveX * DashRange, MoveY * DashRange).normalized;
+        rb.velocity = new Vector2(MoveX * DashRange, MoveY * DashRange);
     }
 
     public void HealEnergyLoss()
