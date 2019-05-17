@@ -11,7 +11,7 @@ using UnityEngine;
 
 
 
-public class EnemyDamageDealer : ScriptableObject
+public class EnemyDamageDealer : MonoBehaviour
 {
     public FloatReference enemyDamage;
 }
