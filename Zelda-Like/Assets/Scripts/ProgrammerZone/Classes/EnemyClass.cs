@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class EnemyClass : LivingClass
 {
-    //PlayerDetection - Done
-    //FacePlayer - Done
-    //MoveToPlayer - Done
-    //KnockBack - To Do
 
     public bool playerDetected = false;
     public bool playerInAttackRange = false;
@@ -18,6 +14,7 @@ public class EnemyClass : LivingClass
         if (detection != null)
         {
             playerDetected = true;
+            Debug.Log("player found");
         }
     }
 
