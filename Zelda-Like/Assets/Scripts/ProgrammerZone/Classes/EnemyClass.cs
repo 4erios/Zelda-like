@@ -38,12 +38,7 @@ public class EnemyClass : LivingClass
         }
     }
 
-    public void EnterAttackRange(float attackRange)
-    {
-        if ()
-        {
+  
 
-        }
-    }
 
 }
