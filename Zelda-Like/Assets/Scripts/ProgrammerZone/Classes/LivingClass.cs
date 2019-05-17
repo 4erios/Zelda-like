@@ -21,7 +21,7 @@ public class LivingClass : MonoBehaviour
         currentEnergyTank.ApplyChangeToFloat(energyGain);
         if (currentEnergyTank >= maxEnergyTank)
         {
-            energyGauge.ApplyChangeToInt(+1);
+            energyGauge.ApplyChangeToInt(1);
             currentEnergyTank.SetFloatValue(0);
 
             if (energyGauge > energyMax)
