@@ -8,6 +8,8 @@ public class EnemyClass : LivingClass
     public Transform playerTransform;
     public bool playerDetected = false;
     public bool playerInAttackRange = false;
+    public bool attackReady = true;
+    public FloatReference TimeBetweenAttacks;
 
     public void PlayerDetection(Transform monsterPosition, float detectionRange, LayerMask playerLayer)
     {
@@ -65,4 +67,18 @@ public class EnemyClass : LivingClass
         rb.velocity = Vector2.zero;
     }
 
+    public IEnumerator DelayBetweenAttacks()
+    {
+        yield return new WaitForSeconds(TimeBetweenAttacks);
+        attackReady = true;
+        Debug.Log("AttackCDDone");
+
+    }
+
+    public void LaunchDelayBetweenAttacks()
+    {
+        attackReady = false;
+        Debug.Log("LaunchAttackDelay");
+        StartCoroutine("DelayBetweenAttacks");
+    }
 }

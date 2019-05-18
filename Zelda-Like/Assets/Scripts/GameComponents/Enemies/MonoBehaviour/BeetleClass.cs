@@ -35,7 +35,7 @@ public class BeetleClass : EnemyClass
             enemyAnimator.SetTrigger("PlayerDetected");
         }
         
-        if (playerInAttackRange)
+        if (playerInAttackRange && attackReady)
         {
             enemyAnimator.SetTrigger("InAttackRange");
         }
@@ -48,7 +48,10 @@ public class BeetleClass : EnemyClass
 
     public void BeetleMoveToPlayer()
     {
-        MoveToPlayer(playerTransform, beetleSpeed);
+        if (Vector2.Distance(playerTransform.position, enemyTransform.position) > beetleAttackRange)
+        {
+            MoveToPlayer(playerTransform, beetleSpeed);
+        }
     }
 
     public void BeetleEnterAttackRange()
