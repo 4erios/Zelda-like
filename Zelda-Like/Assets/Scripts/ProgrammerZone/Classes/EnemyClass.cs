@@ -47,9 +47,9 @@ public class EnemyClass : LivingClass
         enemyRigidbody.AddForce(direction.normalized * knockbackDistance);
     }
 
-    public void EnterAttackRange(Transform playerPosition,float attackRange)
+    public void EnterAttackRange(Transform enemyPosition, Transform playerPosition,float attackRange)
     {
-        if (Vector2.Distance(this.transform.position, playerPosition.position) >= attackRange)
+        if (Vector2.Distance(enemyPosition.position, playerPosition.position) >= attackRange)
         {
             playerInAttackRange = true;
         }

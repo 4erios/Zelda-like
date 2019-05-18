@@ -30,8 +30,16 @@ public class BeetleClass : EnemyClass
     private void Update()
     {
         FacePlayer(beetleTarget, enemySprite);
-        enemyAnimator.SetBool("PlayerDetected", playerDetected);
-        enemyAnimator.SetBool("PlayerInAttackRange", playerInAttackRange);
+        
+        if (playerDetected)
+        {
+            enemyAnimator.SetTrigger("PlayerDetected");
+        }
+        
+        if (playerInAttackRange)
+        {
+            enemyAnimator.SetTrigger("InAttackRange");
+        }
     }
 
     public void BeetleSearchForPlayer()
@@ -46,7 +54,7 @@ public class BeetleClass : EnemyClass
 
     public void BeetleEnterAttackRange()
     {
-        EnterAttackRange(beetleTarget, beetleAttackRange);
+        EnterAttackRange(enemyTransform, beetleTarget, beetleAttackRange);
     }
 
     public void BeetleCharge()

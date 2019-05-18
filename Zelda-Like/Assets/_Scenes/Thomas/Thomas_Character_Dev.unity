@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 2061806492}
   - component: {fileID: 2061806494}
   - component: {fileID: 2061806495}
+  - component: {fileID: 2061806498}
   m_Layer: 0
   m_Name: CharacterController
   m_TagString: Untagged
@@ -252,7 +253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061806491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.757, y: 1.757, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -409,6 +410,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &2061806498
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061806491}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0005463362, y: -0.000105798244}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1350087, y: 0.13631275}
+  m_EdgeRadius: 0
 --- !u!1001 &4861569843074960773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -481,15 +508,5 @@ PrefabInstance:
       propertyPath: beetleTarget
       value: 
       objectReference: {fileID: 2061806493}
-    - target: {fileID: 4861569844125820436, guid: ab8ec4fa49160e14ca038a690f6b856c,
-        type: 3}
-      propertyPath: beetleAttackRange.ConstantValue
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861569844125820436, guid: ab8ec4fa49160e14ca038a690f6b856c,
-        type: 3}
-      propertyPath: beetleChargeSpeed.ConstantValue
-      value: 40
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab8ec4fa49160e14ca038a690f6b856c, type: 3}
