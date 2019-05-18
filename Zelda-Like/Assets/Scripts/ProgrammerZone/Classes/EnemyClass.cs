@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyClass : LivingClass
 {
-
+    [Header("Ennemies Basic Components")]
+    public Transform playerTransform;
     public bool playerDetected = false;
     public bool playerInAttackRange = false;
 
@@ -49,7 +50,7 @@ public class EnemyClass : LivingClass
 
     public void EnterAttackRange(Transform enemyPosition, Transform playerPosition,float attackRange)
     {
-        if (Vector2.Distance(enemyPosition.position, playerPosition.position) >= attackRange)
+        if (Vector2.Distance(enemyPosition.position, playerPosition.position) <= attackRange)
         {
             playerInAttackRange = true;
         }
@@ -59,14 +60,9 @@ public class EnemyClass : LivingClass
         }
     }
 
-    public void SetCurrentSpeedToZero(float currentSpeed)
+    public void SetVelocityToZero(Rigidbody2D rb)
     {
-        currentSpeed = 0;
-    }
-
-    public void SetCurrentSpeedToSpeed(float currentSpeed, float speed)
-    {
-        currentSpeed = speed;
+        rb.velocity = Vector2.zero;
     }
 
 }

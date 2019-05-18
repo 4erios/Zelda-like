@@ -8,4 +8,9 @@ public class BeetleCharge : StateMachineBehaviour
     {
         animator.GetComponent<BeetleClass>().BeetleCharge();
     }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+    {
+        animator.GetComponent<BeetleClass>().SetBeetleVelocityToZero();
+    }
 }

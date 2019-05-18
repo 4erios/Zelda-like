@@ -508,5 +508,15 @@ PrefabInstance:
       propertyPath: beetleTarget
       value: 
       objectReference: {fileID: 2061806493}
+    - target: {fileID: 4861569844125820436, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 2061806493}
+    - target: {fileID: 4861569844125820436, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: beetleChargeSpeed.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab8ec4fa49160e14ca038a690f6b856c, type: 3}
