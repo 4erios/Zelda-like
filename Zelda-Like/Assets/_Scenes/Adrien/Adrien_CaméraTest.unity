@@ -225,8 +225,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  playerTransform: {fileID: 0}
   playerDetected: 1
   playerInAttackRange: 0
+  attackReady: 1
+  TimeBetweenAttacks:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   DetectionRange:
     UseConstant: 1
     ConstantValue: 0
@@ -234,7 +240,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  beetleTarget: {fileID: 1150517461}
   enemyAnimator: {fileID: 11107963}
   enemyTransform: {fileID: 11107966}
   enemySprite: {fileID: 11107965}
@@ -565,8 +570,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  playerTransform: {fileID: 0}
   playerDetected: 1
   playerInAttackRange: 0
+  attackReady: 1
+  TimeBetweenAttacks:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   DetectionRange:
     UseConstant: 1
     ConstantValue: 0
@@ -574,7 +585,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  beetleTarget: {fileID: 1150517461}
   enemyAnimator: {fileID: 208667202}
   enemyTransform: {fileID: 208667205}
   enemySprite: {fileID: 208667204}
@@ -4362,8 +4372,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  playerTransform: {fileID: 0}
   playerDetected: 1
   playerInAttackRange: 0
+  attackReady: 1
+  TimeBetweenAttacks:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   DetectionRange:
     UseConstant: 1
     ConstantValue: 0
@@ -4371,7 +4387,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  beetleTarget: {fileID: 1150517461}
   enemyAnimator: {fileID: 445833784}
   enemyTransform: {fileID: 445833787}
   enemySprite: {fileID: 445833786}
@@ -4942,12 +4957,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!4 &1150517461 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1217351880}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1215405258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,6 +5121,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948175, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1799184540, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5151,6 +5165,11 @@ PrefabInstance:
     - target: {fileID: 714645291, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
       propertyPath: m_SoftZoneHeight
       value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: ThirdDashRange.ConstantValue
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
@@ -5314,8 +5333,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  playerTransform: {fileID: 0}
   playerDetected: 1
   playerInAttackRange: 0
+  attackReady: 1
+  TimeBetweenAttacks:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   DetectionRange:
     UseConstant: 1
     ConstantValue: 0
@@ -5323,7 +5348,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  beetleTarget: {fileID: 1150517461}
   enemyAnimator: {fileID: 1827543764}
   enemyTransform: {fileID: 1827543767}
   enemySprite: {fileID: 1827543766}
