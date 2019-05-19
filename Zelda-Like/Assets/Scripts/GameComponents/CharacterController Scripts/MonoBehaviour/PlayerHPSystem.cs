@@ -23,7 +23,19 @@ public class PlayerHPSystem : MonoBehaviour
             CurrentHP.SetFloatValue(playerMaxHP);
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamages(float damages)
+    {
+        CurrentHP.ApplyChangeToFloat(-damages * PlayerDamagesTaken);
+        DamageEvent.Raise();
+        
+        if (CurrentHP.Value <= 0)
+        {
+            CurrentHP.SetFloatValue(0);
+            ResurrectionEvent.Raise();
+        }
+    }
+
+    /*public void OnCollisionEnter2D(Collision2D collision)
     {
         EnemyDamageDealer damages = collision.gameObject.GetComponent<EnemyDamageDealer>();
         if (damages != null)
@@ -37,6 +49,6 @@ public class PlayerHPSystem : MonoBehaviour
             CurrentHP.SetFloatValue(0);
             ResurrectionEvent.Raise();
         }
-    }
+    }*/
 }
 

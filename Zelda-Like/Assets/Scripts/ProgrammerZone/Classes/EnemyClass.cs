@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class EnemyClass : LivingClass
 {
-    //PlayerDetection - Done
-    //FacePlayer - In Progress
-    //MoveToPlayer - Done
-    //KnockBack - To Do
-    //MessageSystem - To Do
-
-    private bool playerDetected = false;
+    [Header("Ennemies Basic Components")]
+    public Transform playerTransform;
+    public bool playerDetected = false;
+    public bool playerInAttackRange = false;
+    public bool attackReady = true;
+    public FloatReference TimeBetweenAttacks;
 
     public void PlayerDetection(Transform monsterPosition, float detectionRange, LayerMask playerLayer)
     {
@@ -18,27 +17,68 @@ public class EnemyClass : LivingClass
         if (detection != null)
         {
             playerDetected = true;
+            Debug.Log("player found");
         }
     }
 
-    public void MoveToPlayer(Transform playerPosition, float speed, float stopRange)
+    public void MoveToPlayer(Transform playerPosition, float currentspeed)
     {
-        transform.position = Vector2.MoveTowards(this.transform.position, playerPosition.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(this.transform.position, playerPosition.position, currentspeed * Time.deltaTime);
     }
 
-    public void FacePlayer(Transform playerPosition)
+    public void FacePlayer(Transform playerPosition, SpriteRenderer enemySprite)
     {
         if (this.transform.position.x < playerPosition.position.x)
         {
-            //FacingRight
+            if(enemySprite.flipX == true)
+            {
+                enemySprite.flipX = false;
+            }
         }
         else if (this.transform.position.x > playerPosition.position.x)
         {
-            //FacingLeft
+            if (enemySprite.flipX == false)
+            {
+                enemySprite.flipX = true;
+            }
         }
     }
 
-  
+    public void KnockBack(Rigidbody2D enemyRigidbody,Transform playerPosition, float knockbackDistance)
+    {
+        Vector2 direction = this.transform.position - playerPosition.position;
+        enemyRigidbody.AddForce(direction.normalized * knockbackDistance);
+    }
 
+    public void EnterAttackRange(Transform enemyPosition, Transform playerPosition,float attackRange)
+    {
+        if (Vector2.Distance(enemyPosition.position, playerPosition.position) <= attackRange)
+        {
+            playerInAttackRange = true;
+        }
+        else
+        {
+            playerInAttackRange = false;
+        }
+    }
 
+    public void SetVelocityToZero(Rigidbody2D rb)
+    {
+        rb.velocity = Vector2.zero;
+    }
+
+    public IEnumerator DelayBetweenAttacks()
+    {
+        yield return new WaitForSeconds(TimeBetweenAttacks);
+        attackReady = true;
+        Debug.Log("AttackCDDone");
+
+    }
+
+    public void LaunchDelayBetweenAttacks()
+    {
+        attackReady = false;
+        Debug.Log("LaunchAttackDelay");
+        StartCoroutine("DelayBetweenAttacks");
+    }
 }
