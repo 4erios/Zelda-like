@@ -14,7 +14,10 @@ public class BeetleMoveToPlayer : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //calling the MoveTo function which make the enemy move to the player position
         animator.GetComponent<BeetleClass>().BeetleMoveToPlayer();
+        //calling the function which detect when the player enter in attack range
+        animator.GetComponent<BeetleClass>().BeetleEnterAttackRange();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

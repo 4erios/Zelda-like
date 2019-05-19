@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class EnemyClass : LivingClass
 {
-
+    [Header("Ennemies Basic Components")]
+    public Transform playerTransform;
     public bool playerDetected = false;
     public bool playerInAttackRange = false;
+    public bool attackReady = true;
+    public FloatReference TimeBetweenAttacks;
 
     public void PlayerDetection(Transform monsterPosition, float detectionRange, LayerMask playerLayer)
     {
@@ -47,9 +50,9 @@ public class EnemyClass : LivingClass
         enemyRigidbody.AddForce(direction.normalized * knockbackDistance);
     }
 
-    public void EnterAttackRange(Transform playerPosition,float attackRange)
+    public void EnterAttackRange(Transform enemyPosition, Transform playerPosition,float attackRange)
     {
-        if (Vector2.Distance(this.transform.position, playerPosition.position) >= attackRange)
+        if (Vector2.Distance(enemyPosition.position, playerPosition.position) <= attackRange)
         {
             playerInAttackRange = true;
         }
@@ -59,14 +62,23 @@ public class EnemyClass : LivingClass
         }
     }
 
-    public void SetCurrentSpeedToZero(float currentSpeed)
+    public void SetVelocityToZero(Rigidbody2D rb)
     {
-        currentSpeed = 0;
+        rb.velocity = Vector2.zero;
     }
 
-    public void SetCurrentSpeedToSpeed(float currentSpeed, float speed)
+    public IEnumerator DelayBetweenAttacks()
     {
-        currentSpeed = speed;
+        yield return new WaitForSeconds(TimeBetweenAttacks);
+        attackReady = true;
+        Debug.Log("AttackCDDone");
+
     }
 
+    public void LaunchDelayBetweenAttacks()
+    {
+        attackReady = false;
+        Debug.Log("LaunchAttackDelay");
+        StartCoroutine("DelayBetweenAttacks");
+    }
 }

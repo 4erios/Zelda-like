@@ -7,7 +7,6 @@ public class BeetleClass : EnemyClass
     [Header("Beetle Detection Parameters")]
     public FloatReference DetectionRange;
     public LayerMask playerLayer;
-    public Transform beetleTarget;
 
     [Header("Beetle Components")]
     public Animator enemyAnimator;
@@ -29,9 +28,17 @@ public class BeetleClass : EnemyClass
 
     private void Update()
     {
-        FacePlayer(beetleTarget, enemySprite);
-        enemyAnimator.SetBool("PlayerDetected", playerDetected);
-        enemyAnimator.SetBool("PlayerInAttackRange", playerInAttackRange);
+        FacePlayer(playerTransform, enemySprite);
+        
+        if (playerDetected)
+        {
+            enemyAnimator.SetTrigger("PlayerDetected");
+        }
+        
+        if (playerInAttackRange && attackReady)
+        {
+            enemyAnimator.SetTrigger("InAttackRange");
+        }
     }
 
     public void BeetleSearchForPlayer()
@@ -41,17 +48,26 @@ public class BeetleClass : EnemyClass
 
     public void BeetleMoveToPlayer()
     {
-        MoveToPlayer(beetleTarget, beetleSpeed);
+        if (Vector2.Distance(playerTransform.position, enemyTransform.position) > beetleAttackRange)
+        {
+            MoveToPlayer(playerTransform, beetleSpeed);
+        }
     }
 
     public void BeetleEnterAttackRange()
     {
-        EnterAttackRange(beetleTarget, beetleAttackRange);
+        EnterAttackRange(enemyTransform, playerTransform, beetleAttackRange);
     }
 
     public void BeetleCharge()
     {
-        Vector2 direction = enemyTransform.position + beetleTarget.position;
-        enemyRb.AddForce(direction.normalized * beetleChargeSpeed);
+        Vector2 direction = (playerTransform.position - enemyTransform.position).normalized;
+        enemyRb.velocity = new Vector2(direction.x * beetleChargeSpeed, direction.y * beetleChargeSpeed);
+        Debug.Log(direction);
+    }
+
+    public void SetBeetleVelocityToZero()
+    {
+        SetVelocityToZero(enemyRb);
     }
 }
