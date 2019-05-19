@@ -36,7 +36,6 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference AOEInfuseDamages;
 
     public FloatVariable PlayerDamagesTaken;
-    [Range(0,1)]
     public FloatReference ShieldDamageTaken;
 
     //shoot parameters

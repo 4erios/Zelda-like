@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4861569844125820437}
   - component: {fileID: 4861569844125820436}
   - component: {fileID: 4861569844125820439}
+  - component: {fileID: 4861569844125820425}
   m_Layer: 0
   m_Name: Little_Beetle_Test
   m_TagString: Untagged
@@ -136,8 +137,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  playerTransform: {fileID: 0}
   playerDetected: 0
   playerInAttackRange: 0
+  attackReady: 1
+  TimeBetweenAttacks:
+    UseConstant: 1
+    ConstantValue: 5
+    Variable: {fileID: 0}
   DetectionRange:
     UseConstant: 1
     ConstantValue: 25
@@ -145,7 +152,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 1
-  beetleTarget: {fileID: 0}
   enemyAnimator: {fileID: 4861569844125820437}
   enemyTransform: {fileID: 4861569844125820427}
   enemySprite: {fileID: 4861569844125820426}
@@ -156,7 +162,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   beetleSpeed:
     UseConstant: 1
-    ConstantValue: 3
+    ConstantValue: 5
     Variable: {fileID: 0}
   beetleAttackRange:
     UseConstant: 1
@@ -164,7 +170,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   beetleChargeSpeed:
     UseConstant: 1
-    ConstantValue: 40
+    ConstantValue: 10
     Variable: {fileID: 0}
 --- !u!114 &4861569844125820439
 MonoBehaviour:
@@ -180,5 +186,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDamage:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 5
     Variable: {fileID: 0}
+--- !u!61 &4861569844125820425
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4861569844125820424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0

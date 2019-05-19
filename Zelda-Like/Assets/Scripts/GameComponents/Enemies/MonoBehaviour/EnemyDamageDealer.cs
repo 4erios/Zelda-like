@@ -15,8 +15,9 @@ public class EnemyDamageDealer : MonoBehaviour
 {
     public FloatReference enemyDamage;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("joueur touché");
         collision.gameObject.GetComponent<PlayerHPSystem>().TakeDamages(enemyDamage);
     }
 }

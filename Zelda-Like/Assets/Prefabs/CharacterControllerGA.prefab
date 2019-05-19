@@ -1195,10 +1195,10 @@ MonoBehaviour:
     ConstantValue: 10000
     Variable: {fileID: 0}
   CurrentHP: {fileID: 11400000, guid: 41192a5fa502e3d49bfbc8fb0d01590d, type: 2}
-  ResetHP: 0
-  DamageEvent: {fileID: 0}
-  ResurrectionEvent: {fileID: 0}
-  PlayerDamagesTaken: {fileID: 0}
+  ResetHP: 1
+  DamageEvent: {fileID: 11400000, guid: f94d8125720d55c4694a30f03265db8b, type: 2}
+  ResurrectionEvent: {fileID: 11400000, guid: dbb374766bcfc9b4ab395a1513189f80, type: 2}
+  PlayerDamagesTaken: {fileID: 11400000, guid: 5fbd007dfb639524a9a0982b3d5be53f, type: 2}
 --- !u!61 &2211861022508095545
 BoxCollider2D:
   m_ObjectHideFlags: 0
