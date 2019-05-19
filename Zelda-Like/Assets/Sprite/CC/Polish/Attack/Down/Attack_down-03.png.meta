@@ -7,6 +7,8 @@ TextureImporter:
     21300004: Attack_down-03_4
     21300006: Attack_down-03_6
     21300008: Attack_down-03_8
+    21300010: Attack_down-03_1
+    21300012: Attack_down-03_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -92,10 +94,10 @@ TextureImporter:
       name: Attack_down-03_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 56
-        width: 78
-        height: 77
+        x: 0
+        y: 0
+        width: 165
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,7 +105,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7de382034a557a43a5a8621fefe20d6
+      spriteID: 28be9c72dd4c08740a89ed216a5562dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_down-03_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b984b2103f933bf4c906ecf3bb9fb3e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_down-03_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae5c527ec5c25e4ba2ca8a091439f07
       vertices: []
       indices: 
       edges: []
@@ -112,10 +154,10 @@ TextureImporter:
       name: Attack_down-03_3
       rect:
         serializedVersion: 2
-        x: 206
-        y: 34
-        width: 91
-        height: 64
+        x: 495
+        y: 0
+        width: 165
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 886bfca4bcc41e1429836561d09fbf6c
+      spriteID: 25c6d10844ff2674f99e1afc436247da
       vertices: []
       indices: 
       edges: []
@@ -132,10 +174,10 @@ TextureImporter:
       name: Attack_down-03_4
       rect:
         serializedVersion: 2
-        x: 371
-        y: 38
-        width: 87
-        height: 57
+        x: 660
+        y: 0
+        width: 165
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,47 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b271cd2c772f7a9489c53c4c48c06e28
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_down-03_6
-      rect:
-        serializedVersion: 2
-        x: 536
-        y: 45
-        width: 79
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d31d396c6b8d2b46bf9555de43523d0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_down-03_8
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 49
-        width: 70
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21fa58dca0f7a36438fb5a6a2030cbaa
+      spriteID: 47012b66f6de91d4b8f78cb6484d8fdb
       vertices: []
       indices: 
       edges: []
