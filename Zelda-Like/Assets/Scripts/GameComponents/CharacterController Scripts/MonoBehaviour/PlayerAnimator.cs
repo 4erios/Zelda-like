@@ -65,7 +65,12 @@ public class PlayerAnimator : MonoBehaviour
 
     public void LaunchInsufflationAnimation()
     {
-        playerAnimator.SetTrigger("Insufflation");
+        playerAnimator.SetBool("Insufflation", true);
+    }
+
+    public void SetInsufflationConditionToFalse()
+    {
+        playerAnimator.SetBool("Insufflation", false);
     }
 
     public void LaunchShieldAnimation()
