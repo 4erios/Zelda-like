@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DebugChara : MonoBehaviour
+public class DebugScript : MonoBehaviour
 {
     public string DebugMessage;
 

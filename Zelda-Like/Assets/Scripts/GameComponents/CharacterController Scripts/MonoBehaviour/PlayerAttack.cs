@@ -53,45 +53,40 @@ public class PlayerAttack : MonoBehaviour
     public void RightAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(RightAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) /*(int i = 0; i < enemiesHurt.Length; i++)*/
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+
         }
     }
 
     public void LeftAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(LeftAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) /*(int i = 0; i < enemiesHurt.Length; i++)*/
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+
         }
     }
 
     public void UpAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(UpAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) /*(int i = 0; i < enemiesHurt.Length; i++)*/
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+
         }
     }
 
     public void DownAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(DownAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) /*(int i = 0; i < enemiesHurt.Length; i++)*/
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            enemiesHurt[i].GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+
         }
     }
 
