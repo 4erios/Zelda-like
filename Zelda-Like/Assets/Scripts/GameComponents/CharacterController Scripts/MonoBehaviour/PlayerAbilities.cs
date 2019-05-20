@@ -79,6 +79,7 @@ public class PlayerAbilities : MonoBehaviour
     public void AOEInfuseEnergyLoss()
     {
         LoseEnergy(AOEInfuseCost);
+
     }
 
     public void PlayerAOEInfuse()
