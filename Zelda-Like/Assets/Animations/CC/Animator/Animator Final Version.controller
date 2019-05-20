@@ -375,6 +375,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6161966c19001a42a12da3c36fd3892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114688906352208382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ce8713c9dddc14aa0a56b7db5ce9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+  - {fileID: 11400000, guid: 16c5cf02884d9b34cbbf3d2afa91af84, type: 2}
+  exitEvent:
+  - {fileID: 11400000, guid: eb6937ea9c3e8f34fb6d78c1b2aee3ef, type: 2}
+  updateEvent:
+  - {fileID: 11400000, guid: a634d7daa182cca45ae479e3de07de98, type: 2}
 --- !u!114 &114700536446678036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,8 +486,10 @@ MonoBehaviour:
   startEvent:
   - {fileID: 11400000, guid: 6ec62425295eff24bb9841d24d67d404, type: 2}
   - {fileID: 11400000, guid: 16c5cf02884d9b34cbbf3d2afa91af84, type: 2}
-  exitEvent: []
-  updateEvent: []
+  exitEvent:
+  - {fileID: 11400000, guid: eb6937ea9c3e8f34fb6d78c1b2aee3ef, type: 2}
+  updateEvent:
+  - {fileID: 11400000, guid: a634d7daa182cca45ae479e3de07de98, type: 2}
 --- !u!114 &114950909747900780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7518,7 +7538,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101504560687218898}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114688906352208382}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

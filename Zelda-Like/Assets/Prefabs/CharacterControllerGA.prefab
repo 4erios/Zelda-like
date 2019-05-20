@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 714645290}
   - component: {fileID: 714645292}
   - component: {fileID: 714645291}
+  - component: {fileID: 4739069873378502491}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -85,6 +86,22 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &4739069873378502491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714645289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1761634404
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1761634405}
   - component: {fileID: 1761634406}
+  - component: {fileID: 3109104670464270550}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -154,6 +172,23 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 714645290}
+--- !u!114 &3109104670464270550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761634404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228365ac6bb1d6340bbeeb9524c00df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShakeDuration: 0.1
+  ShakeAmplitude: 0.8
+  ShakeFrequency: 2
+  ScreenShakeActivation: 0
+  VirtualCamera: {fileID: 1761634406}
 --- !u!1 &1799184537
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +309,122 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &120806790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6892e5e679d6fad4caa77c9655c81fda, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8307763957188339053}
+        m_MethodName: UpAttackCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &120806791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 9326d8c024751fb4a891d14576ec8e23, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8307763957188339053}
+        m_MethodName: RightAttackCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &120806792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4618ca370ec66b4428883aed4d68af9c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8307763957188339053}
+        m_MethodName: LeftAttackCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &120806793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 412bcf43de3d7dc4aacd8aa65b7c966f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8307763957188339053}
+        m_MethodName: DownAttackCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1023288216
 MonoBehaviour:
@@ -714,7 +865,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &120806790
+--- !u!114 &1064000632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -726,12 +877,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 6892e5e679d6fad4caa77c9655c81fda, type: 2}
+  Event: {fileID: 11400000, guid: a634d7daa182cca45ae479e3de07de98, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8307763957188339053}
-        m_MethodName: UpAttackCollider
+      - m_Target: {fileID: 3109104670464270550}
+        m_MethodName: StartScreenShake
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -743,7 +894,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &120806791
+--- !u!114 &1064000633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -755,70 +906,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9326d8c024751fb4a891d14576ec8e23, type: 2}
+  Event: {fileID: 11400000, guid: eb6937ea9c3e8f34fb6d78c1b2aee3ef, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8307763957188339053}
-        m_MethodName: RightAttackCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &120806792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271560711376651462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 4618ca370ec66b4428883aed4d68af9c, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8307763957188339053}
-        m_MethodName: LeftAttackCollider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &120806793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271560711376651462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 412bcf43de3d7dc4aacd8aa65b7c966f, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8307763957188339053}
-        m_MethodName: DownAttackCollider
+      - m_Target: {fileID: 3109104670464270550}
+        m_MethodName: StopScreenShake
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -942,6 +1035,7 @@ GameObject:
   - component: {fileID: 2211861022508095545}
   - component: {fileID: 1698440698}
   - component: {fileID: 2213852787345290295}
+  - component: {fileID: 562901617}
   m_Layer: 8
   m_Name: CharacterControllerGA
   m_TagString: Untagged
@@ -1385,6 +1479,23 @@ MonoBehaviour:
   energyTank: 0
   maxEnergy: 0
   energy: 0
+--- !u!114 &562901617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704675715113948179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228365ac6bb1d6340bbeeb9524c00df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShakeDuration: 0.3
+  ShakeAmplitude: 1.2
+  ShakeFrequency: 2
+  ScreenShakeActivation: 0
+  VirtualCamera: {fileID: 1761634406}
 --- !u!1 &7081426699157911933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,15 +1646,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456fd6718235ddd47a81b59fb709ea28, type: 3}
---- !u!1 &1271560711376651462 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
-    type: 3}
-  m_PrefabInstance: {fileID: 1434923982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1271560711376651459 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434923982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1271560711376651462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
     type: 3}
   m_PrefabInstance: {fileID: 1434923982}
   m_PrefabAsset: {fileID: 0}
