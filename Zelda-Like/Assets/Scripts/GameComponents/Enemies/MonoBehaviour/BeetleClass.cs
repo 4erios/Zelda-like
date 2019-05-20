@@ -39,6 +39,10 @@ public class BeetleClass : EnemyClass
         {
             enemyAnimator.SetTrigger("InAttackRange");
         }
+
+        enemyAnimator.SetFloat("Health", health);
+
+        LaunchTakeDamagesAnimation();
     }
 
     public void BeetleSearchForPlayer()
@@ -69,5 +73,13 @@ public class BeetleClass : EnemyClass
     public void SetBeetleVelocityToZero()
     {
         SetVelocityToZero(enemyRb);
+    }
+
+    public void LaunchTakeDamagesAnimation()
+    {
+        if (takeDamages)
+        {
+            enemyAnimator.SetTrigger("TakeDamages");
+        }
     }
 }

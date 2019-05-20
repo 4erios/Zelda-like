@@ -5,6 +5,7 @@ using UnityEngine;
 public class LivingClass : MonoBehaviour
 {
     public float health = 1f;
+    public bool takeDamages = false;
 
     public virtual void TakeDamages(float damages)
     {
@@ -13,7 +14,13 @@ public class LivingClass : MonoBehaviour
         {
             health = 0;
         }
+        takeDamages = true;
         Debug.Log("Damages Taken");
+    }
+
+    public void SetBooltakeDamagesToFalse()
+    {
+        takeDamages = false;
     }
 
     public void GainEnergy(FloatVariable currentEnergyTank, FloatReference energyGain, FloatReference maxEnergyTank, IntVariable energyGauge, IntReferences energyMax)
