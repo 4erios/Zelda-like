@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4861569844125820426}
   - component: {fileID: 4861569844125820438}
   - component: {fileID: 4861569844125820437}
-  - component: {fileID: 4861569844125820436}
   - component: {fileID: 4861569844125820439}
   - component: {fileID: 4861569844125820425}
-  m_Layer: 0
+  - component: {fileID: 2322887846343160139}
+  m_Layer: 9
   m_Name: Little_Beetle_Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &4861569844125820437
 Animator:
   serializedVersion: 3
@@ -124,54 +124,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4861569844125820436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4861569844125820424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dddf7f8ae010324582dc1d89c7fea40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  playerTransform: {fileID: 0}
-  playerDetected: 0
-  playerInAttackRange: 0
-  attackReady: 1
-  TimeBetweenAttacks:
-    UseConstant: 1
-    ConstantValue: 5
-    Variable: {fileID: 0}
-  DetectionRange:
-    UseConstant: 1
-    ConstantValue: 25
-    Variable: {fileID: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  enemyAnimator: {fileID: 4861569844125820437}
-  enemyTransform: {fileID: 4861569844125820427}
-  enemySprite: {fileID: 4861569844125820426}
-  enemyRb: {fileID: 4861569844125820438}
-  beetleHealth:
-    UseConstant: 1
-    ConstantValue: 5
-    Variable: {fileID: 0}
-  beetleSpeed:
-    UseConstant: 1
-    ConstantValue: 5
-    Variable: {fileID: 0}
-  beetleAttackRange:
-    UseConstant: 1
-    ConstantValue: 10
-    Variable: {fileID: 0}
-  beetleChargeSpeed:
-    UseConstant: 1
-    ConstantValue: 10
-    Variable: {fileID: 0}
 --- !u!114 &4861569844125820439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +166,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &2322887846343160139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4861569844125820424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cff937130f38e418cd82107edc4679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  playerTransform: {fileID: 0}
+  playerDetected: 0
+  playerInAttackRange: 0
+  attackReady: 1
+  TimeBetweenAttacks:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  DetectionRange:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  enemyAnimator: {fileID: 4861569844125820437}
+  enemyTransform: {fileID: 4861569844125820427}
+  enemySprite: {fileID: 4861569844125820426}
+  enemyRb: {fileID: 4861569844125820438}
+  beetleHealth:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  beetleSpeed:
+    UseConstant: 1
+    ConstantValue: 3.5
+    Variable: {fileID: 0}
+  beetleAttackRange:
+    UseConstant: 1
+    ConstantValue: 2
+    Variable: {fileID: 0}
+  beetleChargeSpeed:
+    UseConstant: 1
+    ConstantValue: 2
+    Variable: {fileID: 0}
