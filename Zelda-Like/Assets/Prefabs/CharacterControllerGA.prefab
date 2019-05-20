@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeDuration: 0.1
-  ShakeAmplitude: 0.8
-  ShakeFrequency: 2
+  ShakeAmplitude: 0.5
+  ShakeFrequency: 1.5
   ScreenShakeActivation: 0
   VirtualCamera: {fileID: 1761634406}
 --- !u!1 &1799184537
@@ -444,6 +444,64 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4165362679613082742}
         m_MethodName: PlayerDash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1064000632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: a634d7daa182cca45ae479e3de07de98, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3109104670464270550}
+        m_MethodName: StartScreenShake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1064000633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271560711376651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: eb6937ea9c3e8f34fb6d78c1b2aee3ef, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3109104670464270550}
+        m_MethodName: StopScreenShake
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -865,64 +923,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1064000632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271560711376651462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: a634d7daa182cca45ae479e3de07de98, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3109104670464270550}
-        m_MethodName: StartScreenShake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1064000633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271560711376651462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: eb6937ea9c3e8f34fb6d78c1b2aee3ef, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3109104670464270550}
-        m_MethodName: StopScreenShake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1341306791632520544
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7976656796365943351}
+  - component: {fileID: 1658314144}
   m_Layer: 0
   m_Name: 'Attack_Right_Point '
   m_TagString: Untagged
@@ -947,12 +948,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341306791632520544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.348, y: -0.046612453, z: -26.575735}
+  m_LocalPosition: {x: 0.129, y: -0.023, z: -26.575735}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children: []
   m_Father: {fileID: 4704675715113948168}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1658314144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341306791632520544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4e6272967fd0f4db142a1caf78b8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeCenter: {fileID: 7976656796365943351}
+  rangeToShow:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d6ca664512e4fc34dad384f1d36ce2c8, type: 2}
 --- !u!1 &3437980674300080239
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4871305041434284578}
+  - component: {fileID: 1967572207}
   m_Layer: 0
   m_Name: 'Attack_Down_Point '
   m_TagString: Untagged
@@ -977,12 +996,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3437980674300080239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015176088, y: -0.415, z: -26.575735}
+  m_LocalPosition: {x: 0.015176088, y: -0.199, z: -26.575735}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children: []
   m_Father: {fileID: 4704675715113948168}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967572207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437980674300080239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4e6272967fd0f4db142a1caf78b8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeCenter: {fileID: 4871305041434284578}
+  rangeToShow:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d6ca664512e4fc34dad384f1d36ce2c8, type: 2}
 --- !u!1 &3891269204309516022
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6049446735290998431}
+  - component: {fileID: 521338701}
   m_Layer: 0
   m_Name: Attack_Left_Point
   m_TagString: Untagged
@@ -1007,12 +1044,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3891269204309516022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39, y: -0.046612453, z: -26.575735}
+  m_LocalPosition: {x: -0.217, y: -0.012, z: -26.575735}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children: []
   m_Father: {fileID: 4704675715113948168}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &521338701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3891269204309516022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4e6272967fd0f4db142a1caf78b8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeCenter: {fileID: 6049446735290998431}
+  rangeToShow:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d6ca664512e4fc34dad384f1d36ce2c8, type: 2}
 --- !u!1 &4704675715113948179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,9 +1315,9 @@ MonoBehaviour:
     ConstantValue: 8
     Variable: {fileID: 0}
   AttackRange:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 2
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: d6ca664512e4fc34dad384f1d36ce2c8, type: 2}
   TimeToAttack:
     UseConstant: 1
     ConstantValue: 2
@@ -1486,7 +1540,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4704675715113948179}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 228365ac6bb1d6340bbeeb9524c00df2, type: 3}
   m_Name: 
@@ -1505,6 +1559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2464805085333481489}
+  - component: {fileID: 1090035866}
   m_Layer: 0
   m_Name: 'Attack_Up_Point '
   m_TagString: Untagged
@@ -1520,12 +1575,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7081426699157911933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015176088, y: 0.43, z: -26.575735}
+  m_LocalPosition: {x: 0.015176088, y: 0.247, z: -26.575735}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children: []
   m_Father: {fileID: 4704675715113948168}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1090035866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081426699157911933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4e6272967fd0f4db142a1caf78b8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeCenter: {fileID: 2464805085333481489}
+  rangeToShow:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d6ca664512e4fc34dad384f1d36ce2c8, type: 2}
 --- !u!1001 &1434923982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1646,15 +1718,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456fd6718235ddd47a81b59fb709ea28, type: 3}
---- !u!4 &1271560711376651459 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
-    type: 3}
-  m_PrefabInstance: {fileID: 1434923982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1271560711376651462 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434923982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1271560711376651459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
     type: 3}
   m_PrefabInstance: {fileID: 1434923982}
   m_PrefabAsset: {fileID: 0}
