@@ -4762,6 +4762,12 @@ PrefabInstance:
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8341620075330936053, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: EnergyMax
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a8d640dd509ecd41aba423f8284817f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!114 &1619082467 stripped
