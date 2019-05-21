@@ -28,14 +28,14 @@ public class EnemyClass : LivingClass
 
     public void FacePlayer(Transform playerPosition, SpriteRenderer enemySprite)
     {
-        if (this.transform.position.x < playerPosition.position.x)
+        if (this.transform.position.x > playerPosition.position.x)
         {
             if(enemySprite.flipX == true)
             {
                 enemySprite.flipX = false;
             }
         }
-        else if (this.transform.position.x > playerPosition.position.x)
+        else if (this.transform.position.x < playerPosition.position.x)
         {
             if (enemySprite.flipX == false)
             {

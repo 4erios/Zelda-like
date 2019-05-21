@@ -84,6 +84,13 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerAOEInfuse()
     {
+        /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(DownAttackPoint.position, AttackRange);
+        foreach (Collider2D enemyCollision in enemiesHurt) //(int i = 0; i < enemiesHurt.Length; i++)
+        {
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+
+        }*/
+
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
         for (int i = 0; i < enemiesHurt.Length; i++)
         {
