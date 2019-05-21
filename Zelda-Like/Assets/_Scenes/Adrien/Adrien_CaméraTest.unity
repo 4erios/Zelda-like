@@ -3958,12 +3958,115 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!4 &379385671 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 379385671, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1217351880}
-  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &326736840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4861569844125820424, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_Name
+      value: BigVioletBeetle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820424, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.148
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.14327236
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1879292225}
+    - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: beetleSpeed.ConstantValue
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: beetleChargeSpeed.ConstantValue
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: DetectionRange.UseConstant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: attackReady
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820425, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861569844125820425, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab8ec4fa49160e14ca038a690f6b856c, type: 3}
 --- !u!1 &610858396
 GameObject:
   m_ObjectHideFlags: 0
@@ -4708,25 +4811,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6049446735290998431, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.331
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976656796365943351, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.268
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464805085333481489, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871305041434284578, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.189
+      objectReference: {fileID: 0}
     - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: EnergyGain.ConstantValue
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
-      propertyPath: FirePoint
-      value: 
-      objectReference: {fileID: 379385671}
-    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: AOEInfuseKnockBackDistance.ConstantValue
-      value: 2
+      propertyPath: DashEnergyCost.ConstantValue
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
-      propertyPath: AOEInfuseDamages.ConstantValue
-      value: 1
+      propertyPath: AOEInfuseCost.ConstantValue
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: ShootInfuseCost.ConstantValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: ShieldCost.ConstantValue
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
@@ -5534,7 +5662,7 @@ PrefabInstance:
     - target: {fileID: 4861569844125820424, guid: ab8ec4fa49160e14ca038a690f6b856c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4861569844125820427, guid: ab8ec4fa49160e14ca038a690f6b856c,
         type: 3}
@@ -5599,7 +5727,7 @@ PrefabInstance:
     - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
         type: 3}
       propertyPath: beetleSpeed.ConstantValue
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
         type: 3}
@@ -5609,6 +5737,16 @@ PrefabInstance:
     - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
         type: 3}
       propertyPath: DetectionRange.UseConstant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: attackReady
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322887846343160139, guid: ab8ec4fa49160e14ca038a690f6b856c,
+        type: 3}
+      propertyPath: beetleSpeed.UseConstant
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4861569844125820425, guid: ab8ec4fa49160e14ca038a690f6b856c,

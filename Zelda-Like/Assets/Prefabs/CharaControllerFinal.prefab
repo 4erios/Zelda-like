@@ -1513,7 +1513,7 @@ MonoBehaviour:
   CurrentEnergyTank: {fileID: 11400000, guid: 85765a3acae987b4280b88b1ae984dea, type: 2}
   EnergyGain:
     UseConstant: 1
-    ConstantValue: 3
+    ConstantValue: 30
     Variable: {fileID: 0}
   MaxEnergyTank:
     UseConstant: 1
@@ -1595,7 +1595,7 @@ MonoBehaviour:
     ConstantValue: 100
     Variable: {fileID: 0}
   rb: {fileID: 4704675715113948175}
-  FirePoint: {fileID: 0}
+  FirePoint: {fileID: 379385671}
   MoveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
   MoveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
   DashRange:
@@ -1612,11 +1612,11 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 26156b74919d7dc42b56c3c2647c164a, type: 2}
   AOEInfuseKnockBackDistance:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 2
     Variable: {fileID: 0}
   AOEInfuseDamages:
     UseConstant: 1
-    ConstantValue: 20
+    ConstantValue: 1
     Variable: {fileID: 0}
   AOEEmissionPoint: {fileID: 0}
   PlayerDamagesTaken: {fileID: 0}
