@@ -57,11 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetSpeedToZero()
     {
-        PlayerSpeed.SetFloatValue(0);
+        rb.velocity = Vector2.zero;
     }
 
-    public void SetSpeedToMaxSpeed()
+    public void SetVelocityToZero()
     {
-        PlayerSpeed.SetFloatValue(PlayerMaxSpeed);
+        rb.velocity = Vector2.zero;
     }
 }
