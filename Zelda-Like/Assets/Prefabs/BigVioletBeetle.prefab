@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4861569844125820437}
   - component: {fileID: 4861569844125820439}
   - component: {fileID: 4861569844125820425}
-  - component: {fileID: 2090885980176031440}
   - component: {fileID: 2322887846343160139}
+  - component: {fileID: 1188717672}
   m_Layer: 9
   m_Name: BigVioletBeetle
   m_TagString: Untagged
@@ -154,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0011950582, y: -0.07529108}
+  m_Offset: {x: 0.0023972094, y: 0.0028492361}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -165,33 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3894587, y: 0.10502529}
-  m_EdgeRadius: 0
---- !u!61 &2090885980176031440
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4861569844125820424}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00059753656, y: 0.053779423}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.39, y: 0.26}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3888049, y: 0.15244114}
+  m_Size: {x: 0.391863, y: 0.26130596}
   m_EdgeRadius: 0
 --- !u!114 &2322887846343160139
 MonoBehaviour:
@@ -217,9 +191,9 @@ MonoBehaviour:
     Variable: {fileID: 0}
   enemyRb: {fileID: 4861569844125820438}
   DetectionRange:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 0b2f6b60fccddd54283dfd75e938ed02, type: 2}
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -228,11 +202,11 @@ MonoBehaviour:
   enemySprite: {fileID: 4861569844125820426}
   beetleHealth:
     UseConstant: 1
-    ConstantValue: 1
+    ConstantValue: 4
     Variable: {fileID: 0}
   beetleSpeed:
     UseConstant: 1
-    ConstantValue: 3.5
+    ConstantValue: 3
     Variable: {fileID: 0}
   beetleAttackRange:
     UseConstant: 1
@@ -242,3 +216,20 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 5
     Variable: {fileID: 0}
+--- !u!114 &1188717672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4861569844125820424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4e6272967fd0f4db142a1caf78b8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeCenter: {fileID: 4861569844125820427}
+  rangeToShow:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 0b2f6b60fccddd54283dfd75e938ed02, type: 2}
