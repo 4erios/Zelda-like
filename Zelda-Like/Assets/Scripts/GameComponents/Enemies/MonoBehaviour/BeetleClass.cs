@@ -12,7 +12,6 @@ public class BeetleClass : EnemyClass
     public Animator enemyAnimator;
     public Transform enemyTransform;
     public SpriteRenderer enemySprite;
-    public Rigidbody2D enemyRb;
 
     [Header ("Beetle Stats")]
     public FloatReference beetleHealth;

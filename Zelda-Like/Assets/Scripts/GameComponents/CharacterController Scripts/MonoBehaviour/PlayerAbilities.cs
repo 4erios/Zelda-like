@@ -20,7 +20,6 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference MaxHP;
 
     public Rigidbody2D rb;
-    public Transform PlayerTransform;
     public Transform FirePoint;
 
 
@@ -33,7 +32,9 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference HealValue;
 
     public FloatReference AOEInfuseRange;
+    public FloatReference AOEInfuseKnockBackDistance;
     public FloatReference AOEInfuseDamages;
+    public Transform AOEEmissionPoint;
 
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
@@ -84,14 +85,16 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerAOEInfuse()
     {
-        /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(DownAttackPoint.position, AttackRange);
-        foreach (Collider2D enemyCollision in enemiesHurt) //(int i = 0; i < enemiesHurt.Length; i++)
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange);
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
+            enemyCollision.GetComponent<EnemyClass>().KnockBack(AOEInfuseKnockBackDistance);
+            //enemiesHurt[i].GetComponent<InfusableComponentClass>().Infuse();
 
-        }*/
+        }
 
-        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
+        /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
         for (int i = 0; i < enemiesHurt.Length; i++)
         {
             enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
@@ -99,7 +102,7 @@ public class PlayerAbilities : MonoBehaviour
             //enemiesHurt[i].GetComponent<InfusableComponentClass>().Infuse();
             Debug.Log("AOE touchée");
             Debug.Log(i);
-        }
+        }*/
     }
 
     public void ShootEnergyLoss()
