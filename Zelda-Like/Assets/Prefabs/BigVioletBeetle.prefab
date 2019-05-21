@@ -191,7 +191,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   enemyRb: {fileID: 4861569844125820438}
   DetectionRange:
-    UseConstant: 0
+    UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 0b2f6b60fccddd54283dfd75e938ed02, type: 2}
   playerLayer:
@@ -206,7 +206,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   beetleSpeed:
     UseConstant: 1
-    ConstantValue: 3
+    ConstantValue: 2
     Variable: {fileID: 0}
   beetleAttackRange:
     UseConstant: 1
@@ -214,7 +214,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   beetleChargeSpeed:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 6
     Variable: {fileID: 0}
 --- !u!114 &1188717672
 MonoBehaviour:
