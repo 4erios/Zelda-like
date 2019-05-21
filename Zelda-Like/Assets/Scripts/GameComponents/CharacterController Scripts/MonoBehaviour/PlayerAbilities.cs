@@ -39,6 +39,10 @@ public class PlayerAbilities : MonoBehaviour
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
 
+    public Rigidbody2D shootPrefab;
+    public Transform shootingPoint;
+    public FloatReference prefabSpeed;
+
     //shoot parameters
     private Vector2 FireDirection;
     
@@ -121,6 +125,11 @@ public class PlayerAbilities : MonoBehaviour
         {
             FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
         }
+        Rigidbody2D clone;
+
+        clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
+        clone.velocity = FireDirection * prefabSpeed;
+
         ShootEnergyLoss();
     }
 
