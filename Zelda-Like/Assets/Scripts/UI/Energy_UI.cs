@@ -8,18 +8,20 @@ public class Energy_UI : MonoBehaviour
     [SerializeField]
     private Image gaugeEnergy;
 
+    public IntVariable EnergyMax;
     public IntVariable currentEnergy;
 
+    private float percentEnergy;
 
     void Start()
     {
-        gaugeEnergy.fillAmount = 1F;
+        percentEnergy = 1F;
     }
 
     private void Update()
     {
-        gaugeEnergy.fillAmount = currentEnergy / 100;
-
+        percentEnergy = currentEnergy / EnergyMax;
+        gaugeEnergy.fillAmount = percentEnergy;
     }
 
 
