@@ -18,7 +18,7 @@ public class Energy_UI : MonoBehaviour
 
     private void Update()
     {
-        gaugeEnergy.fillAmount = currentEnergy;
+        gaugeEnergy.fillAmount = currentEnergy / 100;
 
     }
 
