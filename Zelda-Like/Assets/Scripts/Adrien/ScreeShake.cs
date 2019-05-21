@@ -50,45 +50,13 @@ public class ScreeShake : MonoBehaviour
          {
 
                 virtualCameraNoise.m_AmplitudeGain = 0f;
+                virtualCameraNoise.m_FrequencyGain = 0f;
                 ShakeElapsedTime = 0f;
 
          }
 
     }
 
-    public void ScreenShake ()
-    {
-
-        ShakeElapsedTime = ShakeDuration;
-
-
-
-        if (ScreenShakeActivation == true)
-        {
-            
-
-                virtualCameraNoise.m_AmplitudeGain = ShakeAmplitude;
-                virtualCameraNoise.m_FrequencyGain = ShakeFrequency;
-
-           
-            /*else
-            {
-
-                virtualCameraNoise.m_AmplitudeGain = 0f;
-                ShakeElapsedTime = 0f;
-
-            }*/
-
-
-
-        }
-
-
-
-
-
-
-    }
 
 
 
