@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 68a07d360e95630478eb88823c098795
+guid: 7a60d3224c3fd4e43b8c87c86665d13f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: IDLE_down_0
-    21300002: IDLE_down_1
-    21300004: IDLE_down_2
-    21300006: IDLE_down_3
-    21300008: IDLE_down_4
-    21300010: IDLE_down_5
+    21300000: Top2_0
+    21300002: Top2_1
+    21300004: Top2_2
+    21300006: Top2_3
+    21300008: Top2_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -90,13 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLE_down_0
+      name: Top2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 60
-        height: 60
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,19 +103,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7100160fda9f6174db05cf79a5fc25b7
+      spriteID: 1138d6940fd5269429d241460e18605a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_down_1
+      name: Top2_1
       rect:
         serializedVersion: 2
-        x: 60
+        x: 100
         y: 0
-        width: 60
-        height: 60
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,19 +123,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f56cd1526be21604eb6292d802b49379
+      spriteID: 7653fcafa429a3540ba907a46cddad87
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_down_2
+      name: Top2_2
       rect:
         serializedVersion: 2
-        x: 120
+        x: 200
         y: 0
-        width: 60
-        height: 60
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,59 +143,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b4e8fb68dc815f4e8fbbaa4e6a56983
+      spriteID: b754b3d580d92544c816badeadf4d693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_down_3
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c10021b29971be34993b392bcec35a29
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_down_4
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 243bbb08d6b46334c94e812bab6e9279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_down_5
+      name: Top2_3
       rect:
         serializedVersion: 2
         x: 300
         y: 0
-        width: 60
-        height: 60
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,7 +163,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4708345bc45e0f040988ffbb11353fb3
+      spriteID: c77cdbf9f93ef2841b1e61e2763d94da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top2_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d410d749f6e8ab2429a848365e17886a
       vertices: []
       indices: 
       edges: []
@@ -212,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fe27f86654e43024e89d18af0b775dab
+    spriteID: 16f0ac0529b47cc4a957f949c10f939b
     vertices: []
     indices: 
     edges: []
