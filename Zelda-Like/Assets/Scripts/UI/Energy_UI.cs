@@ -5,30 +5,21 @@ using UnityEngine.UI;
 
 public class Energy_UI : MonoBehaviour
 {
-    public GameObject gOEnergyGauge;
+    [SerializeField]
     private Image gaugeEnergy;
-    public Sprite[] energyElements;
 
-    public IntVariable EnergyGauge;
+    public IntVariable currentEnergy;
 
 
     void Start()
     {
-        gaugeEnergy = gOEnergyGauge.GetComponent<Image>();
-        gaugeEnergy.sprite = energyElements[7];
+        gaugeEnergy.fillAmount = 1F;
     }
 
     private void Update()
     {
-        if (EnergyGauge > 0)
-        {
-            gOEnergyGauge.SetActive(true);
-            gaugeEnergy.sprite = energyElements[EnergyGauge - 1];
-        }
+        gaugeEnergy.fillAmount = currentEnergy / 100;
 
-        else
-        gOEnergyGauge.SetActive(false);
-        
     }
 
 
