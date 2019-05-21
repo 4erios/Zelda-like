@@ -188,6 +188,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
+  enemyRb: {fileID: 4861569844125820438}
   DetectionRange:
     UseConstant: 1
     ConstantValue: 0
@@ -198,7 +199,6 @@ MonoBehaviour:
   enemyAnimator: {fileID: 4861569844125820437}
   enemyTransform: {fileID: 4861569844125820427}
   enemySprite: {fileID: 4861569844125820426}
-  enemyRb: {fileID: 4861569844125820438}
   beetleHealth:
     UseConstant: 1
     ConstantValue: 1
