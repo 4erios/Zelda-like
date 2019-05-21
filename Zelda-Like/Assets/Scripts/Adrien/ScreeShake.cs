@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class ScreeShake : MonoBehaviour
 {
-    public float ShakeDuration = 0.3f;
+    //public float ShakeDuration = 0.3f;
     public float ShakeAmplitude = 1.2f;
     public float ShakeFrequency = 2.0f;
     public bool ScreenShakeActivation;
@@ -51,7 +51,7 @@ public class ScreeShake : MonoBehaviour
 
                 virtualCameraNoise.m_AmplitudeGain = 0f;
                 virtualCameraNoise.m_FrequencyGain = 0f;
-                ShakeElapsedTime = 0f;
+                //ShakeElapsedTime = 0f;
 
          }
 
