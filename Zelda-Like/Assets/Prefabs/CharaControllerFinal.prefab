@@ -128,7 +128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761634404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.336925, y: -7.856111, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 714645290}
@@ -184,7 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228365ac6bb1d6340bbeeb9524c00df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShakeDuration: 0.1
   ShakeAmplitude: 0.5
   ShakeFrequency: 1.5
   ScreenShakeActivation: 0
@@ -218,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799184537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -27.100273}
+  m_LocalPosition: {x: 1.8086317, y: 4.258055, z: -27.100273}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children:
   - {fileID: 1761634405}
@@ -1414,6 +1413,10 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 2
     Variable: {fileID: 11400000, guid: d6ca664512e4fc34dad384f1d36ce2c8, type: 2}
+  AttackKnockBackDistance:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   TimeToAttack:
     UseConstant: 1
     ConstantValue: 2
@@ -1515,7 +1518,6 @@ MonoBehaviour:
     ConstantValue: 100
     Variable: {fileID: 0}
   rb: {fileID: 4704675715113948175}
-  PlayerTransform: {fileID: 4704675715113948168}
   FirePoint: {fileID: 0}
   MoveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
   MoveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
@@ -1531,10 +1533,15 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 26156b74919d7dc42b56c3c2647c164a, type: 2}
+  AOEInfuseKnockBackDistance:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   AOEInfuseDamages:
     UseConstant: 1
     ConstantValue: 20
     Variable: {fileID: 0}
+  AOEEmissionPoint: {fileID: 0}
   PlayerDamagesTaken: {fileID: 0}
   ShieldDamageTaken:
     UseConstant: 1
@@ -1571,10 +1578,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.057663262}
+  m_Offset: {x: 0, y: -0.21090049}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1585,7 +1592,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.42467356}
+  m_Size: {x: 0.36, y: 0.117136}
   m_EdgeRadius: 0
 --- !u!61 &1698440698
 BoxCollider2D:
@@ -1597,10 +1604,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.21291025}
+  m_Offset: {x: 0, y: 0.05990518}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1611,7 +1618,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.11417946}
+  m_Size: {x: 0.36, y: 0.42455137}
   m_EdgeRadius: 0
 --- !u!114 &562901617
 MonoBehaviour:
@@ -1625,7 +1632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228365ac6bb1d6340bbeeb9524c00df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShakeDuration: 0.3
   ShakeAmplitude: 1.2
   ShakeFrequency: 2
   ScreenShakeActivation: 0

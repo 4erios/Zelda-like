@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4861569844125820437}
   - component: {fileID: 4861569844125820439}
   - component: {fileID: 4861569844125820425}
+  - component: {fileID: 2090885980176031440}
   - component: {fileID: 2322887846343160139}
   m_Layer: 9
-  m_Name: Little_Beetle_Test
+  m_Name: BigVioletBeetle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4861569844125820424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.187, y: 0, z: -0.14327236}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1.77369, y: 1.77369, z: 0.59123}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -153,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0011950582, y: -0.07529108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -164,7 +165,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.3894587, y: 0.10502529}
+  m_EdgeRadius: 0
+--- !u!61 &2090885980176031440
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4861569844125820424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00059753656, y: 0.053779423}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.39, y: 0.26}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3888049, y: 0.15244114}
   m_EdgeRadius: 0
 --- !u!114 &2322887846343160139
 MonoBehaviour:
@@ -178,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92cff937130f38e418cd82107edc4679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 4
   takeDamages: 0
   playerTransform: {fileID: 0}
   playerDetected: 0
@@ -186,8 +213,9 @@ MonoBehaviour:
   attackReady: 1
   TimeBetweenAttacks:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 3
     Variable: {fileID: 0}
+  enemyRb: {fileID: 4861569844125820438}
   DetectionRange:
     UseConstant: 1
     ConstantValue: 0
@@ -198,7 +226,6 @@ MonoBehaviour:
   enemyAnimator: {fileID: 4861569844125820437}
   enemyTransform: {fileID: 4861569844125820427}
   enemySprite: {fileID: 4861569844125820426}
-  enemyRb: {fileID: 4861569844125820438}
   beetleHealth:
     UseConstant: 1
     ConstantValue: 1
@@ -213,5 +240,5 @@ MonoBehaviour:
     Variable: {fileID: 0}
   beetleChargeSpeed:
     UseConstant: 1
-    ConstantValue: 2
+    ConstantValue: 5
     Variable: {fileID: 0}
