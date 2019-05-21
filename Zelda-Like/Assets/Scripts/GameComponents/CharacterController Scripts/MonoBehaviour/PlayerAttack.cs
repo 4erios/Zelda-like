@@ -58,6 +58,7 @@ public class PlayerAttack : MonoBehaviour
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
             enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
@@ -68,6 +69,7 @@ public class PlayerAttack : MonoBehaviour
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
             enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
@@ -78,6 +80,7 @@ public class PlayerAttack : MonoBehaviour
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
             enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
@@ -88,6 +91,7 @@ public class PlayerAttack : MonoBehaviour
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
             enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
