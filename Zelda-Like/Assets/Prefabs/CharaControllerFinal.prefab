@@ -389,23 +389,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &775870876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082290499592308883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c4e6272967fd0f4db142a1caf78b8b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rangeCenter: {fileID: 2082290499592308894}
-  rangeToShow:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 26156b74919d7dc42b56c3c2647c164a, type: 2}
 --- !u!114 &120806790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,7 +1027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341306791632520544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.373, y: -0.023, z: -26.575735}
+  m_LocalPosition: {x: 0.519, y: -0.023, z: -26.575735}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children: []
   m_Father: {fileID: 4704675715113948168}
@@ -1067,6 +1050,23 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: d6ca664512e4fc34dad384f1d36ce2c8, type: 2}
+--- !u!114 &775870876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082290499592308883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4e6272967fd0f4db142a1caf78b8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeCenter: {fileID: 2082290499592308894}
+  rangeToShow:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 26156b74919d7dc42b56c3c2647c164a, type: 2}
 --- !u!1 &3437980674300080239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3437980674300080239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015176088, y: -0.199, z: -26.575735}
+  m_LocalPosition: {x: 0.015176088, y: -0.249, z: -26.575735}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children: []
   m_Father: {fileID: 4704675715113948168}
@@ -1140,7 +1140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3891269204309516022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.336, y: -0.012, z: -26.575735}
+  m_LocalPosition: {x: -0.516, y: -0.012, z: -26.575735}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children: []
   m_Father: {fileID: 4704675715113948168}
@@ -1184,7 +1184,6 @@ GameObject:
   - component: {fileID: 1539906982}
   - component: {fileID: 2211861022508095545}
   - component: {fileID: 1698440698}
-  - component: {fileID: 2213852787345290295}
   - component: {fileID: 562901617}
   m_Layer: 8
   m_Name: CharaControllerFinal
@@ -1614,23 +1613,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.36, y: 0.11417946}
   m_EdgeRadius: 0
---- !u!114 &2213852787345290295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4704675715113948179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c61a2abc75a8e4688580566f435be5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  takeDamages: 0
-  energyTank: 0
-  maxEnergy: 0
-  energy: 0
 --- !u!114 &562901617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,7 +1620,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4704675715113948179}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 228365ac6bb1d6340bbeeb9524c00df2, type: 3}
   m_Name: 
@@ -1673,7 +1655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7081426699157911933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015176088, y: 0.233, z: -26.575735}
+  m_LocalPosition: {x: 0.015176088, y: 0.191, z: -26.575735}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children: []
   m_Father: {fileID: 4704675715113948168}
@@ -1848,12 +1830,12 @@ PrefabInstance:
     - target: {fileID: 2082290499302318144, guid: d2649c57be96c64468e2ae9dc8ac64b7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.029308949
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 2082290499302318144, guid: d2649c57be96c64468e2ae9dc8ac64b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18813592
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 2082290499302318144, guid: d2649c57be96c64468e2ae9dc8ac64b7,
         type: 3}
@@ -1903,22 +1885,17 @@ PrefabInstance:
     - target: {fileID: 2082290499302318144, guid: d2649c57be96c64468e2ae9dc8ac64b7,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5420055
+      value: 0.71642286
       objectReference: {fileID: 0}
     - target: {fileID: 2082290499302318144, guid: d2649c57be96c64468e2ae9dc8ac64b7,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5420055
+      value: 0.71642286
       objectReference: {fileID: 0}
     - target: {fileID: 2082290499302318144, guid: d2649c57be96c64468e2ae9dc8ac64b7,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.7100272
-      objectReference: {fileID: 0}
-    - target: {fileID: 2082290499302318147, guid: d2649c57be96c64468e2ae9dc8ac64b7,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 3.582114
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2649c57be96c64468e2ae9dc8ac64b7, type: 3}
@@ -2058,7 +2035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6647451048597076507, guid: 6a3c07abb11e3864eb0611c45aad31bf,
         type: 3}
-      propertyPath: EnergyGauge
+      propertyPath: currentEnergy
       value: 
       objectReference: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28,
         type: 2}
