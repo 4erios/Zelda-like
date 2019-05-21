@@ -10,6 +10,8 @@ public class EnemyClass : LivingClass
     public bool playerInAttackRange = false;
     public bool attackReady = true;
     public FloatReference TimeBetweenAttacks;
+    public Rigidbody2D enemyRb;
+
 
     public void PlayerDetection(Transform monsterPosition, float detectionRange, LayerMask playerLayer)
     {
@@ -28,14 +30,14 @@ public class EnemyClass : LivingClass
 
     public void FacePlayer(Transform playerPosition, SpriteRenderer enemySprite)
     {
-        if (this.transform.position.x < playerPosition.position.x)
+        if (this.transform.position.x > playerPosition.position.x)
         {
             if(enemySprite.flipX == true)
             {
                 enemySprite.flipX = false;
             }
         }
-        else if (this.transform.position.x > playerPosition.position.x)
+        else if (this.transform.position.x < playerPosition.position.x)
         {
             if (enemySprite.flipX == false)
             {
@@ -44,10 +46,10 @@ public class EnemyClass : LivingClass
         }
     }
 
-    public void KnockBack(Rigidbody2D enemyRigidbody,Transform playerPosition, float knockbackDistance)
+    public void KnockBack(float knockbackDistance)
     {
-        Vector2 direction = this.transform.position - playerPosition.position;
-        enemyRigidbody.AddForce(direction.normalized * knockbackDistance);
+        Vector2 direction = this.transform.position - playerTransform.position;
+        enemyRb.AddForce(direction.normalized * knockbackDistance);
     }
 
     public void EnterAttackRange(Transform enemyPosition, Transform playerPosition,float attackRange)

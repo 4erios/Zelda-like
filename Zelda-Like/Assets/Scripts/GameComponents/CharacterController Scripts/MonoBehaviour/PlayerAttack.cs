@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Attack Parameters")]
     public FloatReference PlayerAttackDamages;
     public FloatReference AttackRange;
+    public FloatReference AttackKnockBackDistance;
 
     public FloatReference TimeToAttack;
     public FloatReference AttackCoolDown;
@@ -86,7 +87,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemyCollision in enemiesHurt) /*(int i = 0; i < enemiesHurt.Length; i++)*/
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-
+            enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
         }
     }
 
