@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public FloatVariable CurrentSpeed;
 
     public FloatReference PlayerMaxSpeed;
+    public FloatVariable PlayerSpeed;
 
     public AnimationCurve accelerationCurve;
 
@@ -51,17 +52,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerMove()
     {
-        rb.velocity = playerdirection * CurrentSpeed * accelerationCurve.Evaluate(Time.time);
+        rb.velocity = playerdirection * PlayerSpeed * CurrentSpeed * accelerationCurve.Evaluate(Time.time);
     }
 
     public void SetSpeedToZero()
     {
-        CurrentSpeed.SetFloatValue(0);
+        PlayerSpeed.SetFloatValue(0);
     }
 
     public void SetSpeedToMaxSpeed()
     {
-        CurrentSpeed.SetFloatValue(PlayerMaxSpeed);
+        PlayerSpeed.SetFloatValue(PlayerMaxSpeed);
     }
 
     public void SetVelocityToZero()
