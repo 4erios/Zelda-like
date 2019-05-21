@@ -75,6 +75,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             CurrentHP.SetFloatValue(MaxHP);
         }
+        HealEnergyLoss();
     }
 
     public void AOEInfuseEnergyLoss()
@@ -93,6 +94,8 @@ public class PlayerAbilities : MonoBehaviour
             //enemiesHurt[i].GetComponent<InfusableComponentClass>().Infuse();
 
         }
+
+        PlayerAOEInfuse();
 
         /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
         for (int i = 0; i < enemiesHurt.Length; i++)
@@ -117,6 +120,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
         }
+        ShootEnergyLoss();
     }
 
     public void ShieldEnergyLoss()
@@ -127,6 +131,7 @@ public class PlayerAbilities : MonoBehaviour
     public void PlayerShield()
     {
         PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
+        ShieldEnergyLoss();
     }
 
     public void StopPlayerShield()
