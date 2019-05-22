@@ -17,7 +17,7 @@ public class PlayerHPSystem : MonoBehaviour
 
     public FloatVariable PlayerDamagesTaken;
 
-    private void Start()
+    private void Awake()
     {
         if (ResetHP)
             CurrentHP.SetFloatValue(playerMaxHP);
