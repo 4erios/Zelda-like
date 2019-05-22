@@ -130,7 +130,7 @@ public class PlayerAbilities : MonoBehaviour
 
         clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
         clone.velocity = FireDirection * prefabSpeed;
-
+        Debug.Log("Instantiate PrefabSpawn");
         ShootEnergyLoss();
     }
 

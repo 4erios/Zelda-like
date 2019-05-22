@@ -16,6 +16,7 @@ public class LivingClass : MonoBehaviour
         {
             health = 0;
         }
+
         takeDamages = true;
         Debug.Log("Damages Taken");
     }

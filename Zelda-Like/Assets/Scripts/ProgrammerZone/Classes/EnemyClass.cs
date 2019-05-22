@@ -11,6 +11,7 @@ public class EnemyClass : LivingClass
     public bool attackReady = true;
     public FloatReference TimeBetweenAttacks;
     public Rigidbody2D enemyRb;
+    public Transform enemyTransform;
 
 
     public void PlayerDetection(Transform monsterPosition, float detectionRange, LayerMask playerLayer)
@@ -25,7 +26,8 @@ public class EnemyClass : LivingClass
 
     public void MoveToPlayer(Transform playerPosition, float currentspeed)
     {
-        transform.position = Vector2.MoveTowards(this.transform.position, playerPosition.position, currentspeed * Time.deltaTime);
+        Vector2 direction = (playerTransform.position - enemyTransform.position).normalized;
+        enemyRb.velocity = new Vector2(direction.x * currentspeed, direction.y * currentspeed);
     }
 
     public void FacePlayer(Transform playerPosition, SpriteRenderer enemySprite)

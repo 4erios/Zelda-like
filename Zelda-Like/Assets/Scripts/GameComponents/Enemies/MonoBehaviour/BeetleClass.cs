@@ -10,7 +10,6 @@ public class BeetleClass : EnemyClass
 
     [Header("Beetle Components")]
     public Animator enemyAnimator;
-    public Transform enemyTransform;
     public SpriteRenderer enemySprite;
 
     [Header ("Beetle Stats")]
