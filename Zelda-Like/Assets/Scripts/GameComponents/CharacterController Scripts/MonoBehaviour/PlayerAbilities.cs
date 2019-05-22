@@ -96,7 +96,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
             enemyCollision.GetComponent<EnemyClass>().KnockBack(AOEInfuseKnockBackDistance);
-            //enemiesHurt[i].GetComponent<InfusableComponentClass>().Infuse();
+            enemyCollision.GetComponent<InfusableClass>().Infuse();
 
         }
 
@@ -124,6 +124,7 @@ public class PlayerAbilities : MonoBehaviour
         if (hit.collider != null)
         {
             FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
+            hit.collider.GetComponent<InfusableClass>().Infuse();
         }
         Rigidbody2D clone;
 
