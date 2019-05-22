@@ -192,6 +192,10 @@ MonoBehaviour:
     Variable: {fileID: 0}
   enemyRb: {fileID: 4861569844125820438}
   enemyTransform: {fileID: 4861569844125820427}
+  knockbackDistance:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   DetectionRange:
     UseConstant: 0
     ConstantValue: 0
@@ -207,7 +211,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   beetleSpeed:
     UseConstant: 1
-    ConstantValue: 2.5
+    ConstantValue: 2.3
     Variable: {fileID: 0}
   beetleAttackRange:
     UseConstant: 1
@@ -215,7 +219,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   beetleChargeSpeed:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 4.5
     Variable: {fileID: 0}
 --- !u!114 &1188717672
 MonoBehaviour:
