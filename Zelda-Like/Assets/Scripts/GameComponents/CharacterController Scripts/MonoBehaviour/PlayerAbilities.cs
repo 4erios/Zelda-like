@@ -40,12 +40,94 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference ShieldDamageTaken;
 
     public Rigidbody2D shootPrefab;
+   // public List<Pool> pools;
+    //public Dictionary<string, Queue<GameObject>> poolDictionary;
     public Transform shootingPoint;
     public FloatReference prefabSpeed;
 
     //shoot parameters
     private Vector2 FireDirection;
-    
+   // PlayerAbilities playerAbilities;
+
+   // [System.Serializable]
+    /*public class Pool
+    {
+
+        public string tag;
+        public GameObject prefab;
+        public int size; 
+
+
+
+    }
+
+    #region Singleton 
+
+    public static PlayerAbilities Instance;
+
+    private void Awake()
+    {
+
+        Instance = this;
+    }
+
+
+    #endregion 
+
+    void Start()
+    {
+        poolDictionary = new Dictionary<string, Queue<GameObject>>();
+
+        foreach (Pool pool in pools)
+        {
+
+
+            Queue<GameObject> objectPool = new Queue<GameObject>();
+
+            for (int i = 0; i < pool.size; i++)
+            {
+
+
+                GameObject obj = Instantiate(pool.prefab);
+                obj.SetActive(false);
+                objectPool.Enqueue(obj);
+
+
+            }
+
+            poolDictionary.Add(pool.tag, objectPool);
+
+        }
+
+        playerAbilities = PlayerAbilities.Instance;
+    }
+
+    private void FixedUpdate()
+    {
+        PlayerAbilities.Instance.SpawnFromPool("Infuse", transform.position, Quaternion.identity);
+    }
+
+    public GameObject SpawnFromPool (string tag, Vector2 position, Quaternion rotation)
+    {
+        if (!poolDictionary.ContainsKey(tag))
+        {
+
+            Debug.Log("Warning");
+                return null;
+
+
+        }
+
+       GameObject objectToSpawn = poolDictionary[tag].Dequeue();
+
+        objectToSpawn.SetActive(true);
+        objectToSpawn.transform.position = position;
+        objectToSpawn.transform.rotation = rotation;
+
+        poolDictionary[tag].Enqueue(objectToSpawn);
+
+        return objectToSpawn;
+    }*/
 
     private void LoseEnergy(int energyCost)
     {
@@ -126,6 +208,7 @@ public class PlayerAbilities : MonoBehaviour
             FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
             hit.collider.GetComponent<InfusableClass>().Infuse();
         }
+
         Rigidbody2D clone;
 
         clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);

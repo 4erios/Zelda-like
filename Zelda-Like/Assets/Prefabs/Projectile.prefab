@@ -121,7 +121,7 @@ Animation:
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_CullingType: 0
 --- !u!50 &1031060934
 Rigidbody2D:
@@ -131,14 +131,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828739811829525749}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
