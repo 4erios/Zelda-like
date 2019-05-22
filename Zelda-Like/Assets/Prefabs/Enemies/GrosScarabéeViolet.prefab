@@ -181,8 +181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   takeDamages: 0
-  doesItGiveEnergy: 0
-  playerTransform: {fileID: 0}
+  doesItGiveEnergy: 1
+  playerTransform: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
+    type: 3}
   playerDetected: 0
   playerInAttackRange: 0
   attackReady: 1

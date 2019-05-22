@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GSV_PrepareAttack
+  m_Name: PSV_PrepareAttack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300010, guid: 58114229579b8384d85d78adf4e86356, type: 3}
+      value: {fileID: 21300010, guid: e605426d43e59144a877d57a9f3f75e9, type: 3}
     - time: 0.125
-      value: {fileID: 21300012, guid: 58114229579b8384d85d78adf4e86356, type: 3}
+      value: {fileID: 21300012, guid: e605426d43e59144a877d57a9f3f75e9, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300010, guid: 58114229579b8384d85d78adf4e86356, type: 3}
-    - {fileID: 21300012, guid: 58114229579b8384d85d78adf4e86356, type: 3}
+    - {fileID: 21300010, guid: e605426d43e59144a877d57a9f3f75e9, type: 3}
+    - {fileID: 21300012, guid: e605426d43e59144a877d57a9f3f75e9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
