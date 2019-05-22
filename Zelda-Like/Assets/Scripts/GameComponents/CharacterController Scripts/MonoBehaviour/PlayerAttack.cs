@@ -57,7 +57,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+           // enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
             enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
@@ -68,7 +68,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
             enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
@@ -79,7 +79,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
             enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
@@ -90,7 +90,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
             enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }

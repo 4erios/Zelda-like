@@ -177,7 +177,6 @@ public class PlayerAbilities : MonoBehaviour
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
-            enemyCollision.GetComponent<EnemyClass>().KnockBack(AOEInfuseKnockBackDistance);
             enemyCollision.GetComponent<InfusableClass>().Infuse();
 
         }

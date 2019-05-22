@@ -12,6 +12,9 @@ public class EnemyClass : LivingClass
     public FloatReference TimeBetweenAttacks;
     public Rigidbody2D enemyRb;
     public Transform enemyTransform;
+    public FloatReference knockbackDistance;
+
+    private Vector2 direction;
 
 
     public void PlayerDetection(Transform monsterPosition, float detectionRange, LayerMask playerLayer)
@@ -48,10 +51,14 @@ public class EnemyClass : LivingClass
         }
     }
 
-    public void KnockBack(float knockbackDistance)
+    public void SetKnockBackDirection()
     {
-        Vector2 direction = this.transform.position - playerTransform.position;
-        enemyRb.AddForce(direction.normalized * knockbackDistance);
+        direction = enemyTransform.position - playerTransform.position;
+    }
+
+    public void KnockBack()
+    {
+        enemyRb.velocity = (direction.normalized * knockbackDistance); 
     }
 
     public void EnterAttackRange(Transform enemyPosition, Transform playerPosition,float attackRange)
