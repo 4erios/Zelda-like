@@ -118,8 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0040c14dbdb505408d5c1cf2b2068e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 0
-  timeBeforeRespawn: 0
+  attack: 0
+  portailLife: 5
+  timeBeforeRespawn: 15
   ennemis: []
   spawnAreas:
   - {fileID: 1550541249355115051}

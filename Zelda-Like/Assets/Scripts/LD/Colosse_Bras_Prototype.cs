@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Colosse_Bras : MonoBehaviour
+public class Colosse_Bras_Prototype : MonoBehaviour
 {
     //Reste à faire :
     // Ok! Annimation
@@ -20,22 +20,22 @@ public class Colosse_Bras : MonoBehaviour
     private bool playerOn = false; //Si le joueur doit être transporté
     private bool playerMov = false; // Le joueur est transporté
 
-    public Transform positionHaut;
-    public Transform positionBas;
-    public float speed = 5;
-    public float checkRadius = 2F;
+    public Transform colliderHaut; //En haut de la falaise
+    public Transform colliderBas; //En bas de la falaise
+    public float checkRadius = 0.2f;
     public LayerMask playerMask;
 
     public bool trapeOnly = false;
     private int actualframe;
-    public bool enHauteur; //false = bas || true = haut
+    public GameObject[] playerPosition;
+    public bool positionHaut; //false = bas || true = haut
 
     void Start()
     {
         anim = this.gameObject.GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         #region Up on load
-        if (enHauteur)
+        if (positionHaut)
         {
             anim.SetTrigger("Up On Load");
             actualframe = 5;
@@ -47,75 +47,85 @@ public class Colosse_Bras : MonoBehaviour
     {
         if (actualframe == 0)
         {
-            enHauteur = false;
+            positionHaut = false;
             anim.SetBool("Is Fall", false);
         }
         else if (actualframe == 5)
         {
-            enHauteur = true;
+            positionHaut = true;
             anim.SetBool("Is Go Up", false);
         }
 
         #region Player insufle
-        if (!enHauteur && insufl)
+        if (!positionHaut && insufl)
         {
+            anim.SetBool("Is Go Up", true);
+
             if (playerOn)
             {
                 playerMov = true;
+                player.transform.position = playerPosition[actualframe].transform.position;
             }
-
-            Monter();
         }
         #endregion
 
         #region player attaque
-        if (enHauteur && attack)
+        if (positionHaut && attack)
         {
             if (playerOn)
             {
                 playerMov = true;
+                //player.transform.position = playerPosition[actualframe].transform.position;
             }
-
-            Baisser();
+            anim.SetBool("Is Fall", true);
             // Faire dégâts
         }
         #endregion
+
+        if(!playerOn && !trapeOnly && positionHaut)
+            playerOn = Physics2D.OverlapCircle(colliderHaut.position, checkRadius, playerMask);
+
+        else if (!playerOn && !trapeOnly && !positionHaut)
+            playerOn = Physics2D.OverlapCircle(colliderBas.position, checkRadius, playerMask);
 
     }
 
     public void Movehand()
     {
-        if (!enHauteur)
+        if (!positionHaut)
         {
+            if (playerMov)
+                player.transform.position = playerPosition[actualframe].transform.position;
+
             actualframe++;
+
+            if (actualframe == 5 && playerMov)
+                StopPlayer();
         }
 
-        if (enHauteur)
+        if (positionHaut)
         {
+            if (playerMov)
+                player.transform.position = playerPosition[actualframe].transform.position;
+
             if (actualframe == 8)
                     actualframe = 0;
             else
                 actualframe++;
+
+            if (actualframe == 0 && playerMov)
+                StopPlayer();
         }
     }
 
-    void Monter()
+    private void StopPlayer()
     {
-        if (playerMov && !trapeOnly)
-        {
-            player.transform.position = Vector2.MoveTowards(player.transform.position, positionHaut.position, speed * Time.deltaTime);
-        }
+        playerMov = false;
 
-        anim.SetBool("Is Go Up", true);
-    }
+        if (actualframe == 0)
+            player.transform.position = colliderBas.position;
 
-    void Baisser()
-    {
-        if (playerMov && !trapeOnly)
-        {
-            player.transform.position = Vector2.MoveTowards(player.transform.position, positionBas.position, speed * 2 * Time.deltaTime);
-        }
-
-        anim.SetBool("Is Fall", true);
+        //else if (actualframe == 5)
+            //player.transform.position = colliderHaut.position;
     }
 }

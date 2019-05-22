@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class Stèle : MonoBehaviour
 {
-    public bool Attack = false;
+    //Reste à faire :
+    // - Annimation
+    // - Lier donner le score
+
+    public bool attack = false;
 
     private GameObject player;
     [SerializeField]
     private int scoreWin;
-    public bool Energy;
+    public bool Energy = false;
 
     public IntVariable current;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        if (Energy)
+            scoreWin = 8;
     }
 
     void Update()
     {
-        if (Attack)
+        if (attack)
         {
             if (Energy)
             {
@@ -31,8 +37,9 @@ public class Stèle : MonoBehaviour
             else
             {
                 //current += scoreWin;
-                //Start Annim
             }
+
+            //Start Annim
         }
 
     }

@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Portail : MonoBehaviour
 {
-    public bool Attack = false;
+    //Reste à faire :
+    // - Annimation
 
-    private int countDamage;
-    private int portailLife = 5;
+    public bool attack = false;
+
+    private float countDamage;
+    [SerializeField]
+    private float portailLife = 5;
     private int ennemieSelected;
     private int areaSelected;
     public float timeBeforeRespawn = 15f;
@@ -27,10 +31,10 @@ public class Portail : MonoBehaviour
             // Anim Destroy
         }
 
-        if (Attack)
+        if (attack)
         {
             countDamage++;
-            Attack = false;
+            attack = false;
         }
     }
 
