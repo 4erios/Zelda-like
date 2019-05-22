@@ -7,6 +7,8 @@ public class LivingClass : MonoBehaviour
     public float health = 1f;
     public bool takeDamages = false;
 
+    public bool doesItGiveEnergy = false;
+
     public virtual void TakeDamages(float damages)
     {
         health = health - damages;
@@ -25,21 +27,24 @@ public class LivingClass : MonoBehaviour
 
     public void GainEnergy(FloatVariable currentEnergyTank, FloatReference energyGain, FloatReference maxEnergyTank, IntVariable energyGauge, IntReferences energyMax)
     {
-        currentEnergyTank.ApplyChangeToFloat(energyGain);
-        if (currentEnergyTank >= maxEnergyTank)
+        if (doesItGiveEnergy)
         {
-            energyGauge.ApplyChangeToInt(1);
-            currentEnergyTank.SetFloatValue(0);
-
-            if (energyGauge > energyMax)
+            currentEnergyTank.ApplyChangeToFloat(energyGain);
+            if (currentEnergyTank >= maxEnergyTank)
             {
-                energyGauge.SetIntValue(energyMax);
-            }
-        }
+                energyGauge.ApplyChangeToInt(1);
+                currentEnergyTank.SetFloatValue(0);
 
-        if (energyGauge == energyMax)
-        {
-            currentEnergyTank.SetFloatValue(0);
+                if (energyGauge > energyMax)
+                {
+                    energyGauge.SetIntValue(energyMax);
+                }
+            }
+
+            if (energyGauge == energyMax)
+            {
+                currentEnergyTank.SetFloatValue(0);
+            }
         }
     }
 
