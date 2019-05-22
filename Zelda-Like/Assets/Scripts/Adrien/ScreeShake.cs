@@ -10,7 +10,7 @@ public class ScreeShake : MonoBehaviour
     public float ShakeAmplitude = 1.2f;
     public float ShakeFrequency = 2.0f;
     public bool ScreenShakeActivation;
-    private float ShakeElapsedTime = 0f;
+   // private float ShakeElapsedTime = 0f;
 
     public CinemachineVirtualCamera VirtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise; 

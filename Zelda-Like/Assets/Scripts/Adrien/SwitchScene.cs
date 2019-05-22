@@ -7,6 +7,10 @@ public class SwitchScene : MonoBehaviour
 {
 
     public string LevelName;
+    public int index;
+    public GameObject Player;
+    public Animator animTransition;
+    public float TimeTransition = 1.5f; 
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +28,27 @@ public class SwitchScene : MonoBehaviour
         if (other.CompareTag("Player"))
         {
 
-            SceneManager.LoadScene("LevelName");
 
+            StartCoroutine(Loading());
+            
+            
 
 
         }
+
+
+     
     }
 
 
+    IEnumerator Loading()
+    {
 
+        animTransition.SetTrigger("End");
+        yield return new WaitForSeconds(TimeTransition);
+        SceneManager.LoadScene(index);
+        SceneManager.MoveGameObjectToScene(Player, SceneManager.GetSceneByName(LevelName));
+        Debug.Log("Je sors de la zone");
+    }
 
 }

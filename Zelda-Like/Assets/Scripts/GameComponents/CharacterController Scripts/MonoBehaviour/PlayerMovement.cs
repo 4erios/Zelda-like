@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         CurrentSpeed.SetFloatValue(PlayerMaxSpeed);
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     private void Update()
