@@ -1,14 +1,17 @@
 fileFormatVersion: 2
-guid: 58114229579b8384d85d78adf4e86356
+guid: eec0726dc8d70fb4d985a43a22339128
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GrosScarabVertJump_0
-    21300002: GrosScarabVertJump_1
-    21300004: GrosScarabVertJump_2
-    21300006: GrosScarabVertJump_3
-    21300008: GrosScarabVertJump_4
-    21300010: GrosScarabVertJump_5
-    21300012: GrosScarabVertJump_6
+    21300000: GrosScarabVertMort_0
+    21300002: GrosScarabVertMort_1
+    21300004: GrosScarabVertMort_2
+    21300006: GrosScarabVertMort_3
+    21300008: GrosScarabVertMort_4
+    21300010: GrosScarabVertMort_5
+    21300012: GrosScarabVertMort_6
+    21300014: GrosScarabVertMort_7
+    21300016: GrosScarabVertMort_8
+    21300018: GrosScarabVertMort_9
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -91,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GrosScarabVertJump_0
+      name: GrosScarabVertMort_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 32
-        width: 39
-        height: 26
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,19 +108,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf2bc69d787266c4db3d6d9eed9d3fe9
+      spriteID: b7fa77046bb0c8148bba17f63d9d4cd9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrosScarabVertJump_1
+      name: GrosScarabVertMort_1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 32
-        width: 39
-        height: 25
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,19 +128,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 066d3a0042547f547b9df1bcecbc60fa
+      spriteID: d004cda2375c87445a53f52862228e6e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrosScarabVertJump_2
+      name: GrosScarabVertMort_2
       rect:
         serializedVersion: 2
-        x: 122
-        y: 32
-        width: 38
-        height: 24
+        x: 256
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,19 +148,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfe8e951ca4a7d747a3e6e5f08400cd2
+      spriteID: b69c82dcebc9297458e790394872a1c4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrosScarabVertJump_3
+      name: GrosScarabVertMort_3
       rect:
         serializedVersion: 2
-        x: 168
-        y: 33
-        width: 40
-        height: 22
+        x: 384
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,19 +168,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39b64386b54f1fa4ca57fcdc5dd9cf9c
+      spriteID: 814c1af105c073b4e9ec6f6abf702618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrosScarabVertJump_4
+      name: GrosScarabVertMort_4
       rect:
         serializedVersion: 2
-        x: 216
-        y: 33
-        width: 40
-        height: 22
+        x: 512
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,19 +188,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b5a7299a492f034fb3fbdc039987d8b
+      spriteID: 72a775f38ea82ac4da258d6d1293ec5f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrosScarabVertJump_5
+      name: GrosScarabVertMort_5
       rect:
         serializedVersion: 2
-        x: 267
-        y: 32
-        width: 37
-        height: 25
+        x: 640
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,19 +208,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af0af77ce85db7d4ab5b792359fee1bd
+      spriteID: 00e5df245a20d6a4d8e98945e19d555c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrosScarabVertJump_6
+      name: GrosScarabVertMort_6
       rect:
         serializedVersion: 2
-        x: 315
-        y: 32
-        width: 37
-        height: 25
+        x: 768
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,7 +228,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fa5f7527eac58144bf93985a0cd8e30
+      spriteID: 2a32d4e62084a6e4583c53c8253172f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrosScarabVertMort_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e25cb1daec3bc24f9eec7e7f8272bd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrosScarabVertMort_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccefabe51f5fab4cbbc61a6461e624e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrosScarabVertMort_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810cec8e05f624242a33d8e0c96f5eac
       vertices: []
       indices: 
       edges: []
@@ -233,7 +296,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e00b8dd0325c16944b311a977160c05c
+    spriteID: e14cd64bb76e2d9418f40ff9093720c8
     vertices: []
     indices: 
     edges: []
