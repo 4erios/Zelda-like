@@ -5,10 +5,6 @@ using UnityEngine;
 public class Colosse_Bras : MonoBehaviour
 {
     //Reste à faire :
-    // Ok! Annimation
-    // - Lier fonction "MoveHand()" à l'annimation
-    // - Lier l'annimation au script
-    // - Mettre les positions en fonction de l'annimation
     // - Mettre les dégâts quand main tombe
 
     public bool insufl = false;
@@ -67,7 +63,7 @@ public class Colosse_Bras : MonoBehaviour
         if (enHauteur && attack)
         {
             anim.SetBool("Is Fall", true);
-            // Faire dégâts
+            // Faire dégâts 
         }
         #endregion
 
