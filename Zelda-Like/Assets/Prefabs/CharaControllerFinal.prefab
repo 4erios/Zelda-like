@@ -374,7 +374,7 @@ Camera:
   far clip plane: 5000
   field of view: 53
   orthographic: 1
-  orthographic size: 3.94
+  orthographic size: 3.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1395,6 +1395,7 @@ GameObject:
   - component: {fileID: 4704675715113948175}
   - component: {fileID: 4704675715113948174}
   - component: {fileID: 4704675715113948173}
+  - component: {fileID: 3135404179501604392}
   - component: {fileID: 4704675715113948169}
   - component: {fileID: 4704675715113948170}
   - component: {fileID: 4704675715113948172}
@@ -1522,6 +1523,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3135404179501604392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704675715113948179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19bdc0a161735644afe83ac6e886d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHP: {fileID: 11400000, guid: dc126e0a121328646bfb754068a89743, type: 2}
+  CurrentEnergy: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28, type: 2}
+  SetTimeUntilDeath:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  Healing: {fileID: 11400000, guid: 48b23dc96a6c9e740b4b7b2425732c13, type: 2}
+  TimeUntilDeath: {fileID: 11400000, guid: c9ee03e293759ec409234d4da8c3b28c, type: 2}
+  DeathEvent: {fileID: 11400000, guid: d275fa06944224f428b1cf121795a42c, type: 2}
+  Resurrecting: {fileID: 11400000, guid: 484bc2afd29b12148b30b460dfff9bb3, type: 2}
 --- !u!114 &4704675715113948169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,7 +1590,9 @@ MonoBehaviour:
   MoveX: {fileID: 11400000, guid: 78901cb3b6e72254295e03ab9f90006b, type: 2}
   MoveY: {fileID: 11400000, guid: c72d29b9521ed074cbe495e79be6142c, type: 2}
   CurrentSpeed: {fileID: 11400000, guid: 1dc334b34714b1840a293a6fe9933b2a, type: 2}
+  PlayerCurrentHP: {fileID: 0}
   AttackCount: {fileID: 11400000, guid: 0f0755ce561b5de49ba4d1429f560f1a, type: 2}
+  Healing: {fileID: 0}
 --- !u!114 &4704675715113948172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1772,8 +1797,9 @@ MonoBehaviour:
   shootingPoint: {fileID: 379385671}
   prefabSpeed:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 2
     Variable: {fileID: 0}
+  Healing: {fileID: 11400000, guid: 48b23dc96a6c9e740b4b7b2425732c13, type: 2}
 --- !u!114 &1539906982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,7 +1820,9 @@ MonoBehaviour:
   ResetHP: 1
   DamageEvent: {fileID: 11400000, guid: f94d8125720d55c4694a30f03265db8b, type: 2}
   ResurrectionEvent: {fileID: 11400000, guid: dbb374766bcfc9b4ab395a1513189f80, type: 2}
+  DeathEvent: {fileID: 11400000, guid: d275fa06944224f428b1cf121795a42c, type: 2}
   PlayerDamagesTaken: {fileID: 11400000, guid: 5fbd007dfb639524a9a0982b3d5be53f, type: 2}
+  EnergyGauge: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28, type: 2}
 --- !u!61 &2211861022508095545
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2005,15 +2033,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456fd6718235ddd47a81b59fb709ea28, type: 3}
---- !u!1 &1271560711376651462 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
-    type: 3}
-  m_PrefabInstance: {fileID: 1434923982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1271560711376651459 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1271560709942408973, guid: 456fd6718235ddd47a81b59fb709ea28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434923982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1271560711376651462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
     type: 3}
   m_PrefabInstance: {fileID: 1434923982}
   m_PrefabAsset: {fileID: 0}

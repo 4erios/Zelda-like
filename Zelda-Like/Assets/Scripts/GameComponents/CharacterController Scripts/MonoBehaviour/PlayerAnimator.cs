@@ -14,6 +14,7 @@ public class PlayerAnimator : MonoBehaviour
     public IntVariable AttackCount;
 
     public BoolVariable Healing;
+    public BoolVariable IsResurrecting;
 
     void Update()
     {
@@ -27,6 +28,7 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetFloat("Health", PlayerCurrentHP);
 
         playerAnimator.SetBool("Heal", Healing);
+        playerAnimator.SetBool("Resurrection", IsResurrecting);
     }
 
     public void LaunchAttackAnimation()
@@ -43,11 +45,6 @@ public class PlayerAnimator : MonoBehaviour
     public void LaunchTakeDamageAnimation()
     {
         playerAnimator.SetTrigger("TakeDamage");
-    }
-
-    public void LaunchResurrectionAnimation()
-    {
-        playerAnimator.SetTrigger("Résurrection");
     }
 
     public void LaunchDeathAnimation()
