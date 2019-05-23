@@ -10,16 +10,17 @@ public class Enemis_UI : MonoBehaviour
     private float percentHP;
 
     public FloatReference ennemiMaxHP;
-    public FloatVariable currentEnnemiHP;
+    private LivingClass currentEnnemiHP;
 
     void Start()
     {
         percentHP = 1F;
+        currentEnnemiHP = this.GetComponent<LivingClass>();
     }
 
     void Update()
     {
-        percentHP = currentEnnemiHP / ennemiMaxHP;
+        percentHP = currentEnnemiHP.health / ennemiMaxHP;
 
         gaugeHP.fillAmount = percentHP;
     }
