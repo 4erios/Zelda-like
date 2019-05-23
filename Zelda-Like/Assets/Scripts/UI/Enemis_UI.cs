@@ -5,22 +5,22 @@ using UnityEngine.UI;
 
 public class Enemis_UI : MonoBehaviour
 {
-    public GameObject ennemi;
     [SerializeField]
     private Image gaugeHP;
     private float percentHP;
 
     public FloatReference ennemiMaxHP;
-    public FloatVariable currentEnnemiHP;
+    private LivingClass currentEnnemiHP;
 
     void Start()
     {
         percentHP = 1F;
+        currentEnnemiHP = this.GetComponent<LivingClass>();
     }
 
     void Update()
     {
-        percentHP = currentEnnemiHP / ennemiMaxHP;
+        percentHP = currentEnnemiHP.health / ennemiMaxHP;
 
         gaugeHP.fillAmount = percentHP;
     }

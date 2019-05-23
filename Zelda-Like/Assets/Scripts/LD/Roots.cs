@@ -9,12 +9,14 @@ public class Roots : InfusableClass
 
     public bool attack = false;
 
-    
+    public float damageRange = 1F;
     public bool bigRoots = false;
     private Animator anim;
     [SerializeField]
     private float bigRootsLife = 3;
     private float countDamage;
+
+    public FloatReference Damage;
 
     private void Start()
     {
@@ -48,7 +50,7 @@ public class Roots : InfusableClass
         if (!bigRoots && isInfused)
         {
             anim.SetTrigger("Is Infused");
-            //Dégâts zone
+            FunctionToDealDamages();
         }
         #endregion
 
@@ -58,4 +60,13 @@ public class Roots : InfusableClass
         {
             bigRoots = !bigRoots;
         }
+
+    void FunctionToDealDamages()
+    {
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(this.gameObject.transform.position, damageRange);
+        foreach (Collider2D enemyCollision in enemiesHurt)
+        {
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(Damage);
+        }
+    }
 }
