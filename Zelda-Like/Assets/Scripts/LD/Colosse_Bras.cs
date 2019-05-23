@@ -11,23 +11,17 @@ public class Colosse_Bras : MonoBehaviour
     public bool attack = false;
 
     private Animator anim;
-    private GameObject player;
-    [SerializeField]
-    private bool playerOn = false; //Si le joueur doit être transporté
-    private bool playerMov = false; // Le joueur est transporté
-
     public Collider2D poignetCollider;
     public Collider2D doigtsCollider;
-    public float fallTime = 5f;
-
     public bool trapeOnly = false;
+
+    public float fallTime = 5f;
     private int actualframe;
     public bool enHauteur; //false = bas || true = haut
 
     void Start()
     {
         anim = this.gameObject.GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
         #region Up on load
         if (enHauteur)
         {
@@ -66,6 +60,12 @@ public class Colosse_Bras : MonoBehaviour
             // Faire dégâts 
         }
         #endregion
+
+        if (trapeOnly && !enHauteur)
+        {
+            poignetCollider.isTrigger = false;
+            doigtsCollider.isTrigger = false;
+        }
 
     }
 
