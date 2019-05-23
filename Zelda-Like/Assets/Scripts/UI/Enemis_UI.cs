@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Enemis_UI : MonoBehaviour
 {
-    public GameObject ennemie;
+    public GameObject ennemi;
     [SerializeField]
     private Image gaugeHP;
     private float percentHP;
 
-    public FloatReference enemieMaxHP;
-    public FloatVariable currentEnnemieHP;
+    public FloatReference ennemiMaxHP;
+    public FloatVariable currentEnnemiHP;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class Enemis_UI : MonoBehaviour
 
     void Update()
     {
-        //percentHP = currentHP / playerMaxHP;
+        percentHP = currentEnnemiHP / ennemiMaxHP;
 
         gaugeHP.fillAmount = percentHP;
     }
