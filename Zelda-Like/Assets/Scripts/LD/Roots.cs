@@ -8,7 +8,6 @@ public class Roots : MonoBehaviour
     // - Annimation détruit
     // - Animation grossi
     // - Dégâts ennemis
-    // - Activer collider
 
     public bool insufl = false;
     public bool attack = false;
@@ -17,6 +16,12 @@ public class Roots : MonoBehaviour
     [SerializeField]
     private float bigRootsLife = 3;
     private float countDamage;
+
+    private void Start()
+    {
+        if (bigRoots)
+            this.gameObject.GetComponent<Collider2D>().isTrigger = false;
+    }
 
     void Update()
     {
@@ -30,6 +35,8 @@ public class Roots : MonoBehaviour
         if (countDamage == bigRootsLife)
         {
             // Anim Destroy
+            this.gameObject.GetComponent<Collider2D>().isTrigger = true;
+            bigRoots = false;
         }
         #endregion
 
@@ -38,7 +45,7 @@ public class Roots : MonoBehaviour
         {
             //Anim
             //Dégâts zone
-            //Activer collider
+            this.gameObject.GetComponent<Collider2D>().isTrigger = false;
         }
         #endregion
     }

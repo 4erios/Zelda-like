@@ -13,18 +13,16 @@ public class Colosse_Bras : MonoBehaviour
 
     public bool insufl = false;
     public bool attack = false;
-    private Animator anim;
 
+    private Animator anim;
     private GameObject player;
     [SerializeField]
     private bool playerOn = false; //Si le joueur doit être transporté
     private bool playerMov = false; // Le joueur est transporté
 
-    public Transform positionHaut;
-    public Transform positionBas;
-    public float speed = 5;
-    public float checkRadius = 2F;
-    public LayerMask playerMask;
+    public Collider2D poignetCollider;
+    public Collider2D doigtsCollider;
+    public float fallTime = 5f;
 
     public bool trapeOnly = false;
     private int actualframe;
@@ -50,6 +48,7 @@ public class Colosse_Bras : MonoBehaviour
             enHauteur = false;
             anim.SetBool("Is Fall", false);
         }
+
         else if (actualframe == 5)
         {
             enHauteur = true;
@@ -59,24 +58,15 @@ public class Colosse_Bras : MonoBehaviour
         #region Player insufle
         if (!enHauteur && insufl)
         {
-            if (playerOn)
-            {
-                playerMov = true;
-            }
-
-            Monter();
+            anim.SetBool("Is Go Up", true);
+            StartCoroutine(TimeBeforeFall());
         }
         #endregion
 
         #region player attaque
         if (enHauteur && attack)
         {
-            if (playerOn)
-            {
-                playerMov = true;
-            }
-
-            Baisser();
+            anim.SetBool("Is Fall", true);
             // Faire dégâts
         }
         #endregion
@@ -88,6 +78,7 @@ public class Colosse_Bras : MonoBehaviour
         if (!enHauteur)
         {
             actualframe++;
+
         }
 
         if (enHauteur)
@@ -99,23 +90,15 @@ public class Colosse_Bras : MonoBehaviour
         }
     }
 
-    void Monter()
+    IEnumerator TimeBeforeFall()
     {
-        if (playerMov && !trapeOnly)
+        yield return new WaitForSeconds(fallTime);
+
+        if (enHauteur)
         {
-            player.transform.position = Vector2.MoveTowards(player.transform.position, positionHaut.position, speed * Time.deltaTime);
+            attack = true;
+            yield return new WaitForSeconds(0.5F);
+            attack = false;
         }
-
-        anim.SetBool("Is Go Up", true);
-    }
-
-    void Baisser()
-    {
-        if (playerMov && !trapeOnly)
-        {
-            player.transform.position = Vector2.MoveTowards(player.transform.position, positionBas.position, speed * 2 * Time.deltaTime);
-        }
-
-        anim.SetBool("Is Fall", true);
     }
 }

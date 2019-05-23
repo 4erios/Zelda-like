@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 4075712365398406320}
   - component: {fileID: 4075712365398406323}
   m_Layer: 0
-  m_Name: "Colosse Annim\xE9"
+  m_Name: Colosse prototype
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -374,7 +374,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   trapeOnly: 0
-  playerPosition: []
+  actualframe: 0
+  playerPosition:
+  - {fileID: 4075712364097733520}
+  - {fileID: 4075712364651657256}
+  - {fileID: 4075712363800401218}
+  - {fileID: 4075712365560222793}
+  - {fileID: 4075712364893495867}
+  - {fileID: 8437016222277941989}
+  - {fileID: 8273537329926491248}
+  - {fileID: 4652916452696686322}
+  - {fileID: 2415525506184325258}
   positionHaut: 0
 --- !u!1 &4075712365560222793
 GameObject:

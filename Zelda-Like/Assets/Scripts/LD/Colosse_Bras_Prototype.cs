@@ -10,6 +10,7 @@ public class Colosse_Bras_Prototype : MonoBehaviour
     // - Lier l'annimation au script
     // - Mettre les positions en fonction de l'annimation
     // - Mettre les dégâts quand main tombe
+    // - Mettre délais retombe 3s
 
     public bool insufl = false;
     public bool attack = false;
@@ -26,6 +27,7 @@ public class Colosse_Bras_Prototype : MonoBehaviour
     public LayerMask playerMask;
 
     public bool trapeOnly = false;
+    [SerializeField]
     private int actualframe;
     public GameObject[] playerPosition;
     public bool positionHaut; //false = bas || true = haut
@@ -64,7 +66,6 @@ public class Colosse_Bras_Prototype : MonoBehaviour
             if (playerOn)
             {
                 playerMov = true;
-                player.transform.position = playerPosition[actualframe].transform.position;
             }
         }
         #endregion
@@ -125,7 +126,19 @@ public class Colosse_Bras_Prototype : MonoBehaviour
         if (actualframe == 0)
             player.transform.position = colliderBas.position;
 
-        //else if (actualframe == 5)
-            //player.transform.position = colliderHaut.position;
+        else if (actualframe == 5)
+            player.transform.position = colliderHaut.position;
     }
+
+    public void UpFrame()
+    {
+        actualframe = 5;
+        positionHaut = true;
+    } //Résoudre certains Bugs
+
+    public void DownFrame()
+    {
+        actualframe = 0;
+        positionHaut = false;
+    } //Résoudre certain Bugs
 }
