@@ -7,9 +7,9 @@ public class Champ_de_Force : MonoBehaviour
     public bool actif = false;
     public GameObject chForce;
 
-    private void OnTriggerEnter2D(Collider2D trap)
+    private void OnTriggerEnter2D(Collider2D traped)
     {
-        if (!actif && trap.tag == "Player")
+        if (!actif && traped.tag == "Player")
         {
             chForce.SetActive(true);
             actif = true;

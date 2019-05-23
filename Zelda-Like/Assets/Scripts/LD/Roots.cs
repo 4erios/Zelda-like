@@ -5,22 +5,26 @@ using UnityEngine;
 public class Roots : MonoBehaviour
 {
     //Reste à faire :
-    // - Annimation détruit
-    // - Animation grossi
     // - Dégâts ennemis
 
-    public bool insufl = false;
+    public bool isInfused = false;
     public bool attack = false;
 
+    
     public bool bigRoots = false;
+    private Animator anim;
     [SerializeField]
     private float bigRootsLife = 3;
     private float countDamage;
 
     private void Start()
     {
+        anim = this.gameObject.GetComponent<Animator>();
+
         if (bigRoots)
-            this.gameObject.GetComponent<Collider2D>().isTrigger = false;
+        {
+            anim.SetTrigger("Begin Big");
+        }
     }
 
     void Update()
@@ -34,18 +38,16 @@ public class Roots : MonoBehaviour
 
         if (countDamage == bigRootsLife)
         {
-            // Anim Destroy
-            this.gameObject.GetComponent<Collider2D>().isTrigger = true;
+            anim.SetTrigger("Is Attak");
             bigRoots = false;
         }
         #endregion
 
         #region Small
-        if (!bigRoots && insufl)
+        if (!bigRoots && isInfused)
         {
-            //Anim
+            anim.SetTrigger("Is Infused");
             //Dégâts zone
-            this.gameObject.GetComponent<Collider2D>().isTrigger = false;
         }
         #endregion
     }

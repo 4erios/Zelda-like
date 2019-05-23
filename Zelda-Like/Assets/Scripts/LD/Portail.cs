@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Portail : MonoBehaviour
 {
-    //Reste à faire :
-    // - Annimation
-
     public bool attack = false;
 
     private float countDamage;
     [SerializeField]
     private float portailLife = 5;
+    private Animator anim;
     private int ennemieSelected;
     private int areaSelected;
     public float timeBeforeRespawn = 15f;
@@ -22,13 +20,14 @@ public class Portail : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Respawn());
+        anim = this.gameObject.GetComponent<Animator>();
     }
 
     void Update()
     {
         if (countDamage == portailLife)
         {
-            // Anim Destroy
+            anim.SetTrigger("Destroy");
         }
 
         if (attack)
@@ -42,6 +41,11 @@ public class Portail : MonoBehaviour
     {
         ennemieSelected = Random.Range(0, ennemis.Length);
         areaSelected = Random.Range(0, spawnAreas.Length);
+    }
+
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
     }
 
     IEnumerator Respawn()

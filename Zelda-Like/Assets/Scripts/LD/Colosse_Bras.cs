@@ -7,7 +7,7 @@ public class Colosse_Bras : MonoBehaviour
     //Reste à faire :
     // - Mettre les dégâts quand main tombe
 
-    public bool insufl = false;
+    public bool isInfused = false;
     public bool attack = false;
 
     private Animator anim;
@@ -52,7 +52,7 @@ public class Colosse_Bras : MonoBehaviour
         }
 
         #region Player insufle
-        if (!enHauteur && insufl)
+        if (!enHauteur && isInfused)
         {
             anim.SetBool("Is Go Up", true);
             StartCoroutine(TimeBeforeFall());
