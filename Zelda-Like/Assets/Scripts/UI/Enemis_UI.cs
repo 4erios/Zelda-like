@@ -8,6 +8,7 @@ public class Enemis_UI : MonoBehaviour
     [SerializeField]
     private Image gaugeHP;
     private float percentHP;
+    public GameObject ennemi;
 
     public FloatReference ennemiMaxHP;
     private LivingClass currentEnnemiHP;
@@ -15,7 +16,7 @@ public class Enemis_UI : MonoBehaviour
     void Start()
     {
         percentHP = 1F;
-        currentEnnemiHP = this.GetComponent<LivingClass>();
+        currentEnnemiHP = ennemi.GetComponent<LivingClass>();
     }
 
     void Update()

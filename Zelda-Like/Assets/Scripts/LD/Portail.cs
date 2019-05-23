@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portail : MonoBehaviour
+public class Portail : LivingClass
 {
-    public bool attack = false;
-
-    private float countDamage;
     [SerializeField]
     private float portailLife = 5;
     private Animator anim;
@@ -19,21 +16,18 @@ public class Portail : MonoBehaviour
 
     private void Start()
     {
+        doesItGiveEnergy = true;
         StartCoroutine(Respawn());
         anim = this.gameObject.GetComponent<Animator>();
+        health = portailLife;
     }
 
     void Update()
     {
-        if (countDamage == portailLife)
+        if (health <= 0)
         {
+            StopCoroutine(Respawn());
             anim.SetTrigger("Destroy");
-        }
-
-        if (attack)
-        {
-            countDamage++;
-            attack = false;
         }
     }
 
