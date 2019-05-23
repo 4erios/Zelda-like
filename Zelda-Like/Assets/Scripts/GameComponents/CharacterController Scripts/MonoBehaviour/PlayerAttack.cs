@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Attack Parameters")]
     public FloatReference PlayerAttackDamages;
     public FloatReference AttackRange;
+    public FloatReference AttackKnockBackDistance;
 
     public FloatReference TimeToAttack;
     public FloatReference AttackCoolDown;
@@ -53,45 +54,44 @@ public class PlayerAttack : MonoBehaviour
     public void RightAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(RightAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+           // enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
     public void LeftAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(LeftAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
     public void UpAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(UpAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
     public void DownAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(DownAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            enemiesHurt[i].GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 

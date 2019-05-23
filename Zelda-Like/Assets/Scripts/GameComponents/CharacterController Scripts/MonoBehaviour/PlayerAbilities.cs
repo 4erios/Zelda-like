@@ -20,7 +20,6 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference MaxHP;
 
     public Rigidbody2D rb;
-    public Transform PlayerTransform;
     public Transform FirePoint;
 
 
@@ -33,15 +32,102 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference HealValue;
 
     public FloatReference AOEInfuseRange;
+    public FloatReference AOEInfuseKnockBackDistance;
     public FloatReference AOEInfuseDamages;
+    public Transform AOEEmissionPoint;
 
     public FloatVariable PlayerDamagesTaken;
-    [Range(0,1)]
     public FloatReference ShieldDamageTaken;
+
+    public Rigidbody2D shootPrefab;
+   // public List<Pool> pools;
+    //public Dictionary<string, Queue<GameObject>> poolDictionary;
+    public Transform shootingPoint;
+    public FloatReference prefabSpeed;
 
     //shoot parameters
     private Vector2 FireDirection;
-    
+   // PlayerAbilities playerAbilities;
+
+   // [System.Serializable]
+    /*public class Pool
+    {
+
+        public string tag;
+        public GameObject prefab;
+        public int size; 
+
+
+
+    }
+
+    #region Singleton 
+
+    public static PlayerAbilities Instance;
+
+    private void Awake()
+    {
+
+        Instance = this;
+    }
+
+
+    #endregion 
+
+    void Start()
+    {
+        poolDictionary = new Dictionary<string, Queue<GameObject>>();
+
+        foreach (Pool pool in pools)
+        {
+
+
+            Queue<GameObject> objectPool = new Queue<GameObject>();
+
+            for (int i = 0; i < pool.size; i++)
+            {
+
+
+                GameObject obj = Instantiate(pool.prefab);
+                obj.SetActive(false);
+                objectPool.Enqueue(obj);
+
+
+            }
+
+            poolDictionary.Add(pool.tag, objectPool);
+
+        }
+
+        playerAbilities = PlayerAbilities.Instance;
+    }
+
+    private void FixedUpdate()
+    {
+        PlayerAbilities.Instance.SpawnFromPool("Infuse", transform.position, Quaternion.identity);
+    }
+
+    public GameObject SpawnFromPool (string tag, Vector2 position, Quaternion rotation)
+    {
+        if (!poolDictionary.ContainsKey(tag))
+        {
+
+            Debug.Log("Warning");
+                return null;
+
+
+        }
+
+       GameObject objectToSpawn = poolDictionary[tag].Dequeue();
+
+        objectToSpawn.SetActive(true);
+        objectToSpawn.transform.position = position;
+        objectToSpawn.transform.rotation = rotation;
+
+        poolDictionary[tag].Enqueue(objectToSpawn);
+
+        return objectToSpawn;
+    }*/
 
     private void LoseEnergy(int energyCost)
     {
@@ -61,6 +147,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         Vector2 direction = new Vector2(MoveX, MoveY).normalized;
         rb.velocity = new Vector2(direction.x * DashRange, direction.y * DashRange);
+        DashEnergyLoss();
     }
 
     public void HealEnergyLoss()
@@ -75,16 +162,28 @@ public class PlayerAbilities : MonoBehaviour
         {
             CurrentHP.SetFloatValue(MaxHP);
         }
+        HealEnergyLoss();
     }
 
     public void AOEInfuseEnergyLoss()
     {
         LoseEnergy(AOEInfuseCost);
+
     }
 
     public void PlayerAOEInfuse()
     {
-        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange);
+        foreach (Collider2D enemyCollision in enemiesHurt) 
+        {
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
+            enemyCollision.GetComponent<InfusableClass>().Infuse();
+
+        }
+
+        PlayerAOEInfuse();
+
+        /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
         for (int i = 0; i < enemiesHurt.Length; i++)
         {
             enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
@@ -92,7 +191,7 @@ public class PlayerAbilities : MonoBehaviour
             //enemiesHurt[i].GetComponent<InfusableComponentClass>().Infuse();
             Debug.Log("AOE touchée");
             Debug.Log(i);
-        }
+        }*/
     }
 
     public void ShootEnergyLoss()
@@ -106,7 +205,15 @@ public class PlayerAbilities : MonoBehaviour
         if (hit.collider != null)
         {
             FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
+            hit.collider.GetComponent<InfusableClass>().Infuse();
         }
+
+        Rigidbody2D clone;
+
+        clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
+        clone.velocity = FireDirection * prefabSpeed;
+        Debug.Log("Instantiate PrefabSpawn");
+        ShootEnergyLoss();
     }
 
     public void ShieldEnergyLoss()
@@ -117,6 +224,7 @@ public class PlayerAbilities : MonoBehaviour
     public void PlayerShield()
     {
         PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
+        ShieldEnergyLoss();
     }
 
     public void StopPlayerShield()
