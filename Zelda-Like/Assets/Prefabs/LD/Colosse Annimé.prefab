@@ -198,13 +198,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb362eb7ad3a147a7022d84409bed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
+  takeDamages: 0
+  doesItGiveEnergy: 0
   isInfused: 0
-  attack: 0
-  playerOn: 0
   poignetCollider: {fileID: 8216768000665223621}
   doigtsCollider: {fileID: 1633288067203318019}
-  fallTime: 5
   trapeOnly: 0
+  damageRange: 2
+  underHandRange: {fileID: 106242831801542633}
+  damageHand:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  fallTime: 5
   enHauteur: 0
 --- !u!114 &1391625345283107583
 MonoBehaviour:
@@ -333,6 +340,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0638108, y: 0.65}
   m_EdgeRadius: 0
+--- !u!1 &5440285010404997898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106242831801542633}
+  m_Layer: 0
+  m_Name: Under Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &106242831801542633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5440285010404997898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.111, y: -0.468, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1803241597486643691}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6793883737624399531
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +516,7 @@ Transform:
   - {fileID: 7401082226625847376}
   - {fileID: 7431571748569918096}
   - {fileID: 5951076347115878383}
+  - {fileID: 106242831801542633}
   m_Father: {fileID: 3161488652323073322}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

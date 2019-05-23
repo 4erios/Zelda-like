@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class Roots : InfusableClass
 {
-    //Reste à faire :
-    // - Dégâts ennemis 
-
-    public bool attack = false;
-
     public float damageRange = 1F;
     public bool bigRoots = false;
     private Animator anim;
     [SerializeField]
     private float bigRootsLife = 3;
-    private float countDamage;
 
-    public FloatReference Damage;
+    public FloatReference damageRoots;
 
     private void Start()
     {
         anim = this.gameObject.GetComponent<Animator>();
+
+        health = bigRootsLife;
+        doesItGiveEnergy = true;
 
         if (bigRoots)
         {
@@ -32,17 +29,10 @@ public class Roots : InfusableClass
     void Update()
     {
         #region Big
-        if (bigRoots && attack)
+        if (health <= 0)
         {
-            countDamage++;
-            attack = false;
-        }
-
-        if (countDamage == bigRootsLife)
-        {
-            attack = false;
             anim.SetTrigger("Is Attak");
-            countDamage = 0;
+            health = bigRootsLife;
         }
         #endregion
 
@@ -66,7 +56,7 @@ public class Roots : InfusableClass
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(this.gameObject.transform.position, damageRange);
         foreach (Collider2D enemyCollision in enemiesHurt)
         {
-            enemyCollision.GetComponent<LivingClass>().TakeDamages(Damage);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(damageRoots);
         }
     }
 }
