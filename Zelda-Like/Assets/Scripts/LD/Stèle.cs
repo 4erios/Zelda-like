@@ -11,6 +11,7 @@ public class Stèle : MonoBehaviour
     public bool attack = false;
 
     private GameObject player;
+    private Animator anim;
     [SerializeField]
     private int scoreWin;
     public bool Energy = false;
@@ -22,6 +23,7 @@ public class Stèle : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         if (Energy)
             scoreWin = 8;
+        anim = this.gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -31,7 +33,6 @@ public class Stèle : MonoBehaviour
             if (Energy)
             {
                 //current += scoreWin;
-                //Start annim
             }
 
             else
@@ -39,8 +40,13 @@ public class Stèle : MonoBehaviour
                 //current += scoreWin;
             }
 
-            //Start Annim
+            anim.SetTrigger("Destroy");
         }
 
+    }
+
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
     }
 }

@@ -24,6 +24,7 @@ public class Roots : MonoBehaviour
         if (bigRoots)
         {
             anim.SetTrigger("Begin Big");
+            bigRoots = true;
         }
     }
 
@@ -38,8 +39,9 @@ public class Roots : MonoBehaviour
 
         if (countDamage == bigRootsLife)
         {
+            attack = false;
             anim.SetTrigger("Is Attak");
-            bigRoots = false;
+            countDamage = 0;
         }
         #endregion
 
@@ -50,5 +52,11 @@ public class Roots : MonoBehaviour
             //Dégâts zone
         }
         #endregion
+
     }
+
+    public void ChangeState()
+        {
+            bigRoots = !bigRoots;
+        }
 }
