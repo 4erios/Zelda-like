@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Enemis_UI : MonoBehaviour
 {
-    public GameObject ennemi;
     [SerializeField]
     private Image gaugeHP;
     private float percentHP;
