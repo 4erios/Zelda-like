@@ -92,4 +92,9 @@ public class EnemyClass : LivingClass
         Debug.Log("LaunchAttackDelay");
         StartCoroutine("DelayBetweenAttacks");
     }
+
+    public void StopDelayBetweenAttacks()
+    {
+        StopCoroutine("DelayBetweenAttacks");
+    }
 }

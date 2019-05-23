@@ -9,6 +9,7 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable MoveX;
     public FloatVariable MoveY;
     public FloatVariable CurrentSpeed;
+    public FloatVariable PlayerCurrentHP;
 
     public IntVariable AttackCount;
 
@@ -20,6 +21,8 @@ public class PlayerAnimator : MonoBehaviour
 
         playerAnimator.SetFloat("Speed", CurrentSpeed);
         playerAnimator.SetInteger("AttackCount", AttackCount);
+
+        playerAnimator.SetFloat("Health", PlayerCurrentHP);
     }
 
     public void LaunchAttackAnimation()
