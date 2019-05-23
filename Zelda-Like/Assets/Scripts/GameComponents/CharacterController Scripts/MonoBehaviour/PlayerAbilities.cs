@@ -43,9 +43,18 @@ public class PlayerAbilities : MonoBehaviour
     public Transform shootingPoint;
     public FloatReference prefabSpeed;
 
+    public BoolVariable Healing;
+
     //shoot parameters
     private Vector2 FireDirection;
-    
+
+    private void FixedUpdate()
+    {
+        if (Healing)
+        {
+            PlayerHeal(); 
+        }
+    }
 
     private void LoseEnergy(int energyCost)
     {
@@ -83,10 +92,19 @@ public class PlayerAbilities : MonoBehaviour
         HealEnergyLoss();
     }
 
+    public void LaunchHeal()
+    {
+        Healing.SetBoolValue(true);
+    }
+
+    public void StopHeal()
+    {
+        Healing.SetBoolValue(false);
+    }
+
     public void AOEInfuseEnergyLoss()
     {
         LoseEnergy(AOEInfuseCost);
-
     }
 
     public void PlayerAOEInfuse()
@@ -98,8 +116,6 @@ public class PlayerAbilities : MonoBehaviour
             enemyCollision.GetComponent<InfusableClass>().Infuse();
 
         }
-
-        PlayerAOEInfuse();
 
         /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
         for (int i = 0; i < enemiesHurt.Length; i++)

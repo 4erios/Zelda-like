@@ -13,6 +13,8 @@ public class PlayerAnimator : MonoBehaviour
 
     public IntVariable AttackCount;
 
+    public BoolVariable Healing;
+
     void Update()
     {
         playerAnimator.SetFloat("MoveX", MoveX);
@@ -23,6 +25,8 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetInteger("AttackCount", AttackCount);
 
         playerAnimator.SetFloat("Health", PlayerCurrentHP);
+
+        playerAnimator.SetBool("Heal", Healing);
     }
 
     public void LaunchAttackAnimation()
@@ -34,16 +38,6 @@ public class PlayerAnimator : MonoBehaviour
     public void LaunchDashAnimation()
     {
         playerAnimator.SetTrigger("Dash");
-    }
-
-    public void LaunchHealAnimation()
-    {
-        playerAnimator.SetBool("Heal", true);
-    }
-
-    public void StopHealAnimation()
-    {
-        playerAnimator.SetBool("Heal", false);
     }
 
     public void LaunchTakeDamageAnimation()
