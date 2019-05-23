@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Colosse_Bras : MonoBehaviour
+public class Colosse_Bras : InfusableClass
 {
     //Reste à faire :
     // - Mettre les dégâts quand main tombe
 
-    public bool isInfused = false;
     public bool attack = false;
 
     private Animator anim;

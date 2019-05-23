@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Roots : MonoBehaviour
+public class Roots : InfusableClass
 {
     //Reste à faire :
-    // - Dégâts ennemis
+    // - Dégâts ennemis 
 
-    public bool isInfused = false;
     public bool attack = false;
 
     
