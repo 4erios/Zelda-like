@@ -9,31 +9,24 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable MoveX;
     public FloatVariable MoveY;
     public FloatVariable CurrentSpeed;
-    public VectorVariable PlayerDirection;
+    public FloatVariable PlayerCurrentHP;
 
     public IntVariable AttackCount;
 
-    public BoolVariable FacingRight;
-    public BoolVariable FacingLeft;
-    public BoolVariable FacingUp;
-    public BoolVariable FacingDown;
+    public BoolVariable Healing;
 
     void Update()
     {
-        //allow the player to keep his last position
-        if(PlayerDirection != Vector2.zero)
-        {
-            playerAnimator.SetFloat("MoveX", MoveX);
-            playerAnimator.SetFloat("MoveY", MoveY);
-        }
+        playerAnimator.SetFloat("MoveX", MoveX);
+        playerAnimator.SetFloat("MoveY", MoveY);
+        
 
         playerAnimator.SetFloat("Speed", CurrentSpeed);
         playerAnimator.SetInteger("AttackCount", AttackCount);
 
-        playerAnimator.SetBool("FacingRight", FacingRight);
-        playerAnimator.SetBool("FacingLeft", FacingLeft);
-        playerAnimator.SetBool("FacingUp", FacingUp);
-        playerAnimator.SetBool("FacingDown", FacingDown);
+        playerAnimator.SetFloat("Health", PlayerCurrentHP);
+
+        playerAnimator.SetBool("Heal", Healing);
     }
 
     public void LaunchAttackAnimation()
@@ -45,11 +38,6 @@ public class PlayerAnimator : MonoBehaviour
     public void LaunchDashAnimation()
     {
         playerAnimator.SetTrigger("Dash");
-    }
-
-    public void LaunchHealAnimation()
-    {
-        playerAnimator.SetTrigger("Heal");
     }
 
     public void LaunchTakeDamageAnimation()
@@ -74,7 +62,12 @@ public class PlayerAnimator : MonoBehaviour
 
     public void LaunchInsufflationAnimation()
     {
-        playerAnimator.SetTrigger("Insufflation");
+        playerAnimator.SetBool("Insufflation", true);
+    }
+
+    public void SetInsufflationConditionToFalse()
+    {
+        playerAnimator.SetBool("Insufflation", false);
     }
 
     public void LaunchShieldAnimation()

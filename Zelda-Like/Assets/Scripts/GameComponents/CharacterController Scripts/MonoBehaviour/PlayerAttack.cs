@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Attack Parameters")]
     public FloatReference PlayerAttackDamages;
     public FloatReference AttackRange;
+    public FloatReference AttackKnockBackDistance;
 
     public FloatReference TimeToAttack;
     public FloatReference AttackCoolDown;
@@ -30,61 +31,67 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("AttackInertiaComponents")]
     public Rigidbody2D rb;
-    public FloatVariable moveX;
-    public FloatVariable moveY;
-    public FloatReference PlayerSpeed;
+    public FloatVariable MoveX;
+    public FloatVariable MoveY;
 
-    public AnimationCurve FirstAttackCurve;
-    public AnimationCurve SecondAttackCurve;
-    public AnimationCurve ThirdAttackCurve;
+    public FloatReference FirstDashRange;
+    public FloatReference SecondDashRange;
+    public FloatReference ThirdDashRange;
 
     private void Start()
     {
-        AttackCount.SetIntValue(0);
+        //AttackCount.SetIntValue(0);
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("ButtonA"))
+        {
+            AttackInertia();
+        }
     }
 
     public void RightAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(RightAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+           // enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
     public void LeftAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(LeftAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
     public void UpAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(UpAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
     public void DownAttackCollider()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(DownAttackPoint.position, AttackRange);
-        for (int i = 0; i < enemiesHurt.Length; i++)
+        foreach (Collider2D enemyCollision in enemiesHurt) 
         {
-            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
-            enemiesHurt[i].GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
-            Debug.Log("Ennemi touché");
-            Debug.Log(i);
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
+            //enemyCollision.GetComponent<EnemyClass>().KnockBack(AttackKnockBackDistance);
+            enemyCollision.GetComponent<LivingClass>().GainEnergy(CurrentEnergyTank, EnergyGain, MaxEnergyTank, EnergyGauge, EnergyMax);
         }
     }
 
@@ -92,7 +99,7 @@ public class PlayerAttack : MonoBehaviour
     {
         Debug.Log(TimeToAttack);
         yield return new WaitForSeconds(TimeToAttack);
-        AttackCount.SetIntValue(4);
+        AttackCount.SetIntValue(3);
         LaunchAttackCoolDown();
     }
 
@@ -135,10 +142,16 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    private void DashAttack(float MoveSpeed, AnimationCurve InertiaCurve)
+    public void SetDashAttackDirection()
     {
-        Vector2 direction = new Vector2(moveX, moveY);
-        rb.velocity= direction * MoveSpeed * InertiaCurve.Evaluate(Time.time);
+        Vector2 direction = new Vector2(MoveX, MoveY).normalized;
+    }
+
+    private void DashAttack(float dashRange)
+    {
+        Vector2 direction = new Vector2(MoveX, MoveY).normalized;
+        rb.velocity = new Vector2(direction.x * dashRange, direction.y * dashRange);
+        Debug.Log("DashAttack");
     }
 
     public void AttackInertia()
@@ -146,13 +159,19 @@ public class PlayerAttack : MonoBehaviour
         switch (AttackCount)
         {
             case 0:
-                DashAttack(PlayerSpeed,FirstAttackCurve);
+                DashAttack(FirstDashRange);
+                Debug.Log("FirstDash");
+                Debug.Log(FirstDashRange);
                 break;
             case 1:
-                DashAttack(PlayerSpeed,SecondAttackCurve);
+                DashAttack(SecondDashRange);
+                Debug.Log("SecondDash");
+                Debug.Log(SecondDashRange);
                 break;
             case 2:
-                DashAttack(PlayerSpeed,ThirdAttackCurve);
+                DashAttack(ThirdDashRange);
+                Debug.Log("ThirdDash");
+                Debug.Log(ThirdDashRange);
                 break;
         }
     }

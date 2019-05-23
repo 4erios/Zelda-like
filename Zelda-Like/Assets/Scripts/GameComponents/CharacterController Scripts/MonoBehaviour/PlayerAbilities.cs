@@ -15,13 +15,46 @@ public class PlayerAbilities : MonoBehaviour
     public IntReferences ShootInfuseCost;
     public IntReferences ShieldCost;
 
-    [Header("Abilities Parameters")]
-    public Rigidbody2D rb;
+    [Header("Refered Components")]
+    public FloatVariable CurrentHP;
+    public FloatReference MaxHP;
 
+    public Rigidbody2D rb;
+    public Transform FirePoint;
+
+
+    [Header("Abilities Parameters")]
     public FloatVariable MoveX;
     public FloatVariable MoveY;
 
     public FloatReference DashRange;
+
+    public FloatReference HealValue;
+
+    public FloatReference AOEInfuseRange;
+    public FloatReference AOEInfuseKnockBackDistance;
+    public FloatReference AOEInfuseDamages;
+    public Transform AOEEmissionPoint;
+
+    public FloatVariable PlayerDamagesTaken;
+    public FloatReference ShieldDamageTaken;
+
+    public Rigidbody2D shootPrefab;
+    public Transform shootingPoint;
+    public FloatReference prefabSpeed;
+
+    public BoolVariable Healing;
+
+    //shoot parameters
+    private Vector2 FireDirection;
+
+    private void FixedUpdate()
+    {
+        if (Healing)
+        {
+            PlayerHeal(); 
+        }
+    }
 
     private void LoseEnergy(int energyCost)
     {
@@ -32,31 +65,106 @@ public class PlayerAbilities : MonoBehaviour
         }
     }
 
-    public void PlayerDash()
+    public void DashEnergyLoss()
     {
         LoseEnergy(DashEnergyCost);
+    }
 
-        Vector2 direction = new Vector2(MoveX, MoveY);
-        rb.MovePosition(rb.position + direction * DashRange);
+    public void PlayerDash()
+    {
+        Vector2 direction = new Vector2(MoveX, MoveY).normalized;
+        rb.velocity = new Vector2(direction.x * DashRange, direction.y * DashRange);
+        DashEnergyLoss();
+    }
+
+    public void HealEnergyLoss()
+    {
+        LoseEnergy(HealEnergyCost);
     }
 
     public void PlayerHeal()
     {
+        CurrentHP.ApplyChangeToFloat(HealValue);
+        if (CurrentHP >= MaxHP)
+        {
+            CurrentHP.SetFloatValue(MaxHP);
+        }
+        HealEnergyLoss();
+    }
 
+    public void LaunchHeal()
+    {
+        Healing.SetBoolValue(true);
+    }
+
+    public void StopHeal()
+    {
+        Healing.SetBoolValue(false);
+    }
+
+    public void AOEInfuseEnergyLoss()
+    {
+        LoseEnergy(AOEInfuseCost);
     }
 
     public void PlayerAOEInfuse()
     {
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange);
+        foreach (Collider2D enemyCollision in enemiesHurt) 
+        {
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
+            enemyCollision.GetComponent<InfusableClass>().Infuse();
 
+        }
+
+        /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
+        for (int i = 0; i < enemiesHurt.Length; i++)
+        {
+            enemiesHurt[i].GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
+            //enemiesHurt[i].GetComponent<LivingClass>().Knockback();
+            //enemiesHurt[i].GetComponent<InfusableComponentClass>().Infuse();
+            Debug.Log("AOE touchée");
+            Debug.Log(i);
+        }*/
+    }
+
+    public void ShootEnergyLoss()
+    {
+        LoseEnergy(ShootInfuseCost);
     }
 
     public void PlayerShootInfuse()
     {
+        RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
+        if (hit.collider != null)
+        {
+            FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
+            hit.collider.GetComponent<InfusableClass>().Infuse();
+        }
+        Rigidbody2D clone;
 
+        clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
+        clone.velocity = FireDirection * prefabSpeed;
+        Debug.Log("Instantiate PrefabSpawn");
+        ShootEnergyLoss();
+    }
+
+    public void ShieldEnergyLoss()
+    {
+        LoseEnergy(ShieldCost);
     }
 
     public void PlayerShield()
     {
-
+        PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
+        ShieldEnergyLoss();
     }
+
+    public void StopPlayerShield()
+    {
+        PlayerDamagesTaken.SetFloatValue(1);
+    }
+
+
+
 }
