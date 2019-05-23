@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InfusableClass : MonoBehaviour
+public class InfusableClass : LivingClass
 {
     public bool isInfused = false;
 
