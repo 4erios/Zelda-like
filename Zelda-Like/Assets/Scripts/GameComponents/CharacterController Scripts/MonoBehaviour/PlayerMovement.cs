@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        PlayerSpeed.SetFloatValue(PlayerMaxSpeed);
+        CurrentSpeed.SetFloatValue(PlayerMaxSpeed);
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     private void Update()
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerMove()
     {
-        rb.velocity = playerdirection * CurrentSpeed * PlayerSpeed * accelerationCurve.Evaluate(Time.time);
+        rb.velocity = playerdirection * PlayerSpeed * CurrentSpeed * accelerationCurve.Evaluate(Time.time);
     }
 
     public void SetSpeedToZero()
@@ -63,5 +64,10 @@ public class PlayerMovement : MonoBehaviour
     public void SetSpeedToMaxSpeed()
     {
         PlayerSpeed.SetFloatValue(PlayerMaxSpeed);
+    }
+
+    public void SetVelocityToZero()
+    {
+        rb.velocity = Vector2.zero;
     }
 }

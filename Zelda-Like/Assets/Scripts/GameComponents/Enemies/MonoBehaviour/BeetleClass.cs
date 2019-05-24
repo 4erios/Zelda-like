@@ -10,9 +10,7 @@ public class BeetleClass : EnemyClass
 
     [Header("Beetle Components")]
     public Animator enemyAnimator;
-    public Transform enemyTransform;
     public SpriteRenderer enemySprite;
-    public Rigidbody2D enemyRb;
 
     [Header ("Beetle Stats")]
     public FloatReference beetleHealth;
@@ -39,6 +37,10 @@ public class BeetleClass : EnemyClass
         {
             enemyAnimator.SetTrigger("InAttackRange");
         }
+
+        enemyAnimator.SetFloat("Health", health);
+
+        LaunchTakeDamagesAnimation();
     }
 
     public void BeetleSearchForPlayer()
@@ -69,5 +71,13 @@ public class BeetleClass : EnemyClass
     public void SetBeetleVelocityToZero()
     {
         SetVelocityToZero(enemyRb);
+    }
+
+    public void LaunchTakeDamagesAnimation()
+    {
+        if (takeDamages)
+        {
+            enemyAnimator.SetTrigger("TakeDamages");
+        }
     }
 }

@@ -14,6 +14,11 @@ using UnityEngine;
 public class EnemyDamageDealer : MonoBehaviour
 {
     public FloatReference enemyDamage;
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.gameObject.GetComponent<PlayerHPSystem>().TakeDamages(enemyDamage);
+    }
 }
 
 
