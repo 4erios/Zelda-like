@@ -10,6 +10,8 @@ public class Colosse_Bras : InfusableClass
     private Animator anim;
     public Collider2D poignetCollider;
     public Collider2D doigtsCollider;
+    public Collider2D droit;
+    public Collider2D gauche;
     public bool trapeOnly = false;
     public float damageRange = 2F;
     public Transform underHandRange;
@@ -65,8 +67,18 @@ public class Colosse_Bras : InfusableClass
 
         if (trapeOnly && !enHauteur)
         {
+            poignetCollider.isTrigger = true;
+            doigtsCollider.isTrigger = true;
+            droit.isTrigger = true;
+            gauche.isTrigger = true;
+        }
+
+        else if (trapeOnly && enHauteur)
+        {
             poignetCollider.isTrigger = false;
             doigtsCollider.isTrigger = false;
+            droit.isTrigger = false;
+            gauche.isTrigger = false;
         }
 
         Debug.Log(actualframe);
