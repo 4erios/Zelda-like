@@ -41,6 +41,11 @@ public class Stèle : LivingClass
             anim.SetTrigger("Destroy");
         }
 
+        if (takeDamages)
+        {
+            anim.SetTrigger("Damage");
+        }
+
     }
 
     public void Destroy()
