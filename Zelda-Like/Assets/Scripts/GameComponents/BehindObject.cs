@@ -5,28 +5,25 @@ using UnityEngine;
 public class BehindObject : MonoBehaviour
 {
     private int orderLayer;
-    private Transform player;
-    public Transform centerPosition;
     private SpriteRenderer compSprite;
+    private int saveOrderLayer;
+    private bool objectBehind;
 
     void Start()
     {
-        compSprite = this.gameObject.GetComponent<SpriteRenderer>();
-        orderLayer = compSprite.sortingOrder;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        compSprite = gameObject.GetComponentInParent<SpriteRenderer>();
+        saveOrderLayer = compSprite.sortingOrder;
     }
 
-
-    void Update()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (player.position.y > centerPosition.position.y)
-        {
-            compSprite.sortingOrder = -orderLayer;
-        }
+        orderLayer = collision.GetComponent<SpriteRenderer>().sortingOrder;
 
-        else
-        {
-            compSprite.sortingOrder = orderLayer;
-        }
+        compSprite.sortingOrder = orderLayer + 1;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        compSprite.sortingOrder = saveOrderLayer;
     }
 }

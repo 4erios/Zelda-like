@@ -31,28 +31,48 @@ public class Roots : InfusableClass
         #region Big
         if (health <= 0)
         {
-            anim.SetTrigger("Is Attak");
+            anim.SetBool("Is Attak", true);
             health = bigRootsLife;
         }
         #endregion
+
+        if (takeDamages && bigRoots)
+        {
+            anim.SetTrigger("Damage");
+            takeDamages = false;
+            isInfused = false;
+        }
 
         #region Small
         if (!bigRoots && isInfused)
         {
+            takeDamages = false;
             anim.SetBool("Is Infused",true);
             FunctionToDealDamages();
-            health = bigRootsLife;
             anim.SetBool("Is Infused", false);
         }
         #endregion
 
-        anim.SetBool("Is Infused", isInfused);
+        if (bigRoots)
+        {
+            anim.SetBool("Is Infused", false);
+        }
+
+        else if (!bigRoots)
+        {
+            anim.SetBool("Is Attak", false);
+        }
     }
 
     public void ChangeState()
         {
-            bigRoots = !bigRoots;
+        bigRoots = !bigRoots;
         }
+
+    private void Heal()
+    {
+        health = bigRootsLife;
+    }
 
     void FunctionToDealDamages()
     {
