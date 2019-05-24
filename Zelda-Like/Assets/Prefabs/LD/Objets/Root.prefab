@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 260125698167037351}
   - component: {fileID: 2942883278064334050}
   - component: {fileID: 8310190221189773649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,10 +140,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aed8db8a7a6a40e418878a63328080cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
+  takeDamages: 0
+  doesItGiveEnergy: 0
   isInfused: 0
-  attack: 0
+  damageRange: 1
   bigRoots: 0
   bigRootsLife: 3
+  damageRoots:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
 --- !u!114 &8310190221189773649
 MonoBehaviour:
   m_ObjectHideFlags: 0
