@@ -13,6 +13,11 @@ public class Area : MonoBehaviour
     public int nbWaves = 1;
     private int countwaves = 0;
 
+    [Header("Have a Mini-Boss ?")]
+    public bool haveMiniBoss = false;
+    public GameObject spawnerMiniBoss;
+    public int miniBossWave;
+
     private void Start()
     {
         if (GameObject.Find("Area Manager").GetComponent<AreaManager>().areaState[areaNumber])
@@ -22,6 +27,9 @@ public class Area : MonoBehaviour
 
         else
             areaActif = false;
+
+        spawnerGroup.SetActive(false);
+        spawnerMiniBoss.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D traped)
@@ -41,8 +49,14 @@ public class Area : MonoBehaviour
     {
         if (GameObject.FindGameObjectsWithTag("Area Enemy").Length == 0)
         {
-            if (countwaves >= nbWaves)
+            if (countwaves == miniBossWave && haveMiniBoss)
             {
+                spawnerMiniBoss.SetActive(true);
+            }
+
+            else if (countwaves >= nbWaves)
+            {
+                spawnerMiniBoss.SetActive(false);
                 GameObject.Find("Area Manager").GetComponent<AreaManager>().areaState[areaNumber] = false;
                 chForce.SetActive(false);
                 chActif = false;
@@ -52,8 +66,9 @@ public class Area : MonoBehaviour
 
             else
             {
+                spawnerMiniBoss.SetActive(false);
                 countwaves++;
-                //Active Waves
+                spawnerGroup.GetComponentInChildren<Spawner>().LaunchRespawn();
             }
         }
     }
