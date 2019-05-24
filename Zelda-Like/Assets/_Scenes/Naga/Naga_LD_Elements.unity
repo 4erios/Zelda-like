@@ -112,6 +112,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &25686190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4704675715113948179, guid: 30d97faed7688d2468a6d854eff79be1,
+    type: 3}
+  m_PrefabInstance: {fileID: 221464819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &25686205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25686190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680262fbb0a1cbe44b34f94cf072dd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSouls:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083, type: 2}
+  currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
+  ResetHP: 0
+  magnetRange: 3
 --- !u!1001 &102032223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -886,6 +911,75 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &3600476197288302360
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3600476195402893415, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Souls on the Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.039759412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600476195402893466, guid: 77074c5ac9784cb49ae9a955533a36ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77074c5ac9784cb49ae9a955533a36ba, type: 3}
 --- !u!1001 &3773769637466870717
 PrefabInstance:
   m_ObjectHideFlags: 0
