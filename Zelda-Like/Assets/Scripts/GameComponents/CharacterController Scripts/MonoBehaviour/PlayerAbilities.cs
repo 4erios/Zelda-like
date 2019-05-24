@@ -44,6 +44,7 @@ public class PlayerAbilities : MonoBehaviour
     public Transform shootingPoint;
     public Transform shootingAxis;
     public FloatReference prefabSpeed;
+    private Animator anim;
 
     public BoolVariable Healing;
 
@@ -52,6 +53,14 @@ public class PlayerAbilities : MonoBehaviour
 
     //shoot parameters
     private Vector2 FireDirection;
+
+    private void Start()
+    {
+        anim = this.gameObject.GetComponent<Animator>();
+        
+    
+    }
+
     
 
     private void FixedUpdate()
@@ -65,6 +74,7 @@ public class PlayerAbilities : MonoBehaviour
     public void Update()
     {
         Twist();
+        anim.SetFloat("PlayerEnergy", EnergyGauge);
     }
 
     private void LoseEnergy(int energyCost)
