@@ -72,9 +72,12 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerDash()
     {
-        Vector2 direction = new Vector2(MoveX, MoveY).normalized;
-        rb.velocity = new Vector2(direction.x * DashRange, direction.y * DashRange);
-        DashEnergyLoss();
+        if (EnergyGauge >= DashEnergyCost)
+        {
+            Vector2 direction = new Vector2(MoveX, MoveY).normalized;
+            rb.velocity = new Vector2(direction.x * DashRange, direction.y * DashRange);
+            DashEnergyLoss();
+        }
     }
 
     public void HealEnergyLoss()
@@ -90,6 +93,7 @@ public class PlayerAbilities : MonoBehaviour
             CurrentHP.SetFloatValue(MaxHP);
         }
         HealEnergyLoss();
+        
     }
 
     public void LaunchHeal()
@@ -109,12 +113,15 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerAOEInfuse()
     {
-        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange);
-        foreach (Collider2D enemyCollision in enemiesHurt) 
+        if (EnergyGauge >= AOEInfuseCost)
         {
-            enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
-            enemyCollision.GetComponent<InfusableClass>().Infuse();
+            Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange);
+            foreach (Collider2D enemyCollision in enemiesHurt)
+            {
+                enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
+                enemyCollision.GetComponent<InfusableClass>().Infuse();
 
+            }
         }
 
         /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
@@ -135,18 +142,21 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerShootInfuse()
     {
-        RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
-        if (hit.collider != null)
-        {
-            FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
-            hit.collider.GetComponent<InfusableClass>().Infuse();
-        }
-        Rigidbody2D clone;
+        if(EnergyGauge >= ShootInfuseCost)
+        { 
+            RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
+            if (hit.collider != null)
+            {
+                FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
+                hit.collider.GetComponent<InfusableClass>().Infuse();
+            }
+            Rigidbody2D clone;
 
-        clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
-        clone.velocity = FireDirection * prefabSpeed;
-        Debug.Log("Instantiate PrefabSpawn");
-        ShootEnergyLoss();
+            clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
+            clone.velocity = FireDirection * prefabSpeed;
+            Debug.Log("Instantiate PrefabSpawn");
+            ShootEnergyLoss();
+        }
     }
 
     public void ShieldEnergyLoss()
@@ -156,8 +166,11 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerShield()
     {
-        PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
-        ShieldEnergyLoss();
+        if (EnergyGauge >= ShieldCost)
+        {
+            PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
+            ShieldEnergyLoss();
+        }
     }
 
     public void StopPlayerShield()
