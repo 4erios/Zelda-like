@@ -39,7 +39,7 @@ public class PlayerAbilities : MonoBehaviour
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
 
-    public Rigidbody2D shootPrefab;
+    public GameObject shootPrefab;
     public Transform shootingPoint;
     public Transform shootingAxis;
     public FloatReference prefabSpeed;
@@ -51,6 +51,7 @@ public class PlayerAbilities : MonoBehaviour
 
     //shoot parameters
     private Vector2 FireDirection;
+    
 
     private void FixedUpdate()
     {
