@@ -36,6 +36,12 @@ public class Roots : InfusableClass
         }
         #endregion
 
+        if (takeDamages && bigRoots)
+        {
+            anim.SetTrigger("Damage");
+            takeDamages = false;
+        }
+
         #region Small
         if (!bigRoots && isInfused)
         {

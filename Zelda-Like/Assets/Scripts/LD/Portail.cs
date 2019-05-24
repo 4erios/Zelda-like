@@ -26,6 +26,12 @@ public class Portail : LivingClass
             StopCoroutine(Respawn());
             anim.SetTrigger("Destroy");
         }
+
+        if (takeDamages)
+        {
+            anim.SetTrigger("Damage");
+            takeDamages = false;
+        }
     }
 
     private void Roulette()
