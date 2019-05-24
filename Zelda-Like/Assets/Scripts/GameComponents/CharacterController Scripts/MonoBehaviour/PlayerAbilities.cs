@@ -39,6 +39,7 @@ public class PlayerAbilities : MonoBehaviour
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
 
+    // public Rigidbody2D shootPrefab;
     public GameObject shootPrefab;
     public Transform shootingPoint;
     public Transform shootingAxis;
@@ -153,8 +154,11 @@ public class PlayerAbilities : MonoBehaviour
     public void PlayerShootInfuse()
      {
          if(EnergyGauge >= ShootInfuseCost)
-         { 
-             RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
+         {
+
+            Instantiate(shootPrefab, FirePoint.position, FirePoint.rotation);
+
+            /* RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
              if (hit.collider != null)
              {
                  FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
@@ -164,7 +168,12 @@ public class PlayerAbilities : MonoBehaviour
 
              clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
              clone.velocity = FireDirection * prefabSpeed;
-             Debug.Log("Instantiate PrefabSpawn");
+             Debug.Log("Instantiate PrefabSpawn");*/
+
+
+
+
+
              ShootEnergyLoss();
          }
      }
