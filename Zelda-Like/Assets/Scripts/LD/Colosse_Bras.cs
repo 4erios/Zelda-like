@@ -49,9 +49,9 @@ public class Colosse_Bras : InfusableClass
         #region Player insufle
         if (!enHauteur && isInfused)
         {
-            health = 1;
             anim.SetBool("Is Go Up", true);
             StartCoroutine(TimeBeforeFall());
+            isInfused = false;
         }
         #endregion
 
@@ -69,6 +69,7 @@ public class Colosse_Bras : InfusableClass
             doigtsCollider.isTrigger = false;
         }
 
+        Debug.Log(actualframe);
     }
 
     public void Movehand()
@@ -77,11 +78,13 @@ public class Colosse_Bras : InfusableClass
         {
             actualframe++;
 
+            if (actualframe == 5)
+                health = 1;
         }
 
         if (enHauteur)
         {
-            if (actualframe == 8)
+            if (actualframe == 9)
                     actualframe = 0;
             else
                 actualframe++;
@@ -94,7 +97,6 @@ public class Colosse_Bras : InfusableClass
 
         if (enHauteur)
         {
-            yield return new WaitForSeconds(0.5F);
             health = 0;
         }
     }

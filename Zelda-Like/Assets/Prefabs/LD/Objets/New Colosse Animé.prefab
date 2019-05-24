@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 1640213857911758486}
   - component: {fileID: 1205837585970564230}
   - component: {fileID: 8179602439051647996}
+  - component: {fileID: 8663575739902378026}
   m_Layer: 9
   m_Name: "New Colosse Anim\xE9"
   m_TagString: Untagged
@@ -241,6 +242,41 @@ MonoBehaviour:
     Variable: {fileID: 0}
   fallTime: 5
   enHauteur: 0
+--- !u!60 &8663575739902378026
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640213857911758487}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.86, y: 5}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.696279, y: -0.92232275}
+      - {x: -3.7020388, y: -1.4849393}
+      - {x: 1.7242503, y: -1.6017952}
+      - {x: 1.6911807, y: -0.59810114}
+      - {x: -0.18561697, y: -0.5774765}
+      - {x: -0.16499329, y: -0.96933603}
+    - []
+    - []
+    - []
+    - []
 --- !u!1 &1659965833397549072
 GameObject:
   m_ObjectHideFlags: 0
