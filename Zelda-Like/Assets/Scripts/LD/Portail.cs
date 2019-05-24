@@ -43,6 +43,7 @@ public class Portail : LivingClass
     {
         yield return new WaitForSeconds(timeBeforeRespawn);
         Roulette();
+        anim.SetTrigger("Invoke");
         ennemiObj = Instantiate(ennemis[ennemieSelected], spawnAreas[areaSelected].transform.position, Quaternion.identity) as GameObject;
         StartCoroutine(Respawn());
     }
