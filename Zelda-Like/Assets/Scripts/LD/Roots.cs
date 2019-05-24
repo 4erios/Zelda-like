@@ -40,6 +40,7 @@ public class Roots : InfusableClass
         {
             anim.SetTrigger("Damage");
             takeDamages = false;
+            isInfused = false;
         }
 
         #region Small
