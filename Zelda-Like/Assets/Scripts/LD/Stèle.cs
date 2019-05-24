@@ -44,6 +44,7 @@ public class Stèle : LivingClass
         if (takeDamages)
         {
             anim.SetTrigger("Damage");
+            takeDamages = false;
         }
 
     }
