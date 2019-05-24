@@ -63,14 +63,9 @@ public class BeetleClass : EnemyClass
         EnterAttackRange(enemyTransform, playerTransform, beetleAttackRange);
     }
 
-
-    public void SetBeetleChargeDirection()
-    {
-        direction = (playerTransform.position - enemyTransform.position).normalized;
-    }
-
     public void BeetleCharge()
     {
+        direction = (playerTransform.position - enemyTransform.position).normalized;
         enemyRb.velocity = new Vector2(direction.x * beetleChargeSpeed, direction.y * beetleChargeSpeed);
     }
 
