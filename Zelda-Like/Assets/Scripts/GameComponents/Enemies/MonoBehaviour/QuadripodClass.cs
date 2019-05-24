@@ -18,6 +18,8 @@ public class QuadripodClass : EnemyClass
     public FloatReference quadripodAttackRange;
     public FloatReference quadripodBulletSpeed;
 
+    private Vector2 direction;
+
     private void Start()
     {
         health = quadripodHealth;
@@ -29,12 +31,50 @@ public class QuadripodClass : EnemyClass
 
         if (playerDetected)
         {
-
+            enemyAnimator.SetTrigger("PlayerDetected");
         }
 
         if (playerInAttackRange && attackReady)
         {
+            enemyAnimator.SetTrigger("InAttackRange");
+        }
 
+        enemyAnimator.SetFloat("Health", health);
+    }
+
+    public void QuadripodSearchForPlayer()
+    {
+        PlayerDetection(enemyTransform, DetectionRange, playerLayer);
+    }
+
+    public void QuadripodMoveToPlayer()
+    {
+        if(Vector2.Distance(playerTransform.position, enemyTransform.position) > quadripodAttackRange)
+        {
+            MoveToPlayer(playerTransform, quadripodSpeed);
+        }
+    }
+
+    public void SetQuadripodShootDirection()
+    {
+        direction = (playerTransform.position - enemyTransform.position).normalized;
+    }
+
+    public void QuadripodShoot()
+    {
+
+    }
+
+    public void SetQuadripodVelocityToZero()
+    {
+        SetVelocityToZero(enemyRb);
+    }
+
+    public void LaunchTakeDamagesAnimation()
+    {
+        if (takeDamages)
+        {
+            enemyAnimator.SetTrigger("TakeDamages");
         }
     }
 }
