@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f4c004f952a234baa5bccb20ffd276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 20
+  rb: {fileID: 0}
+  lifeTime: 20
 --- !u!212 &1868826045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -697,6 +700,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f4c004f952a234baa5bccb20ffd276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 20
+  rb: {fileID: 0}
+  lifeTime: 20
 --- !u!114 &120806790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,6 +1684,7 @@ GameObject:
   - component: {fileID: 2211861022508095545}
   - component: {fileID: 562901617}
   - component: {fileID: 1630397519}
+  - component: {fileID: 1624205985319063412}
   m_Layer: 8
   m_Name: CharaControllerFinal
   m_TagString: Player
@@ -2157,6 +2164,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Object: {fileID: 4704675715113948179}
   Disabler: 0
+--- !u!114 &1624205985319063412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704675715113948179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680262fbb0a1cbe44b34f94cf072dd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSouls:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083, type: 2}
+  currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
+  ResetHP: 1
+  magnetRange: 3
 --- !u!95 &673529925
 Animator:
   serializedVersion: 3
@@ -2584,6 +2610,23 @@ PrefabInstance:
       propertyPath: currentHP
       value: 
       objectReference: {fileID: 11400000, guid: 41192a5fa502e3d49bfbc8fb0d01590d,
+        type: 2}
+    - target: {fileID: 8365468410451183962, guid: 6a3c07abb11e3864eb0611c45aad31bf,
+        type: 3}
+      propertyPath: playerMaxSouls.UseConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365468410451183962, guid: 6a3c07abb11e3864eb0611c45aad31bf,
+        type: 3}
+      propertyPath: playerMaxSouls.Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083,
+        type: 2}
+    - target: {fileID: 8365468410451183962, guid: 6a3c07abb11e3864eb0611c45aad31bf,
+        type: 3}
+      propertyPath: currentSouls
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443,
         type: 2}
     - target: {fileID: 6647451048597076507, guid: 6a3c07abb11e3864eb0611c45aad31bf,
         type: 3}
