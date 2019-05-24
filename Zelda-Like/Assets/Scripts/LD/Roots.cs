@@ -39,11 +39,14 @@ public class Roots : InfusableClass
         #region Small
         if (!bigRoots && isInfused)
         {
-            anim.SetTrigger("Is Infused");
+            anim.SetBool("Is Infused",true);
             FunctionToDealDamages();
+            health = bigRootsLife;
+            anim.SetBool("Is Infused", false);
         }
         #endregion
 
+        anim.SetBool("Is Infused", isInfused);
     }
 
     public void ChangeState()
