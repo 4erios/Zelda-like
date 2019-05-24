@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Portail : LivingClass
 {
@@ -11,6 +12,7 @@ public class Portail : LivingClass
     public GameObject[] ennemis; // Préfabs
     public GameObject[] spawnAreas;
     private GameObject ennemiObj;
+   
 
     private void Start()
     {
@@ -32,6 +34,7 @@ public class Portail : LivingClass
     {
         ennemieSelected = Random.Range(0, ennemis.Length);
         areaSelected = Random.Range(0, spawnAreas.Length);
+        anim.SetTrigger("Invoke");
     }
 
     public void Destroy()
@@ -45,5 +48,6 @@ public class Portail : LivingClass
         Roulette();
         ennemiObj = Instantiate(ennemis[ennemieSelected], spawnAreas[areaSelected].transform.position, Quaternion.identity) as GameObject;
         StartCoroutine(Respawn());
+       
     }
 }
