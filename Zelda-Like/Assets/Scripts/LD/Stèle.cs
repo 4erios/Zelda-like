@@ -10,17 +10,17 @@ public class Stèle : LivingClass
     private GameObject player;
     private Animator anim;
     [SerializeField]
-    private int scoreWin;
+    private float scoreWin = 80f;
     public bool Energy = false;
 
-    public IntVariable current;
+    public FloatVariable soulsGiven;
 
     void Start()
     {
         doesItGiveEnergy = true;
         player = GameObject.FindGameObjectWithTag("Player");
         if (Energy)
-            scoreWin = 8;
+            scoreWin = 80f;
         anim = this.gameObject.GetComponent<Animator>();
     }
 
@@ -35,7 +35,7 @@ public class Stèle : LivingClass
 
             else
             {
-                //current += scoreWin;
+                player.GetComponent<PlayerSouls>().TakeSouls(soulsGiven);
             }
 
             anim.SetTrigger("Destroy");

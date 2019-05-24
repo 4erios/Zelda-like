@@ -39,14 +39,20 @@ public class PlayerAbilities : MonoBehaviour
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
 
-    public Rigidbody2D shootPrefab;
+    // public Rigidbody2D shootPrefab;
+    public GameObject shootPrefab;
     public Transform shootingPoint;
+    public Transform shootingAxis;
     public FloatReference prefabSpeed;
 
     public BoolVariable Healing;
 
+    [Range(-180,180)]
+    public int ajout;
+
     //shoot parameters
     private Vector2 FireDirection;
+    
 
     private void FixedUpdate()
     {
@@ -54,6 +60,11 @@ public class PlayerAbilities : MonoBehaviour
         {
             PlayerHeal(); 
         }
+    }
+
+    public void Update()
+    {
+        Twist();
     }
 
     private void LoseEnergy(int energyCost)
@@ -141,23 +152,64 @@ public class PlayerAbilities : MonoBehaviour
     }
 
     public void PlayerShootInfuse()
-    {
-        if(EnergyGauge >= ShootInfuseCost)
-        { 
-            RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
-            if (hit.collider != null)
-            {
-                FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
-                hit.collider.GetComponent<InfusableClass>().Infuse();
-            }
-            Rigidbody2D clone;
+     {
+         if(EnergyGauge >= ShootInfuseCost)
+         {
 
-            clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
-            clone.velocity = FireDirection * prefabSpeed;
-            Debug.Log("Instantiate PrefabSpawn");
-            ShootEnergyLoss();
+            Instantiate(shootPrefab, FirePoint.position, FirePoint.rotation);
+
+            /* RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
+             if (hit.collider != null)
+             {
+                 FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
+                 hit.collider.GetComponent<InfusableClass>().Infuse();
+             }
+             Rigidbody2D clone;
+
+             clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
+             clone.velocity = FireDirection * prefabSpeed;
+             Debug.Log("Instantiate PrefabSpawn");*/
+
+
+
+
+
+             ShootEnergyLoss();
+         }
+     }
+
+    void Twist()
+    {
+        float h1 = Input.GetAxis("Horizontal");
+        float v1 = Input.GetAxis("Vertical");
+
+        //Debug.Log("y = " + v1 + " et x = " + h1);
+
+        if (h1 > 0.62f || h1 < -0.62f || v1 > 0.62f || v1 < -0.62f)
+        {
+            shootingAxis.transform.localEulerAngles = new Vector3(0f, 0f, -(Mathf.Atan2(h1, v1) * 180 / Mathf.PI) + ajout); // this does the actual rotaion according to inputs
         }
+
+
     }
+
+   /* public void UseWave()
+    {
+        Vector2 rotationVector = new Vector2(target.position.x - myShooterTransform.position.x, target.position.y - myShooterTransform.position.y);
+        float angleValue = Mathf.Atan2(rotationVector.normalized.y, rotationVector.normalized.x) * Mathf.Rad2Deg;
+
+        ParticleSystem.ShapeModule wpshape = myShooter.shape;
+        wpshape.rotation = new Vector3(0, 0, angleValue);
+
+        myShooter.Emit(1);
+    }
+
+
+    private void RotationUpdater()
+    {
+        waveManager.WaveShooters[waveManager.selectionIndex].startRotation = -targetRotator.localRotation.ToEulerAngles().z;
+    }*/
+
 
     public void ShieldEnergyLoss()
     {

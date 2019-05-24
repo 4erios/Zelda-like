@@ -8,8 +8,8 @@ public class Souls_UI : MonoBehaviour
     [SerializeField]
     private Image gaugeSouls;
 
-    //public FloatReference playerMaxSouls;
-    //public FloatVariable currentSouls;
+    public FloatReference playerMaxSouls;
+    public FloatVariable currentSouls;
 
     private float percentSouls;
 
@@ -20,7 +20,7 @@ public class Souls_UI : MonoBehaviour
 
     void Update()
     {
-        //percentSouls = currentSouls / playerMaxSouls;
+        percentSouls = currentSouls / playerMaxSouls;
 
         gaugeSouls.fillAmount = percentSouls;
     }
