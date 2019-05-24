@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class SpawnerMiniBoss : MonoBehaviour
 {
     public GameObject[] ennemis; // Préfabs
     private int ennemieSelected;
@@ -12,18 +12,6 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        do
-        {
-            Roulette();
-            Respawn();
-            countSpawn++;
-        } while (countSpawn < nbSpawn);
-    }
-
-    public void LaunchRespawn()
-    {
-        countSpawn = 0;
-
         do
         {
             Roulette();

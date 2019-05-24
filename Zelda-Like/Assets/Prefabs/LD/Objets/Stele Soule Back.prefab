@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6242152118684345509}
   - component: {fileID: 3680769427287701001}
   - component: {fileID: 7201392913756998959}
+  - component: {fileID: 5347378661426933824}
   - component: {fileID: 1468475126340540821}
   - component: {fileID: 3430271291977334115}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stele Soule Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00038838387, y: -0.21644133}
+  m_Offset: {x: 0.00038838387, y: -0.23379368}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,7 +128,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19656801, y: 0.1267556}
+  m_Size: {x: 0.19656801, y: 0.09205091}
+  m_EdgeRadius: 0
+--- !u!61 &5347378661426933824
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197168703292496564}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00038838387, y: -0.0937348}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.19656801, y: 0.14906561}
   m_EdgeRadius: 0
 --- !u!114 &1468475126340540821
 MonoBehaviour:
@@ -169,7 +196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6349102066666158715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}

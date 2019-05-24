@@ -24,15 +24,10 @@ public class AreaManager : MonoBehaviour
     }
     #endregion
 
+    public bool[] areaState;
 
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
+    #region Area Repertory
+    // 0 P1A3
+    // 1 P1A4
+    #endregion
 }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Portail : LivingClass
 {
-    [SerializeField]
-    private float portailLife = 5;
     private Animator anim;
     private int ennemieSelected;
     private int areaSelected;
@@ -19,7 +17,6 @@ public class Portail : LivingClass
         doesItGiveEnergy = true;
         StartCoroutine(Respawn());
         anim = this.gameObject.GetComponent<Animator>();
-        health = portailLife;
     }
 
     void Update()
