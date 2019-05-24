@@ -112,31 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &25686190 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4704675715113948179, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 221464819}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &25686205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25686190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 680262fbb0a1cbe44b34f94cf072dd55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSouls:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083, type: 2}
-  currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
-  ResetHP: 0
-  magnetRange: 3
 --- !u!1001 &102032223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -276,22 +251,6 @@ PrefabInstance:
     - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799184540, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799184540, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.000000032306044
-      objectReference: {fileID: 0}
-    - target: {fileID: 1761634405, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1761634405, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1254,6 +1213,7 @@ MonoBehaviour:
   - {fileID: 6769300823274202444}
   - {fileID: 3584754464670619109}
   - {fileID: 5914020952753412425}
+  activation: 0
 --- !u!1 &5914020952753412425
 GameObject:
   m_ObjectHideFlags: 0
