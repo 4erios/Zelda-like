@@ -9,34 +9,65 @@ public class PlayerMovement : MonoBehaviour
     public FloatVariable MoveX;
     public FloatVariable MoveY;
 
+    private float moveX;
+    private float moveY;
+
     public VectorVariable PlayerDirection;
     private Vector2 playerdirection;
 
     public FloatVariable CurrentSpeed;
 
-    public FloatReference PlayerSpeed;
+    public FloatReference PlayerMaxSpeed;
+    public FloatVariable PlayerSpeed;
 
     public AnimationCurve accelerationCurve;
+
+    private void Start()
+    {
+        CurrentSpeed.SetFloatValue(PlayerMaxSpeed);
+        DontDestroyOnLoad(transform.gameObject);
+    }
 
     private void Update()
     {
         ProcessInputs();
         PlayerDirection.SetVector(playerdirection);
+
+        //allow the player to keep his last position
+        if (PlayerDirection != Vector2.zero)
+        {
+            MoveX.SetFloatValue(moveX);
+            MoveY.SetFloatValue(moveY);
+        }
     }
 
     public void ProcessInputs()
     {
+        moveX = Input.GetAxisRaw("Horizontal");
+        moveY = Input.GetAxisRaw("Vertical");
 
-        MoveX.SetFloatValue(Input.GetAxis("Horizontal"));
-        MoveY.SetFloatValue(Input.GetAxis("Vertical"));
-
-        playerdirection = new Vector2 (MoveX, MoveY);
+        playerdirection = new Vector2 (moveX, moveY);
         CurrentSpeed.SetFloatValue(Mathf.Clamp(playerdirection.magnitude, 0.0f, 1.0f));
         playerdirection.Normalize();
     }
 
     public void PlayerMove()
     {
-        rb.velocity = playerdirection * CurrentSpeed * PlayerSpeed * accelerationCurve.Evaluate(Time.time);
+        rb.velocity = playerdirection * PlayerSpeed * CurrentSpeed * accelerationCurve.Evaluate(Time.time);
+    }
+
+    public void SetSpeedToZero()
+    {
+        PlayerSpeed.SetFloatValue(0);
+    }
+
+    public void SetSpeedToMaxSpeed()
+    {
+        PlayerSpeed.SetFloatValue(PlayerMaxSpeed);
+    }
+
+    public void SetVelocityToZero()
+    {
+        rb.velocity = Vector2.zero;
     }
 }

@@ -12,21 +12,45 @@ public class PlayerHPSystem : MonoBehaviour
 
     public bool ResetHP;
 
-    [SerializeField] private GameEvent DamageEvent;
-    [SerializeField] private GameEvent ResurrectionEvent;
+    public GameEvent DamageEvent;
+    public GameEvent ResurrectionEvent;
+    public GameEvent DeathEvent;
 
-    private void Start()
+    public FloatVariable PlayerDamagesTaken;
+
+    public IntVariable EnergyGauge;
+
+    private void Awake()
     {
         if (ResetHP)
             CurrentHP.SetFloatValue(playerMaxHP);
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamages(float damages)
+    {
+        CurrentHP.ApplyChangeToFloat(-damages * PlayerDamagesTaken);
+        DamageEvent.Raise();
+        
+        if (CurrentHP.Value <= 0)
+        {
+            CurrentHP.SetFloatValue(0);
+            if (EnergyGauge > 3)
+            {
+                ResurrectionEvent.Raise();
+            }
+            else if (EnergyGauge <= 3)
+            {
+                DeathEvent.Raise();
+            }
+        }
+    }
+
+    /*public void OnCollisionEnter2D(Collision2D collision)
     {
         EnemyDamageDealer damages = collision.gameObject.GetComponent<EnemyDamageDealer>();
         if (damages != null)
         {
-            CurrentHP.ApplyChangeToFloat(-damages.enemyDamage);
+            CurrentHP.ApplyChangeToFloat(-damages.enemyDamage * PlayerDamagesTaken);
             DamageEvent.Raise();
         }
 
@@ -35,6 +59,6 @@ public class PlayerHPSystem : MonoBehaviour
             CurrentHP.SetFloatValue(0);
             ResurrectionEvent.Raise();
         }
-    }
+    }*/
 }
 

@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portail : MonoBehaviour
+public class Portail : LivingClass
 {
-    public bool attack = false;
-
-    private float countDamage;
-    [SerializeField]
-    private float portailLife = 5;
     private Animator anim;
     private int ennemieSelected;
     private int areaSelected;
@@ -19,21 +14,17 @@ public class Portail : MonoBehaviour
 
     private void Start()
     {
+        doesItGiveEnergy = true;
         StartCoroutine(Respawn());
         anim = this.gameObject.GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (countDamage == portailLife)
+        if (health <= 0)
         {
+            StopCoroutine(Respawn());
             anim.SetTrigger("Destroy");
-        }
-
-        if (attack)
-        {
-            countDamage++;
-            attack = false;
         }
     }
 
@@ -52,6 +43,7 @@ public class Portail : MonoBehaviour
     {
         yield return new WaitForSeconds(timeBeforeRespawn);
         Roulette();
+        anim.SetTrigger("Invoke");
         ennemiObj = Instantiate(ennemis[ennemieSelected], spawnAreas[areaSelected].transform.position, Quaternion.identity) as GameObject;
         StartCoroutine(Respawn());
     }

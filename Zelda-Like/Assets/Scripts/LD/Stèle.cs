@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stèle : MonoBehaviour
+public class Stèle : LivingClass
 {
     //Reste à faire :
-    // - Annimation
     // - Lier donner le score
-
-    public bool attack = false;
 
     private GameObject player;
     private Animator anim;
@@ -20,6 +17,7 @@ public class Stèle : MonoBehaviour
 
     void Start()
     {
+        doesItGiveEnergy = true;
         player = GameObject.FindGameObjectWithTag("Player");
         if (Energy)
             scoreWin = 8;
@@ -28,7 +26,7 @@ public class Stèle : MonoBehaviour
 
     void Update()
     {
-        if (attack)
+        if (health <= 0)
         {
             if (Energy)
             {
@@ -41,6 +39,12 @@ public class Stèle : MonoBehaviour
             }
 
             anim.SetTrigger("Destroy");
+        }
+
+        if (takeDamages)
+        {
+            anim.SetTrigger("Damage");
+            takeDamages = false;
         }
 
     }

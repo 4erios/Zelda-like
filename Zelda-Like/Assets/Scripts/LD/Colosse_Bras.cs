@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Colosse_Bras : MonoBehaviour
+public class Colosse_Bras : InfusableClass
 {
     //Reste à faire :
     // - Mettre les dégâts quand main tombe
-
-    public bool isInfused = false;
-    public bool attack = false;
 
     private Animator anim;
     public Collider2D poignetCollider;
     public Collider2D doigtsCollider;
     public bool trapeOnly = false;
+    public float damageRange = 2F;
+    public Transform underHandRange;
+
+    public FloatReference damageHand;
 
     public float fallTime = 5f;
     private int actualframe;
@@ -48,16 +49,17 @@ public class Colosse_Bras : MonoBehaviour
         #region Player insufle
         if (!enHauteur && isInfused)
         {
+            health = 1;
             anim.SetBool("Is Go Up", true);
             StartCoroutine(TimeBeforeFall());
         }
         #endregion
 
         #region player attaque
-        if (enHauteur && attack)
+        if (enHauteur && health <= 0)
         {
             anim.SetBool("Is Fall", true);
-            // Faire dégâts 
+            FunctionToDealDamages();
         }
         #endregion
 
@@ -92,9 +94,17 @@ public class Colosse_Bras : MonoBehaviour
 
         if (enHauteur)
         {
-            attack = true;
             yield return new WaitForSeconds(0.5F);
-            attack = false;
+            health = 0;
+        }
+    }
+
+    void FunctionToDealDamages()
+    {
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(underHandRange.position, damageRange);
+        foreach (Collider2D enemyCollision in enemiesHurt)
+        {
+            enemyCollision.GetComponent<LivingClass>().TakeDamages(damageHand);
         }
     }
 }

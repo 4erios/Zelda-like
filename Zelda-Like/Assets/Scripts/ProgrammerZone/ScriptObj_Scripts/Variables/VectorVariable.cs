@@ -22,7 +22,7 @@ public class VectorVariable : ScriptableObject
         get { return Vector2; }
     }
 
-    public static implicit operator Vector2 (VectorVariable vectorVariable)
+    public static implicit operator Vector2(VectorVariable vectorVariable)
     {
         return vectorVariable.Vector2;
     }
