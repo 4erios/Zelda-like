@@ -7,12 +7,12 @@ public class PlayerSouls : MonoBehaviour
     public FloatReference maxSouls;
     public FloatVariable currentSouls;
 
-    public bool ResetHP;
+    public bool ResetSouls;
     public float magnetRange = 3f;
 
     private void Awake()
     {
-        if (ResetHP)
+        if (ResetSouls)
             currentSouls.SetFloatValue(0);
     }
 
