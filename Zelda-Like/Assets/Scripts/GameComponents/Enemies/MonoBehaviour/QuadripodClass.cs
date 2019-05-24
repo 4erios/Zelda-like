@@ -2,79 +2,70 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeetleClass : EnemyClass
+public class QuadripodClass : EnemyClass
 {
-    [Header("Beetle Detection Parameters")]
+    [Header("Quadripod Detection Parameters")]
     public FloatReference DetectionRange;
     public LayerMask playerLayer;
 
-    [Header("Beetle Components")]
+    [Header("Quadripod Components")]
     public Animator enemyAnimator;
     public SpriteRenderer enemySprite;
 
-    [Header ("Beetle Stats")]
-    public FloatReference beetleHealth;
-    public FloatReference beetleSpeed;
-    public FloatReference beetleAttackRange;
-    public FloatReference beetleChargeSpeed;
+    [Header("Quadripod Stats")]
+    public FloatReference quadripodHealth;
+    public FloatReference quadripodSpeed;
+    public FloatReference quadripodAttackRange;
+    public FloatReference quadripodBulletSpeed;
 
     private Vector2 direction;
 
     private void Start()
     {
-        //initialise enemyHp
-        health = beetleHealth;
+        health = quadripodHealth;
     }
 
     private void Update()
     {
         FacePlayer(playerTransform, enemySprite);
-        
+
         if (playerDetected)
         {
             enemyAnimator.SetTrigger("PlayerDetected");
         }
-        
+
         if (playerInAttackRange && attackReady)
         {
             enemyAnimator.SetTrigger("InAttackRange");
         }
 
         enemyAnimator.SetFloat("Health", health);
-
-        LaunchTakeDamagesAnimation();
     }
 
-    public void BeetleSearchForPlayer()
+    public void QuadripodSearchForPlayer()
     {
         PlayerDetection(enemyTransform, DetectionRange, playerLayer);
     }
 
-    public void BeetleMoveToPlayer()
+    public void QuadripodMoveToPlayer()
     {
-        if (Vector2.Distance(playerTransform.position, enemyTransform.position) > beetleAttackRange)
+        if(Vector2.Distance(playerTransform.position, enemyTransform.position) > quadripodAttackRange)
         {
-            MoveToPlayer(playerTransform, beetleSpeed);
+            MoveToPlayer(playerTransform, quadripodSpeed);
         }
     }
 
-    public void BeetleEnterAttackRange()
-    {
-        EnterAttackRange(enemyTransform, playerTransform, beetleAttackRange);
-    }
-
-
-    public void SetBeetleChargeDirection()
+    public void SetQuadripodShootDirection()
     {
         direction = (playerTransform.position - enemyTransform.position).normalized;
     }
 
-    public void BeetleCharge()
+    public void QuadripodShoot()
     {
-        enemyRb.velocity = new Vector2(direction.x * beetleChargeSpeed, direction.y * beetleChargeSpeed);
+
     }
 
-    public void SetBeetleVelocityToZero()
+    public void SetQuadripodVelocityToZero()
     {
         SetVelocityToZero(enemyRb);
     }
