@@ -233,7 +233,6 @@ GameObject:
   - component: {fileID: 6241265406361100912}
   - component: {fileID: 2008262715658787264}
   - component: {fileID: 5563558946747100821}
-  - component: {fileID: 742048112410964933}
   m_Layer: 9
   m_Name: New Portail
   m_TagString: Untagged
@@ -362,7 +361,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6241265406361100913}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0040c14dbdb505408d5c1cf2b2068e6, type: 3}
   m_Name: 
@@ -397,18 +396,6 @@ CircleCollider2D:
   m_Offset: {x: 0.65, y: -0.65}
   serializedVersion: 2
   m_Radius: 2
---- !u!114 &742048112410964933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6241265406361100913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ff0062b0a67164f878ca6f776390e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7318900071288505686
 GameObject:
   m_ObjectHideFlags: 0
