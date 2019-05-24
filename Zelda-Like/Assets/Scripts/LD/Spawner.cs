@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject[] ennemis; // Préfabs
+    private int ennemieSelected;
+    private GameObject ennemiObj;
+    public int nbSpawn;
+    private int countSpawn;
+
+    private void Start()
     {
-        
+        do
+        {
+            Roulette();
+            Respawn();
+            countSpawn++;
+        } while (countSpawn < nbSpawn);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LaunchRespawn()
     {
-        
+        countSpawn = 0;
+
+        do
+        {
+            Roulette();
+            Respawn();
+            countSpawn++;
+        } while (countSpawn < nbSpawn);
+    }
+
+    private void Respawn()
+    {
+        ennemiObj = Instantiate(ennemis[ennemieSelected], this.gameObject.transform.position, Quaternion.identity) as GameObject;
+    }
+
+    private void Roulette()
+    {
+        ennemieSelected = Random.Range(0, ennemis.Length);
     }
 }

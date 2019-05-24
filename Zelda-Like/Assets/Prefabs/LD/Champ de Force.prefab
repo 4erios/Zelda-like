@@ -70,5 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aea09fe2637f1c4ab185b487cd1d125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actif: 0
+  areaNumber: 10000
+  areaActif: 1
+  spawnerGroup: {fileID: 0}
+  chActif: 0
   chForce: {fileID: 0}
