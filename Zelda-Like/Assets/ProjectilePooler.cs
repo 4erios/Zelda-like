@@ -6,7 +6,7 @@ public class ProjectilePooler : MonoBehaviour
 {
 
 
-   // PlayerAbilities playerAbilities;
+   // public PlayerAbilities playerAbilities;
     
 
 
@@ -20,6 +20,6 @@ public class ProjectilePooler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //playerAbilities.SpawnFromPool("Infuse", transform.position, Quaternion.identity);
+       // playerAbilities.SpawnFromPool("Infuse", transform.position, Quaternion.identity);
     }
 }
