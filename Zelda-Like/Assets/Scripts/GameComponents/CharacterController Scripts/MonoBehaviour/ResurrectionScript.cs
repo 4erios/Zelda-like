@@ -19,6 +19,9 @@ public class ResurrectionScript : MonoBehaviour
 
     public BoolVariable Resurrecting;
 
+    public Animator Rez;
+
+
     private void Update()
     {
         if (Resurrecting)
