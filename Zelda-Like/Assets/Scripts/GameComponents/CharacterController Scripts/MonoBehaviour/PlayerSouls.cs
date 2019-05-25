@@ -9,6 +9,7 @@ public class PlayerSouls : MonoBehaviour
 
     public bool ResetSouls;
     public float magnetRange = 3f;
+    public LayerMask mask;
 
     private void Awake()
     {
@@ -28,8 +29,6 @@ public class PlayerSouls : MonoBehaviour
 
     void Update()
     {
-        LayerMask mask = LayerMask.GetMask("Souls");
-
         Collider2D[] areaObj = Physics2D.OverlapCircleAll(this.gameObject.transform.position, magnetRange, mask);
         foreach (Collider2D obj in areaObj)
         {
