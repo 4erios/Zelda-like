@@ -23,6 +23,7 @@ public class EnemyClass : LivingClass
         if (detection != null)
         {
             playerDetected = true;
+            playerTransform = detection.gameObject.transform;
             Debug.Log("player found");
         }
     }
