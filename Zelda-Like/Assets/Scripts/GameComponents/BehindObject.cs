@@ -14,10 +14,6 @@ public class BehindObject : MonoBehaviour
     {
         compSprite = gameObject.GetComponentInParent<SpriteRenderer>();
         saveOrderLayer = compSprite.sortingOrder;
-        if(this.gameObject.GetComponent<BoxCollider2D>())
-        this.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-        if(this.gameObject.GetComponent<PolygonCollider2D>())
-        this.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)

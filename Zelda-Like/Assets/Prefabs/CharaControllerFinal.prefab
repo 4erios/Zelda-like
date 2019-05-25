@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 1761634405}
   - component: {fileID: 1761634406}
   - component: {fileID: 3109104670464270550}
+  - component: {fileID: 1854588245119005439}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -159,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761634404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.04033, y: -6.3053927, z: 0}
+  m_LocalPosition: {x: -2.9386961, y: -14.455253, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 714645290}
@@ -219,6 +220,23 @@ MonoBehaviour:
   ShakeFrequency: 1.5
   ScreenShakeActivation: 0
   VirtualCamera: {fileID: 1761634406}
+--- !u!114 &1854588245119005439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761634404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 0}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!1 &1799184537
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799184537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.7318864, y: 3.4175575, z: -5.398985}
+  m_LocalPosition: {x: 1.5927894, y: 7.834826, z: -5.398985}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children:
   - {fileID: 1761634405}
@@ -1586,7 +1604,6 @@ MonoBehaviour:
   TimeUntilDeath: {fileID: 11400000, guid: c9ee03e293759ec409234d4da8c3b28c, type: 2}
   DeathEvent: {fileID: 11400000, guid: d275fa06944224f428b1cf121795a42c, type: 2}
   Resurrecting: {fileID: 11400000, guid: 484bc2afd29b12148b30b460dfff9bb3, type: 2}
-  Rez: {fileID: 0}
 --- !u!114 &4704675715113948169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,6 +1848,9 @@ MonoBehaviour:
     ConstantValue: 1
     Variable: {fileID: 0}
   AOEEmissionPoint: {fileID: 2082290499592308894}
+  LayerToAttack:
+    serializedVersion: 2
+    m_Bits: 512
   PlayerDamagesTaken: {fileID: 11400000, guid: 5fbd007dfb639524a9a0982b3d5be53f, type: 2}
   ShieldDamageTaken:
     UseConstant: 1
