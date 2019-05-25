@@ -18,7 +18,7 @@ public class Portail : LivingClass
     private void Start()
     {
         doesItGiveEnergy = true;
-        //StartCoroutine(Respawn());
+        StartCoroutine(Respawn());
         anim = this.gameObject.GetComponent<Animator>();
         
     }
@@ -37,14 +37,7 @@ public class Portail : LivingClass
             takeDamages = false;
         }
 
-        if (activation == true)
-        {
-           
-            StartCoroutine(Respawn());
-
-
-        }
-            
+       
 
 
     }
@@ -66,9 +59,12 @@ public class Portail : LivingClass
    
     IEnumerator Respawn()
     {
+        
         yield return new WaitForSeconds(timeBeforeRespawn);
-        Roulette();
-        ennemiObj = Instantiate(ennemis[ennemieSelected], spawnAreas[areaSelected].transform.position, Quaternion.identity) as GameObject;
+        if (activation) {
+            Roulette();
+            ennemiObj = Instantiate(ennemis[ennemieSelected], spawnAreas[areaSelected].transform.position, Quaternion.identity) as GameObject;
+        }
         StartCoroutine(Respawn());
        
     }
