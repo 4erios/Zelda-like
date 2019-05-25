@@ -13858,13 +13858,18 @@ PrefabInstance:
     - target: {fileID: 2820816733846046291, guid: 88aa8b45d878aa84abe157681fa101f4,
         type: 3}
       propertyPath: nbWaves
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2820816733846046291, guid: 88aa8b45d878aa84abe157681fa101f4,
         type: 3}
       propertyPath: chForce
       value: 
       objectReference: {fileID: 1786325040}
+    - target: {fileID: 2820816733846046291, guid: 88aa8b45d878aa84abe157681fa101f4,
+        type: 3}
+      propertyPath: countwaves
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 959045008732285097, guid: 88aa8b45d878aa84abe157681fa101f4,
         type: 3}
       propertyPath: ennemis.Array.size
@@ -14458,12 +14463,12 @@ PrefabInstance:
     - target: {fileID: 1640213857911758484, guid: 6774510332c721540aa55fb9071d1e5a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.925
+      value: -3.5635
       objectReference: {fileID: 0}
     - target: {fileID: 1640213857911758484, guid: 6774510332c721540aa55fb9071d1e5a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.18
+      value: -4.024
       objectReference: {fileID: 0}
     - target: {fileID: 1640213857911758484, guid: 6774510332c721540aa55fb9071d1e5a,
         type: 3}
@@ -14508,36 +14513,6 @@ PrefabInstance:
     - target: {fileID: 1640213857911758484, guid: 6774510332c721540aa55fb9071d1e5a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640213857911758484, guid: 6774510332c721540aa55fb9071d1e5a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.166676
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640213857911758484, guid: 6774510332c721540aa55fb9071d1e5a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.166676
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640213857911758484, guid: 6774510332c721540aa55fb9071d1e5a,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8179602439051647996, guid: 6774510332c721540aa55fb9071d1e5a,
-        type: 3}
-      propertyPath: trapeOnly
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257135658327936526, guid: 6774510332c721540aa55fb9071d1e5a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3784577120871143102, guid: 6774510332c721540aa55fb9071d1e5a,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -21681,6 +21656,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 1862184972151476016, guid: 77e7f53d84bac464da51c619f21a816b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9192675453336384831, guid: 77e7f53d84bac464da51c619f21a816b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21882,6 +21862,11 @@ PrefabInstance:
       propertyPath: spawnerMiniBoss
       value: 
       objectReference: {fileID: 1583049274}
+    - target: {fileID: 2820816733846046291, guid: 88aa8b45d878aa84abe157681fa101f4,
+        type: 3}
+      propertyPath: countwaves
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 959045008732285097, guid: 88aa8b45d878aa84abe157681fa101f4,
         type: 3}
       propertyPath: ennemis.Array.size
