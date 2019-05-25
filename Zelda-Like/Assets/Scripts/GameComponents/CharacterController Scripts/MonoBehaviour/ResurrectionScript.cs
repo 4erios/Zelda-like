@@ -19,7 +19,7 @@ public class ResurrectionScript : MonoBehaviour
 
     public BoolVariable Resurrecting;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Resurrecting)
         {
@@ -34,7 +34,7 @@ public class ResurrectionScript : MonoBehaviour
     
     public void ResurrectionTimer()
     {
-        TimeUntilDeath.ApplyChangeToFloat(Time.deltaTime);
+        TimeUntilDeath.ApplyChangeToFloat(1);
 
         if (TimeUntilDeath >= SetTimeUntilDeath)
         {

@@ -35,6 +35,7 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference AOEInfuseKnockBackDistance;
     public FloatReference AOEInfuseDamages;
     public Transform AOEEmissionPoint;
+    public LayerMask LayerToAttack;
 
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
@@ -142,7 +143,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         if (EnergyGauge >= AOEInfuseCost)
         {
-            Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange);
+            Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange, LayerToAttack);
             foreach (Collider2D enemyCollision in enemiesHurt)
             {
                 enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
@@ -198,6 +199,8 @@ public class PlayerAbilities : MonoBehaviour
     {
         float h1 = Input.GetAxis("Horizontal");
         float v1 = Input.GetAxis("Vertical");
+
+        //Debug.Log("y = " + v1 + " et x = " + h1);
 
         //Debug.Log("y = " + v1 + " et x = " + h1);
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6603127649696727565}
   - component: {fileID: 6696785604253466892}
   - component: {fileID: 7811967935879239538}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Behind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0381d7fa2e4e6448bd1d725653e31d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inFrontOf: 0
+  "d\xE9calage": 5
 --- !u!61 &7811967935879239538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,7 +184,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.32052004}

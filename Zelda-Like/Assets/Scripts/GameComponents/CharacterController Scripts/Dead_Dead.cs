@@ -43,6 +43,8 @@ public class Dead_Dead : MonoBehaviour
     IEnumerator Loading()
     {
         reallyDead = false;
+        this.gameObject.GetComponent<PlayerMovement>().enabled = false;
+        this.gameObject.GetComponent<PlayerControls>().enabled = false;
         animTransition.SetTrigger("End");
         yield return new WaitForSeconds(TimeTransition);
         SceneManager.LoadScene(gateScene);

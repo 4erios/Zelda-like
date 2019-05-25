@@ -53,7 +53,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void RightAttackCollider()
     {
-        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(RightAttackPoint.position, AttackRange);
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(RightAttackPoint.position, AttackRange, layerToAttack);
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
@@ -64,7 +64,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void LeftAttackCollider()
     {
-        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(LeftAttackPoint.position, AttackRange);
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(LeftAttackPoint.position, AttackRange, layerToAttack);
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
@@ -75,7 +75,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void UpAttackCollider()
     {
-        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(UpAttackPoint.position, AttackRange);
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(UpAttackPoint.position, AttackRange, layerToAttack);
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);
@@ -86,7 +86,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void DownAttackCollider()
     {
-        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(DownAttackPoint.position, AttackRange);
+        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(DownAttackPoint.position, AttackRange, layerToAttack);
         foreach (Collider2D enemyCollision in enemiesHurt) 
         {
             enemyCollision.GetComponent<LivingClass>().TakeDamages(PlayerAttackDamages);

@@ -13,9 +13,9 @@ public class ArenasManager : MonoBehaviour
 
     public void ResetArenas()
     {
-        for (int i = 0; i < arenasState.Length; i++)
+        for (int i = 1; i < arenasState.Length; i++)
         {
-            arenasState[i] = false;
+            arenasState[i] = true;
         }
     }
 }

@@ -7,7 +7,8 @@ public class BehindObject : MonoBehaviour
     private int orderLayer;
     private SpriteRenderer compSprite;
     private int saveOrderLayer;
-    private bool objectBehind;
+    public bool inFrontOf;
+    public int décalage = 5;
 
     void Start()
     {
@@ -18,8 +19,14 @@ public class BehindObject : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         orderLayer = collision.GetComponent<SpriteRenderer>().sortingOrder;
+        if (inFrontOf)
+        {
+            compSprite.sortingOrder = orderLayer - décalage;
+        }
 
-        compSprite.sortingOrder = orderLayer + 1;
+        else
+            compSprite.sortingOrder = orderLayer + décalage;
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

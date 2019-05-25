@@ -20,7 +20,6 @@ public class QuadripodClass : EnemyClass
     public FloatReference quadripodAttackRange;
     public FloatReference quadripodBulletSpeed;
 
-    private Vector2 direction;
 
     private void Start()
     {
@@ -62,15 +61,11 @@ public class QuadripodClass : EnemyClass
         EnterAttackRange(enemyTransform, playerTransform, quadripodAttackRange);
     }
 
-    public void SetQuadripodShootDirection()
-    {
-        direction = (playerTransform.position - enemyTransform.position).normalized;
-    }
-
     public void QuadripodShoot()
     {
+        Vector2 direction = (playerTransform.position - enemyTransform.position).normalized;
         Rigidbody2D clone;
-        clone = Instantiate(projectileToInstantiate, ShootingPoint);
+        clone = Instantiate(projectileToInstantiate, ShootingPoint.position, ShootingPoint.rotation);
         clone.velocity = direction * quadripodBulletSpeed;
     }
 

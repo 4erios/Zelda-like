@@ -6,12 +6,13 @@ public class Arena : MonoBehaviour
 {
     [SerializeField]
     private int arenaNumber;
+    [SerializeField]
     private bool arenaActif = true;
     public GameObject spawnerGroup;
     private bool chActif = false;
     public GameObject chForce;
     public int nbWaves = 1;
-    private int countwaves = 0;
+    private int countwaves = 1;
 
     [Header("Have a Mini-Boss ?")]
     public bool haveMiniBoss = false;
@@ -20,16 +21,13 @@ public class Arena : MonoBehaviour
 
     private void Start()
     {
-        if (GameObject.Find("Areas Manager").GetComponent<ArenasManager>().arenasState[arenaNumber])
+        if (GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ArenasManager>().arenasState[arenaNumber])
         {
             arenaActif = true;
         }
 
         else
             arenaActif = false;
-
-        spawnerGroup.SetActive(false);
-        spawnerMiniBoss.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D traped)
@@ -41,34 +39,41 @@ public class Arena : MonoBehaviour
                 chForce.SetActive(true);
                 chActif = true;
                 spawnerGroup.SetActive(true);
+                countwaves++;
             }
         }
     }
 
     private void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Arena Enemy").Length == 0)
+        Debug.Log(GameObject.FindGameObjectsWithTag("Arena Enemy").Length);
+
+        if (spawnerGroup.activeInHierarchy)
         {
-            if (countwaves == miniBossWave && haveMiniBoss)
+            if (GameObject.FindGameObjectsWithTag("Arena Enemy").Length == 0 && countwaves > 0)
             {
-                spawnerMiniBoss.SetActive(true);
-            }
+                Debug.Log("Suivant!");
 
-            else if (countwaves >= nbWaves)
-            {
-                spawnerMiniBoss.SetActive(false);
-                GameObject.Find("Arenas Manager").GetComponent<ArenasManager>().arenasState[arenaNumber] = false;
-                chForce.SetActive(false);
-                chActif = false;
-                spawnerGroup.SetActive(false);
-                arenaActif = false;
-            }
+                if (countwaves == miniBossWave && haveMiniBoss)
+                {
+                    spawnerMiniBoss.SetActive(true);
+                }
 
-            else
-            {
-                spawnerMiniBoss.SetActive(false);
-                countwaves++;
-                spawnerGroup.GetComponentInChildren<Spawner>().LaunchRespawn();
+                else if (countwaves >= nbWaves)
+                {
+                    spawnerMiniBoss.SetActive(false);
+                    GameObject.Find("Arenas Manager").GetComponent<ArenasManager>().arenasState[arenaNumber] = false;
+                    chForce.SetActive(false);
+                    chActif = false;
+                    spawnerGroup.SetActive(false);
+                    arenaActif = false;
+                }
+
+                else
+                {
+                    countwaves++;
+                    spawnerGroup.GetComponentInChildren<Spawner>().LaunchRespawn();
+                }
             }
         }
     }
