@@ -17,6 +17,7 @@ public class EnemyDamageDealer : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!gameObject.GetComponent<PlayerHPSystem>()) return;
         collision.gameObject.GetComponent<PlayerHPSystem>().TakeDamages(enemyDamage);
     }
 }

@@ -31,25 +31,50 @@ public class Roots : InfusableClass
         #region Big
         if (health <= 0)
         {
-            anim.SetTrigger("Is Attak");
+            anim.SetBool("Is Attak", true);
             health = bigRootsLife;
         }
         #endregion
 
+        if (takeDamages && bigRoots)
+        {
+            anim.SetTrigger("Damage");
+            takeDamages = false;
+            isInfused = false;
+        }
+
         #region Small
         if (!bigRoots && isInfused)
         {
-            anim.SetTrigger("Is Infused");
+            takeDamages = false;
+            anim.SetBool("Is Infused",true);
             FunctionToDealDamages();
+            anim.SetBool("Is Infused", false);
         }
         #endregion
 
+        if (bigRoots)
+        {
+            anim.SetBool("Is Infused", false);
+        }
+
+        else if (!bigRoots)
+        {
+            anim.SetBool("Is Attak", false);
+        }
+
+        this.gameObject.GetComponent<Collider2D>().isTrigger = !bigRoots;
     }
 
     public void ChangeState()
         {
-            bigRoots = !bigRoots;
+        bigRoots = !bigRoots;
         }
+
+    private void Heal()
+    {
+        health = bigRootsLife;
+    }
 
     void FunctionToDealDamages()
     {

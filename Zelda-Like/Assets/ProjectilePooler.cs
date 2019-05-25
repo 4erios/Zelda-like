@@ -6,20 +6,23 @@ public class ProjectilePooler : MonoBehaviour
 {
 
 
-   // PlayerAbilities playerAbilities;
-    
-
+    public float speed = 20f;
+    public Rigidbody2D rb;
+    public float lifeTime = 20f; 
 
     // Start is called before the first frame update
     void Start()
     {
-        //playerAbilities = PlayerAbilities.Instance;
 
+        rb.velocity = -transform.right * speed;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        //playerAbilities.SpawnFromPool("Infuse", transform.position, Quaternion.identity);
+
+        Destroy(this.gameObject, lifeTime);
+
     }
+    
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ResurrectionScript : MonoBehaviour
 {
     public FloatVariable CurrentHP;
@@ -17,6 +18,9 @@ public class ResurrectionScript : MonoBehaviour
     public GameEvent DeathEvent;
 
     public BoolVariable Resurrecting;
+
+    public Animator Rez;
+
 
     private void Update()
     {
