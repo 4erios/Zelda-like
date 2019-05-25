@@ -14,8 +14,11 @@ public class PlayerHPSystem : MonoBehaviour
 
     public GameEvent DamageEvent;
     public GameEvent ResurrectionEvent;
+    public GameEvent DeathEvent;
 
     public FloatVariable PlayerDamagesTaken;
+
+    public IntVariable EnergyGauge;
 
     private void Awake()
     {
@@ -31,7 +34,14 @@ public class PlayerHPSystem : MonoBehaviour
         if (CurrentHP.Value <= 0)
         {
             CurrentHP.SetFloatValue(0);
-            ResurrectionEvent.Raise();
+            if (EnergyGauge > 3)
+            {
+                ResurrectionEvent.Raise();
+            }
+            else if (EnergyGauge <= 3)
+            {
+                DeathEvent.Raise();
+            }
         }
     }
 
