@@ -9,8 +9,12 @@ public class PlayerAnimator : MonoBehaviour
     public FloatVariable MoveX;
     public FloatVariable MoveY;
     public FloatVariable CurrentSpeed;
+    public FloatVariable PlayerCurrentHP;
 
     public IntVariable AttackCount;
+
+    public BoolVariable Healing;
+    public BoolVariable IsResurrecting;
 
     void Update()
     {
@@ -20,6 +24,11 @@ public class PlayerAnimator : MonoBehaviour
 
         playerAnimator.SetFloat("Speed", CurrentSpeed);
         playerAnimator.SetInteger("AttackCount", AttackCount);
+
+        playerAnimator.SetFloat("Health", PlayerCurrentHP);
+
+        playerAnimator.SetBool("Heal", Healing);
+        playerAnimator.SetBool("Resurrection", IsResurrecting);
     }
 
     public void LaunchAttackAnimation()
@@ -33,24 +42,9 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetTrigger("Dash");
     }
 
-    public void LaunchHealAnimation()
-    {
-        playerAnimator.SetBool("Heal", true);
-    }
-
-    public void StopHealAnimation()
-    {
-        playerAnimator.SetBool("Heal", false);
-    }
-
     public void LaunchTakeDamageAnimation()
     {
         playerAnimator.SetTrigger("TakeDamage");
-    }
-
-    public void LaunchResurrectionAnimation()
-    {
-        playerAnimator.SetTrigger("Résurrection");
     }
 
     public void LaunchDeathAnimation()

@@ -79,8 +79,4 @@ public class Energy_UI : MonoBehaviour
 
         percentGaugeElement = (currentEnergyFloat - (gaugeCount * 10)) / 10;
     }
-
-
-
-
 }
