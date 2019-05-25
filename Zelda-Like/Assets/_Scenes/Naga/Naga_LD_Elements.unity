@@ -267,6 +267,19 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.00000003218046
       objectReference: {fileID: 0}
+    - target: {fileID: 1761634405, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761634405, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524224164164153844, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: arenasState.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!4 &772374893 stripped

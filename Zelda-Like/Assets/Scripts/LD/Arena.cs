@@ -6,6 +6,7 @@ public class Arena : MonoBehaviour
 {
     [SerializeField]
     private int arenaNumber;
+    [SerializeField]
     private bool arenaActif = true;
     public GameObject spawnerGroup;
     private bool chActif = false;
@@ -20,7 +21,7 @@ public class Arena : MonoBehaviour
 
     private void Start()
     {
-        if (GameObject.Find("Areas Manager").GetComponent<ArenasManager>().arenasState[arenaNumber])
+        if (GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ArenasManager>().arenasState[arenaNumber])
         {
             arenaActif = true;
         }
@@ -28,7 +29,6 @@ public class Arena : MonoBehaviour
         else
             arenaActif = false;
 
-        spawnerGroup.SetActive(false);
         spawnerMiniBoss.SetActive(false);
     }
 
@@ -41,6 +41,7 @@ public class Arena : MonoBehaviour
                 chForce.SetActive(true);
                 chActif = true;
                 spawnerGroup.SetActive(true);
+                countwaves++;
             }
         }
     }
