@@ -15,7 +15,7 @@ public class ArenasManager : MonoBehaviour
     {
         for (int i = 1; i < arenasState.Length; i++)
         {
-            arenasState[i] = false;
+            arenasState[i] = true;
         }
     }
 }

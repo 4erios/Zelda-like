@@ -62,6 +62,8 @@ public class Roots : InfusableClass
         {
             anim.SetBool("Is Attak", false);
         }
+
+        this.gameObject.GetComponent<Collider2D>().isTrigger = !bigRoots;
     }
 
     public void ChangeState()
