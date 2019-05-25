@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Area : MonoBehaviour
+public class Arena : MonoBehaviour
 {
     [SerializeField]
-    private int areaNumber;
-    private bool areaActif = true;
+    private int arenaNumber;
+    private bool arenaActif = true;
     public GameObject spawnerGroup;
     private bool chActif = false;
     public GameObject chForce;
@@ -20,13 +20,13 @@ public class Area : MonoBehaviour
 
     private void Start()
     {
-        if (GameObject.Find("Area Manager").GetComponent<AreaManager>().areaState[areaNumber])
+        if (GameObject.Find("Areas Manager").GetComponent<ArenasManager>().arenasState[arenaNumber])
         {
-            areaActif = true;
+            arenaActif = true;
         }
 
         else
-            areaActif = false;
+            arenaActif = false;
 
         spawnerGroup.SetActive(false);
         spawnerMiniBoss.SetActive(false);
@@ -34,7 +34,7 @@ public class Area : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D traped)
     {
-        if (areaActif)
+        if (arenaActif)
         {
             if (!chActif && traped.tag == "Player")
             {
@@ -47,7 +47,7 @@ public class Area : MonoBehaviour
 
     private void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Area Enemy").Length == 0)
+        if (GameObject.FindGameObjectsWithTag("Arena Enemy").Length == 0)
         {
             if (countwaves == miniBossWave && haveMiniBoss)
             {
@@ -57,11 +57,11 @@ public class Area : MonoBehaviour
             else if (countwaves >= nbWaves)
             {
                 spawnerMiniBoss.SetActive(false);
-                GameObject.Find("Area Manager").GetComponent<AreaManager>().areaState[areaNumber] = false;
+                GameObject.Find("Arenas Manager").GetComponent<ArenasManager>().arenasState[arenaNumber] = false;
                 chForce.SetActive(false);
                 chActif = false;
                 spawnerGroup.SetActive(false);
-                areaActif = false;
+                arenaActif = false;
             }
 
             else

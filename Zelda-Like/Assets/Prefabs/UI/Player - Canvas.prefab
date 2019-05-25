@@ -1,5 +1,99 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &463701648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 463701649}
+  - component: {fileID: 463701652}
+  - component: {fileID: 463701651}
+  - component: {fileID: 463701650}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &463701649
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463701648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8121327106580055414}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &463701652
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463701648}
+  m_CullTransparentMesh: 0
+--- !u!114 &463701651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463701648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!95 &463701650
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463701648}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec648c676033a9d4b8670177f98a93a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &640927930456290168
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +650,7 @@ RectTransform:
   - {fileID: 8121327108120772427}
   - {fileID: 8121327107950458718}
   - {fileID: 8121327107792548175}
+  - {fileID: 463701649}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -639,9 +734,9 @@ MonoBehaviour:
   gaugeHP: {fileID: 8121327107901818401}
   playerMaxHP:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 100
     Variable: {fileID: 0}
-  currentHP: {fileID: 11400000, guid: dc126e0a121328646bfb754068a89743, type: 2}
+  currentHP: {fileID: 11400000, guid: 41192a5fa502e3d49bfbc8fb0d01590d, type: 2}
 --- !u!114 &6647451048597076507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +758,7 @@ MonoBehaviour:
   - {fileID: 4231667839462381590}
   - {fileID: 9180270607970567062}
   - {fileID: 7963792566578154965}
-  currentEnergy: 0
+  currentEnergy: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28, type: 2}
 --- !u!114 &8365468410451183962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,6 +772,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gaugeSouls: {fileID: 8121327108474107135}
+  playerMaxSouls:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083, type: 2}
+  currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
 --- !u!114 &146437415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1222,7 @@ GameObject:
   - component: {fileID: 8121327107908287140}
   - component: {fileID: 8121327107908287142}
   - component: {fileID: 8121327107908287141}
+  - component: {fileID: 673529925}
   m_Layer: 5
   m_Name: Empty
   m_TagString: Untagged
@@ -1185,6 +1286,25 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!95 &673529925
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8121327107908287147}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69e48be88ce1ae84b975f70166ee87b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8121327107950458717
 GameObject:
   m_ObjectHideFlags: 0
