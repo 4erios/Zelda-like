@@ -38,12 +38,16 @@ public class PlayerAbilities : MonoBehaviour
 
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
+    public BoolVariable Shielding;
+    public FloatReference ShieldTime;
 
     // public Rigidbody2D shootPrefab;
     public GameObject shootPrefab;
     public Transform shootingPoint;
     public Transform shootingAxis;
     public FloatReference prefabSpeed;
+    private Animator anim;
+    public Animator Rez;
 
     public BoolVariable Healing;
 
@@ -52,6 +56,14 @@ public class PlayerAbilities : MonoBehaviour
 
     //shoot parameters
     private Vector2 FireDirection;
+
+    private void Start()
+    {
+        anim = this.gameObject.GetComponent<Animator>();
+        
+    
+    }
+
     
 
     private void FixedUpdate()
@@ -65,6 +77,7 @@ public class PlayerAbilities : MonoBehaviour
     public void Update()
     {
         Twist();
+        anim.SetFloat("PlayerEnergy", EnergyGauge);
     }
 
     private void LoseEnergy(int energyCost)
@@ -102,6 +115,7 @@ public class PlayerAbilities : MonoBehaviour
         if (CurrentHP >= MaxHP)
         {
             CurrentHP.SetFloatValue(MaxHP);
+
         }
         HealEnergyLoss();
         
@@ -110,11 +124,13 @@ public class PlayerAbilities : MonoBehaviour
     public void LaunchHeal()
     {
         Healing.SetBoolValue(true);
+        Rez.SetBool("OnPressHeal", true);
     }
 
     public void StopHeal()
     {
         Healing.SetBoolValue(false);
+        Rez.SetBool("OnPressHeal", false);
     }
 
     public void AOEInfuseEnergyLoss()
@@ -221,6 +237,8 @@ public class PlayerAbilities : MonoBehaviour
         if (EnergyGauge >= ShieldCost)
         {
             PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
+            Shielding.SetBoolValue(true);
+            StopCoroutine("ShieldTimeCoroutine");
             ShieldEnergyLoss();
         }
     }
@@ -228,8 +246,18 @@ public class PlayerAbilities : MonoBehaviour
     public void StopPlayerShield()
     {
         PlayerDamagesTaken.SetFloatValue(1);
+        Shielding.SetBoolValue(false);
     }
 
+    public IEnumerator ShieldTimeCoroutine()
+    {
+        yield return new WaitForSeconds(ShieldTime);
+        StopPlayerShield();
+    }
 
+    public void StartShieldCoroutine()
+    {
+        StartCoroutine("ShieldTimeCoroutine");
+    }
 
 }

@@ -11,6 +11,8 @@ public class QuadripodClass : EnemyClass
     [Header("Quadripod Components")]
     public Animator enemyAnimator;
     public SpriteRenderer enemySprite;
+    public Rigidbody2D projectileToInstantiate;
+    public Transform ShootingPoint;
 
     [Header("Quadripod Stats")]
     public FloatReference quadripodHealth;
@@ -55,6 +57,11 @@ public class QuadripodClass : EnemyClass
         }
     }
 
+    public void QuadripodEnterAttackRange()
+    {
+        EnterAttackRange(enemyTransform, playerTransform, quadripodAttackRange);
+    }
+
     public void SetQuadripodShootDirection()
     {
         direction = (playerTransform.position - enemyTransform.position).normalized;
@@ -62,7 +69,9 @@ public class QuadripodClass : EnemyClass
 
     public void QuadripodShoot()
     {
-
+        Rigidbody2D clone;
+        clone = Instantiate(projectileToInstantiate, ShootingPoint);
+        clone.velocity = direction * quadripodBulletSpeed;
     }
 
     public void SetQuadripodVelocityToZero()
