@@ -28,6 +28,8 @@ public class Stèle : LivingClass
     {
         if (health <= 0)
         {
+
+            anim.SetTrigger("Destroy");
             if (Energy)
             {
                 //current += scoreWin;
@@ -38,7 +40,7 @@ public class Stèle : LivingClass
                 player.GetComponent<PlayerSouls>().TakeSouls(soulsGiven);
             }
 
-            anim.SetTrigger("Destroy");
+           
         }
 
         if (takeDamages)
