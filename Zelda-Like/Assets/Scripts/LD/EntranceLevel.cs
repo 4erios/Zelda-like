@@ -15,10 +15,20 @@ public class EntranceLevel : MonoBehaviour
         {
             player.transform.position = this.transform.position;
         }
+    }
 
+    public void Revive()
+    {
         if (player.GetComponentInChildren<LastScene>().lastScene == 0)
         {
-            
+            player.transform.position = this.transform.position;
+            player.GetComponent<Animator>().SetTrigger("ResurrectionReallyDead");
         }
+    }
+
+    public void PlayerBegin()
+    {
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerControls>().enabled = true;
     }
 }
