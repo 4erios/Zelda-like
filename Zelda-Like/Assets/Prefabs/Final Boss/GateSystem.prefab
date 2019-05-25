@@ -91,8 +91,9 @@ GameObject:
   - component: {fileID: 3661766044656561382}
   - component: {fileID: 3661766044656561380}
   - component: {fileID: 3661766044656561381}
+  - component: {fileID: 1703396190653491437}
   m_Layer: 5
-  m_Name: Empty
+  m_Name: Empty Need Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +116,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -60, y: -60.000015}
-  m_SizeDelta: {x: 120, y: 120}
+  m_SizeDelta: {x: 176, y: 179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3661766044656561380
 CanvasRenderer:
@@ -145,7 +146,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 69aceb81da2482e4d8f9039f0df4b6c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dae79592bf3cad745a3b93a7dc5559f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -154,6 +155,25 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!95 &1703396190653491437
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661766044656561383}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3661766044895723118
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3661766045237247161
 RectTransform:
   m_ObjectHideFlags: 0
