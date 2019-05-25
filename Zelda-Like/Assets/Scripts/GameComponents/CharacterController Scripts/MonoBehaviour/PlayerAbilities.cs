@@ -38,6 +38,8 @@ public class PlayerAbilities : MonoBehaviour
 
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
+    public BoolVariable Shielding;
+    public FloatReference ShieldTime;
 
     // public Rigidbody2D shootPrefab;
     public GameObject shootPrefab;
@@ -235,6 +237,8 @@ public class PlayerAbilities : MonoBehaviour
         if (EnergyGauge >= ShieldCost)
         {
             PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
+            Shielding.SetBoolValue(true);
+            StopCoroutine("ShieldTimeCoroutine");
             ShieldEnergyLoss();
         }
     }
@@ -242,8 +246,18 @@ public class PlayerAbilities : MonoBehaviour
     public void StopPlayerShield()
     {
         PlayerDamagesTaken.SetFloatValue(1);
+        Shielding.SetBoolValue(false);
     }
 
+    public IEnumerator ShieldTimeCoroutine()
+    {
+        yield return new WaitForSeconds(ShieldTime);
+        StopPlayerShield();
+    }
 
+    public void StartShieldCoroutine()
+    {
+        StartCoroutine("ShieldTimeCoroutine");
+    }
 
 }
