@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2496740099847477603}
   - component: {fileID: 2496740099847477602}
   - component: {fileID: 2496740099847477605}
+  - component: {fileID: 8513488651105824471}
   m_Layer: 0
   m_Name: GateSystem
   m_TagString: Untagged
@@ -31,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 3661766045237247161}
   - {fileID: 5436002756251934787}
+  - {fileID: 4095655486819080694}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,9 +52,13 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: cc419536f0474a841bc10b2bd243607b, type: 2}
-  currentSouls: {fileID: 11400000, guid: e27df1d5ace398447bbacce1e0f3cebe, type: 2}
+  currentGateSouls: {fileID: 11400000, guid: e27df1d5ace398447bbacce1e0f3cebe, type: 2}
+  currentPlayerSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
+  playerCount: {fileID: 11400000, guid: 0f0755ce561b5de49ba4d1429f560f1a, type: 2}
+  animatorGauge: {fileID: 1703396190653491437}
   bossHere: 0
   ResetSouls: 1
+  giveSouls: 0
   gateCanvas: {fileID: 3661766045237247157}
   boss1: {fileID: 0}
 --- !u!61 &2496740099847477605
@@ -81,6 +87,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8513488651105824471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2496740099847477600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e6f8242706f5f3947a7fa6753be6005c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2496740099847477602}
+        m_MethodName: SoulsToGate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2696737889204655274
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,3 +817,78 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: cc419536f0474a841bc10b2bd243607b, type: 2}
   currentGateSouls: {fileID: 11400000, guid: e27df1d5ace398447bbacce1e0f3cebe, type: 2}
+--- !u!1001 &4052236624445658352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2496740099847477603}
+    m_Modifications:
+    - target: {fileID: 66110656420662535, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_Name
+      value: Gate Area
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.40625
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a762105f48059074a928f1510fe74828, type: 3}
+--- !u!4 &4095655486819080694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 66110656420662534, guid: a762105f48059074a928f1510fe74828,
+    type: 3}
+  m_PrefabInstance: {fileID: 4052236624445658352}
+  m_PrefabAsset: {fileID: 0}
