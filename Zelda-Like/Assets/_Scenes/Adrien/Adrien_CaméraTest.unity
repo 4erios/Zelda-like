@@ -390,7 +390,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animTransition
       value: 
-      objectReference: {fileID: 2020607421}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f7d7f956accc5b448c528981f145ef4, type: 3}
 --- !u!1 &288421833
@@ -5066,12 +5066,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab8ec4fa49160e14ca038a690f6b856c, type: 3}
---- !u!95 &1893752673 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 673529925, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2107888645}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1996458477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2056571397, guid: 30d97faed7688d2468a6d854eff79be1,
@@ -5814,12 +5808,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!95 &2020607421 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 463701650, guid: 30d97faed7688d2468a6d854eff79be1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2107888645}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2107888645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5831,6 +5819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CharaControllerFinal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416809417104956565, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2056571397, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5911,7 +5904,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Rez
       value: 
-      objectReference: {fileID: 1893752673}
+      objectReference: {fileID: 0}
     - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: ShieldDamageTaken.ConstantValue
@@ -6009,11 +6002,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3416809417104956565, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3416809416922743382, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6029,6 +6017,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948173, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0adb8c4496ff7754994723b9f68717a0, type: 2}
     m_RemovedComponents:
     - {fileID: 2056571399, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
