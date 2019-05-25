@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Follow: {fileID: 4704675715113948168}
   m_Lens:
     FieldOfView: 53
-    OrthographicSize: 3.5
+    OrthographicSize: 3.8
     NearClipPlane: 0.01
     FarClipPlane: 5000
     Dutch: 0
@@ -1940,6 +1940,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 2
     Variable: {fileID: 0}
+  Rez: {fileID: 0}
   Healing: {fileID: 11400000, guid: 48b23dc96a6c9e740b4b7b2425732c13, type: 2}
   ajout: -90
 --- !u!114 &1539906982
@@ -2235,7 +2236,7 @@ PrefabInstance:
     - target: {fileID: 2082290499302318157, guid: d2649c57be96c64468e2ae9dc8ac64b7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2082290499302318144, guid: d2649c57be96c64468e2ae9dc8ac64b7,
         type: 3}

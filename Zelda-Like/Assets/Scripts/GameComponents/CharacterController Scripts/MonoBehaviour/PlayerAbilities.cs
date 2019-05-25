@@ -45,6 +45,7 @@ public class PlayerAbilities : MonoBehaviour
     public Transform shootingAxis;
     public FloatReference prefabSpeed;
     private Animator anim;
+    public Animator Rez;
 
     public BoolVariable Healing;
 
@@ -112,6 +113,7 @@ public class PlayerAbilities : MonoBehaviour
         if (CurrentHP >= MaxHP)
         {
             CurrentHP.SetFloatValue(MaxHP);
+
         }
         HealEnergyLoss();
         
@@ -120,11 +122,13 @@ public class PlayerAbilities : MonoBehaviour
     public void LaunchHeal()
     {
         Healing.SetBoolValue(true);
+        Rez.SetBool("OnPressHeal", true);
     }
 
     public void StopHeal()
     {
         Healing.SetBoolValue(false);
+        Rez.SetBool("OnPressHeal", false);
     }
 
     public void AOEInfuseEnergyLoss()
