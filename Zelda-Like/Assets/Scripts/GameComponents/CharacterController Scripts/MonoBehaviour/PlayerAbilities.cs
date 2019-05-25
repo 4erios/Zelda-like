@@ -197,15 +197,10 @@ public class PlayerAbilities : MonoBehaviour
 
     void Twist()
     {
-        if(EnergyGauge >= ShootInfuseCost)
-        { 
-            RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right, LayerToAttack);
-            if (hit.collider != null)
-            {
-                FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
-                hit.collider.GetComponent<InfusableClass>().Infuse();
-            }
-            Rigidbody2D clone;
+        float h1 = Input.GetAxis("Horizontal");
+        float v1 = Input.GetAxis("Vertical");
+
+        //Debug.Log("y = " + v1 + " et x = " + h1);
 
         //Debug.Log("y = " + v1 + " et x = " + h1);
 
