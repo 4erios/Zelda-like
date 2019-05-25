@@ -15,5 +15,10 @@ public class EntranceLevel : MonoBehaviour
         {
             player.transform.position = this.transform.position;
         }
+
+        if (player.GetComponentInChildren<LastScene>().lastScene == 0)
+        {
+            
+        }
     }
 }
