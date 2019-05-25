@@ -35,6 +35,7 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference AOEInfuseKnockBackDistance;
     public FloatReference AOEInfuseDamages;
     public Transform AOEEmissionPoint;
+    public LayerMask LayerToAttack;
 
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
@@ -142,7 +143,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         if (EnergyGauge >= AOEInfuseCost)
         {
-            Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange);
+            Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange, LayerToAttack);
             foreach (Collider2D enemyCollision in enemiesHurt)
             {
                 enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
@@ -196,8 +197,15 @@ public class PlayerAbilities : MonoBehaviour
 
     void Twist()
     {
-        float h1 = Input.GetAxis("Horizontal");
-        float v1 = Input.GetAxis("Vertical");
+        if(EnergyGauge >= ShootInfuseCost)
+        { 
+            RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right, LayerToAttack);
+            if (hit.collider != null)
+            {
+                FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
+                hit.collider.GetComponent<InfusableClass>().Infuse();
+            }
+            Rigidbody2D clone;
 
         //Debug.Log("y = " + v1 + " et x = " + h1);
 
