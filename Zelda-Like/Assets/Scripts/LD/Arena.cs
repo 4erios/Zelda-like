@@ -28,8 +28,6 @@ public class Arena : MonoBehaviour
 
         else
             arenaActif = false;
-
-        spawnerMiniBoss.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D traped)
@@ -48,7 +46,7 @@ public class Arena : MonoBehaviour
 
     private void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Arena Enemy").Length == 0)
+        if (GameObject.FindGameObjectsWithTag("Arena Enemy").Length == 0 && countwaves > 0)
         {
             if (countwaves == miniBossWave && haveMiniBoss)
             {
@@ -67,7 +65,6 @@ public class Arena : MonoBehaviour
 
             else
             {
-                spawnerMiniBoss.SetActive(false);
                 countwaves++;
                 spawnerGroup.GetComponentInChildren<Spawner>().LaunchRespawn();
             }
