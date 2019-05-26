@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4546362972452486346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.331, y: -0.323, z: 0}
+  m_LocalPosition: {x: 0.305, y: -0.334, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4546362973611704347}
@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 4546362973611704341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.94, y: 1.03, z: -0.20042622}
-  m_LocalScale: {x: 1.9138606, y: 1.9138606, z: 0}
+  m_LocalScale: {x: -1.913861, y: 1.9138606, z: 0}
   m_Children:
   - {fileID: 4546362972452486347}
   - {fileID: 2416924804231762241}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33e3a86c35903f43aebf38c16cbf836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 7
   takeDamages: 0
   doesItGiveEnergy: 1
   playerTransform: {fileID: 0}
@@ -223,20 +223,20 @@ MonoBehaviour:
     type: 3}
   ShootingPoint: {fileID: 4546362972452486347}
   quadripodHealth:
-    UseConstant: 1
-    ConstantValue: 7
-    Variable: {fileID: 0}
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 788f26d14b84a4c419c2a9623841b03a, type: 2}
   quadripodSpeed:
     UseConstant: 1
     ConstantValue: 2.5
     Variable: {fileID: 0}
   quadripodAttackRange:
     UseConstant: 1
-    ConstantValue: 6
+    ConstantValue: 5
     Variable: {fileID: 0}
   quadripodBulletSpeed:
     UseConstant: 1
-    ConstantValue: 1
+    ConstantValue: 13
     Variable: {fileID: 0}
 --- !u!1001 &8920309372976228374
 PrefabInstance:
@@ -354,16 +354,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209018744253083272, guid: f8d46d6fa11a0024d89fc983dd50e578,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.105
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209018744253083272, guid: f8d46d6fa11a0024d89fc983dd50e578,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7037184691740097341, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}

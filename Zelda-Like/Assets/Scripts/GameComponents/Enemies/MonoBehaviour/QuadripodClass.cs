@@ -29,6 +29,7 @@ public class QuadripodClass : EnemyClass
     private void Update()
     {
         FacePlayer(playerTransform, enemySprite);
+        enemyAnimator.SetFloat("Health", health);
 
         if (playerDetected)
         {
@@ -40,7 +41,7 @@ public class QuadripodClass : EnemyClass
             enemyAnimator.SetTrigger("InAttackRange");
         }
 
-        enemyAnimator.SetFloat("Health", health);
+        
     }
 
     public void QuadripodSearchForPlayer()
