@@ -4786,6 +4786,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4546362973611704342, guid: 268e35f619adf8e4587102041e8e742b,
+        type: 3}
+      propertyPath: quadripodBulletSpeed.ConstantValue
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268e35f619adf8e4587102041e8e742b, type: 3}
 --- !u!1 &1630397516 stripped
