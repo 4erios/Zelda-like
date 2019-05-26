@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class QuadripodProjectile : MonoBehaviour
 {
-    public float speed = 20f;
     public Rigidbody2D rb;
     public float lifeTime = 20f;
     public float QuadripodDamage = 10f;
-    void Start()
-    {
-        rb.velocity = -transform.right * speed;
-    }
 
 
     private void Update()

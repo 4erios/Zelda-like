@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 4546362973611704344}
   - component: {fileID: 4546362973611704343}
   - component: {fileID: 4546362973611704342}
+  - component: {fileID: 3458192211982257103}
+  - component: {fileID: 6918523893274354862}
   m_Layer: 9
   m_Name: Quadripod
   m_TagString: Untagged
@@ -208,7 +210,7 @@ MonoBehaviour:
   enemyTransform: {fileID: 4546362973611704347}
   knockbackDistance:
     UseConstant: 1
-    ConstantValue: 2
+    ConstantValue: 1
     Variable: {fileID: 0}
   DetectionRange:
     UseConstant: 1
@@ -228,16 +230,45 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 788f26d14b84a4c419c2a9623841b03a, type: 2}
   quadripodSpeed:
     UseConstant: 1
-    ConstantValue: 2.5
+    ConstantValue: 2.8
     Variable: {fileID: 0}
   quadripodAttackRange:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 4
     Variable: {fileID: 0}
   quadripodBulletSpeed:
     UseConstant: 1
-    ConstantValue: 13
+    ConstantValue: 8
     Variable: {fileID: 0}
+--- !u!114 &3458192211982257103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546362973611704341}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bde8345c4bc184a9cbc2903debe3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 4546362973611704341}
+  Disabler: 0
+--- !u!114 &6918523893274354862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546362973611704341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76070b3c3e8957149b9fd26221149aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoulToDrop: {fileID: 3082339995312093087, guid: 546c39aa217335d4fb646f41c4799e87,
+    type: 3}
+  Ennemi: {fileID: 4546362973611704341}
 --- !u!1001 &8920309372976228374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,52 +339,52 @@ PrefabInstance:
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.342
+      value: -0.217
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.621
+      value: 0.593
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7037184691740097341, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}

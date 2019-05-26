@@ -29,7 +29,6 @@ public class QuadripodClass : EnemyClass
     private void Update()
     {
         FacePlayer(playerTransform, enemySprite);
-        enemyAnimator.SetFloat("Health", health);
 
         if (playerDetected)
         {
@@ -41,7 +40,8 @@ public class QuadripodClass : EnemyClass
             enemyAnimator.SetTrigger("InAttackRange");
         }
 
-        
+        enemyAnimator.SetFloat("Health", health);
+        LaunchTakeDamagesAnimation();
     }
 
     public void QuadripodSearchForPlayer()
@@ -64,7 +64,7 @@ public class QuadripodClass : EnemyClass
 
     public void QuadripodShoot()
     {
-        Vector2 direction = (playerTransform.position - enemyTransform.position).normalized;
+        Vector2 direction = (playerTransform.position - ShootingPoint.position).normalized;
         Rigidbody2D clone;
         clone = Instantiate(projectileToInstantiate, ShootingPoint.position, ShootingPoint.rotation);
         clone.velocity = direction * quadripodBulletSpeed;

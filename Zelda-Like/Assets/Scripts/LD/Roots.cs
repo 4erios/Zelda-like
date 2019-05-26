@@ -17,7 +17,6 @@ public class Roots : InfusableClass
         anim = this.gameObject.GetComponent<Animator>();
 
         health = bigRootsLife;
-        doesItGiveEnergy = true;
 
         if (bigRoots)
         {
@@ -55,11 +54,13 @@ public class Roots : InfusableClass
 
         if (bigRoots)
         {
+            doesItGiveEnergy = true;
             anim.SetBool("Is Infused", false);
         }
 
         else if (!bigRoots)
         {
+            doesItGiveEnergy = false;
             anim.SetBool("Is Attak", false);
         }
 

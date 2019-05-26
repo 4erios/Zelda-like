@@ -26,6 +26,11 @@ public class IbisClass : EnemyClass
         health = IbisHealth;
     }
 
+    private void Update()
+    {
+
+    }
+
     public void IbisSearchForPlayer()
     {
         PlayerDetection(enemyTransform, DetectionRange, playerLayer);
