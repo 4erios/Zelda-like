@@ -160,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761634404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.59784293, y: -2.8500037, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 714645290}
@@ -266,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799184537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.00000003218046, z: -5.398985}
+  m_LocalPosition: {x: -0.32403415, y: 1.5447177, z: -2.8526642}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children:
   - {fileID: 1761634405}
@@ -1476,8 +1476,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4704675715113948179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8522, y: 1.8522, z: 1.8522}
+  m_LocalPosition: {x: 0.4259, y: 0.915, z: 0}
+  m_LocalScale: {x: 3.5054946, y: 3.5054946, z: 3.5054946}
   m_Children:
   - {fileID: 6049446735290998431}
   - {fileID: 7976656796365943351}
@@ -1604,6 +1604,7 @@ MonoBehaviour:
   TimeUntilDeath: {fileID: 11400000, guid: c9ee03e293759ec409234d4da8c3b28c, type: 2}
   DeathEvent: {fileID: 11400000, guid: d275fa06944224f428b1cf121795a42c, type: 2}
   Resurrecting: {fileID: 11400000, guid: 484bc2afd29b12148b30b460dfff9bb3, type: 2}
+  anim: {fileID: 0}
 --- !u!114 &4704675715113948169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,7 +1673,7 @@ MonoBehaviour:
   CurrentSpeed: {fileID: 11400000, guid: 1dc334b34714b1840a293a6fe9933b2a, type: 2}
   PlayerMaxSpeed:
     UseConstant: 1
-    ConstantValue: 3.8
+    ConstantValue: 4
     Variable: {fileID: 0}
   PlayerSpeed: {fileID: 11400000, guid: c7fbde6f47dcc7149b0e9120a7e2257f, type: 2}
   accelerationCurve:
