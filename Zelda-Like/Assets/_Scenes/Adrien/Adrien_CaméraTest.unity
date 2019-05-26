@@ -4794,6 +4794,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2107888645}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1630397526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2107888645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630397516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db9d0db78c405a44b940cd05f6ff073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1630397527 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4704675715113948170, guid: 30d97faed7688d2468a6d854eff79be1,
@@ -5976,6 +5988,51 @@ PrefabInstance:
         type: 3}
       propertyPath: magnetRange
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: HealEnergyCost.ConstantValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: HealValue.ConstantValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: AOEInfuseKnockBackDistance.ConstantValue
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: Shielding
+      value: 
+      objectReference: {fileID: 11400000, guid: 121084e26b055e64eb0cc02239568a4a,
+        type: 2}
+    - target: {fileID: 1092644546, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092644546, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092644546, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092644546, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1630397526}
+    - target: {fileID: 1092644546, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetVelocityToZero
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092644546, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
