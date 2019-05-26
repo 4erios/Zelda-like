@@ -5835,6 +5835,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharaControllerFinal
       objectReference: {fileID: 0}
+    - target: {fileID: 3135404179501604392, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: SetTimeUntilDeath.UseConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135404179501604392, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1630397530}
     - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5848,7 +5858,7 @@ PrefabInstance:
     - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.89
       objectReference: {fileID: 0}
     - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
@@ -5890,6 +5900,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948168, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.37
+      objectReference: {fileID: 0}
     - target: {fileID: 1799184540, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5904,7 +5919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1799184540, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.8526642
+      value: -27.027027
       objectReference: {fileID: 0}
     - target: {fileID: 1761634405, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6177,16 +6192,6 @@ PrefabInstance:
       propertyPath: magnetRange
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3135404179501604392, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: SetTimeUntilDeath.UseConstant
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3135404179501604392, guid: 30d97faed7688d2468a6d854eff79be1,
-        type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 1630397530}
     - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: HealEnergyCost.ConstantValue
@@ -6269,6 +6274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948174, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
