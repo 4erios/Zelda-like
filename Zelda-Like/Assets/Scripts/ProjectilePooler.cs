@@ -8,7 +8,7 @@ public class ProjectilePooler : MonoBehaviour
 
     public float speed = 20f;
     public Rigidbody2D rb;
-    public float lifeTime = 20f; 
+    public float lifeTime = 1f; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,29 @@ public class ProjectilePooler : MonoBehaviour
 
         Destroy(this.gameObject, lifeTime);
 
-    }
+        
     
-}
+
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ennemi"))
+        {
+
+            other.GetComponent<LivingClass>().TakeDamages(1);
+            other.GetComponent<InfusableClass>().Infuse();
+            
+
+        }
+
+    }
+
+
+
+
+    }
+
+
+

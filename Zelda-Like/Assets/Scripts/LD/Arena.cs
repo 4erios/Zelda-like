@@ -57,6 +57,7 @@ public class Arena : MonoBehaviour
                 if (countwaves == miniBossWave && haveMiniBoss)
                 {
                     spawnerMiniBoss.SetActive(true);
+                    countwaves++;
                 }
 
                 else if (countwaves >= nbWaves)

@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0381d7fa2e4e6448bd1d725653e31d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inFrontOf: 0
+  "d\xE9calage": 5
 --- !u!1 &5616561009039245968
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   takeDamages: 0
-  doesItGiveEnergy: 0
-  scoreWin: 0
+  doesItGiveEnergy: 1
   Energy: 1
-  current: {fileID: 0}
+  soulsGiven: {fileID: 0}
+  currentEnergy: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28, type: 2}
