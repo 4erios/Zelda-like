@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2496740099847477603}
   - component: {fileID: 2496740099847477602}
   - component: {fileID: 2496740099847477605}
-  - component: {fileID: 8513488651105824471}
+  - component: {fileID: 347753712747161667}
   m_Layer: 0
   m_Name: GateSystem
   m_TagString: Untagged
@@ -87,7 +87,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8513488651105824471
+--- !u!114 &347753712747161667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bb36fc55ff4a2419fd6569f98b3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: e6f8242706f5f3947a7fa6753be6005c, type: 2}
+  Event: {fileID: 11400000, guid: efb3132b1f6317e40b3b47d5f2ccf8ee, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:

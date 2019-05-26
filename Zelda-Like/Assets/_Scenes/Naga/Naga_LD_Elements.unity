@@ -275,11 +275,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1799184539, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
+      propertyPath: orthographic size
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8524224164164153844, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: arenasState.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9102178416884671727, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: eS
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4055503361806317897, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: pressStart
+      value: 
+      objectReference: {fileID: 11400000, guid: 4533acaac2938584c864f0bc31505610,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!4 &772374893 stripped
@@ -1409,6 +1424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0381d7fa2e4e6448bd1d725653e31d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inFrontOf: 0
+  "d\xE9calage": 5
 --- !u!1 &6769300823274202444
 GameObject:
   m_ObjectHideFlags: 0

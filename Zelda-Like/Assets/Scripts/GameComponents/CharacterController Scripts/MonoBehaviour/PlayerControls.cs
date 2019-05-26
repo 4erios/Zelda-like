@@ -24,6 +24,7 @@ public class PlayerControls : MonoBehaviour
     public GameEvent PressLeftBumper;
     public GameEvent PressRightTrigger;
     public GameEvent PressLeftTrigger;
+    public GameEvent StayPressA;
 
 
     private void Update()
@@ -32,6 +33,12 @@ public class PlayerControls : MonoBehaviour
         {
             PressA.Raise();
             Debug.Log("AttackButton");
+        }
+
+        if (Input.GetButton(NameInputButtonA))
+        {
+            StayPressA.Raise();
+            Debug.Log("Into The Gate");
         }
 
         if (Input.GetButtonDown(NameInputButtonX))
