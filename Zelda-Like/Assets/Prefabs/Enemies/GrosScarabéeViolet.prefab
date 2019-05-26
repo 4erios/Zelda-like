@@ -118,7 +118,7 @@ Animator:
   m_GameObject: {fileID: 4861569844125820424}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 640e2426364892749863fd9fc979ad04, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1dccd8f4c657d034690ce4a9ce82e97d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -261,11 +261,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4861569844125820427}
     m_Modifications:
-    - target: {fileID: 6494271308314666065, guid: f8d46d6fa11a0024d89fc983dd50e578,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemie Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 6503736971381537111, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -371,16 +366,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7743830703171851309, guid: f8d46d6fa11a0024d89fc983dd50e578,
+    - target: {fileID: 6494271308314666065, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: Enemie Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7037184691740097341, guid: f8d46d6fa11a0024d89fc983dd50e578,
-        type: 3}
-      propertyPath: ennemi
-      value: 
-      objectReference: {fileID: 2322887846343160139}
     - target: {fileID: 7037184691740097341, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
       propertyPath: ennemiMaxHP.UseConstant
@@ -393,16 +383,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7037184691740097341, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
-      propertyPath: currentEnnemiHP
+      propertyPath: ennemiMaxHP.Variable
       value: 
       objectReference: {fileID: 11400000, guid: 349f6617c69341840b2076ccc7cb1238,
         type: 2}
     - target: {fileID: 7037184691740097341, guid: f8d46d6fa11a0024d89fc983dd50e578,
         type: 3}
-      propertyPath: ennemiMaxHP.Variable
+      propertyPath: ennemi
       value: 
-      objectReference: {fileID: 11400000, guid: 349f6617c69341840b2076ccc7cb1238,
-        type: 2}
+      objectReference: {fileID: 2322887846343160139}
+    - target: {fileID: 7743830703171851309, guid: f8d46d6fa11a0024d89fc983dd50e578,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d46d6fa11a0024d89fc983dd50e578, type: 3}
 --- !u!224 &3805583153592866813 stripped
