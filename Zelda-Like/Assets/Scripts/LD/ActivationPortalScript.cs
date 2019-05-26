@@ -6,7 +6,7 @@ public class ActivationPortalScript : MonoBehaviour
 {
 
 
-    Animator anim;
+    public Animator anim;
     public bool activation;
 
     // Start is called before the first frame update
