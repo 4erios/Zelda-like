@@ -5,8 +5,8 @@ using UnityEngine;
 public class DeahScript : MonoBehaviour
 {
 
-    public GameObject SoulToDrop; 
-    public GameObject Ennemi
+    public GameObject SoulToDrop;
+    public GameObject Ennemi;
     
    
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class DeahScript : MonoBehaviour
 
     void Death()
     {
-        Instantiate(SoulToDrop, this.gameObject.position, ShootingPoint.rotation);
+        //Instantiate(SoulToDrop, this.gameObject.position, ShootingPoint.rotation);
 
 
     }
