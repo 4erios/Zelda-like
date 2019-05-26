@@ -71,4 +71,25 @@ public class PlayerAnimator : MonoBehaviour
     {
         playerAnimator.SetBool("Insufflation", false);
     }
+
+    /*public void LaunchHealAnimation()
+    {
+        playerAnimator.SetBool("Heal", true);
+    }
+    public void StopHealAnimation()
+    {
+
+
+        playerAnimator.SetBool("Heal", false);
+
+
+    }
+
+    public void LaunchShieldAnimation()
+    {
+
+
+        playerAnimator.SetTrigger("Shield");
+
+    }*/
 }
