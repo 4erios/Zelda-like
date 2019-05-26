@@ -4791,6 +4791,11 @@ PrefabInstance:
       propertyPath: quadripodBulletSpeed.ConstantValue
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4546362973611704342, guid: 268e35f619adf8e4587102041e8e742b,
+        type: 3}
+      propertyPath: knockbackDistance.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268e35f619adf8e4587102041e8e742b, type: 3}
 --- !u!1 &1630397516 stripped
@@ -5941,6 +5946,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211861022508095545, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211861022508095545, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
