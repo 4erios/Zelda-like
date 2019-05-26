@@ -35,18 +35,37 @@ public class PlayerAbilities : MonoBehaviour
     public FloatReference AOEInfuseKnockBackDistance;
     public FloatReference AOEInfuseDamages;
     public Transform AOEEmissionPoint;
+    public LayerMask LayerToAttack;
 
     public FloatVariable PlayerDamagesTaken;
     public FloatReference ShieldDamageTaken;
+    public BoolVariable Shielding;
+    public FloatReference ShieldTime;
 
-    public Rigidbody2D shootPrefab;
+    // public Rigidbody2D shootPrefab;
+    public GameObject shootPrefab;
     public Transform shootingPoint;
+    public Transform shootingAxis;
     public FloatReference prefabSpeed;
+    private Animator anim;
+    public Animator Rez;
 
     public BoolVariable Healing;
 
+    [Range(-180,180)]
+    public int ajout;
+
     //shoot parameters
     private Vector2 FireDirection;
+
+    private void Start()
+    {
+        anim = this.gameObject.GetComponent<Animator>();
+        
+    
+    }
+
+    
 
     private void FixedUpdate()
     {
@@ -54,6 +73,12 @@ public class PlayerAbilities : MonoBehaviour
         {
             PlayerHeal(); 
         }
+    }
+
+    public void Update()
+    {
+        Twist();
+        anim.SetFloat("PlayerEnergy", EnergyGauge);
     }
 
     private void LoseEnergy(int energyCost)
@@ -72,9 +97,12 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerDash()
     {
-        Vector2 direction = new Vector2(MoveX, MoveY).normalized;
-        rb.velocity = new Vector2(direction.x * DashRange, direction.y * DashRange);
-        DashEnergyLoss();
+        if (EnergyGauge >= DashEnergyCost)
+        {
+            Vector2 direction = new Vector2(MoveX, MoveY).normalized;
+            rb.velocity = new Vector2(direction.x * DashRange, direction.y * DashRange);
+            DashEnergyLoss();
+        }
     }
 
     public void HealEnergyLoss()
@@ -88,18 +116,22 @@ public class PlayerAbilities : MonoBehaviour
         if (CurrentHP >= MaxHP)
         {
             CurrentHP.SetFloatValue(MaxHP);
+
         }
         HealEnergyLoss();
+        
     }
 
     public void LaunchHeal()
     {
         Healing.SetBoolValue(true);
+        Rez.SetBool("OnPressHeal", true);
     }
 
     public void StopHeal()
     {
         Healing.SetBoolValue(false);
+        Rez.SetBool("OnPressHeal", false);
     }
 
     public void AOEInfuseEnergyLoss()
@@ -109,12 +141,15 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerAOEInfuse()
     {
-        Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange);
-        foreach (Collider2D enemyCollision in enemiesHurt) 
+        if (EnergyGauge >= AOEInfuseCost)
         {
-            enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
-            enemyCollision.GetComponent<InfusableClass>().Infuse();
+            Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(AOEEmissionPoint.position, AOEInfuseRange, LayerToAttack);
+            foreach (Collider2D enemyCollision in enemiesHurt)
+            {
+                enemyCollision.GetComponent<LivingClass>().TakeDamages(AOEInfuseDamages);
+                enemyCollision.GetComponent<InfusableClass>().Infuse();
 
+            }
         }
 
         /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
@@ -134,20 +169,66 @@ public class PlayerAbilities : MonoBehaviour
     }
 
     public void PlayerShootInfuse()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
-        if (hit.collider != null)
-        {
-            FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
-            hit.collider.GetComponent<InfusableClass>().Infuse();
-        }
-        Rigidbody2D clone;
+     {
+         if(EnergyGauge >= ShootInfuseCost)
+         {
 
-        clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
-        clone.velocity = FireDirection * prefabSpeed;
-        Debug.Log("Instantiate PrefabSpawn");
-        ShootEnergyLoss();
+            Instantiate(shootPrefab, FirePoint.position, FirePoint.rotation);
+
+            /* RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, Vector2.right);
+             if (hit.collider != null)
+             {
+                 FireDirection = new Vector2(hit.point.x - FirePoint.position.x, hit.point.y - FirePoint.position.y);
+                 hit.collider.GetComponent<InfusableClass>().Infuse();
+             }
+             Rigidbody2D clone;
+
+             clone = Instantiate(shootPrefab, shootingPoint.position, shootingPoint.rotation);
+             clone.velocity = FireDirection * prefabSpeed;
+             Debug.Log("Instantiate PrefabSpawn");*/
+
+
+
+
+
+             ShootEnergyLoss();
+         }
+     }
+
+    void Twist()
+    {
+        float h1 = Input.GetAxis("Horizontal");
+        float v1 = Input.GetAxis("Vertical");
+
+        //Debug.Log("y = " + v1 + " et x = " + h1);
+
+        //Debug.Log("y = " + v1 + " et x = " + h1);
+
+        if (h1 > 0.62f || h1 < -0.62f || v1 > 0.62f || v1 < -0.62f)
+        {
+            shootingAxis.transform.localEulerAngles = new Vector3(0f, 0f, -(Mathf.Atan2(h1, v1) * 180 / Mathf.PI) + ajout); // this does the actual rotaion according to inputs
+        }
+
+
     }
+
+   /* public void UseWave()
+    {
+        Vector2 rotationVector = new Vector2(target.position.x - myShooterTransform.position.x, target.position.y - myShooterTransform.position.y);
+        float angleValue = Mathf.Atan2(rotationVector.normalized.y, rotationVector.normalized.x) * Mathf.Rad2Deg;
+
+        ParticleSystem.ShapeModule wpshape = myShooter.shape;
+        wpshape.rotation = new Vector3(0, 0, angleValue);
+
+        myShooter.Emit(1);
+    }
+
+
+    private void RotationUpdater()
+    {
+        waveManager.WaveShooters[waveManager.selectionIndex].startRotation = -targetRotator.localRotation.ToEulerAngles().z;
+    }*/
+
 
     public void ShieldEnergyLoss()
     {
@@ -156,15 +237,30 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerShield()
     {
-        PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
-        ShieldEnergyLoss();
+        if (EnergyGauge >= ShieldCost)
+        {
+            PlayerDamagesTaken.SetFloatValue(ShieldDamageTaken);
+            Shielding.SetBoolValue(true);
+            StopCoroutine("ShieldTimeCoroutine");
+            ShieldEnergyLoss();
+        }
     }
 
     public void StopPlayerShield()
     {
         PlayerDamagesTaken.SetFloatValue(1);
+        Shielding.SetBoolValue(false);
     }
 
+    public IEnumerator ShieldTimeCoroutine()
+    {
+        yield return new WaitForSeconds(ShieldTime);
+        StopPlayerShield();
+    }
 
+    public void StartShieldCoroutine()
+    {
+        StartCoroutine("ShieldTimeCoroutine");
+    }
 
 }

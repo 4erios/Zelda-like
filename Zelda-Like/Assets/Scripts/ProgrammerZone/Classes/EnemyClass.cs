@@ -23,6 +23,7 @@ public class EnemyClass : LivingClass
         if (detection != null)
         {
             playerDetected = true;
+            playerTransform = detection.gameObject.transform;
             Debug.Log("player found");
         }
     }
@@ -35,19 +36,13 @@ public class EnemyClass : LivingClass
 
     public void FacePlayer(Transform playerPosition, SpriteRenderer enemySprite)
     {
-        if (this.transform.position.x > playerPosition.position.x)
+        if (enemyTransform.position.x > playerPosition.position.x)
         {
-            if(enemySprite.flipX == true)
-            {
-                enemySprite.flipX = false;
-            }
+            enemyTransform.rotation = Quaternion.identity;
         }
-        else if (this.transform.position.x < playerPosition.position.x)
+        else if (enemyTransform.position.x < playerPosition.position.x)
         {
-            if (enemySprite.flipX == false)
-            {
-                enemySprite.flipX = true;
-            }
+            enemyTransform.rotation = Quaternion.Euler(0, 180, 0); 
         }
     }
 

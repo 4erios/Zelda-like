@@ -12,13 +12,15 @@ public class Portail : LivingClass
     public GameObject[] ennemis; // Préfabs
     public GameObject[] spawnAreas;
     private GameObject ennemiObj;
-   
+    public bool activation = false;
+
 
     private void Start()
     {
         doesItGiveEnergy = true;
         StartCoroutine(Respawn());
         anim = this.gameObject.GetComponent<Animator>();
+
     }
 
     void Update()
@@ -28,7 +30,18 @@ public class Portail : LivingClass
             StopCoroutine(Respawn());
             anim.SetTrigger("Destroy");
         }
+
+        if (takeDamages)
+        {
+            anim.SetTrigger("Damage");
+            takeDamages = false;
+        }
+
+
+
+
     }
+
 
     private void Roulette()
     {
@@ -37,17 +50,37 @@ public class Portail : LivingClass
         anim.SetTrigger("Invoke");
     }
 
+
     public void Destroy()
     {
         Destroy(this.gameObject);
     }
 
+
     IEnumerator Respawn()
     {
+
         yield return new WaitForSeconds(timeBeforeRespawn);
-        Roulette();
-        ennemiObj = Instantiate(ennemis[ennemieSelected], spawnAreas[areaSelected].transform.position, Quaternion.identity) as GameObject;
+        if (anim.GetBool("Activation")) {
+            Roulette();
+            ennemiObj = Instantiate(ennemis[ennemieSelected], spawnAreas[areaSelected].transform.position, Quaternion.identity) as GameObject;
+        }
         StartCoroutine(Respawn());
-       
+
     }
+
+
+    /*private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+
+            activation = true; 
+            anim.SetTrigger("Activation");
+
+
+
+
+        }
+    }*/
 }

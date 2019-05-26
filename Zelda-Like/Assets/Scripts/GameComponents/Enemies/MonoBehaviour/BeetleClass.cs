@@ -18,6 +18,8 @@ public class BeetleClass : EnemyClass
     public FloatReference beetleAttackRange;
     public FloatReference beetleChargeSpeed;
 
+
+
     private void Start()
     {
         //initialise enemyHp
@@ -65,7 +67,6 @@ public class BeetleClass : EnemyClass
     {
         Vector2 direction = (playerTransform.position - enemyTransform.position).normalized;
         enemyRb.velocity = new Vector2(direction.x * beetleChargeSpeed, direction.y * beetleChargeSpeed);
-        Debug.Log(direction);
     }
 
     public void SetBeetleVelocityToZero()
