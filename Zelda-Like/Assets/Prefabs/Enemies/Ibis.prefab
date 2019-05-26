@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3278386902688485270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BeetlesSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 3278386902952528649}
   - component: {fileID: 3278386902952528663}
   - component: {fileID: 3278386902952528648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coupdebec
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3278386903483418580}
   - component: {fileID: 3278386903483418576}
   - component: {fileID: 7860420714156398766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ibis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ Transform:
   m_GameObject: {fileID: 3278386903483418581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 51.53, y: 26.13, z: -0.0703125}
-  m_LocalScale: {x: 2.987991, y: 2.987991, z: 0.19919941}
+  m_LocalScale: {x: -2.987991, y: 2.987991, z: 0.19919941}
   m_Children:
   - {fileID: 3278386902952528649}
   - {fileID: 3278386903785233319}
@@ -230,8 +230,7 @@ MonoBehaviour:
   enemySprite: {fileID: 3278386903483418578}
   projectileToInstantiate: {fileID: 0}
   ShootingPoint: {fileID: 3278386903785233319}
-  EnemyToInstantiate: {fileID: 4861569844125820424, guid: ab8ec4fa49160e14ca038a690f6b856c,
-    type: 3}
+  EnemyToInstantiate: {fileID: 0}
   SpawnSpitPoint: {fileID: 3278386902688485270}
   IbisHealth:
     UseConstant: 1
@@ -334,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3278386903785233319}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
