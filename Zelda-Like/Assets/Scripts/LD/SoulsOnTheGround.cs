@@ -9,5 +9,6 @@ public class SoulsOnTheGround : MonoBehaviour
     public void GiveSouls()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSouls>().TakeSouls(soulsLooted);
+        Debug.Log("Récolté!");
     }
 }

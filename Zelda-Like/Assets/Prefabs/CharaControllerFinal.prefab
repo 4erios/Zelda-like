@@ -303,7 +303,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 791
+    m_Bits: 1815
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1969,7 +1969,10 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083, type: 2}
   currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
   ResetSouls: 0
-  magnetRange: 3
+  magnetRange: 2
+  mask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!114 &8874805619672912459
 MonoBehaviour:
   m_ObjectHideFlags: 0
