@@ -31,7 +31,7 @@ public class PlayerHPSystem : MonoBehaviour
         CurrentHP.ApplyChangeToFloat(-damages * PlayerDamagesTaken);
         DamageEvent.Raise();
         
-        if (CurrentHP.Value <= 0)
+        /*if (CurrentHP.Value <= 0)
         {
             CurrentHP.SetFloatValue(0);
             if (EnergyGauge > 3)
@@ -44,7 +44,7 @@ public class PlayerHPSystem : MonoBehaviour
                 DeathEvent.Raise();
                 Debug.Log("Death");
             }
-        }
+        }*/
     }
 
     /*public void OnCollisionEnter2D(Collision2D collision)
