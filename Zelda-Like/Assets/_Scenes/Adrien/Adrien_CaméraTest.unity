@@ -5628,6 +5628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharaControllerFinal
       objectReference: {fileID: 0}
+    - target: {fileID: 4704675715113948172, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: PlayerMaxSpeed.ConstantValue
+      value: 6.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3135404179501604392, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: SetTimeUntilDeath.UseConstant
@@ -5764,6 +5769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861129821364659096, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3750635509725839482, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
