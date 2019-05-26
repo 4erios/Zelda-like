@@ -303,7 +303,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 791
+    m_Bits: 1815
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1552,7 +1552,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cec1798128c6f024bb1ba106d0dc82be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28612a1b7dc859d4e8bf966bcd52b9f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1912,7 +1912,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.36, y: 0.54}
+    oldSize: {x: 0.34, y: 0.54}
     newSize: {x: 0.36, y: 0.54}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1969,7 +1969,10 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083, type: 2}
   currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
   ResetSouls: 0
-  magnetRange: 3
+  magnetRange: 2
+  mask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!114 &8874805619672912459
 MonoBehaviour:
   m_ObjectHideFlags: 0

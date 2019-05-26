@@ -12,7 +12,7 @@ public class Arena : MonoBehaviour
     private bool chActif = false;
     public GameObject chForce;
     public int nbWaves = 1;
-    private int countwaves = 0;
+    private int countwaves = 1;
 
     [Header("Have a Mini-Boss ?")]
     public bool haveMiniBoss = false;
@@ -46,27 +46,34 @@ public class Arena : MonoBehaviour
 
     private void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Arena Enemy").Length == 0 && countwaves > 0)
+        Debug.Log(GameObject.FindGameObjectsWithTag("Arena Enemy").Length);
+
+        if (spawnerGroup.activeInHierarchy)
         {
-            if (countwaves == miniBossWave && haveMiniBoss)
+            if (GameObject.FindGameObjectsWithTag("Arena Enemy").Length == 0 && countwaves > 0)
             {
-                spawnerMiniBoss.SetActive(true);
-            }
+                Debug.Log("Suivant!");
 
-            else if (countwaves >= nbWaves)
-            {
-                spawnerMiniBoss.SetActive(false);
-                GameObject.Find("Arenas Manager").GetComponent<ArenasManager>().arenasState[arenaNumber] = false;
-                chForce.SetActive(false);
-                chActif = false;
-                spawnerGroup.SetActive(false);
-                arenaActif = false;
-            }
+                if (countwaves == miniBossWave && haveMiniBoss)
+                {
+                    spawnerMiniBoss.SetActive(true);
+                }
 
-            else
-            {
-                countwaves++;
-                spawnerGroup.GetComponentInChildren<Spawner>().LaunchRespawn();
+                else if (countwaves >= nbWaves)
+                {
+                    spawnerMiniBoss.SetActive(false);
+                    GameObject.Find("Arenas Manager").GetComponent<ArenasManager>().arenasState[arenaNumber] = false;
+                    chForce.SetActive(false);
+                    chActif = false;
+                    spawnerGroup.SetActive(false);
+                    arenaActif = false;
+                }
+
+                else
+                {
+                    countwaves++;
+                    spawnerGroup.GetComponentInChildren<Spawner>().LaunchRespawn();
+                }
             }
         }
     }

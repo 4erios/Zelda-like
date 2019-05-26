@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulsLooted:
-    UseConstant: 0
-    ConstantValue: 0
+    UseConstant: 1
+    ConstantValue: 20
     Variable: {fileID: 0}
 --- !u!61 &3600476195402893467
 BoxCollider2D:

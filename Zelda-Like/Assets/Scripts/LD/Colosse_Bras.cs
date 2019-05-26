@@ -12,6 +12,7 @@ public class Colosse_Bras : InfusableClass
     public Collider2D doigtsCollider;
     public Collider2D droit;
     public Collider2D gauche;
+    public Collider2D bras;
     public bool trapeOnly = false;
     public float damageRange = 2F;
     public Transform underHandRange;
@@ -40,12 +41,14 @@ public class Colosse_Bras : InfusableClass
         {
             enHauteur = false;
             anim.SetBool("Is Fall", false);
+            bras.isTrigger = false;
         }
 
         else if (actualframe == 5)
         {
             enHauteur = true;
             anim.SetBool("Is Go Up", false);
+            bras.isTrigger = true;
         }
 
         #region Player insufle

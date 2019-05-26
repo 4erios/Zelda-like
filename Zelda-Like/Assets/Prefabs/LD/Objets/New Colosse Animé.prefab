@@ -122,7 +122,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257135658327936525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0381d7fa2e4e6448bd1d725653e31d4, type: 3}
   m_Name: 
@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 1205837585970564230}
   - component: {fileID: 8179602439051647996}
   - component: {fileID: 8663575739902378026}
+  - component: {fileID: 9134065711240322422}
   m_Layer: 9
   m_Name: "New Colosse Anim\xE9"
   m_TagString: Untagged
@@ -160,7 +161,7 @@ Transform:
   m_GameObject: {fileID: 1640213857911758487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.07, y: -0.69, z: -0.14327236}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2586101, y: 1.2586101, z: 0}
   m_Children:
   - {fileID: 1382539195865142027}
   - {fileID: 4972711202114484482}
@@ -274,7 +275,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.74613285, y: -0.3}
+  m_Offset: {x: 0.37379867, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -285,7 +286,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.021266, y: 0.39}
+  m_Size: {x: 1.2765976, y: 0.39}
   m_EdgeRadius: 0
 --- !u!114 &8179602439051647996
 MonoBehaviour:
@@ -307,7 +308,8 @@ MonoBehaviour:
   doigtsCollider: {fileID: 1113411224722979609}
   droit: {fileID: 683773167004260548}
   gauche: {fileID: 615122928130119961}
-  trapeOnly: 0
+  bras: {fileID: 9134065711240322422}
+  trapeOnly: 1
   damageRange: 1
   underHandRange: {fileID: 1382539195865142027}
   damageHand:
@@ -351,6 +353,32 @@ PolygonCollider2D:
     - []
     - []
     - []
+--- !u!61 &9134065711240322422
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640213857911758487}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3953519, y: -0.2995727}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.86, y: 5}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.71601295, y: 0.39644206}
+  m_EdgeRadius: 0
 --- !u!1 &1659965833397549072
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +529,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3784577120871143101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0381d7fa2e4e6448bd1d725653e31d4, type: 3}
   m_Name: 

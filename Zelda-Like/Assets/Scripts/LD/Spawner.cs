@@ -35,6 +35,7 @@ public class Spawner : MonoBehaviour
     private void Respawn()
     {
         ennemiObj = Instantiate(ennemis[ennemieSelected], this.gameObject.transform.position, Quaternion.identity) as GameObject;
+        ennemiObj.tag = "Arena Enemy";
     }
 
     private void Roulette()
