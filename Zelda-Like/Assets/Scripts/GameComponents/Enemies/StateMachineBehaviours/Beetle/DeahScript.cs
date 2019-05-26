@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheDisabler : MonoBehaviour
+public class DeahScript : MonoBehaviour
+
 {
 
-
-
-    public GameObject Object;
-    public bool Disabler = false; 
+    public GameObject SoulToDrop;
+    public GameObject Ennemi;
+    
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,12 @@ public class TheDisabler : MonoBehaviour
     void Update()
     {
         
-        Object.SetActive(false);
-
-
     }
+
+    void EnemyLastMoments()
+    {
+        Instantiate(SoulToDrop, Ennemi.transform.position, Ennemi.transform.rotation);
+        
+    }
+
 }
