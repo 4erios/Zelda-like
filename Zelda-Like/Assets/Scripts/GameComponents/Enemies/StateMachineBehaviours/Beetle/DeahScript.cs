@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DeahScript : MonoBehaviour
+
 {
 
     public GameObject SoulToDrop;
@@ -21,11 +22,9 @@ public class DeahScript : MonoBehaviour
         
     }
 
-    void Death()
+    void EnemyLastMoments()
     {
-        //Instantiate(SoulToDrop, this.gameObject.position, ShootingPoint.rotation);
-
-
+        Instantiate(SoulToDrop, Ennemi.transform.position, Ennemi.transform.rotation);
     }
 
 }
