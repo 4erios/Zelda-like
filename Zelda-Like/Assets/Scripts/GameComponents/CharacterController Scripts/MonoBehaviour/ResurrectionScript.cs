@@ -18,13 +18,6 @@ public class ResurrectionScript : MonoBehaviour
 
     public BoolVariable Resurrecting;
 
-    private void FixedUpdate()
-    {
-        if (Resurrecting)
-        {
-            UpdateTimer();
-        }
-    }
 
     public void ResetResurrectionTimer()
     {
@@ -33,20 +26,18 @@ public class ResurrectionScript : MonoBehaviour
     
     public void ResurrectionTimer()
     {
-        TimeUntilDeath.ApplyChangeToFloat(1);
+        TimeUntilDeath.ApplyChangeToFloat(Time.deltaTime);
 
         if (TimeUntilDeath >= SetTimeUntilDeath)
         {
             DeathEvent.Raise();
+            Debug.Log("Death");
         }
     }
 
     public void UpdateTimer()
     {
-        if (!Healing)
-        {
-            ResurrectionTimer();
-        }
+        ResurrectionTimer();
     }
 
     public void IsResurrecting()

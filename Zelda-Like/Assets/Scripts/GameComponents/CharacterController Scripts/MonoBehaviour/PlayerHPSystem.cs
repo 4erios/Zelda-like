@@ -37,10 +37,12 @@ public class PlayerHPSystem : MonoBehaviour
             if (EnergyGauge > 3)
             {
                 ResurrectionEvent.Raise();
+                Debug.Log("Resurrection");
             }
             else if (EnergyGauge <= 3)
             {
                 DeathEvent.Raise();
+                Debug.Log("Death");
             }
         }
     }
