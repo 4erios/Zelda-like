@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameMenu : MonoBehaviour
 {
     public int play;
+    public int inputs;
     public EventSystem eS;
     private GameObject storeSelected;
     [SerializeField]
@@ -55,5 +56,10 @@ public class GameMenu : MonoBehaviour
     {
         Debug.Log("Le jeu se ferme");
         Application.Quit();
+    }
+
+    public void Inputs()
+    {
+        SceneManager.LoadScene(inputs);
     }
 }

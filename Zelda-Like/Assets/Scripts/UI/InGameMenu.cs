@@ -5,16 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class InGameMenu : GameMenu
 {
-    public int inputs;
+    public GameObject player;
 
     public void Resume()
     {
-        SceneManager.LoadScene(play);
+        player.GetComponent<ESCMenu>().BPressed();
     }
-
-    public void Inputs()
-    {
-        SceneManager.LoadScene(inputs);
-    }
-
 }

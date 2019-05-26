@@ -160,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761634404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49805632, y: -0.00000005937294, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 714645290}
@@ -266,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799184537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.26994926, y: 0, z: -5.398985}
+  m_LocalPosition: {x: 0, y: 0, z: -5.398985}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children:
   - {fileID: 1761634405}
@@ -299,7 +299,7 @@ Camera:
   far clip plane: 5000
   field of view: 53
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.8
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1982,7 +1982,7 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083, type: 2}
   currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
-  ResetSouls: 0
+  ResetSouls: 1
   magnetRange: 2
   mask:
     serializedVersion: 2
@@ -2025,7 +2025,6 @@ MonoBehaviour:
   escapeMenu: {fileID: 9102178416884671720}
   nameInputButtonStart: Menu
   pressStart: {fileID: 11400000, guid: 4533acaac2938584c864f0bc31505610, type: 2}
-  bpause: 0
 --- !u!1 &7081426699157911933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,11 +2080,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4704675715113948168}
     m_Modifications:
-    - target: {fileID: 8803650871667794619, guid: 456fd6718235ddd47a81b59fb709ea28,
-        type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4055503361806317897}
     - target: {fileID: 1271560709942408968, guid: 456fd6718235ddd47a81b59fb709ea28,
         type: 3}
       propertyPath: m_Name
@@ -2197,6 +2191,11 @@ PrefabInstance:
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8803650871667794619, guid: 456fd6718235ddd47a81b59fb709ea28,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4055503361806317897}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456fd6718235ddd47a81b59fb709ea28, type: 3}
 --- !u!4 &1271560711376651459 stripped
@@ -2471,11 +2470,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameMenu - Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5093444041679594589, guid: 90be149db3188034aab4ea0246461459,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5093444041679594585, guid: 90be149db3188034aab4ea0246461459,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2581,6 +2575,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1643347639, guid: 90be149db3188034aab4ea0246461459, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443452718217738516, guid: 90be149db3188034aab4ea0246461459,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 4704675715113948179}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90be149db3188034aab4ea0246461459, type: 3}
 --- !u!224 &9102178416884671724 stripped
