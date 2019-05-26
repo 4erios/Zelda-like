@@ -18,7 +18,7 @@ public class BeetleClass : EnemyClass
     public FloatReference beetleAttackRange;
     public FloatReference beetleChargeSpeed;
 
-    private Vector2 direction;
+
 
     private void Start()
     {
@@ -65,7 +65,7 @@ public class BeetleClass : EnemyClass
 
     public void BeetleCharge()
     {
-        direction = (playerTransform.position - enemyTransform.position).normalized;
+        Vector2 direction = (playerTransform.position - enemyTransform.position).normalized;
         enemyRb.velocity = new Vector2(direction.x * beetleChargeSpeed, direction.y * beetleChargeSpeed);
     }
 

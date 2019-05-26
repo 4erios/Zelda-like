@@ -7,23 +7,22 @@ public class QuadripodProjectile : MonoBehaviour
     public float speed = 20f;
     public Rigidbody2D rb;
     public float lifeTime = 20f;
-
+    public float QuadripodDamage = 10f;
     void Start()
     {
         rb.velocity = -transform.right * speed;
     }
 
-    // Update is called once per frame
 
+    private void Update()
+    {
+        Destroy(this.gameObject, lifeTime);
+    }
 
-    /* private void OnTriggerEnter2D(Collider2D other)
-     {
-         if (other.CompareTag("Player"))
-         {
-
-
-
-
-         }
-     }*/
+    
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (gameObject.GetComponent<PlayerHPSystem>()) return;
+        collision.gameObject.GetComponent<PlayerHPSystem>().TakeDamages(QuadripodDamage);
+    }
 }
