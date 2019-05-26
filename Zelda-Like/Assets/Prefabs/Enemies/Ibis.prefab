@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3278386902952528650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.111, y: -0.0225, z: 0}
+  m_LocalPosition: {x: 1.124, y: -0.066, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3278386903483418577}
@@ -91,7 +91,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0018080659, y: 0.0009041056}
+  m_Offset: {x: 0.034778982, y: 0.0009041056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -102,7 +102,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.04896667, y: 0.090551585}
+  m_Size: {x: 0.1429689, y: 0.090551585}
   m_EdgeRadius: 0
 --- !u!1 &3278386903483418581
 GameObject:
@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 3278386903483418579}
   - component: {fileID: 3278386903483418580}
   - component: {fileID: 3278386903483418576}
+  - component: {fileID: 7860420714156398766}
   m_Layer: 0
   m_Name: Ibis
   m_TagString: Untagged
@@ -132,8 +133,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3278386903483418581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.79, y: -0.21, z: -0.0703125}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalPosition: {x: 51.53, y: 26.13, z: -0.0703125}
+  m_LocalScale: {x: 2.987991, y: 2.987991, z: 0.19919941}
   m_Children:
   - {fileID: 3278386902952528649}
   - {fileID: 3278386903785233319}
@@ -178,12 +179,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300012, guid: 84ecef6901d9a034f9b569598fb2fc85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 3.3199997, y: 1.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3739b8040d6dc7d4ba22afbc5022dafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   takeDamages: 0
   doesItGiveEnergy: 1
   playerTransform: {fileID: 0}
@@ -229,7 +230,8 @@ MonoBehaviour:
   enemySprite: {fileID: 3278386903483418578}
   projectileToInstantiate: {fileID: 0}
   ShootingPoint: {fileID: 3278386903785233319}
-  EnemyToInstantiate: {fileID: 0}
+  EnemyToInstantiate: {fileID: 4861569844125820424, guid: ab8ec4fa49160e14ca038a690f6b856c,
+    type: 3}
   SpawnSpitPoint: {fileID: 3278386902688485270}
   IbisHealth:
     UseConstant: 1
@@ -297,6 +299,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &7860420714156398766
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278386903483418581}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.09672701, y: -0.020151377}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.32, y: 1.61}
+    newSize: {x: 3.3199997, y: 1.61}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2560022, y: 0.74751663}
+  m_EdgeRadius: 0
 --- !u!1 &3278386903785233304
 GameObject:
   m_ObjectHideFlags: 0
