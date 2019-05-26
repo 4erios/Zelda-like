@@ -208,7 +208,7 @@ MonoBehaviour:
   enemyTransform: {fileID: 4546362973611704347}
   knockbackDistance:
     UseConstant: 1
-    ConstantValue: 2
+    ConstantValue: 1
     Variable: {fileID: 0}
   DetectionRange:
     UseConstant: 1
@@ -236,7 +236,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   quadripodBulletSpeed:
     UseConstant: 1
-    ConstantValue: 13
+    ConstantValue: 8
     Variable: {fileID: 0}
 --- !u!1001 &8920309372976228374
 PrefabInstance:
