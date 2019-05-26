@@ -34,7 +34,6 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("AttackButton");
         }
 
-
         if (Input.GetButtonDown(NameInputButtonX))
         {
             PressX.Raise();
