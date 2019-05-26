@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 2322887846343160139}
   - component: {fileID: 1188717672}
   - component: {fileID: 8600647041170630457}
-  - component: {fileID: 7328424226054861711}
   m_Layer: 9
   m_Name: "GrosScarab\xE9eViolet"
   m_TagString: Untagged
@@ -255,18 +254,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Object: {fileID: 4861569844125820424}
   Disabler: 0
---- !u!114 &7328424226054861711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4861569844125820424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec90ca7afe9c66c4092271f20a498cbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7967377802860719786
 PrefabInstance:
   m_ObjectHideFlags: 0
