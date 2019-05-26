@@ -5,6 +5,9 @@ using UnityEngine;
 public class SablierHealing : MonoBehaviour
 {
     // Start is called before the first frame update
+    public BoolVariable HealingBool;
+    public Animator Sablier; 
+
     void Start()
     {
         
@@ -13,6 +16,6 @@ public class SablierHealing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Sablier.SetBool("Healing", HealingBool);
     }
 }
