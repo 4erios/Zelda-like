@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Stèle : LivingClass
 {
-    //Reste à faire :
-    // - Lier donner le score
-
     private GameObject player;
     private Animator anim;
     public bool Energy = false;
 
     public FloatVariable soulsGiven;
-    public FloatVariable currentEnergy;
+    public FloatVariable currentSouls;
+    public IntVariable currentEnergy;
 
     void Start()
     {
@@ -25,19 +23,18 @@ public class Stèle : LivingClass
     {
         if (health <= 0)
         {
-
-            anim.SetTrigger("Destroy");
             if (Energy)
             {
-                currentEnergy.SetFloatValue(80f);
+                currentEnergy.SetIntValue(80);
             }
 
             else
             {
-                player.GetComponent<PlayerSouls>().TakeSouls(soulsGiven);
+                currentSouls.ApplyChangeToFloat(soulsGiven);
+                health = 100;
             }
 
-           
+            anim.SetTrigger("Destroy");
         }
 
         if (takeDamages)
