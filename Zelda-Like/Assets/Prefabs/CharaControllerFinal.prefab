@@ -1946,7 +1946,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.17504919}
+  m_Offset: {x: 0, y: -0.22529583}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1957,7 +1957,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.18883859}
+  m_Size: {x: 0.36, y: 0.08834532}
   m_EdgeRadius: 0
 --- !u!114 &562901617
 MonoBehaviour:
@@ -2560,6 +2560,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a3c07abb11e3864eb0611c45aad31bf, type: 3}
+--- !u!95 &3423613956404584572 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 463701650, guid: 6a3c07abb11e3864eb0611c45aad31bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3423613956213909230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &3423613956614678187 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 673529925, guid: 6a3c07abb11e3864eb0611c45aad31bf,
@@ -2569,12 +2575,6 @@ Animator:
 --- !u!224 &6861129821364659096 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8121327106580055414, guid: 6a3c07abb11e3864eb0611c45aad31bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3423613956213909230}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &3423613956404584572 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 463701650, guid: 6a3c07abb11e3864eb0611c45aad31bf,
     type: 3}
   m_PrefabInstance: {fileID: 3423613956213909230}
   m_PrefabAsset: {fileID: 0}
@@ -2695,26 +2695,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1643347639, guid: 90be149db3188034aab4ea0246461459, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4443452718217738516, guid: 90be149db3188034aab4ea0246461459,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 4704675715113948179}
+    - target: {fileID: 1643347639, guid: 90be149db3188034aab4ea0246461459, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90be149db3188034aab4ea0246461459, type: 3}
---- !u!224 &9102178416884671724 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5093444041679594585, guid: 90be149db3188034aab4ea0246461459,
-    type: 3}
-  m_PrefabInstance: {fileID: 4106969868027756725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9102178416884671720 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5093444041679594589, guid: 90be149db3188034aab4ea0246461459,
+    type: 3}
+  m_PrefabInstance: {fileID: 4106969868027756725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &9102178416884671724 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5093444041679594585, guid: 90be149db3188034aab4ea0246461459,
     type: 3}
   m_PrefabInstance: {fileID: 4106969868027756725}
   m_PrefabAsset: {fileID: 0}
@@ -2811,6 +2811,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4704675715113948168}
     m_Modifications:
+    - target: {fileID: 8852078795215649567, guid: ee1fc6321e33270429d384c63c06241c,
+        type: 3}
+      propertyPath: m_Name
+      value: FX bouclier
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852078795215649567, guid: ee1fc6321e33270429d384c63c06241c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8852078795215649566, guid: ee1fc6321e33270429d384c63c06241c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2864,16 +2874,6 @@ PrefabInstance:
     - target: {fileID: 8852078795215649566, guid: ee1fc6321e33270429d384c63c06241c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8852078795215649567, guid: ee1fc6321e33270429d384c63c06241c,
-        type: 3}
-      propertyPath: m_Name
-      value: FX bouclier
-      objectReference: {fileID: 0}
-    - target: {fileID: 8852078795215649567, guid: ee1fc6321e33270429d384c63c06241c,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8852078797018035916, guid: ee1fc6321e33270429d384c63c06241c,

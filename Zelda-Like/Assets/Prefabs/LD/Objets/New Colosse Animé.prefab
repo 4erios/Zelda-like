@@ -102,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.032843947, y: -0.41939878}
+  m_Offset: {x: -0.032843947, y: -0.5005807}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -113,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.080704, y: 0.6205244}
+  m_Size: {x: 1.080704, y: 0.45816055}
   m_EdgeRadius: 0
 --- !u!114 &1257135658327936526
 MonoBehaviour:
@@ -309,6 +309,7 @@ MonoBehaviour:
   droit: {fileID: 683773167004260548}
   gauche: {fileID: 615122928130119961}
   bras: {fileID: 9134065711240322422}
+  falaise: {fileID: 0}
   trapeOnly: 1
   damageRange: 1
   underHandRange: {fileID: 1382539195865142027}
