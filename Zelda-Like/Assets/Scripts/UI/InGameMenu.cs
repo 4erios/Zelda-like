@@ -1,54 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class InGameMenu : MonoBehaviour
+public class InGameMenu : GameMenu
 {
-    [SerializeField]
-    private int play;
-    public EventSystem eS;
-    private GameObject storeSelected;
-    [SerializeField]
-    private GameObject firstButton;
+    public int inputs;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        storeSelected = firstButton;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (eS.currentSelectedGameObject != storeSelected)
-        {
-            if (eS.currentSelectedGameObject == null)
-            {
-                eS.SetSelectedGameObject(storeSelected);
-            }
-
-            else
-            {
-                storeSelected = eS.currentSelectedGameObject;
-            }
-        }
-
-        else
-        {
-            storeSelected = eS.firstSelectedGameObject;
-        }
-    }
-
-    public void Play()
+    public void Resume()
     {
         SceneManager.LoadScene(play);
     }
 
-    public void Quit()
+    public void Inputs()
     {
-        Debug.Log("Le jeu se ferme");
-        Application.Quit();
+        SceneManager.LoadScene(inputs);
     }
+
 }
