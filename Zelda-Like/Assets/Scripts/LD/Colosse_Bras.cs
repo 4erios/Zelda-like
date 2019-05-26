@@ -13,6 +13,7 @@ public class Colosse_Bras : InfusableClass
     public Collider2D droit;
     public Collider2D gauche;
     public Collider2D bras;
+    public GameObject falaise;
     public bool trapeOnly = false;
     public float damageRange = 2F;
     public Transform underHandRange;
@@ -116,7 +117,18 @@ public class Colosse_Bras : InfusableClass
         }
     }
 
-    void FunctionToDealDamages()
+    public void Falaise()
+    {
+        if (falaise != null && !falaise.activeInHierarchy)
+        {
+            falaise.SetActive(true);
+        }
+
+        else if (falaise != null && falaise.activeInHierarchy)
+            falaise.SetActive(false);
+    }
+
+    public void FunctionToDealDamages()
     {
         Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(underHandRange.position, damageRange);
         foreach (Collider2D enemyCollision in enemiesHurt)
