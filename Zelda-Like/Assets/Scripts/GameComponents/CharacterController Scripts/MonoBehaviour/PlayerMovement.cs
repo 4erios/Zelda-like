@@ -4,7 +4,27 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    #region Démarrage
+    public static PlayerMovement manager;
+
+    private void Awake()
+    {
+        if (manager == null)
+        {
+            manager = this;
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
+    }
+    #endregion
+
+    public Rigidbody2D rb; 
 
     public FloatVariable MoveX;
     public FloatVariable MoveY;
