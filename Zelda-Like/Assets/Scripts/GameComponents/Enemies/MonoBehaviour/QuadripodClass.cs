@@ -41,6 +41,7 @@ public class QuadripodClass : EnemyClass
         }
 
         enemyAnimator.SetFloat("Health", health);
+        LaunchTakeDamagesAnimation();
     }
 
     public void QuadripodSearchForPlayer()
