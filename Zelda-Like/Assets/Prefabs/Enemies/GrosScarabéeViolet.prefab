@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDamage:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 8
     Variable: {fileID: 0}
 --- !u!61 &4861569844125820425
 BoxCollider2D:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92cff937130f38e418cd82107edc4679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 5
   takeDamages: 0
   doesItGiveEnergy: 1
   playerTransform: {fileID: 0}
