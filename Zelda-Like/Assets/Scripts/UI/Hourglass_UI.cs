@@ -8,9 +8,10 @@ public class Hourglass_UI : MonoBehaviour
     [SerializeField]
     private Image gaugeHourglass;
 
-    //public FloatReference playerMaxTime;
+    public float maxTime = 3f;
 
     private float percentRemainingTime;
+    public FloatVariable timeUntilDeath;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class Hourglass_UI : MonoBehaviour
 
     void Update()
     {
-        //percentRemainingTime = (playerMaxTime - time.deltaTime) / playerMaxTime;
+        percentRemainingTime = timeUntilDeath / maxTime;
 
         gaugeHourglass.fillAmount = percentRemainingTime;
     }
