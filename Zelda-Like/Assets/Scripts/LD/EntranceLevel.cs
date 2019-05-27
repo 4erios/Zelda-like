@@ -27,6 +27,8 @@ public class EntranceLevel : MonoBehaviour
     {
         if (player.GetComponentInChildren<LastScene>().lastScene == 0)
         {
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<PlayerControls>().enabled = false;
             player.transform.position = this.transform.position;
             player.GetComponent<Animator>().SetTrigger("ResurrectionReallyDead");
         }

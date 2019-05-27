@@ -20,6 +20,9 @@ public class Dead_Dead : MonoBehaviour
     private void Start()
     {
         animTransition = arenasManager.GetComponent<LastScene>().panelAnim;
+        currentHP.SetFloatValue(maxHP);
+        currentEnergy.SetIntValue(80);
+        currentSouls.SetFloatValue(0);
     }
 
     void Update()
@@ -48,5 +51,6 @@ public class Dead_Dead : MonoBehaviour
         animTransition.SetTrigger("End");
         yield return new WaitForSeconds(TimeTransition);
         SceneManager.LoadScene(gateScene);
+        Destroy(this.gameObject);
     }
 }
