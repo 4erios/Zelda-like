@@ -112,14 +112,16 @@ public class PlayerAbilities : MonoBehaviour
 
     public void PlayerHeal()
     {
-        CurrentHP.ApplyChangeToFloat(HealValue);
-        if (CurrentHP >= MaxHP)
+        if (EnergyGauge >= HealEnergyCost)
         {
-            CurrentHP.SetFloatValue(MaxHP);
+            CurrentHP.ApplyChangeToFloat(HealValue);
+            if (CurrentHP >= MaxHP)
+            {
+                CurrentHP.SetFloatValue(MaxHP);
 
+            }
+            HealEnergyLoss();
         }
-        HealEnergyLoss();
-        
     }
 
     public void LaunchHeal()
@@ -248,8 +250,9 @@ public class PlayerAbilities : MonoBehaviour
 
     public void StopPlayerShield()
     {
-        PlayerDamagesTaken.SetFloatValue(1);
         Shielding.SetBoolValue(false);
+        PlayerDamagesTaken.SetFloatValue(1);
+        Debug.Log("Stop Shield");
     }
 
     public IEnumerator ShieldTimeCoroutine()
@@ -260,6 +263,7 @@ public class PlayerAbilities : MonoBehaviour
 
     public void StartShieldCoroutine()
     {
+        Debug.Log("Start Shield Coroutine");
         StartCoroutine("ShieldTimeCoroutine");
     }
 

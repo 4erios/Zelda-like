@@ -27,8 +27,6 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetFloat("Health", PlayerCurrentHP);
 
         playerAnimator.SetBool("Heal", Healing);
-
-        playerAnimator.SetBool("Shield", Shielding);
     }
 
     public void LaunchAttackAnimation()
@@ -72,7 +70,7 @@ public class PlayerAnimator : MonoBehaviour
         playerAnimator.SetBool("Insufflation", false);
     }
 
-    /*public void LaunchHealAnimation()
+    public void LaunchHealAnimation()
     {
         playerAnimator.SetBool("Heal", true);
     }
@@ -91,5 +89,5 @@ public class PlayerAnimator : MonoBehaviour
 
         playerAnimator.SetTrigger("Shield");
 
-    }*/
+    }
 }
