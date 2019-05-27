@@ -23873,11 +23873,6 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[53].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3645094406602779318, guid: 88aa8b45d878aa84abe157681fa101f4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2526853228742656817, guid: 88aa8b45d878aa84abe157681fa101f4,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -24476,6 +24471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ChunkCullingBounds.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645094406602779318, guid: 88aa8b45d878aa84abe157681fa101f4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5543809282994788185, guid: 88aa8b45d878aa84abe157681fa101f4,
         type: 3}
@@ -26462,12 +26462,12 @@ PrefabInstance:
     - target: {fileID: 4861569844125820427, guid: be7a84ea4ff112b4cad7fb7f592cdb9c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4199598
+      value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 4861569844125820427, guid: be7a84ea4ff112b4cad7fb7f592cdb9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.614102
+      value: 8.87
       objectReference: {fileID: 0}
     - target: {fileID: 4861569844125820427, guid: be7a84ea4ff112b4cad7fb7f592cdb9c,
         type: 3}
@@ -31168,11 +31168,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 876434072}
     m_Modifications:
-    - target: {fileID: 6465163442225171205, guid: 48d2e64c10ed11f4fa0d281eb4c132f5,
-        type: 3}
-      propertyPath: m_Name
-      value: New Stele + Behind
-      objectReference: {fileID: 0}
     - target: {fileID: 6465163442225171206, guid: 48d2e64c10ed11f4fa0d281eb4c132f5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31227,6 +31222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465163442225171205, guid: 48d2e64c10ed11f4fa0d281eb4c132f5,
+        type: 3}
+      propertyPath: m_Name
+      value: New Stele + Behind
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48d2e64c10ed11f4fa0d281eb4c132f5, type: 3}

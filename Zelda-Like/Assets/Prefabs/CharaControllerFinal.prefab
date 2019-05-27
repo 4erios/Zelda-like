@@ -266,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799184537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.00000003400641, z: -10}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children:
   - {fileID: 1761634405}
@@ -1496,6 +1496,7 @@ GameObject:
   - component: {fileID: 8874805619672912459}
   - component: {fileID: 4055503361806317897}
   - component: {fileID: 7404108777721847083}
+  - component: {fileID: 3508563882239464533}
   m_Layer: 8
   m_Name: CharaControllerFinal
   m_TagString: Player
@@ -2033,7 +2034,6 @@ MonoBehaviour:
   currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
   arenasManager: {fileID: 7809759544552420969}
   TimeTransition: 1.5
-  revive: {fileID: 0}
   gateScene: 1
 --- !u!114 &4055503361806317897
 MonoBehaviour:
@@ -2146,6 +2146,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3508563882239464533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704675715113948179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0143b1d25c8c0ed42891ad59e197ef31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider1: {fileID: 2211861022508095545}
+  collider2: {fileID: 0}
 --- !u!1 &7081426699157911933
 GameObject:
   m_ObjectHideFlags: 0
