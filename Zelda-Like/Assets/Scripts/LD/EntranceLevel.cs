@@ -6,7 +6,8 @@ public class EntranceLevel : MonoBehaviour
 {
     public int nbWay;
     private GameObject player;
-    
+    public GameEvent revive;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -14,6 +15,11 @@ public class EntranceLevel : MonoBehaviour
         if (player.GetComponentInChildren<LastScene>().lastScene == nbWay)
         {
             player.transform.position = this.transform.position;
+
+            if(nbWay == 0)
+            {
+                revive.Raise();
+            }
         }
     }
 

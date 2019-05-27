@@ -154,6 +154,8 @@ public class PlayerAbilities : MonoBehaviour
             }
         }
 
+        LoseEnergy(AOEInfuseCost);
+
         /*Collider2D[] enemiesHurt = Physics2D.OverlapCircleAll(PlayerTransform.position, AOEInfuseRange);
         for (int i = 0; i < enemiesHurt.Length; i++)
         {
