@@ -5825,6 +5825,18 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3135404179501604392, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: CurrentEnergy
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28,
+        type: 2}
+    - target: {fileID: 8307763957188339053, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: EnergyGauge
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28,
+        type: 2}
     - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: ShieldDamageTaken.UseConstant
@@ -5836,11 +5848,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5fbd007dfb639524a9a0982b3d5be53f,
         type: 2}
+    - target: {fileID: 4165362679613082742, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: EnergyGauge
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28,
+        type: 2}
     - target: {fileID: 8874805619672912459, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: gateScene
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8874805619672912459, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: currentEnergy
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28,
+        type: 2}
     - target: {fileID: 6845068152514889536, guid: 30d97faed7688d2468a6d854eff79be1,
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
@@ -5871,6 +5895,12 @@ PrefabInstance:
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8341620075330936053, guid: 30d97faed7688d2468a6d854eff79be1,
+        type: 3}
+      propertyPath: currentEnergy
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c61a51c06dddd940a85a74dba771f28,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d97faed7688d2468a6d854eff79be1, type: 3}
 --- !u!1001 &2145327251
