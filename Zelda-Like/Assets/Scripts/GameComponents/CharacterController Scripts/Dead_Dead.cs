@@ -22,7 +22,6 @@ public class Dead_Dead : MonoBehaviour
         animTransition = arenasManager.GetComponent<LastScene>().panelAnim;
         currentHP.SetFloatValue(maxHP);
         currentEnergy.SetIntValue(80);
-        currentSouls.SetFloatValue(0);
     }
 
     void Update()

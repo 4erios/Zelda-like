@@ -160,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761634404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.982054, y: 11.502647, z: 0.369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 714645290}
@@ -266,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799184537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.00000003400641, z: -10}
+  m_LocalPosition: {x: -0.53227866, y: -6.234498, z: -11}
   m_LocalScale: {x: 0.5420055, y: 0.5420055, z: 2.7100272}
   m_Children:
   - {fileID: 1761634405}
@@ -1928,7 +1928,7 @@ MonoBehaviour:
     ConstantValue: 100
     Variable: {fileID: 0}
   CurrentHP: {fileID: 11400000, guid: 41192a5fa502e3d49bfbc8fb0d01590d, type: 2}
-  ResetHP: 1
+  ResetHP: 0
   DamageEvent: {fileID: 11400000, guid: f94d8125720d55c4694a30f03265db8b, type: 2}
   ResurrectionEvent: {fileID: 11400000, guid: dbb374766bcfc9b4ab395a1513189f80, type: 2}
   DeathEvent: {fileID: 11400000, guid: d275fa06944224f428b1cf121795a42c, type: 2}
@@ -2007,7 +2007,7 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 3ec44ce4b2a8ae34881b6c9ebacf8083, type: 2}
   currentSouls: {fileID: 11400000, guid: 8f3470ebfe768d545af86f7c4e20f443, type: 2}
-  ResetSouls: 1
+  ResetSouls: 0
   magnetRange: 2
   mask:
     serializedVersion: 2
@@ -2159,7 +2159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider1: {fileID: 2211861022508095545}
-  collider2: {fileID: 0}
 --- !u!1 &7081426699157911933
 GameObject:
   m_ObjectHideFlags: 0
