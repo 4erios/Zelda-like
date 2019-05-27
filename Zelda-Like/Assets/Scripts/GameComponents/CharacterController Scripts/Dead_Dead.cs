@@ -15,6 +15,7 @@ public class Dead_Dead : MonoBehaviour
     public FloatVariable currentSouls;
     public GameObject arenasManager;
     public float TimeTransition = 1.5f;
+    public GameEvent revive;
     public int gateScene;
 
     private void Start()
@@ -36,7 +37,7 @@ public class Dead_Dead : MonoBehaviour
         currentEnergy.SetIntValue(80);
         currentSouls.SetFloatValue(0);
         arenasManager.GetComponent<ArenasManager>().ResetArenas();
-        arenasManager.GetComponent<LastScene>().lastScene = SceneManager.GetActiveScene().buildIndex;
+        arenasManager.GetComponent<LastScene>().lastScene = 0;
         StartCoroutine(Loading());
     }
 
@@ -47,6 +48,7 @@ public class Dead_Dead : MonoBehaviour
         this.gameObject.GetComponent<PlayerControls>().enabled = false;
         animTransition.SetTrigger("End");
         yield return new WaitForSeconds(TimeTransition);
+        revive.Raise();
         SceneManager.LoadScene(gateScene);
     }
 }
