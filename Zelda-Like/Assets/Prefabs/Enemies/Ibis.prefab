@@ -228,33 +228,35 @@ MonoBehaviour:
     m_Bits: 256
   enemyAnimator: {fileID: 3278386903483418580}
   enemySprite: {fileID: 3278386903483418578}
-  projectileToInstantiate: {fileID: 0}
+  projectileToInstantiate: {fileID: 382745751761654493, guid: 0ed57a0e2cb514e4882c336160a9b622,
+    type: 3}
   ShootingPoint: {fileID: 3278386903785233319}
-  EnemyToInstantiate: {fileID: 0}
+  EnemyToInstantiate: {fileID: 4861569844125820424, guid: ab8ec4fa49160e14ca038a690f6b856c,
+    type: 3}
   SpawnSpitPoint: {fileID: 3278386902688485270}
   IbisHealth:
     UseConstant: 1
-    ConstantValue: 10
+    ConstantValue: 20
     Variable: {fileID: 0}
   IbisSpeed:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 3
     Variable: {fileID: 0}
   IbisMeleeAttackRange:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 0.5
     Variable: {fileID: 0}
   IbisDistanceAttackRange:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 3
     Variable: {fileID: 0}
   IbisBulletSpeed:
     UseConstant: 1
-    ConstantValue: 6
+    ConstantValue: 13
     Variable: {fileID: 0}
   BeetleSpawnCouldown:
     UseConstant: 1
-    ConstantValue: 100
+    ConstantValue: 2
     Variable: {fileID: 0}
   canSpawnBeetles: 1
   canAttackInMelee: 0
@@ -297,7 +299,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7860420714156398766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -311,7 +313,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09672701, y: -0.020151377}
+  m_Offset: {x: 0.1340887, y: 0.022546858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -322,7 +324,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2560022, y: 0.74751663}
+  m_Size: {x: 1.9144169, y: 0.66212016}
   m_EdgeRadius: 0
 --- !u!1 &3278386903785233304
 GameObject:
